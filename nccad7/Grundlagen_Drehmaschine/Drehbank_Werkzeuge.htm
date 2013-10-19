@@ -1,0 +1,559 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Drehbank/Werkzeuge</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Arial" size="1" color="#000000"><b><font face="Times New Roman" size="6" color="#FF00FF"><i><font size="3">Die 
+  &quot;Intelligente Drehbank&quot;</font> <br>
+  <font size="5">Werkzeugwechsel und Werkzeugverwaltung</font></i></font> <br>
+  <font face="Tahoma">Stand: Oktober 2004</font></b></font></p>
+<p align="left"><font face="Arial" size="2" color="#000000">Die Werkzeuge und 
+  der Werkzeugwechsel haben beim Drehen eine besondere Bedeutung. </font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left">Es gibt eine Vielzahl 
+    von Formen und Arten.</font></li>
+  <li><font color="#000000" size="2" face="Arial" align="left">Die Werkzeuge m&uuml;ssen 
+    besonders h&auml;ufig gewechselt werden.</font></li>
+  <li><font color="#000000" size="2" face="Arial" align="left">Die Angriffspunkte 
+    k&ouml;nnen sehr weit auseinander sein.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Arial">Im Folgenden werden 
+  die Details erkl&auml;rt:</font></p>
+<p align="left"><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="5">1.</font> 
+  M&ouml;gliche Arbeitsmethoden beim Werkzeugwechsel</b><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font color="#000000" face="Tahoma">Sie 
+  sind zum Einen von der Bedienperson abh&auml;ngig (alte Gewohnheiten werden 
+  beibehalten) und zum Anderen von der vorhandenen Ausstattung. Grunds&auml;tzlich 
+  gibt es folgende Methoden:</font></font></font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Konventionell</b><br>
+    Wie von der handbedienten Drehbank gewohnt, wird nach einem Werkzeugwechsel 
+    das Werkst&uuml;ck angekratzt bzw. &uuml;berdreht und gemessen. Danach wird 
+    die zugeh&ouml;rige Achs-Anzeige auf Null gestellt und von dieser Stellung 
+    aus zugestellt. Diese bew&auml;hrte Arbeitsmethode ist auch mit der KOSY-Steuerung 
+    prinzipiell m&ouml;glich, es fehlen lediglich die Handr&auml;der und deren 
+    Scalen, der PC und das Fenster &quot;Handsteuerung&quot; m&uuml;ssen statt 
+    dessen benutzt werden. <br>
+    Hinweise zu dieser Methode finden Sie unter <a href="/Grundlagen_Drehmaschine/Drehbank_ErsteSchritte.htm">CNC-Drehmaschinen/Inbetriebnahme, 
+    erste Schritte</a> oder unter <a href="/Grundlagen_Drehmaschine/Arbeitshinweise/WnpXachseVerschieben.htm">CNC-Drehmaschinen/Arbeitshinweise/WNP 
+    korrigieren</a> .</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Mit Korrekturtabelle/Korrekturspeicher</b><br>
+    Hier werden zun&auml;chst die Werkzeuge in den Haltern vermessen und die Werte 
+    in eine Korrekturtabelle eingetragen. Mit einem der Werkzeuge mu&szlig; der 
+    Werkst&uuml;ck-Nullpunkt (WNP) eingestellt/eingelernt werden. Mit dem Werkzeugwechsel 
+    mu&szlig; die Nummer des neuen Werkzeugs genannt werden, der Werkst&uuml;ck-Nullpunkt 
+    (WNP) wird dann automatisch korrigiert (Bildung der Differenz zu den Tabellenwerten 
+    des vorhergehenden Werkzeugs). <br>
+    Ein Ankratzen oder &Uuml;berdrehen und Messen ist in diesem Fall nicht erforderlich. 
+    Die Reproduzierbarkeit der Werkzeugpositionen mu&szlig; allerdings sehr zuverl&auml;ssig 
+    sein.<br>
+    Im <a href="#WWechselKorrekturspeicher">Kapitel 2</a> dieser Hilfeseite finden 
+    Sie die Details zur Korrekturtabelle.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Mit automatischem 
+    Werkzeugwechsel</b><br>
+    Vorausgesetzt Sie verf&uuml;gen &uuml;ber ein angetriebenes Wechselmagazin 
+    und die entsprechende Steuerungs- bzw. Software-Unterst&uuml;tzung, dann ist 
+    dies die Methode mit dem h&ouml;chsten Komfort. Eine echte Automatisierung 
+    komplexer Dreh-Bearbeitungen ist m&ouml;glich.<br>
+    Auch hier werden zun&auml;chst die Werkzeuge im Magazin vermessen und die 
+    Werte in die Korrekturtabelle eingetragen. Mit einem der Werkzeuge mu&szlig; 
+    der Werkst&uuml;ck-Nullpunkt (WNP) eingestellt/eingelernt werden. Mit einem 
+    CNC-Befehl oder einer CAM-Funktion mu&szlig; die Nummer des neuen Werkzeugs 
+    genannt werden, der Werkst&uuml;ck-Nullpunkt (WNP) wird dann automatisch korrigiert 
+    (Bildung der Differenz zu den Tabellenwerten des vorhergehenden Werkzeugs).<br>
+    Im <a href="#WWechselKorrekturspeicher">Kapitel 2</a> dieser Hilfeseite finden 
+    Sie die Details zur Korrekturtabelle. <br>
+    Im<a href="#WWechselAutomatisch"> Kapitel 3</a> dieser Hilfeseite finden Sie 
+    alles Weitere zum automatischen Werkzeugwechsel.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Mehr zu den beiden 
+  letztgenannten Arbeitsmethoden erfahren Sie, wenn Sie weiterlesen:</font></p>
+<p align="left"><font face="Arial" size="2" color="#808080"><b><font face="Tahoma" size="6" color="#FF00FF"> 
+  </font></b></font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><br>
+  <font size="5"><a name="WWechselKorrekturspeicher"></a>2.</font> Korrekturspeicher 
+  benutzen, Werkzeuge vermessen</b><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Die 
+  verschiedenen Drehmei&szlig;el werden unterschiedlich aus der Halterung herausragen. 
+  </font></font></font></font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Mit 
+  einem der Werkzeuge haben Sie den Werkst&uuml;ck-Nullpunkt eingestellt und durch 
+  Versuche getestet. Wechseln Sie das Werkzeug, dann m&uuml;sste der Nullpunkt 
+  erneut eingestellt werden, es sei denn der Unterschied der Angriffsposition 
+  ist bekannt und kann automatisch korrigiert werden.<br>
+  </font></font></font></font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Damit 
+  die Automatik funktioniert, m&uuml;ssen die Werkzeuge- oder die Differenzen 
+  der Angriffspositionen vermessen werden und die Werte gespeichert sein, dann 
+  kann die Software bei einem Werkzeugwechsel die Korrektur automatisch vornehmen.</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b><i>nccad</i></b> kennt ab November 
+  2004 <b>2 grunds&auml;tzlich verschiedene Vermessungsmethoden</b> f&uuml;r <b>Drehwerkzeuge</b>:</font></p>
+<ul>
+  <li><b><font color="#000000" size="2" face="Tahoma">Vermessen</font></b><font color="#000000" size="2" face="Tahoma"> 
+    mit <b>Bezugskanten</b> bzw. Werkzeug-Nullpunkt (Kapitel 2.1)<br>
+    Es werden entweder Messger&auml;te zur Vermessung ben&ouml;tigt oder der Werkst&uuml;ck-Nullpunkt 
+    wird eingestellt, die anderen Werkzeuge auf diesen Punkt bewegt und die Abweichung 
+    in der Positionsanzeige abgelesen.<br>
+    <i>Vorteil:</i> Die Messwerte sind leicht nachvollziehbar.<br>
+    <i>Nachteile:</i> Werkzeug-Nullpunkt, Werkst&uuml;ck-Nullpunkt und Hilfsmittel 
+    werden ben&ouml;tigt, eine sehr genaue Messung ist aufw&auml;ndig.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Vermessen</b> mit <b>Abdrehen</b> 
+    und <b>Nutzung des Maschinen-Nullpunktes</b> (Kapitel 2.2)<br>
+    Die Abst&auml;nde der Angriffspitzen zum Maschinen-Nullpunkt (Endschalter) 
+    werden durch Abdrehen und Messen bestimmt.<br>
+    <i>Vorteile:</i> Es wird kein Werkzeug-Nullpunkt ben&ouml;tigt, die Messungen 
+    sind einfach.<br>
+    <i>Nachteile:</i> Die Messwerte sind nur schwer nachvollziehbar, der Umbau 
+    des Drehfutters kann Probleme verursachen.<br>
+    </font></li>
+</ul>
+<p><font color="#000000" size="2" face="Tahoma">Die <b>Wahl der Vermessungsmethode 
+  mu&szlig; mit der Inbetriebnahme</b> des Werkzeugwechsel-Systems <b>getroffen 
+  werden</b>. Dies geschieht im Men&uuml; <b>Parameter/Maschine/KOSY </b>unter 
+  <b>Optionen Drehmaschine</b>, wie das folgende Bild zeigt.</font></p>
+<p><img src="1_Bilder/Drehen_WerkzVermessOptionen.gif" width="320" height="222"></p>
+<p><font color="#000000" size="2" face="Tahoma">Im Fenster f&uuml;r die <b>KOSY-Parametereinstellungen</b> 
+  m&uuml;ssen unter <b>Optionen</b> die Schaltfl&auml;chen <b>Drehmaschine und 
+  Werkzeug-Korrekturspeicher</b> aktiviert werden, dann erscheint zun&auml;chst 
+  eine Warnmeldung zur Verwendung des Korrekturspeichers. Darunter wird ein weiterer 
+  Rahmen <b>Werkzeug-Me&szlig;methode</b> sichtbar, hier <b>mu&szlig;</b> die 
+  gew&uuml;nschte Methode<b> gew&auml;hlt werden</b>. Sie mu&szlig; fortan auch 
+  beibehalten werden, ein <b>Mischen der Methoden</b> ist <b>nicht erlaubt</b>.</font></p>
+<p><font color="#000000" size="2" face="Tahoma">Im Folgenden N&auml;heres zu den 
+  2 vorgeschlagenen Vermessungsmethoden:</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><img src="1_Bilder/Drehen_PrinzipWerkzKorr.gif" width="510" height="436"></b></font></font></b></font><font size="4"><br>
+  2.1</font></b> Vermessen mit Bezugskanten und Werkzeug-Nullpunkt<br>
+  </font><font face="Tahoma"><font color="#000000">D</font><font color="#000000">ie 
+  obige Skizze zeigt das Prinzip. Schaffen Sie sich einen &Uuml;berblick &uuml;ber 
+  die Befestigungs- und Wechselmethode und definieren Sie in den beiden Bewegungsrichtungen 
+  Bezugskanten. Letztere kreuzen sich in einem Referenzpunkt, der auch Werkzeug-Nullpunkt 
+  genannt wird (siehe Bild oben).</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Vermessen</b> Sie den <b>Abstand 
+  zwischen Angriffsspitze und Bezugskanten</b> unter Ber&uuml;cksichtigung des 
+  Vorzeichens und <b>von der Angriffsspitze aus betrachtet</b>, wie es die obige 
+  Skizze zeigt. Die Me&szlig;methode sollte nat&uuml;rlich sehr genau sein, aber 
+  bereits mit Me&szlig;schieber oder H&ouml;henrei&szlig;er kann der geschulte 
+  Techniker zu brauchbaren Ergebnissen kommen.</font></p>
+<p><font color="#000000" size="2" face="Tahoma">Das <b>Vermessen</b> kann auch 
+  <b>mit der Handsteuerung</b> der CNC-Drehmaschine gemacht werden, z.B. auf folgende 
+  Weise:</font></p>
+<ol>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Spannen</b> Sie ein Rundteil 
+    mit <b>Me&szlig;-Spitze</b> (Gravierstichel, Me&szlig;f&uuml;hler u.&Auml;.) 
+    ein.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Fahren</b> Sie <b>mit</b> 
+    der <b>Bezugsecke oder einem Bezugswerkzeug</b> die <b>Me&szlig;-Spitze an</b>, 
+    evtl. unter der Lupe.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Nullen</b> Sie mit der Tastenkombination 
+    <b>&lt;Strg&gt;</b>+<b>&lt;Ende&gt;</b> diese Position.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Fahren</b> Sie mit der <b>Angriffs-Spitze</b> 
+    eines Werkzeugs die <b>Me&szlig;spitze</b> an (evtl. zum Schutz ein Papier 
+    dazwischen). </font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Lesen Sie <b>vorzeichenrichtig 
+    die X-Position</b> ab (Durchmesserwert). <b>Notieren</b> Sie den <b>halben 
+    Wert</b> (Korrekturwert entsprechend dem Abstand zur Bezugskante). </font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Lesen Sie <b>vorzeichenrichtig 
+    die Z-Position</b> ab. <b>Notieren</b> Sie den <b>Wert</b> (Korrekturwert, 
+    entsprechend dem Abstand zur Bezugskante).</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Tragen Sie die Werte in die 
+    <b>Korrekturtabelle</b> ein.</font></li>
+</ol>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><img src="1_Bilder/Drehen_WerkzKorrTabelle.gif" width="450" height="567"><br>
+  </b>2.1.1<b> </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Korrekturspeicher 
+  &quot;laden&quot;<font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font></font></font></font></font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Das 
+  obige Bild zeigt die Tabelle des Werkzeug-Korrekturspeichers, die Sie &uuml;ber 
+  das Men&uuml; <b>Parameter/CAM/Werkzeug-Speicher</b> erreichen. Die unter 2.1 
+  ermittelten Werte m&uuml;ssen hier eingetragen werden.</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">Eine sp&auml;tere <b>Feinkorrektur</b> 
+  dieser gemessenen Werte kann <b>direkt in der Tabelle</b> vorgenommen werden.</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="4"><img src="1_Bilder/Drehen_PrinzipWerkzKorrMaNu.gif" width="397" height="304"><br>
+  2.2</font></b> Vermessen mit Maschinen-Nullpunkt<br>
+  <font color="#000000">Die obige Skizze zeigt das Prinzip: Mit dem gew&auml;hlten 
+  Werkzeug wird l&auml;ngs- und plan <b>abgedreht</b> oder angekratzt und die 
+  L&auml;nge <b>L</b> bzw. der Durchmesser <b>D</b> <b>gemessen</b>. Die dazugeh&ouml;rigen 
+  X- und Z-Positionen werden bezogen auf den Maschinen-Nullpunkt innerhalb von 
+  <i> <b>nccad</b></i> registriert, diese Positionswerte werden um die gemessenen 
+  </font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Werkst&uuml;ck-</font></font></font></font><font color="#000000">Werte 
+  korrigiert. </font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">Im Einzelnen wird folgenderma&szlig;en 
+  vorgegangen:</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><img src="1_Bilder/Drehen_WerkzVermessAufruf.gif" width="437" height="258"><br>
+  2.2.1<b> </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Werkzeugvermessung 
+  aufrufen <font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font></font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Rufen 
+  Sie im Men&uuml; <b>Maschine/CNC-Drehmaschine</b> auf, das Fenster <b>Handsteuerung</b></font></font></font></font><font color="#000000"> 
+  erscheint. </font></font></font></font></font></font></font></p>
+<ol>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Durch 
+    Eingabe von <b>Tn</b> (n=Werkzeugnummer) <b>w&auml;hlen</b> Sie das <b>zu 
+    vermessende Werkzeug</b>- und damit auch die Werkzeugnummer im Korrekturspeicher 
+    aus.</font></font></font></font></font></font></font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Dann 
+    wird im Rahmen <b>Automation</b> der Button <b>Werkzeugvermessung</b> aufgerufen, 
+    der Fenstertext erh&auml;lt den Hinweis &quot;Werkzeug vermessen&quot;, ein 
+    Warnhinweis erscheint und der Button wird rot markiert (siehe Bild oben).<br>
+    </font></font></font></font><font color="#000000" size="2" face="Tahoma">Der 
+    <b>Warnhinweis</b> ist folgenderma&szlig;en zu verstehen:<br>
+    <b>Beim Abdrehen auf einen Durchmesser</b> darf die X-Achse solange nicht 
+    ver&auml;ndert werden, bis der Me&szlig;wert D ermittelt ist. In Richtung 
+    +Z kann aber beliebig verfahren werden, soda&szlig; ein bequemes Messen m&ouml;glich 
+    ist.<br>
+    </font><font color="#000000" size="2" face="Tahoma"><b>Beim Plandrehen auf 
+    eine L&auml;nge</b> darf die Z-Achse solange nicht ver&auml;ndert werden, 
+    bis der Me&szlig;wert L ermittelt ist. In Richtung +X kann aber beliebig verfahren 
+    werden, soda&szlig; ein bequemes Messen m&ouml;glich ist.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Nachdem dieser Warnhinweis 
+    mit <b>OK</b> best&auml;tigt ist, kann die <b>Vermessung eines Werkzeuges 
+    beginnen</b>:</font></li>
+</ol>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><br>
+  2.2.2<b> </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">X-Vermessung<font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font> <b>Drehen</b> Sie ein Werkst&uuml;ck <b>auf</b> den gew&uuml;nschten 
+  <b>Durchmesser ab</b> und fahren Sie in Richtung +Z vom Werkst&uuml;ck weg. 
+  Schalten Sie die Spindel aus und <b>messen</b> Sie den <b>Durchmesser</b>. Alternativ 
+  kann auch an einem zuvor vermessenen Durchmesser angekratzt werden.<br>
+  Dr&uuml;cken Sie dann die Tastenkombination <b>&lt;Alt&gt;</b>+<b>&lt;X&gt;</b>, 
+  das folgende Fenster erscheint:</font></font></font></font></p>
+<p><img src="1_Bilder/Drehen_WerkzVermAltX.gif" width="302" height="193"></p>
+<p><font color="#000000" size="2" face="Tahoma">Geben Sie den gemessenen Durchmesser 
+  ein und dr&uuml;cken Sie den Butten <b>Werte &uuml;bernehmen</b>. <i><b>nccad</b></i> 
+  berechnet danach den <b>Weg der Angriffsspitze vom Maschinen-Nullpunkt bis zur 
+  Drehmitte</b> und tr&auml;gt diesen Wert <b>automatisch in die Korrekturtabelle</b> 
+  ein.<br>
+  Mit <b>Abbrechen</b> kann die Vermessung <b>ohne Auswirkung</b> auf den Korreklturspeicher 
+  <b>beendet </b>werden.</font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Ausnahme - Werkzeug ist Bohrer:</b><br>
+  In diesem Fall kann in X-Richtung nicht abgedreht werden aber der Bohrer kann 
+  an das Werkst&uuml;ck angelegt werden.<br>
+  Die Schaltfl&auml;che &quot;Werkzeug ist Bohrer&quot; mu&szlig; aktiviert werden 
+  und der Durchmesser des Bohrers ist zus&auml;tzlich zum Werkst&uuml;ck-Durchmesser 
+  einzugebeben.</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><br>
+  2.2.3<b> </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Z-Vermessung</font></font></font><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font><b>Drehen</b> Sie ein Werkst&uuml;ck <b>auf</b> die gew&uuml;nschte 
+  <b>L&auml;nge plan</b> und fahren Sie in Richtung X vom Werkst&uuml;ck weg. 
+  Schalten Sie die Spindel aus und <b>messen</b> Sie die <b>L&auml;nge</b>. Alternativ 
+  kann auch an einer zuvor vermessenen L&auml;nge angekratzt werden.<br>
+  Dr&uuml;cken Sie dann die Tastenkombination <b>&lt;Alt&gt;</b>+<b>&lt;Z&gt;</b>, 
+  das folgende Fenster erscheint:</font></font></font></font></p>
+<p><img src="1_Bilder/Drehen_WerkzVermAltZ.gif" width="302" height="193"></p>
+<p><font color="#000000" size="2" face="Tahoma">Geben Sie die gemessene L&auml;nge 
+  ein und dr&uuml;cken Sie den Butten <b>Werte &uuml;bernehmen</b>. <i><b>nccad</b></i> 
+  berechnet danach den <b>Weg der Angriffsspitze vom Maschinen-Nullpunkt bis zur 
+  Drehfutter-Oberfl&auml;che</b> und tr&auml;gt diesen Wert <b>automatisch in 
+  die Korrekturtabelle</b> ein.<br>
+  Mit <b>Abbrechen</b> kann die Vermessung <b>ohne Auswirkung</b> auf den Korreklturspeicher 
+  <b>beendet </b>werden.</font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Ausnahme - Werkzeug ist Abstechstahl:</b><br>
+  In diesem Fall kann in Z-Richtung nur mit der linken Ecke plangedreht- oder 
+  angekratzt werden.<br>
+  Die Schaltfl&auml;che &quot;Werkzeug ist Abstechstahl&quot; mu&szlig; aktiviert 
+  werden und die Breite des Abstechstahls ist zus&auml;tzlich zur Werkst&uuml;ck-L&auml;nge 
+  einzugeben.</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">2.2.4<b> 
+  </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Korrekturspeicher 
+  &auml;ndern (Feinabstimmung der Werte)<font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font>Die Werte in der Korrekturtabelle sind etwas schwer zu interpretieren, 
+  deshalb zur Feinabstimmung der Tabellenwerte folgende Hinweise:</font></font></font></font></p>
+<table width="561" border="1" cellspacing="2" cellpadding="2">
+  <tr bgcolor="#CCCCCC"> 
+    <td width="134" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="249"><p align="left"><font color="#000000" size="2" face="Tahoma"><i>Korrektur 
+        in X</i></font></p></td>
+    <td width="150"><p align="left"><font color="#000000" size="2" face="Tahoma"><i>Korrektur 
+        in Z</i></font></p></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><p align="left"><font color="#000000" size="2" face="Tahoma"><i>Durchmesser 
+        zu gro&szlig;</i></font></p></td>
+    <td><p align="left"><font color="#000000" size="1" face="Tahoma">Halben Korrekturwert 
+        addieren (Radius statt Durchmesser)</font></p></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><font color="#000000" size="2" face="Tahoma"><i>Durchmesser 
+      zu klein</i></font></td>
+    <td><font color="#000000" size="1" face="Tahoma">Halben Korrekturwert subtrahieren</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><p align="left"><font color="#000000" size="2" face="Tahoma"><i>L&auml;nge 
+        zu gro&szlig;</i></font></p></td>
+    <td>&nbsp;</td>
+    <td><font color="#000000" size="1" face="Tahoma">Korrekturwert subtrahieren</font></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><font color="#000000" size="2" face="Tahoma"><i>L&auml;nge 
+      zu klein</i></font></td>
+    <td>&nbsp;</td>
+    <td><font color="#000000" size="1" face="Tahoma">Korrekturwert addieren </font></td>
+  </tr>
+</table>
+<p><font color="#000000" size="2" face="Tahoma"></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="5"> 
+  3.</font> Werkzeugwechsel mit Nutzung des Korrekturspeichers</b></font></font></b></font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Es gibt <b>2 M&ouml;glichkeiten</b> 
+  f&uuml;r den <b>Werkzeugwechsel mit Korrekturspeicher</b>:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Manuell (von Hand)</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Automatisch (mit 
+    programmierbarem Magazin)</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Hierzu die Details:</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="4">3.1</font> 
+  </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Manueller 
+  Werkzeugwechsel mit Korrekturspeicher<font color="#000000"><font face="Arial, Helvetica, sans-serif"> 
+  <b> <br>
+  </b></font>Beim Werkzeugwechsel mit Hilfe des Korrekturspeichers ist es absolut 
+  wichtig, da&szlig; die <b>Positionen der Angriffsspitzen reproduzierbar</b> 
+  sind und damit die Eintragungen in der Tabelle (siehe 2.1) immer richtig sind. 
+  Voraussetzungen daf&uuml;r sind:</font></font></font></font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma">Eine wiederholgenaue Schnellspann-Vorrichtung</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Keine st&ouml;renden Einfl&uuml;sse, 
+    wie Sp&auml;ne oder unzuverl&auml;ssige Halterungen...</font></li>
+</ul>
+<p><font color="#000000" size="2" face="Tahoma">Au&szlig;erdem mu&szlig; der <b>Werkst&uuml;ck-Nullpunkt 
+  (WNP) sehr genau</b> <a href="/Grundlagen_Drehmaschine/Drehbank_ErsteSchritte.htm#WNP1">eingestellt</a> 
+  sein.</font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Innerhalb eines laufenden Programms</b> 
+  mu&szlig; f&uuml;r den Werkzeugwechsel&nbsp; <b>eine Unterbrechung bzw. &quot;Stop 
+  f&uuml;r Handbedienung&quot; eingebaut</b> werden. Dies geschieht je nach Programmierart 
+  unterschiedlich:</font></p>
+<ul>
+  <li><b><font color="#000000" size="2" face="Tahoma">Innerhalb eines CNC-Programms</font></b><font color="#000000" size="2" face="Tahoma"><br>
+    Hier ist der Befehl <font color="#339966" face="Courier New, Courier, mono">M05</font> 
+    an der entsprechenden Stelle einzuf&uuml;gen, z.B:<br>
+    <font color="#339966" face="Courier New, Courier, mono">....<br>
+    G00 X50 Z10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+    ;Umspannposition anfahren<br>
+    <b>M05</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <br>
+    ; Unterbrechung f&uuml;r Handbetrieb<br>
+    ; manueller Werkzeugwechsel<br>
+    ; Tastenkombination &lt;T&gt;+&lt;n&gt; eingeben (n = Werkzeugnummer)<br>
+    ; Fortsetzen mit &lt;Strg&gt;+&lt;F&gt;<br>
+    G01 X... Z.... F...<br>
+    ;Bearbeitung fortsetzen, in der Regel mit neuer Vorschub-Angabe<br>
+    ....</font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Innerhalb eines CAD/CAM-Programms</b><br>
+    Hier ist im Fenster <b>Technologie</b> f&uuml;r das zugeh&ouml;rige Zeichnungteil 
+    die Schaltfl&auml;che <b>Stop f&uuml;r Handbedienung</b> zu <b>aktivieren</b>. 
+    Vor der Bearbeitung dieses Zeichnungteils wird dann das Programm unterbrochen, 
+    das Fenster f&uuml;r die Handbedienung erscheint. Mit dessen Hilfe kann eine 
+    Umspannposition angefahren- und das Werkzeug gewechselt werden. Danach ist 
+    die Tastenkombination <b>&lt;T&gt;+&lt;n&gt;</b> einzugeben (n steht f&uuml;r 
+    die Werkzeugnummer). Mit der Tastenkombination <b>&lt;Strg&gt;+&lt;F&gt;</b> 
+    wird das Programm fortgesetzt.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="5"><img src="/Grundlagen_Drehmaschine/1_Bilder/Dreh_WWechsel_Wabeco1.jpg" width="300" height="152"></font></b></font></font></b></font><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><font size="5"><a name="WWechselAutomatisch"></a></font></b></font></font></b></font><font size="4">3.2</font> 
+  </b></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma">Automatischer 
+  Werkzeugwechsel mit Korrekturspeicher<font color="#000000"><font face="Arial, Helvetica, sans-serif"> 
+  <b> <br>
+  </b></font></font></font></font></font><font color="#000000">Das Bild zeigt 
+  <b>eine L&ouml;sungsm&ouml;glichkeit</b> f&uuml;r den automatischen Werkzeugwechsel: 
+  Auf dem Support-Schlitten ist ein, <b>vom Schrittmotor angetriebener Drehteller</b> 
+  montiert. Die wiederholgenaue Position wird durch Raststellungen erreicht. Dazu 
+  mu&szlig; der Motor den Drehteller zun&auml;chst vorw&auml;rts &uuml;ber die 
+  Raststellung hinaus bewegen und dann ein St&uuml;ck r&uuml;ckw&auml;rts drehen.</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">Die <b>Voraussetzungen</b> f&uuml;r 
+  den Betrieb des <b>automatischen Werkzeugwechsels</b> sind insgesamt folgende:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma">Das <b>motorisch betriebene 
+    Wechselmagazin</b>, passend zur vorhandenen Steuerung.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Eine <b>erweiterete KOSY-Steuerung</b> 
+    mit best&uuml;ckter U-Achse.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Die <b>programmierbare Steuerung 
+    der Spindeldrehzahl</b>. Durch die unterschiedlichen Werkzeuge sind unterschiedliche 
+    Spindeldrehzahlen erforderlich, die ebenso automatisch gewechselt werden m&uuml;ssen, 
+    wie die Werkzeuge. Fragen Sie Ihren Lieferanten nach den technischen M&ouml;glichkeiten. 
+    Bei der KOSY-Steuerung mu&szlig; der analoge Ausgang vorhanden sein (Option) 
+    und die Elektronik der Spindel mu&szlig; &uuml;ber einen Steuereingang f&uuml;r 
+    die Drehzahl, in der Regel 0...10 Volt, verf&uuml;gen (Option).</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Die Software <i><b>nccad7</b></i> 
+    ab Mai 2004/Rev. 0.00.04.04 vom 17.5.04.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Die <b>exakte mechanische Anpassung</b> 
+    der gesamten Werkzeugwechsel-Einheit an die Drehmaschine (&Uuml;bereinstimmung 
+    mit Spindelachse, Beseitigung von Hindernissen u.A.m.). Bitte wenden Sie sich 
+    bei Fragen und Problemen an den Hersteller.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><font color="#FF00FF" size="4" face="Tahoma"><b><img src="/Grundlagen_Drehmaschine/1_Bilder/Dreh_WWechselNah_Wabeco1.jpg" width="400" height="307"><br>
+  <font size="2">3.2.1</font></b></font><font color="#FF00FF" size="2" face="Tahoma"> 
+  Werkzeuge montieren<br>
+  </font><font color="#000000" size="2" face="Tahoma">Der Drehteller verf&uuml;gt 
+  &uuml;ber 8 Werkzeugpositionen, 4 davon f&uuml;r die Au&szlig;enbearbeitung 
+  (Nuten im Drehteller) und 4 f&uuml;r die Innenbearbeitung (Bohrungen im Drehteller). 
+  </font></p>
+<p><font color="#000000" size="2" face="Tahoma">F&uuml;r die 4 Werkzeuge zur Au&szlig;enbearbeitung 
+  sind verstellbare Halter in den Nuten des Drehtellers befestigt, damit die Angriffspitze 
+  besser justiert werden kann. Die Werkzeuge f&uuml;r die Innenbearbeitung sind 
+  in Adapter-H&uuml;lsen befestigt, eine davon hat eine Spannzangenaufnahme (rechts 
+  oben im Bild). Die genannten Halter/Adapter f&uuml;r die Aufnahme der Werkzeuge 
+  geh&ouml;ren nicht zwangsl&auml;ufig zum Lieferumfang des dargestellten Werkzeugwechsel-Systems.</font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Achtung:</b> Pr&uuml;fen Sie 
+  bei der Wahl der Werkzeuge und deren Position im Drehteller, ob <b>beim Bearbeiten 
+  </b>des Werkst&uuml;cks<b> Kollisionen</b> mit der Sicherheitsklappe oder den 
+  herausstehenden Spannbacken o.&Auml;. auftreten k&ouml;nnen.</font></p>
+<p><font color="#000000" size="2" face="Tahoma">Bei der Best&uuml;ckungsplanung 
+  st&ouml;&szlig;t man mit 8 Wechselpositionen leicht an Grenzen, deshalb mu&szlig; 
+  ein schneller Wechsel eines vorjustierten Werkzeuges m&ouml;glich sein und dieses 
+  Werkzeug im Korrekturspeicher eingetragen sein. Dazu mehr in den folgenden Kapiteln.</font></p>
+<p>&nbsp;</p>
+<p><font color="#FF00FF" size="4" face="Tahoma"><b><img src="/Grundlagen_Drehmaschine/1_Bilder/Drehen_Parameter_WW.gif" width="213" height="198"><br>
+  <font size="2">3.2.2</font></b></font><font color="#FF00FF" size="2" face="Tahoma"> 
+  Werkzeugwechsel vorbereiten<br>
+  </font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Die 
+  <b>Verwendung</b> des Werkzeug-Korrekturspeichers und des automatischen Werkzeugwechsels 
+  mu&szlig; <b>bewu&szlig;t aktiviert</b> werden. Dazu sind im Men&uuml; <b>Parameter/Maschine/KOSY 
+  </b>unter <b>Optionen</b> die Schaltfl&auml;chen lt. obigem Bild zu <b>aktivieren</b>. 
+  </font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">(in Vorbereitung:.........................&Uuml;ber 
+  das </font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Men&uuml; 
+  <b>Parameter/CAM/Werkzeug-Magazin </b>mu&szlig; eine Anzahl von Drehwerkzeugen 
+  den Positionen des Drehtellers zugewiesen werden.......................)</font></font></font></font></p>
+<p>&nbsp;</p>
+<p><font color="#FF00FF" size="2" face="Tahoma"><b>3.2.3</b> 
+  Werkzeuge vermessen<br>
+  </font><font color="#000000" size="2" face="Tahoma">Dazu sind <b>Bezugspositionen 
+  bzw. Bezugskanten erforderlich</b> (vgl. weiter oben unter 2.). Im Falle des 
+  Drehtellers kann z.B. f&uuml;r das X-Ma&szlig; der Teilkreis der Werkzeugaufnahme-Bohrungen 
+  verwendet werden, f&uuml;r das Z-Ma&szlig; empfiehlt sich die Oberfl&auml;che 
+  des Drehtellers. Beide Ma&szlig;e k&ouml;nnen - mehr oder weniger genau, je 
+  nach Me&szlig;mittel und Me&szlig;methode - ermittelt werden. <br>
+  Anschlie&szlig;end sind 
+  sie in die Tabelle des Werkzeug-Korrekturspeichers einzutragen. </font><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Die 
+  Tabelle des Werkzeug-Korrekturspeichers erreichen Sie &uuml;ber das Men&uuml; 
+  <b>Parameter/CAM/Werkzeug-Speicher</b>. </font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">Eine Feinkorrektur kann durch 
+  eine Probebearbeitung und durch editieren der Tabellenwerte vorgenommen werden.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font color="#FF00FF" size="4" face="Tahoma"><b><img src="/Grundlagen_Drehmaschine/1_Bilder/Drehen_Handsteuerung_WW.gif" width="200" height="285"><br>
+  <font size="2">3.2.4</font></b></font><font color="#FF00FF" size="2" face="Tahoma"> 
+  Werkzeugwechsel in Betrieb nehmen und testen<br>
+  </font><font color="#000000" size="2" face="Tahoma">Damit der automatische Werkzeugwechsel 
+  &uuml;ber die Software verwendet werden kann, mu&szlig; der Schrittmotor an 
+  der U-Achse der KOSY-Steuerung angeschlossen sein, die <b>Funktion</b> k&ouml;nnen 
+  Sie durch eine Handbedienung <b>testen</b>, also: </font></p>
+<ol>
+  <li><font color="#000000" size="2" face="Tahoma">Steuerung einschalten, <i><b>nccad7</b></i> 
+    starten.</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Parameter/Maschine/KOSY </b>unter 
+    <b>Optionen</b> vor&uuml;bergehend die <b>Drehmaschine deaktivieren</b> und 
+    statt dessen die <b>U-Achse aktiveren</b>. Mit <b>OK</b> das Fenster verlassen 
+    (nicht speichern).</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"> Im Men&uuml; <b>Maschine/CNC-Drehmaschine</b> 
+    die <b>Handsteuerung</b> aufrufen.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Dr&uuml;cken der Tasten <b>&lt;+&gt;</b> 
+    (weiterdrehen) und <b>&lt;-&gt;</b> (r&uuml;ckw&auml;rts bis zur Raststellung) 
+    im Nummernblock der Tastatur (ganz rechts). Beim R&uuml;ckw&auml;rts drehen 
+    mu&szlig; nach dem Einrasten der Schrittmotor &quot;durchdrehen&quot;, kein 
+    Problem f&uuml;r den Schrittmotor und die anderen Komponeneten. <br>
+    Bei falscher Drehrichtung m&uuml;ssen die Anschl&uuml;sse eines Strangs am 
+    Schrittmotor vertauscht werden.</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Parameter/Maschine/KOSY </b>unter 
+    <b>Optionen</b> die <b>Drehmaschine wieder aktivieren</b> und statt dessen 
+    die U-Achse deaktiveren. Mit <b>Speichern</b> das Fenster verlassen.</font></li>
+</ol>
+<p><font color="#000000" size="2" face="Tahoma">F&uuml;r den <b>erstmaligen automatische 
+  Werkzeugwechsel</b> ist nacheinander <b>Folgendes zu tun</b>:</font></p>
+<ol>
+  <li><font color="#000000" size="2" face="Tahoma">Im Feld <b>Direkt</b> <b>&lt;T&gt; 
+    + &lt;1&gt;</b> eingeben. </font></li>
+  <li><font size="2" face="Tahoma">Die Wechsel-Routine l&auml;uft ab:</font>
+    <ol>
+      <li><font color="#000000" size="2" face="Tahoma">In Richtung +X wird weggefahren.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma">In Richtung +Z wird eine 
+        freie Wechselposition angefahren (derzeit voreingestellt: Maximalweg in 
+        Z lt. Parameter).</font></li>
+      <li><font color="#000000" size="2" face="Tahoma">Der Drehteller dreht sich 
+        bei der Erstinbetriebnahme in eine nicht beinflu&szlig;bare beliebige 
+        Position.</font></li>
+    </ol>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma">Da die Drehteller-Position 
+    nicht an die Software zur&uuml;ckgemeldet wird, mu&szlig; erstmalig von Hand 
+    die richtige Position eingestellt werden, dazu:</font> 
+    <ol>
+      <li><font color="#000000" size="2" face="Tahoma">Steuerung ausschalten, 
+        damit der Schrittmotor kraftlos ist.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma">Auf der Gegenseite des 
+        Schrittmotors ist ein Wellenende sichtbar. Mit einem Inbusschl&uuml;ssel 
+        k&ouml;nnen Sie diese Welle- und damit den Drehteller von Hand bewegen.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma">Drehen Sie den Drehteller 
+        soweit, da&szlig; das Werkzeug von Position 1 in der Eingriff-Position, 
+        also am Werkst&uuml;ck steht. Achten Sie darauf, da&szlig; Sie zun&auml;chst 
+        die Raststellung &uuml;berfahren und dann durch r&uuml;ckw&auml;rts drehen 
+        diese Position fixieren.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma">Steuerung wieder einschalten.</font></li>
+    </ol>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma">Durch die Wahl anderer Werkzeuge 
+    sollten Sie das Prinzip kennenlernen, also<br>
+    Im Feld <b>Direkt</b> die Tastenkombination <b>&lt;T&gt; + &lt;n&gt;</b> eingeben 
+    (n=Nummer des Werkzeugs). </font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Die <b>im Handsteuer-Fenster 
+    genannte Werkzeugnummer</b> mu&szlig; mit dem Werkzeug &uuml;bereinstimmen, 
+    das momentan <b>an der Eingriff-Postion</b> steht.</font></li>
+</ol>
+<p><font color="#000000" size="2" face="Tahoma">Der PC &quot;merkt&quot; sich 
+  die zuletzt gew&auml;hlte Postion. Bei <b>Fehlern</b> (Stromausfall, mechanisches 
+  Ver&auml;ndern ohne Software usw.) ist durch Handbetrieb f&uuml;r &Uuml;bereinstimmung 
+  von Software und Mechanik zu sorgen, also Wiederholen der Schritte 3.1 bis 3.4.</font></p>
+<p><font color="#000000" size="2" face="Tahoma">Der <b>Drehteller hat 8 Positionen</b>. 
+  Wenn Sie die <b>Werkzeugnummer 9</b> (T9) aufrufen, werden die <b>Korrekturwerte 
+  von T9</b> des Werkzeug-Korrekturspeichers benutzt, aber der <b>Drehteller</b> 
+  steht wieder <b>in Position 1</b>. Dort m&uuml;sste also zuvor durch einen <b>manuellen 
+  Werkzeugwechsel</b> das entsprechende Werkzeug montiert werden. Dieser Gedanke 
+  l&auml;sst sich fortsetzen: Drehteller-Position 3 wird z.B. auch bei Werkzeugnummer 
+  11 angefahren usw. Die h&ouml;chste Nummer ist 20 (entsprechend Drehteller-Position 
+  4), dies wegen der Anzahl von vorhandenen Zellen im Werkzeug-Korrekturspeicher.</font></p>
+<p>&nbsp;</p>
+<p><font color="#FF00FF" size="2" face="Tahoma"><b>3.2.5</b> 
+  Werkzeugwechsel programmieren und automatisch ausf&uuml;hren<br>
+  </font><font color="#000000" size="2" face="Tahoma">In jedem Fall 
+  mu&szlig; der <b>Werkst&uuml;ck-Nullpunkt (WNP) sehr genau</b> <a href="/Grundlagen_Drehmaschine/Drehbank_ErsteSchritte.htm#WNP1">eingestellt</a> 
+  sein. Dies geschieht mit einem der montierten Werkzeuge und sollte durch einige 
+  handgesteuerte Versuchsbearbeitungen &uuml;berpr&uuml;ft werden. Bitte achten 
+  Sie darauf, da&szlig; im Handsteuer-Fenster auch das benutzte Werkzeug angezeigt 
+  wird (siehe Werkzeugnummer), nur so k&ouml;nnen beim sp&auml;teren Werkzeugwechsel 
+  die Korrekturen stimmen. </font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Innerhalb eines laufenden Programms</b> 
+  mu&szlig; f&uuml;r den Werkzeugwechsel&nbsp; <b>eine Anweisung eingebaut</b> 
+  werden. Dies geschieht je nach Programmierart unterschiedlich:</font></p>
+<ul>
+  <li><b><font color="#000000" size="2" face="Tahoma">Innerhalb eines CNC-Programms</font></b><font color="#000000" size="2" face="Tahoma"><br>
+    Hier ist der Befehl <font color="#339966" face="Courier New, Courier, mono"><b>M06</b></font> 
+    an der entsprechenden Stelle einzuf&uuml;gen, z.B:<br>
+    <font color="#339966" face="Courier New, Courier, mono">....<br>
+    <b>G00 X... Z...&nbsp;&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+    ;Wechselposition anfahren<br>
+    <b>M06 Tn</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <br>
+    ;Werkzeugwechsel, n=Nummer des Werkzeugs, max. 8 bzw. 20<br>
+    <b>M25 Ux</b><br>
+    ;Bearbeitung fortsetzen, in der Regel mit<br>
+    ;neuer Spindeldrehzahl (x=Spannungswert in Volt, 0...10(25))<br>
+    <b>G01 X... Z... F...</b><br>
+    ;Bewegungen, meist mit neuer Vorschub-Angabe<br>
+    ....</font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Innerhalb eines CAD/CAM-Programms</b><br>
+    Hier ist im Fenster <b>Technologie</b> nicht die Werkzeug-Ma&szlig;angabe, 
+    sondern die <b>Werkzeugnummer</b> erforderlich. &Uuml;ber den Reiter <b>Steuerung</b> 
+    erreichen Sie auch die <b>Programmierung der Spindeldrehzahl</b> (Spannung) 
+    und andere Steuerfunktionen f&uuml;r eine perfekte Automatisierung.</font></li>
+</ul>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma"><br>
+  </font></b></font></p>
+</body>
+</html>

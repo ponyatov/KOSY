@@ -1,0 +1,117 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Grundlagen Anwendung/TeachIn-Programmierung</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">TeachIn-Programmierung<br>
+  </font></b></i><font face="Tahoma" size="1" color="#000000"><b>Überarbeitet: 
+  August 2002</b></font></p>
+<p><font face="Tahoma" size="2" color="#000000"><br>
+  Sowohl im CNC- als auch im CAD-Modus k&ouml;nnen die momentanen Maschinenpositionen 
+  an die Arbeitsfl&auml;che als CNC-Befehl - oder als Koordinate &uuml;bergeben 
+  werden. Diess ist die einfachste Art, um die Bewegungen der Maschine zu programmieren. 
+  Vor Allem kann sie dazu benutzt werden, um ein vorhandenes Originalteil zu &quot;scannen&quot;.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Arial" size="2" color="#000000"><img src="1_Bilder/TeachIn_CNCgesamt.gif" width="300" height="227"><br>
+  <b><font color="#FF00FF" face="Tahoma" size="5">1.</font></b> <font face="Tahoma" color="#FF00FF"><b>TeachIn 
+  bei CNC-Programmen<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Es ist nacheinander 
+  Folgendes zu tun:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">&Ouml;ffnen eines neuen CNC-Programms 
+    im Men&uuml; <b>Datei/CNC Neues Programm</b>. Ein leeres Textfeld erscheint.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Start der <a href="Handbedienung.htm">Handbedienung</a> 
+    im Men&uuml; <b>Maschine/CNC-Maschine</b>. Das Fenster &quot;Handsteuerung&quot; 
+    wird eingeblendet, falls die Maschine eingeschaltet - und richtig angeschlossen 
+    ist.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Einspannen</b> des <b>Originalteils</b>, 
+    das &quot;nachgefahren&quot; (gescannt) werden soll.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Einstellen des <b>Werkst&uuml;ck-Nullpunktes</b>.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit der<b> Handsteuerung</b> 
+    (Cursortasten) erste Position bzw. ersten <b>Eckpunkt</b> der Kontur anfahren, 
+    dann die Taste <b>&lt;Einfg&gt;</b> (Einf&uuml;gen = Insert) dr&uuml;cken. 
+    Dies entspricht dem Einlernen (TeachIn) dieses Eckpunktes, im Textfeld erscheint 
+    ein CNC-Befehl <font face="Courier New, Courier, mono" color="#339966">G01 
+    X... Y... Z...</font><font face="Courier New, Courier, mono" size="2" color="#339966"> 
+    </font>mit der Angabe der Koordinaten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Weitere Eckpunkte</b> wie 
+    zuvor anfahren und &quot;einlernen&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit <b>CNC-Maschine ENDE</b> 
+    verlassen Sie die Handsteuerung und befinden sich im Textfeld.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit den <b>Editierfunkionen</b> 
+    k&ouml;nnen Sie das CNC-Programm nachbearbeiten und z.B. durch Befehle zum 
+    Schalten, Eintauchen usw. - und mit einer Angabe zum Vorschub (F) erg&auml;nzen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; <b>Datei/Speichern...</b> 
+    kann das Programm gesichert werden. &Uuml;ber <b>Handsteuerung/Ausf&uuml;hren</b> 
+    kann jederzeit eine Kopie des eingelernten Originalteil gefr&auml;st werden.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Die folgende Bilder 
+  zeigen ein beispielhaftes CNC-Programm, vor - und nach der Editierung:</font></p>
+<p align="left"><img src="1_Bilder/TeachIn_CNCprogr1.gif" width="216" height="121"><br>
+  <img src="1_Bilder/TeachIn_CNCprogr2.gif" width="301" height="259"> </p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma"><b><font face="Arial" size="5"><img src="1_Bilder/TeachIn_CADgesamt.gif" width="300" height="226"><br>
+  </font><font face="Tahoma"><b><font color="#FF00FF" ><font size="5">2</font></font><font face="Tahoma" size="5" color="#FF00FF">.</font></b> 
+  </font> <font face="Arial" size="2" color="#000000"><font face="Tahoma" color="#FF00FF"><b>TeachIn 
+  bei CAD<br>
+  </b></font></font></b></font><font face="Tahoma" size="2" color="#000000">Ab 
+  <i> <b>nccad6</b></i> gibt es neben der <b>Koordinateneingabe</b> &uuml;ber 
+  Maus oder Tastatur noch eine <b>dritte M&ouml;glichkeit</b>: Die <b>&Uuml;bernahme 
+  der momentanen X-Y-Koordinaten von der Maschine</b> in das Zeichenfeld. Dies 
+  gilt ganz allgemein, egal in welcher Zeichenfunktion Sie sich befinden, Sie 
+  &ouml;ffnen die Handsteuerung, fahren eine X-Y-Position an und Dr&uuml;cken 
+  die Taste &lt;Einfg&gt;. Damit wird der Punkt in die Zeichenfl&auml;che so &uuml;bernommen 
+  als h&auml;tten Sie Ihn &uuml;ber Tastatur eingegeben.<br>
+  Auf diese Weise k&ouml;nnen eingespannte Teile zweidimensional &quot;nachgezeichnet&quot; 
+  werden, wie es das Bild oben am Beispiel eines Polygonzuges zeigt. Nacheinander 
+  ist Folgendes zu tun:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">&Ouml;ffnen einer neuen CAC/CAM-Zeichnung 
+    im Men&uuml; <b>Datei/ CAD/CAM Neue Zeichnung</b>. Ein leeres Zeichenfeld 
+    erscheint.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Positionieren des <b>Werkstuck-Nullpunktes 
+    in der Zeichenfl&auml;che</b> (ICON CAM/WERKST&Uuml;CK NULLPUNKT) und zeichnen 
+    eines <b>Rahmens im Layer 9</b>, der die Grenzen des Werkst&uuml;ckes nachbildet.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Aufruf des Zeichnungsteils</b>, 
+    dessen Koordinaten mit Hilfe der Maschine eingegeben werden sollen. Z.B. <b>CAD 
+    Standard/Polygon</b>, wie im Bild oben.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Start der <a href="Handbedienung.htm">Handbedienung</a> 
+    im Men&uuml; <b>Maschine/CNC-Maschine</b>. Das Fenster &quot;Handsteuerung&quot; 
+    wird eingeblendet, falls die Maschine eingeschaltet - und richtig angeschlossen 
+    ist.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Einspannen</b> des <b>Originalteils</b>, 
+    das &quot;nachgefahren&quot; (gescannt) werden soll.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Einstellen des <b>Werkst&uuml;ck-Nullpunktes</b>.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit der<b> Handsteuerung</b> 
+    (Cursortasten) erste Position bzw. ersten <b>Eckpunkt</b> der Kontur anfahren, 
+    dann die Taste <b>&lt;Einfg&gt;</b> (Einf&uuml;gen = Insert) dr&uuml;cken. 
+    Dies entspricht dem Einlernen (TeachIn) dieses Eckpunktes, im Zeichenfeld 
+    &quot;w&auml;chst&quot; das Zeichnungsteil mit.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Weitere Eckpunkte</b> wie 
+    zuvor anfahren und &quot;einlernen&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit <b>CNC-Maschine ENDE</b> 
+    verlassen Sie die Handsteuerung und befinden sich im Textfeld.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit den <b>Bearbeitungsfunkionen</b> 
+    k&ouml;nnen Sie die Zeichnung nachbearbeiten und z.B. die <b>Technologie-Angaben</b> 
+    erg&auml;nzen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; <b>Datei/Speichern...</b> 
+    kann die Zeichnung gesichert werden. &Uuml;ber <b>Handsteuerung/Ausf&uuml;hren</b> 
+    kann jederzeit eine Kopie des eingelernten Originalteil gefr&auml;st werden.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">In gleicher Weise 
+  kann mit jedem anderen Zeichnungsteil verfahren werden. </font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Es ist konsequenterweise 
+  auch m&ouml;glich, die<b> 3 verschiedenen Koordinateneingaben zu mischen</b>, 
+  also z.B. einzelne Punkte, wie den Mittelpunkt eines Kreises, mit der Maschine 
+  einzugeben und den Punkt am Kreis mit der Tastatur.</font></p>
+<p align="left">&nbsp;</p>
+</body>
+
+</html>

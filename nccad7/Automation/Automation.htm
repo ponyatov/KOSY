@@ -1,0 +1,269 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Automation</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Automatisieren 
+  mit KOSY <br>
+  </font></b></i><font face="Tahoma" size="2"><b><font size="1">&Uuml;berarbeitet: 
+  August 2002</font></b></font></p>
+<p><font face="Tahoma" size="2"> Das Koordinatentisch-System KOSY beinhaltet alle 
+  Komponenten, um technische Prozesse automatisch ablaufen zu lassen. Es ist einerseits 
+  eine frei programmierbare Bewegungsmechanik vorhanden, andererseits ist die 
+  Elektronik flexibel und erweiterbar f&uuml;r den Anschluss von Aktoren oder 
+  Sensoren. Die mitgelieferte Software <i><b>nccad</b></i> erm&ouml;glicht es, 
+  die Abl&auml;ufe komfortabel zu programmieren, ohne da&szlig; dazu weitreichende 
+  Programmierkenntnisse erforderlich sind. Im Folgenden werden die Grundlagen 
+  dazu erkl&auml;rt.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="Bilder/EuH_Tauchlackierung.jpg" width="278" height="238"><br>
+  </font> <font face="Tahoma"> <b><font color="#FF00FF" size="5">1. </font> <font color="#FF00FF" size="2"> 
+  Typisches Beispiel: Tauchlackierung</font></b><font size="2"><br>
+  An einem Beispiel l&auml;&szlig;t sich das Prinzip einer technischen Aufgabe 
+  am besten erkl&auml;ren: <br>
+  Hier ist eine bestimmte Anzahl von kleinen Teilen auf einem drehbaren Magazin 
+  befestigt. Die Teile werden in ein Bad getaucht und nach festem Zeitplan nach 
+  oben bewegt. Um eine konstante Eintauchtiefe zu erreichen, wird mit einem ber&uuml;hrungslosen 
+  Abstands-Sensor der Lack-F&uuml;llstand gemessen.<br>
+  In der Planungsphase solcher Aufgaben wird aus der Vielzahl von m&ouml;glichen 
+  Maschinen die richtige ausgew&auml;hlt, hier ist es die Standard-Maschine A4. 
+  Sie wurde kundenspezifisch abgewandelt: Am Z-Tisch ist ein Drehzusatz montiert 
+  (4. Achse), auf dem Y-Tisch befindet sich eine Halterung f&uuml;r die Lackschale 
+  und eine Wasserwaage als Justage-Hilfsmittel.</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font color="#FF00FF" size="5">2. </font> <font color="#FF00FF" size="2"> 
+  Prozess-Ein/Ausg&auml;nge bei den verschiedenen Maschinen</font></b><font size="2"><br>
+  Um Automatisieren zu k&ouml;nnen sind Verbindungen zum technischen Prozess herzustellen: 
+  Es mu&szlig; etwas geschaltet, geregelt oder gesteuert werden und es m&uuml;ssen 
+  Zust&auml;nde erfasst werden. Es stehen dazu folgende Ein/Ausg&auml;nge zur 
+  Verf&uuml;gung:</font></font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Relaiskontakte (1 polige Umschalter) f&uuml;r 
+    maximal 24 Volt/ 1A</font></li>
+  <li><font face="Tahoma" size="2">Digitale Eing&auml;nge, die entweder Spannung- 
+    oder keine Spannung von au&szlig;en erhalten</font></li>
+  <li><font face="Tahoma" size="2">Analoge Ein/Ausg&auml;nge f&uuml;r Gleichspannungen 
+    (nur bei IF4x, KOSY massiv oder Portal)</font></li>
+</ul>
+<p><font face="Tahoma" size="2">Die genauen technischen Daten und die Anzahl der 
+  Ein/Ausg&auml;nge entnehmen Sie bitte dem Handbuch (Technische Daten, Kapitel 
+  11 oder der <br>
+  <a href="../Anhang/Anschlussbelegung.htm">KOSY-Hilfe/Anhang/Anschlussbelegung</a>)</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><font size="2"> </font> </font></p>
+<p><font face="Tahoma"><b><font face="Tahoma"><b><font color="#FF00FF" size="4"><a name="RelAus"></a></font></b></font><font color="#FF00FF" size="5"><img src="Bilder/Autom_RelaisPrinzip.gif" width="283" height="215"><br>
+  3. </font> <font color="#FF00FF" size="2"> Das Prinzip der Relais-Ausg&auml;nge</font></b><font size="2"><br>
+  Die Relais-Umschalter stehen an der Buchse <b>&quot;Zusatzfunktionen&quot;</b> 
+  zur Verf&uuml;gung. Die Anordnung finden Sie unter der <b>KOSY-Hilfe/Anhang/<a href="../Anhang/Anschlussbelegung.htm">Anschlussbelegung</a></b></font><font face="Tahoma" size="2">. 
+  Bitte beachten Sie die Unterschiede zwischen dem Interface 3x (eingebaut in 
+  die Standard-Maschinen) und dem Interface 4x (eingebaut in die Massiv- oder 
+  Portal-Maschinen).<br>
+  Den Anschlu&szlig; eines zu schaltenden Verbrauchers bzw. Elementes (Lampe, 
+  Magnetventil o.&Auml;.) zeigt das obige Bild. Dabei wird die im Netzteil der 
+  Maschine erzeugte Steuerspannung von 24 Volt benutzt. Ihr -Pol geht direkt zum 
+  Verbraucher, der +Pol wird &uuml;ber den gemeinsamen Relaiskontakt und den Arbeitskontakt 
+  zum Verbraucher gef&uuml;hrt. An ihm steht also nur dann Spannung an, wenn der 
+  Relaiskontakt geschaltet wird. Dabei haben Sie mehrere solche Relais-Umschalter 
+  zur freien Verf&uuml;gung, sie sind entsprechend in der Anschlussbelegung gekennzeichnet 
+  und nummeriert.<br>
+  <b>Bei induktiven Verbrauchern</b>, wie Sch&uuml;tzspulen, Magnetventilen, Hubmagneten 
+  u.&Auml;., mu&szlig; entgegen der Polung eine sogenannte <b>Freilaufdiode</b> 
+  geschaltet werden, damit beim Ausschalten die Induktionsspannung kurzgeschlossen 
+  wird (siehe Bild oben, rechter Teil).</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/Autom_Handsteuerung_Direkt.gif" width="339" height="150"><br>
+  3.1</b> Test der Relais-Schaltung in der Handsteuerung</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie in nccad unter<b> Maschine/CNC-Maschine</b> die <b>Handsteuerung</b> 
+  auf und f&uuml;hren dann einen der folgenden Schritte aus:</font></font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Klicken Sie in die Relais-Schaltfl&auml;che 
+    des verwendeten Relais zum Einschalten und nochmals zum Ausschalten.</font></li>
+  <li><font face="Tahoma" size="2">Dr&uuml;cken Sie die Tastenkombination [Strg]+[Fx] 
+    zum Ein- und wieder zum Ausschalten, also z.B. [Strg] + [F2] f&uuml;r Relais 
+    2. </font></li>
+  <li><font face="Tahoma" size="2">Geben Sie zum Einschalten im Feld &quot;Direkt&quot; 
+    den NC-Befehl <font face="Courier New, Courier, mono" color="#339966"><font color="#000000"><b>M10 
+    Ox.1</b></font></font> ein. Zum Ausschalten verwenden Sie den Befehl<font face="Courier New, Courier, mono" color="#339966"> 
+    <b><font color="#000000"> M10 Ox.0</font></b></font>. (x steht f&uuml;r die 
+    verwendete Relais-Nummer. <b>Ox</b> ist eine Buchstabenfolge und steht f&uuml;r 
+    Output Nr.x, im Unterschied zur Zahl Null <b>0</b>).<br>
+    Der NC-Befehl <font face="Courier New, Courier, mono" color="#339966">M10 
+    O2.1</font> schaltet also beispielsweise das Relais 2 ein.</font></li>
+</ul>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>3.2</b> 
+  Programmierung der Relais-Schaltung mit NC-Befehlen</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie in nccad unter <b>Datei/CNC Neues Programm</b> den Texteditor 
+  auf und geben ein CNC-Programm ein. Hierzu ein einfaches Beispiel unter Verwendung 
+  des Relais 2:</font></font></font></p>
+<p><font face="Courier New, Courier, mono" size="2" color="#339966">G00 X10 Y20<br>
+  M10 O2.1<br>
+  G01 Y100 F100<br>
+  M10 O2.0</font></p>
+<p><font face="Tahoma" size="2">Wenn Sie anschlie&szlig;end das Programm ausf&uuml;hren 
+  (Men&uuml; Maschine/CNC-Maschine und Button &quot;Ausf&uuml;hren&quot;), wird 
+  die Maschine zun&auml;chst eine Anfagsposition anfahren, dann Relais 2 einschalten 
+  und bei eingeschaltetem Relais eine Y-Bewegung machen, danach wird das Relais 
+  2 wieder ausgeschaltet.</font></p>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>3.3</b> 
+  Programmierung der Relais-Schaltung mit CAD/CAM</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie in nccad unter <b>Datei/CAD/CAM Neue Zeichnung </b>die Zeichenfunktionen 
+  auf und zeichnen eine Gerade an die Sie die folgende Technologie anh&auml;ngen, 
+  wiederum unter Verwendung des Relais 2:</font></font></font></p>
+<p><font face="Courier New, Courier, mono" size="2">Nr. 1<br>
+  Relais vorher &gt; Feld 2 anklicken, damit es markiert wird<br>
+  Relais nachher &gt; Feld 2 mu&szlig; leer sein<br>
+  Vorschub: 200<br>
+  Werkzeugdurchmasser: 2 (z.B.)</font></p>
+<p><font face="Tahoma" size="2">Wenn Sie anschlie&szlig;end das Programm ausf&uuml;hren 
+  (Men&uuml; Maschine/CNC-Maschine und Button &quot;Ausf&uuml;hren&quot;), wird 
+  die Maschine zun&auml;chst eine Anfagsposition anfahren, dann Relais 2 einschalten 
+  und bei eingeschaltetem Relais die gezeichnete Bewegung machen, danach wird 
+  das Relais 2 wieder ausgeschaltet.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma"><b><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="4"><a name="DigEin"></a></font></b></font></font><font color="#FF00FF" size="5"><img src="Bilder/Autom_DinPrinzip_IF4.gif" width="270" height="220"></font></b></font><b><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="4"><img src="Bilder/Autom_DinPrinzip_IF3.gif" width="231" height="196"></font></b></font></font><font color="#FF00FF" size="5"><br>
+  4. </font> <font color="#FF00FF" size="2"> Das Prinzip der Digitalen Eing&auml;nge</font></b><font size="2"><br>
+  Die Digitalen Eing&auml;nge sind, abh&auml;ngig vom verwendeten Interface, unterschiedlich 
+  ausgef&uuml;hrt: <br>
+  Beim <b>Interface 3x</b> (Standard-Maschinen) wird der Eingangszustand alleine 
+  durch den Schaltzustand am jeweiligen Eingang bestimmt (siehe obiges Bild, rechter 
+  Teil). Geschlossener Schalter bzw. leitender Transistor f&uuml;hren zu einem 
+  0-Zustand, also keine Spannung am Eingang.<br>
+  </font><font face="Tahoma"><font face="Tahoma"><font size="2">Beim <b>Interface 
+  4x</b> (Massiv o. Portal-Maschinen) wird der Eingangszustand durch den Zustand 
+  der Leuchtdiode des Optokopplers bestimmt (siehe obiges Bild, linker Teil). 
+  Liegt eine externe Spannung am jeweiligen Eingang an, sendet die Leuchtdiode 
+  des Optokopplers Licht aus, dies f&uuml;hrt zu einem 1-Zustand. Dazu geh&ouml;rt 
+  entweder ein geschlossener Schalter oder ein gesperrter Transistor. Jeder Optokoppler-Eingang 
+  ist galvanisch vom Interface getrennt, dies wird in professionellen Steuerungen 
+  vorgeschrieben. Es funktioniert allerdings nur, wenn auch eine galvanisch getrennte 
+  externe Spannungsquelle- und die Opto-Masse benutzt werden.</font></font></font></font></font></p>
+<p><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>4.1</b> 
+  Test der Digitalen Eing&auml;nge in der Handsteuerung</font><font face="Tahoma" size="2"><br>
+  Unter der Voraussetzung, da&szlig; Sie &uuml;ber <i><b>nccad6</b></i> verf&uuml;gen, 
+  ist der Vorgang besonders einfach: Dazu rufen Sie <b> Maschine/CNC-Maschine</b> 
+  die <b>Handsteuerung</b> auf und dr&uuml;cken die Funktionstaste <b>[F8]</b>. 
+  Es erscheint ein Fenster in dem alle Eingangszust&auml;nde dargestellt sind. 
+  Wenn Sie einen Eingangszustand &auml;ndern, mu&szlig; dies angezeigt werden. 
+  Zum Verlassen des Fensters klicken Sie auf den entsprechenden Ende-Button, m&ouml;glicherweise 
+  mu&szlig; dies wiederholt werden, sollte keine sofortige Reaktion erfolgen.</font></font></p>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>4.2</b> 
+  Programmierung der Eingangsabfrage mit NC-Befehlen</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie in nccad unter <b>Datei/CNC Neues Programm</b> den Texteditor 
+  auf und geben ein CNC-Programm ein. Hierzu ein einfaches Beispiel unter Verwendung 
+  des Digitalen Eingangs 2:</font></font></font></p>
+<p><font face="Courier New, Courier, mono" size="2" color="#339966">G00 X10 Y20<br>
+  M15 I2.0<br>
+  G01 Y100 F100</font><font face="Courier New, Courier, mono" size="2"><br>
+  </font></p>
+<p><font face="Tahoma" size="2">Wenn Sie anschlie&szlig;end das Programm ausf&uuml;hren 
+  (Men&uuml; Maschine/CNC-Maschine und Button &quot;Ausf&uuml;hren&quot;), wird 
+  die Maschine zun&auml;chst eine Anfagsposition anfahren, dann wartet die Maschine 
+  solange, bis Sie am Eingang 2 den Zustand 0 (keine Spannung) herstellen. Danach 
+  macht Sie eine Y-Bewegung.</font></p>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>4.3</b> 
+  Programmierung der Eingangsabfrage mit CAD/CAM</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie in nccad unter <b>Datei/CAD/CAM Neue Zeichnung</b> die Zeichenfunktionen 
+  auf und zeichnen eine <b>Gerade</b> an die Sie die folgende <b>Technologie</b> 
+  anh&auml;ngen, wiederum unter Verwendung des Digitalen Eingangs 2:</font></font></font></p>
+<p><font face="Courier New, Courier, mono" size="2">Nr. 1<br>
+  Vorschub: 200<br>
+  Werkzeugdurchmesser: 2 (z.B.)<br>
+  Wechsel zur Karteikarte &quot;Steuerung&quot;:<br>
+  Eing&auml;nge vorher geschlossen &gt; Schaltfl&auml;che 2 klicken</font></p>
+<p><font face="Tahoma" size="2">Wenn Sie anschlie&szlig;end das Programm ausf&uuml;hren 
+  (Men&uuml; Maschine/CNC-Maschine und Button &quot;Ausf&uuml;hren&quot;), wird 
+  die Maschine zun&auml;chst eine Anfagsposition anfahren. Dann wartet die Maschine 
+  solange, bis Sie am Eingang 2 den Zustand 0 (keine Spannung) herstellen. Danach 
+  macht Sie die gezeichnete Bewegung. </font></p>
+<p><font face="Tahoma"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>4.4</b> 
+  Texte f&uuml;r Wartemeldung beliebig festlegen</font><font face="Tahoma" size="2"><br>
+  Ist in den Programmlauf eine Eingangsabfrage eingebaut, erscheint beim Ablauf 
+  des Programms eine Wartemeldung, z.B.:</font></font></font></p>
+<p><font face="Courier New, Courier, mono">Warte, bis Eingang 2 geschlossen</font></p>
+<p><font face="Tahoma" size="2">Erst wenn dann am Eingang 2 der Zustand keine 
+  Spannung (Schalter geschlossen bei IF3x) erreicht ist, wird das Programm fortgesetzt.</font></p>
+<p><font face="Tahoma" size="2">Die Wartetexte k&ouml;nnen in einer Textdatei 
+  frei festgelegt werden. Dazu mu&szlig; im Hauptverzeichnis von nccad (z.B. </font><font face="Tahoma"><font face="Courier New, Courier, mono">KOSY5</font></font><font face="Tahoma" size="2">) 
+  die Textdatei </font><font face="Tahoma"><font face="Courier New, Courier, mono">NccadDin.CFG</font></font><font face="Tahoma" size="2"> 
+  angelegt werden. In ihr stehen nacheinander die Wartetexte f&uuml;r die Digitalen 
+  Eing&auml;nge, z.B.:</font></p>
+<p align="left"><font face="Courier New, Courier, mono">START-Taste dr&uuml;cken</font><font face="Tahoma" size="2" color="#000000"> 
+  <font size="1">(Text f&uuml;r Eingang 1 geschlossen bzw. keine Spannung vorhanden)</font><br>
+  </font><font face="Tahoma"> <font face="Courier New, Courier, mono">Werkst&uuml;ck 
+  entfernen</font></font><font face="Tahoma" size="2" color="#000000"> <font size="1">(Text 
+  f&uuml;r Eingang 1 offen bzw. Spannung vorhanden)</font><br>
+  </font><font face="Tahoma"> <font face="Courier New, Courier, mono">xxxxxxxxxxxxxxxxxxx</font></font><font face="Tahoma" size="2" color="#000000"> 
+  <font size="1">(Text f&uuml;r Eingang 2 geschlossen bzw. keine Spannung vorhanden)</font><br>
+  </font><font face="Tahoma"> <font face="Courier New, Courier, mono">xxxxxxxxxxxxxxxxxxx</font></font><font face="Tahoma" size="2" color="#000000"> 
+  <font size="1">(Text f&uuml;r Eingang 2 offen bzw. Spannung vorhanden)</font><br>
+  usw. </font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Jede Textzeile mu&szlig; 
+  mit CRLF abgeschlossen werden, maximal 10 Textzeilen f&uuml;r 5 Digitale Eing&auml;nge 
+  sind denkbar.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="5"><a name="AnaAus"></a>5. 
+  </font> <font color="#FF00FF" size="2"> Analoge Ausg&auml;nge (Spannungsausgabe)</font></b><font size="2"><br>
+  B</font><font face="Tahoma" size="2">ei CNC-Maschinen, die mit IF4x ausger&uuml;stet 
+  sind (KOSYmassiv oder KOSYportal), k&ouml;nnen programmgesteuert Spannungen 
+  ausgegeben werden. Eine weitere Voraussetzung ist <i><b>nccad</b></i> ab Version 
+  <b>6</b>. Folgende Wertebereiche und M&ouml;glichkeiten stehen zur Verf&uuml;gung:</font></font></font></p>
+<ul>
+  <li><font face="Tahoma" size="2">0 .... 10 V, ohne zus&auml;tzlichen Relaiskontakt.</font></li>
+  <li><font face="Tahoma" size="2">0 .... 25 V, wenn das Relais 1 zus&auml;tzlich 
+    geschaltet ist.</font></li>
+</ul>
+<p><font face="Tahoma" size="2">Die Strombelastung der Ausg&auml;nge sollte 10 
+  mA nicht &uuml;berschreiten. Unter <a href="../Anhang/Anschlussbelegung.htm">Anschlussbelegung/IF4</a> 
+  finden Sie die Zuordnung der beiden Ausg&auml;nge.</font></p>
+<p><font face="Tahoma" size="2">Im Zusammenhang mit der <a href="../Grundlagen_Fraesmaschine/Bearbeitungseinheit/Drehstrom_DrehzahlStrg.htm">Drehzahlsteuerung 
+  einer Fr&auml;sspindel</a> finden Sie eine ausf&uuml;hrlich erkl&auml;rte Anwendung.</font></p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>5.1</b> CNC-Programmierung</font><font face="Tahoma" size="2"><br>
+  Hierzu 2 Beispiele:</font></p>
+<p align="left"><font face="Courier New, Courier, mono" size="2" color="#339966">;Ausgabe 
+  0 ... 10 V<br>
+  M10 O1.1 <br>
+  M25 U5</font></p>
+<p align="left"><font face="Courier New, Courier, mono" size="2" color="#339966">;Ausgabe 
+  0 ... 24 V<br>
+  M25 U15.6</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>5.2</b> CAD/CAM-Programmierung</font><font face="Tahoma" size="2" color="#000000"><br>
+  Sobald Sie eine Kontur gezeichnet - und das <b>Technologiefenster</b> ge&ouml;ffnet 
+  haben, finden Sie auf der <b>Karteikarte Steuerung</b> ein Eingabefeld f&uuml;r 
+  Spannung, in das Sie einen entsprechenden Wert zwischen 0 und 25 eingeben. Bei 
+  einem Wert von 12<b>.</b>5 (50%) stehen am 10V-Ausgang ca. 5V und am 24V-Ausgang 
+  ca. 12V (sobald Relais 1 geschaltet ist).</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">In vielen F&auml;llen 
+  empfiehlt sich der Einbau einer <b>Pause vorher</b>, um die Spannungsausgabe 
+  &quot;wirken&quot; zu lassen, bevor die Kontur abgefahren wird.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="5"><a name="AnaEin"></a>6.</font> 
+  <font color="#FF00FF" size="2"> Analoge Eing&auml;nge (Spannungsmessung)</font></b><font size="2"><br>
+  Diese Eing&auml;nge stehen nur in kundenspezifischen Sonderf&auml;llen zur Verf&uuml;gung.</font></font></font></p>
+<p><font face="Tahoma"><font face="Tahoma"><b></b></font></font></p>
+<table width="75%" border="0">
+  <tr>
+    <td width="32%"><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="4"><img src="../Grundlagen_Dosiersystem/Bilder/STIHL_Dosiersystem.jpg" width="200" height="373"></font></b></font></font></td>
+    <td width="68%" valign="bottom" align="left"><font face="Tahoma"><font face="Tahoma"><b><font color="#FF00FF" size="5">7.</font> 
+      <font color="#FF00FF" size="2"> Dosieren</font></b><font size="2"><br>
+      Bei solchen Automatisierungsaufgaben wird die Maschine mit Dosierkomponenten 
+      ausger&uuml;stet, wie Kartuschen, Dosierventile, Pneumatik-Ventile u.&Auml;.m.<br>
+      F&uuml;r die Steuerung werden die Relais-Ausg&auml;nge benutzt, um z.B. 
+      ein Magnetventil zu schalten. Die digitalen Eing&auml;nge dienen z.B. der 
+      Meldung, ob ein Werkst&uuml;ck eingelegt ist.<br>
+      Ab der Version 6 von <i><b>nccad</b></i> stehen eine Reihe von Spezialfunktionen 
+      zur Verf&uuml;gung, die in Projekten nach Bedarf verwendet werden. Unter 
+      <a href="../Grundlagen_Dosiersystem/Dosieren.htm">Dosieren mit KOSY</a> finden Sie n&auml;here Hinweise.<br>
+      Da bei solchen Anwendungen viel KnowHow erforderlich ist, sollten Sie sich 
+      an den Hersteller wenden.</font></font><font face="Tahoma" size="2"><font color="#FF00FF"></font></font></font></td>
+  </tr>
+</table>
+</body>
+
+</html>

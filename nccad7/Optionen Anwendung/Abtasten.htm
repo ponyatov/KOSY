@@ -1,0 +1,476 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Abtasten</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><b><i><font color="#FF00FF" face="Times New Roman" size="5">Plastische Körper 
+  abtasten<br>
+  </font></i></b><b><font color="#000000" face="Tahoma" size="1">&Uuml;berarbeitet: 
+  Oktober 2004<br>
+  </font></b></p>
+<p><font face="Tahoma" size="2">Mit <b><i>nccad </i></b>ab Version5 können 3D-Körper 
+  konstruiert, editiert und bearbeitet werden. In jedem Fall sollten Sie zuvor 
+  ein Einführungsbeispiel zu 2D gemacht haben, bevor Sie sich an die 3D-Bearbeitung 
+  &quot;heranwagen&quot;.</font></p>
+
+<p><font face="Tahoma" size="2">Manchmal ist es
+gewünscht, einen vorhandenen plastischen Körper in das 3D-System zu übernehmen
+und ihn anschließend als Positivform (Originalform) oder als Nagativform (z.B.
+Gießform) aus einem Werkstück-Rohling ausfräsen zu können.<br>
+Es gibt innerhalb des Koordinatentisch-Systems KOSY mehrere Möglichkeiten,
+einen plastischen Körper abzutasten. Sie unterscheiden sich hinsichtlich
+Aufwand, Genauigkeit und Kosten:</font></p>
+
+<ul>
+  <li><font face="Tahoma" size="2">Abtasten mit einem modifizierten Tiefenregler.</font></li>
+  <li><font face="Tahoma" size="2">Abtasten durch Berühren einer leitenden Oberfläche 
+    mit dem Berührungs-Sensor (siehe Bild 1.).</font></li>
+  <li><font face="Tahoma" size="2">Abtasten durch Berühren mit dem Berührungs-Schalter 
+    (siehe Bild 1a.).</font></li>
+  <li><font face="Tahoma" size="2">Abtasten mit Laser-Entfernungsmessung (teuerste, 
+    nicht unbedingt genaueste Möglichkeit).</font></li>
+</ul>
+<p><font face="Tahoma" size="2">Immer wird bei KOSY eine Software-Funktion benutzt, 
+  die auf dem Tiefenregler basiert. Prinzipiell wird dabei der Z-Tisch solange 
+  nach unten gefahren, bis sich ein Schaltzustand ändert oder Z=0 erreicht ist. 
+  Die Auswertung dieser Änderung kann höchst unterschiedlich sein, im Fall der 
+  Abtastung liefert sie in Form der momentanen Z-Position eine Höheninformation 
+  an dieser Stelle.&nbsp;<br>
+  Dies bedeutet, daß eine entsprechende Hardware (Mechanik und Elektronik) vorhanden 
+  sein muß und daß <b><i>nccad</i></b> für die Abtastung vorbereitet werden muß.</font></p>
+<p><font face="Tahoma" size="2"><b>Bitte beachten:<br>
+  </b></font><font face="Tahoma" size="2">Der <b>Anschlu&szlig;</b> und die <b>Art 
+  der Steckverbindung</b> ist <b>abh&auml;ngig</b> von der verwendeten <b>Maschine 
+  und deren Steuerelektronik</b>. Bitte vergewissern Sie sich, da&szlig; beides 
+  zusammen passt, also richtig bestellt- oder geliefert wurde.</font></p>
+<p><font size="2" face="Tahoma">Die in der Steuerelektronik <b>eingebaute Controller-Version</b> 
+  ist <b>entscheidend f&uuml;r den Funktionsumfang</b> und f&uuml;r die Komfortstufe 
+  bei der Anwendung. Es ist m&ouml;glich, da&szlig; die hier dargestellte Anwendung 
+  mit dem eingebauten Controller nicht- oder nur unvollst&auml;ndig realisiert 
+  werden kann, ein Controller-Tausch ist erforderlich.<br>
+  Die <b>Controller-Version</b> <b>kann</b> f&uuml;r R&uuml;ckfragen auf folgende 
+  Weise <b>&uuml;berpr&uuml;ft werden</b>:</font></p>
+<ol>
+  <li><font size="2" face="Tahoma">CNC-Maschine oder Steuerung <b>einschalten</b>.</font></li>
+  <li><font size="2" face="Tahoma">Die <b>Handsteuerung</b> aufrufen und wieder 
+    verlassen (Kommunikation mit der Maschine aufbauen und &uuml;berpr&uuml;fen).</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Hilfe/Datei-Informationen</b> 
+    w&auml;hlen.</font></li>
+  <li><font size="2" face="Tahoma">Controller-Version und R&uuml;ckmeldetext <b>ablesen</b>.</font></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><font face="Tahoma"><b><font color="#FF00FF" face="Verdana" size="5"><img border="0" src="Bilder/Abtasten_Nadel.jpg" width="287" height="329"><br>
+  1. </font><font color="#FF00FF" size="2">Der Berührungs-Sensor</font></b></font><font size="2" face="Verdana"><br>
+  </font><font face="Tahoma" size="2">Er besteht aus einer federnd gelagerten 
+  Prüfspitze, die -elektrisch isoliert- am Z-Tisch montiert wird. Der abzutastende 
+  Originalkörper wird auf eine Unterlage gelegt, die oben eine leitende Fläche 
+  besitzt aber zum Y-Tisch isoliert ist (z.B. eine kupferkaschierte Leiterplatte 
+  mit gefasten Außenkanten). Von der leitenden Fläche der Unterlage (Masse = schwarzes 
+  Kabel) und von der Prüfspitze (Schaltleitung = rotes Kabel) gehen Leitungen 
+  zu einer elektronischen Schaltung, die im SubD-Gehäuse des Anschlußsteckers 
+  untergebracht ist. Dieser Stecker wird in die Buchse <b>Zusatzfunktionen</b> 
+  der CNC-Maschine gesteckt.<br>
+  Sollte der Originalkörper nicht elektrisch leitend sein, muß er zumindest eine 
+  leitende Oberfläche erhalten (Überzug mit Leitfolie oder Aufsprühen von Leitlack, 
+  z.B. EMV-Lack). Dabei muß auch ein Kontakt zur leitenden Fläche der Unterlage 
+  hergestellt werden.<br>
+  Der Berührungs-Sensor liefert sehr genaue Abtastergebnisse, dafür muß unter 
+  Umständen der Nachteil in Kauf genommen werden, daß die Oberfläche leitend sein- 
+  bzw. leitend gemacht werden muß.</font></p>
+<p><font face="Tahoma"><b><font face="Tahoma"><b><font color="#FF00FF" face="Verdana" size="5"><img src="Bilder/Abtasten_MaxLiefer.jpg" width="300" height="200"></font></b></font><font color="#FF00FF" face="Verdana" size="5"><br>
+  1a. </font><font color="#FF00FF" size="2">Der Berührungs-Schalter</font></b></font><font size="2" face="Verdana"><br>
+  </font><font face="Tahoma" size="2">Er besteht aus einer federnd gelagerten 
+  Prüfspitze, die in X,Y und Z-Richtung einen elektrischen Kontakt ausl&ouml;st. 
+  Im Gegensatz zum Ber&uuml;hrungs-Sensor ist also keine leitende Oberfl&auml;che 
+  erforderlich. Der Ber&uuml;hrungsschalter wird zusammen mit einer Halterung 
+  geliefert, die am Z-Tisch montiert wird und, abh&auml;ngig von der Systemausstattung, 
+  individuell zu bestellen ist.</font></p>
+<p><font face="Tahoma" size="2">Der abzutastende Originalkörper wird auf dem Y-Tisch 
+  montiert. Der Ber&uuml;hrungs-Schalter hat zwei 4mm-Buchsen f&uuml;r Bananenstecker 
+  (rot in die isolierte Buchse, schwarz in die unisolierte Buchse). Die 2 Leitungen 
+  gehen zu einer elektronischen Schaltung, die im SubD-Gehäuse des Anschlußsteckers 
+  untergebracht ist. Dieser Stecker wird in die Buchse <b>Zusatzfunktionen</b> 
+  der CNC-Maschine gesteckt.</font></p>
+
+<p>&nbsp;</p>
+
+<p><br>
+  <img src="Bilder/Hilfe60.gif" width="341" height="184"> <br>
+  <b><font color="#FF00FF" face="Verdana" size="5">2. </font><font color="#FF00FF" size="2"
+face="Verdana">Parameter einstellen</font></b><font size="2" face="Verdana"><br>
+  Bitte achten Sie darauf, daß die CNC-Maschine ausgeschaltet ist, bevor Sie Änderungen 
+  an der Einstellung vornehmen.<br>
+  </font><font size="2" face="Tahoma">Im Menü wählen Sie dazu <b>Parameter/KOSY</b>. 
+  Es erscheint ein Fenster, in dem alle Einstellungen für die CNC-Maschine und 
+  die System-Ausstattung vorgenommen werden.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe61.gif" width="164" height="222"><br>
+  <b><font color="#FF00FF" face="Verdana" size="5">3. </font><font
+color="#FF00FF" face="Tahoma" size="2">Abtastung aktivieren</font></b><font size="2" face="Verdana"><br>
+  </font><font face="Tahoma" size="2"> Im Fenster <b>Parameter</b> finden Sie 
+  den Rahmen <b>Optionen</b>. Dort klicken Sie in das Feld <b>Tiefenregler montiert</b> 
+  und dann auf <b>Speichern</b>.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Men_LaufCNC_Ma.gif" width="183" height="99"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">4. </font><font color="#FF00FF" size="2" face="Verdana">CNC-Maschine 
+  aktivieren</font></b><font size="2" face="Verdana"><br>
+  </font></font><font size="2" face="Verdana">Schalten Sie jetzt erst die CNC-Maschine 
+  ein. <font face="Tahoma">Im Menü wählen Sie</font></font><font face="Tahoma" size="2"> 
+  dann</font><font size="2" face="Verdana"> <b>Lauf/CNC-Maschine</b> bzw. CNC-Fr&auml;smaschine 
+  oder Koordinatentisch. Unter der Voraussetzung, daß die CNC-Maschine eingeschaltet- 
+  und ordnungsgemäß in Betrieb genommen wurde, erscheint das Fenster <b>Handsteuerung</b>.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img border="0" src="Bilder/Hilfe62.gif" width="227" height="305"><br>
+<font color="#FF00FF" face="Tahoma" size="5"><b>5.</b></font><font face="Tahoma" size="2"><font color="#FF00FF"
+size="2" face="Verdana">  <b>Handsteuerung</b> </font><br>
+Dieses Fenster ist die Bedienzentrale und
+der Ursprung für die nächstfolgenden Tätigkeiten und Funktionen.</font></p>
+
+<p>&nbsp;</p>
+
+<p><b><font face="Tahoma" size="5" color="#FF00FF">6.</font></b><font face="Tahoma" size="2"><font color="#FF00FF"
+size="2" face="Verdana"> </font><font color="#FF00FF"><b>Originalkörper aufspannen</b></font><br>
+  Durch Drücken der Taste <b>[Entf]</b> fährt der Y-Tisch in die <b>Ausspannposition</b>. 
+  </font></p>
+<p><font face="Tahoma" size="2"><b>F&uuml;r Ber&uuml;hrungs-Sensor gilt:</b> Legen 
+  Sie zunächst die Unterlage mit der leitenden Oberfläche auf den Y-Tisch und 
+  darauf den Originalkörper. Beides zusammen kann beispielsweise durch eine Pratze 
+  (einen Niederhalter) fixiert werden. Die Pratze muß isoliert sein (es genügt 
+  eine isolierende Zwischenlage, Pappe o.Ä.) oder sie muß insgesamt aus einem 
+  nichtleitenden Material bestehen (z.B. Kunststoff oder Holz).</font></p>
+<p><font face="Tahoma" size="2"><b>F&uuml;r Ber&uuml;hrungs-Schalter gilt:</b> 
+  Werkst&uuml;ck auf normale Weise befestigen.</font></p>
+<p>&nbsp;</p>
+
+<p><font face="Tahoma"><b><font color="#FF00FF" size="5">7. </font><font size="2"><font color="#FF00FF">Testen 
+  des Berührungs-Sensors<br>
+  </font></font></b><font size="2">Manchmal, gerade nach der Erstinstallation, 
+  sollte der Sensor getestet werden. Dazu gibt es mehrere Möglichkeiten, eine 
+  davon benutzt die CNC-Befehle zum Abfragen eines digitalen Eingangs der CNC-Maschine.<br>
+  Im Menü <b>Datei</b> wählen Sie <b> Neu/CNC</b> und geben das folgende CNC-Programm 
+  ein:</font></font><font size="2" face="Verdana"><br>
+  </font><font size="2" face="Courier New">Start&nbsp;&nbsp; M15 I1.1<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M30 P30<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G20 Start</font><font size="2" face="Verdana"><br>
+  </font><font face="Tahoma" size="2">Dann wählen Sie <b>Maschine/CNC-Maschine</b> 
+  und in der <b>Handsteuerung </b>anschließend <b>Programm ausführen</b>. Das 
+  Programm wartet nun darauf, daß der digitale Eingang 1 geschaltet wird, in diesem 
+  Fall muß die Prüfspitze oder der Bananenstecker gelöst- und mit der leitenden 
+  Oberfläche des Originalkörpers für kurze Zeit verbunden werden. Das CNC-Programm 
+  muß zur Wartezeit weiterspringen und dann erneut auf ein &quot;Antippen&quot; 
+  der Kontaktfläche warten. Das Programm beenden Sie mit [ESC].</font></p>
+<p><font face="Tahoma" size="2">Eine <b>weitere Testmethode</b> f&uuml;r den Schalter 
+  ist folgende:</font><font face="Tahoma"><font face="Tahoma" size="2"><br>
+  Unter der Voraussetzung, da&szlig; Sie &uuml;ber <i><b>nccad6</b></i> verf&uuml;gen, 
+  ist der Vorgang besonders einfach: Dazu rufen Sie <b> Maschine/CNC-Maschine</b> 
+  die <b>Handsteuerung</b> auf und dr&uuml;cken die Funktionstaste <b>[F8]</b>. 
+  Es erscheint ein Fenster in dem alle Eingangszust&auml;nde dargestellt sind. 
+  Wenn Sie einen Eingangszustand &auml;ndern (Sensor ausl&ouml;sen), mu&szlig; 
+  dies angezeigt werden. Zum Verlassen des Fensters klicken Sie auf den entsprechenden 
+  Ende-Button, m&ouml;glicherweise mu&szlig; dies wiederholt werden, sollte keine 
+  sofortige Reaktion erfolgen.</font></font><font face="Tahoma" size="2"> </font></p>
+
+<p>&nbsp;</p>
+
+<p><b><font face="Tahoma" size="5" color="#FF00FF">8.</font></b><font face="Tahoma" size="2"><font color="#FF00FF"
+size="2" face="Verdana"> </font><b><font color="#FF00FF">Werkstück-Nullpunkt
+für die Abtastung einstellen</font></b><br>
+  Innerhalb des Fensters <b>Handsteuerung</b> sollten Sie zunächst durch Drücken 
+  der Taste <b> [Pos1]</b> einen <b>Referenzlauf</b> machen und dann an den Startpunkt 
+  der Abtastung fahren, am besten in <b>X-Y-Richtung</b> links vor dem Originalkörper. 
+  In <b>Z-Richtung</b> ist die Position anzufahren, bis zu der abgetastet werden 
+  soll. Tiefere Z-Werte werden beim automatischen Abtastvorgang nicht angefahren.<br>
+  <b>Wählen</b> Sie dann eine <b>Speicher-Nummer</b> für diesen Werkstück-Nullpunkt 
+  (WNP) und drücken Sie die Tastenkombination <b> [Strg]+[Ende]</b>, um in der 
+  Positionsanzeige Null zu erhalten.</font></p>
+
+<p><font face="Tahoma" size="2">Die eigentliche Abtastung starten Sie nun durch
+Drücken der Taste <b>[Strg]</b>+<b>[F10]</b> oder <b>[F10].</b></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe51.gif" width="318" height="202" alt="wpe2.gif (7074 Byte)"><br>
+<font face="Tahoma"><b><font color="#FF00FF" size="5">9.</font></b> <font size="2"><font color="#FF00FF"><b>Art der
+Abtastung wählen</b></font><br>
+In diesem Fenster muß die Zone beschrieben werden, die
+abgetastet werden soll. Es gibt folgende Möglichkeiten:
+</font></font></p>
+
+<ul>
+  <li><font size="2" face="Tahoma"><b>Rechteckige Fläche:</b> Der
+    Originalkörper ist von oben gesehen durch ein Rechteck mit den Maßen
+    X=..... und Y=.... begrenzt und innerhalb der Fläche sollen mehrere
+    Schnitte bei der Abtastung gleichmäßig verteilt werden, um ein komplettes
+    Abbild des Originals zu erhalten.</font></li>
+  <li><font size="2" face="Tahoma"><b>Einzelner Schnitt parallel zur X-Achse:</b>
+    Der Originalkörper hat entweder über die ganze Länge in Richtung Y-Achse
+    das gleiche Aussehen sodaß es genügt, einen Schnitt in X-Richtung
+    abzutasten oder er hat an einigen Y-Positionen besonders markante Schnitte,
+    die separat nacheinander abgetastet werden müssen.</font></li>
+  <li><font size="2" face="Tahoma"><b>Einzelner Schnitt parallel zur Y-Achse:</b>
+    Der Originalkörper hat entweder über die ganze Breite in Richtung X-Achse
+    das gleiche Aussehen sodaß es genügt, einen Schnitt in Y-Richtung
+    abzutasten oder er hat an einigen X-Positionen besonders markante Schnitte,
+    die separat nacheinander abgetastet werden müssen.</font></li>
+  <li><font size="2" face="Tahoma"><b>Einzelner Punkt: </b>Der Originalkörper
+    ist durch die Abtastung an frei wählbaren Punkten gut
+    &quot;beschreibbar&quot;. Es entsteht dadurch eine sogenannte
+    &quot;Punktwolke&quot;, die in der Software beim Fräsen zu einem
+    Gesamtprofil sortiert werden muß.</font></li>
+</ul>
+<p><font size="2" face="Tahoma">In den folgenden Bildern wird mit der Wahl <b>Einzelnen
+Schnitt parallel zur X-Achse abtasten</b> gearbeitet.</font></p>
+
+<p><font size="2" face="Tahoma">Durch Drücken der Taste <b>[F9]</b> wird der
+    Abtastvorgang endgültig gestartet. Das erste mal fragt das System nach den
+exakten Abtastbedingungen (siehe nächstes Bild).</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe52.gif" width="258" height="207" alt="wpe4.gif (69425 Byte)"><br>
+<font face="Tahoma"><b><font color="#FF00FF" size="5">10.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF"><b>Abtastbedingungen
+eingeben und Abtastung ausführen</b></font><br>
+In diesem Fenster müssen alle
+Einstellungen entsprechend den Abmessungen und dem Aussehen des Originalkörpers
+vorgenommen werden:</font></font></p>
+
+<ul>
+  <li><font size="2" face="Tahoma"><b>Strecke:</b> Der Originalkörper muß in
+    Richtung des Schnittes grob abgemessen (oder geschätzt) werden. Es
+    empfiehlt sich ein Zuschlag, um am Anfang und am Ende des Schnittes noch die
+    ebene Unterlage zu treffen. Entsprechend ist auch der Startpunkt der
+    Abtastung bzw. für die erste Abtastung der Werkstück-Nullpunkt
+    einzustellen.</font></li>
+  <li><font size="2" face="Tahoma"><b>Auflösung:</b> Sie richtet sich nach der
+    Form der Oberfläche in Richtung des Schnittes und muß umso kleiner sein,
+    je wechselhafter sie ist, je genauer die Abtastung werden soll und je
+    länger der Abtastvorgang dauern darf.</font></li>
+  <li><font size="2" face="Tahoma"><b>Sicherheitsabstand:</b> Beim Abtasten
+    fährt die Abtastnadel hoch, dann in die Abtastposition und anschließend
+    solange abwärts, bis die Oberfläche berührt wird. Beim Fahren in die
+    Abtastposition wird auf den Sicherheitsabstand hochgefahren. Er muß
+    mindestens so groß sein, wie die maximale Höhe des abzutastenden
+    Körpers&nbsp;</font></li>
+</ul>
+
+<p><font face="Tahoma" size="2">Durch Klicken auf <b> Ausführen</b> wird der
+eigentliche Abtastvorgang gestartet.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe53.gif" width="341" height="195" alt="wpe5.gif (65255 Byte)"><br>
+<font face="Tahoma">
+<b><font color="#FF00FF" size="5">11.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Erneute
+Abtastung eines Schnittes an anderer Anfangsposition</b></font><br>
+Ist ein Schnitt entsprechend Bild 9 fertig
+abgetastet, erscheint dieses Fenster, in dem Sie das weitere Vorgehen wählen.
+Für den Fall, daß Sie an einer markanten Stelle einen weiteren Schnitt
+abtasten wollen, ist folgendes zu tun:</font></font></p>
+
+<ul>
+  <li><font size="2" face="Tahoma"><b>OK</b>  klicken oder <b>Eingabetaste</b>
+    drücken, das Fenster <b>Handsteuerung</b>
+    erscheint.</font></li>
+  <li><font size="2" face="Tahoma">Mithilfe der Handsteuerung in X-Y-Richtung
+    den Startpunkt des nächsten Schnittes anfahren, möglichst etwas außerhalb
+    des Originalkörpers über der Unterlage.</font></li>
+  <li><font size="2" face="Tahoma">Drücken der Taste <b>[F9]</b>, der
+    Abtastvorgang wird erneut gestartet.</font></li>
+</ul>
+<p><font size="2" face="Tahoma">Wiederholen Sie diesen Vorgang solange, bis alle
+gewünschten Schnitte abgetastet sind. Wenn Sie am Ende einer Abtastung <b>Speichern</b>
+wählen, wird der Abtastvorgang endgültig abgeschlossen.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Tahoma"><b><font color="#FF00FF" size="5">12.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Speichern
+der Abtastergebnisse</b></font><br>
+Die Ergebnisse der Abtastung sind im Arbeitsspeicher gesammelt und müssen in
+einer Datei &quot;gesichert&quot; werden. Dazu erscheint ein Fenster, in dem Sie
+den Datei-Ordner auswählen- und den Datei-Namen eingeben können. Es entsteht
+eine sogenannte Oberflächendatei für <b><i>nccad</i></b> (ab Version 5) mit
+der Dateierweiterung <b>.TXT</b> (Textdatei). Sie kann anschließend in <b><i>nccad</i></b>
+importiert, editiert und dargestellt werden.</font></font></p>
+
+<p><font size="2" face="Tahoma">Damit ist der eigentliche Abtastvorgang zu Ende.
+Die folgenden Schritte verfolgen das Ziel, den dreidimensionalen Körper
+darzustellen, zu überarbeiten und auszufräsen.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe55.gif" width="381" height="383"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">13.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Importieren 
+  der Oberflächen-Datei</b></font><br>
+  Soll eine Oberflächendatei in <b><i> nccad</i></b> importiert werden, ist nacheinander 
+  folgendes zu tun: </font></font></p>
+
+<ul>
+  <li><font size="2" face="Tahoma">Öffnen Sie zunächst eine neue CAD-Datei
+    über des Menü <b>Datei/Neu/CAD</b> und klicken Sie nacheinander die Icons <b>Technologie
+    sonstige</b>&nbsp; (links oben in der Icon-Hauptleiste) und dann <b>Werkstück-Nullpunkt</b>.
+    Legen Sie diesen in den freien Raum der Zeichenfläche, um Platz für die
+    Darstellung der plastischen Zone zu haben. Der zusätzliche Import einer
+    Oberflächen-Datei kann aber auch in einer zuvor geladenen CAD-Zeichnung
+    erfolgen.</font></li>
+  <li><font size="2" face="Tahoma">Wählen Sie über Menü <b>Datei/Import/Oberflächen-Datei</b>
+    (siehe Bild oben) die gewünschte Datei aus. Danach erscheint ein Fenster,
+    in dem Sie Importbedingungen festlegen.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="Bilder/Hilfe56.gif" width="334" height="181"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">14.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Importbedingungen 
+  wählen</b></font><br>
+  Hier gibt es sehr unterschiedliche Möglichkeiten:<br>
+  Die Datei kann importiert werden als.....</font></font></p>
+<ul>
+  <li><font face="Tahoma" size="2"><b>Gerade:</b> Die Verbindungen zwischen den
+Abtastpunkten eines Schnittes werden linear mit Geradenstücken von einer
+Länge entsprechend der Auflösung hergestellt.</font></li>
+  <li><font face="Tahoma" size="2"><b>
+Polygon:</b> Die Abtastpunkte eines Schnittes werden als Stützpunkte
+eines Polygonzuges betrachtet. Wenn Sie eine Nachbearbeitung der Schnitte
+beabsichtigen, ist dies die geeignete Importbedingung.</font></li>
+  <li><font face="Tahoma" size="2"><b>
+Kurve interpolierend oder approximierend:</b> Die Abtastpunkte eines Schnittes
+werden als Stützpolygon einer Kurve betrachtet.<b><br>
+    </b> </font></li>
+</ul>
+<p><font size="2" face="Tahoma">Zusätzlich können Umrechnungsmethoden gewählt
+werden.....</font></p>
+<ul>
+  <li><font size="2" face="Tahoma"><b>Punkte optimieren:</b> Damit sollen sog. &quot;Ausreißer&quot; korrigiert
+werden (bitte diese Funktion testen).</font></li>
+  <li><font size="2" face="Tahoma"><b>
+Negativform:</b> Die Originalform wird umgekehrt. Aus einem Originalkörper wird
+beispielsweise eine dazu passende Gießform.</font></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe57.gif" width="351" height="233"><br>
+  <font face="Tahoma"><b> <font color="#FF00FF" size="5">15.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Abgetasteter 
+  Körper in der Draufsicht</b></font><br>
+  Für den Fall, daß Sie nur einen Schnitt abgetastet haben, werden Sie gefragt, 
+  wie lang die plastische Zone sein soll. Über diese Länge wird dann der eine 
+  abgetastete Schnitt linear interpoliert.<br>
+  Es erscheint, beim Werkstück-Nullpunkt beginnend, die plastische Zone in der 
+  Draufsicht. Wenn Sie über <b> Ausschnitt wählen</b> eine vergrößerte Darstellung 
+  einstellen, können Sie die Markierungen für die abgetasteten Schnitte erkennen.</font></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe58.gif" width="200" height="91"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">16.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Schnitte 
+  bearbeiten</b></font><br>
+  Für eine Schnittbearbeitung und Darstellung der dreidimensionalen Abtastergebnisse 
+  wählen Sie zunächst das Icon <b>Schnitt bearbeiten</b> im unteren Teil der Icon-Hauptleiste. 
+  Danach erscheint das Fadenkreuz mit Suchfenster, das Sie am linken Ende eines 
+  Schnittes positionieren und kurz auf die Bestätigung warten, daß ein Schnitt 
+  an dieser Stelle gefunden wurde. Mit einem Klick öffnen Sie die Darstellung 
+  dieses gewählten Schnittes in einem separaten Fenster.</font></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe59.gif" width="418" height="596" alt="wpeC.gif (67718 Byte)"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">17.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>3D-Funktionen 
+  in <i>nccad</i></b></font><br>
+Im Fenster <b>Schnitt-Ansicht</b> haben Sie eine Reihe von Möglichkeiten, den
+Schnitt zu betrachten und zu bearbeiten. Sie entsprechen im Wesentlichen den
+Möglichkeiten, die auch beim 2D-CAD zur Verfügung stehen.<br>
+  In der Icon-Gruppe <b>Darstellung </b>oder<b> CAD 3D</b> befindet sich das Icon 
+  <b>3D-Ansicht</b>, mit ihm wird das Fenster <b>3D-Ansicht</b> geöffnet (siehe 
+  oberen Teil des Bildes). </font></font></p>
+
+<p><font size="2" face="Tahoma">Beide Fenster ermöglichen Ihnen die Vorbereitung 
+  der plastischen Zone zum anschließenden Bearbeiten. Wenn Sie mehr darüber wissen 
+  wollen, sollten Sie die Hilfe zum Thema <a href="../Grundlagen_Fraesmaschine/3D%20Anwendungen/CAD_3DKonstruktion.htm">3D-Konstruktion</a> 
+  aufrufen.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="Bilder/Hilfe510.gif" width="273" height="476"><br>
+  <font face="Tahoma"> <b><font color="#FF00FF" size="5">18.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>3D-Bearbeitungsdaten 
+  (Technologie) zuordnen</b></font><br>
+  Nachdem Sie die beiden Fenster zu 3D geschlossen haben, wählen Sie in der Icon-Hauptleiste 
+  <b>Technologie</b> und positionieren das Suchfenster in eine Ecke der plastischen 
+  Zone, die bearbeitet werden soll. Im Technologiefenster geben Sie dann beispielsweise 
+  die im Bild gezeigten Werte an, um eine einfache Bearbeitung zu erreichen und 
+  auf schnellen Weg ein Musterteil zu erhalten.</font></font></p>
+
+<p><font size="2" face="Tahoma">Unter <b>Bearbeitung</b> gibt es zwar einige
+Wahlmöglichkeiten, aber es gilt folgende Einschränkung:<br>
+<b>Senkrecht zur X-Achse</b> funktioniert nur, wenn lediglich <b>ein Schnitt</b>
+vorhanden ist.<br>
+</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Tahoma"><b><font color="#FF00FF" size="5">19.</font></b><font color="#FF00FF"
+size="2" face="Verdana"> </font><font size="2"><font color="#FF00FF" face="Verdana"><b>Die
+Bearbeitung</b></font><br>
+In jedem Fall sollten Sie zuvor ein Einführungsbeispiel zu 2D gemacht haben,
+bevor Sie sich an die 3D-Bearbeitung &quot;heranwagen&quot;. Haben Sie also
+einige Erfahrung, ist das Vorgehen gleich, wie bei der 2D-Bearbeitung:&nbsp; </font></font></p>
+
+<ul>
+  <li><font size="2" face="Tahoma">Werkstück-Rohling und Fräser einspannen</font></li>
+  <li><font size="2" face="Tahoma">Werkstück-Nullpunkt einstellen (oder
+    überprüfen)</font></li>
+  <li><font size="2" face="Tahoma">Programmausführung wählen, Start-Check
+    machen </font></li>
+  <li><font size="2" face="Tahoma">Bearbeitung überwachen</font></li>
+</ul>
+
+<p>&nbsp;</p>
+</body>
+</html>

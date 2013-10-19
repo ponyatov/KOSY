@@ -1,0 +1,396 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Dreh-Zyklen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Arial" size="1" color="#000000"><b><font face="Times New Roman" size="6" color="#FF00FF"><i><font size="3">Die 
+  &quot;Intelligente Drehbank&quot; <br>
+  </font> Dreh-Zyklen <font size="2">in CAD/CAM und CNC</font></i></font> <br>
+  <font face="Tahoma">Erstellt: Februar 2004<br>
+  &Uuml;berarbeitet: September 2004</font></b></font></p>
+<p align="left"><font face="Arial" size="2" color="#000000">Mit einer weiterentwickelten 
+  Version von <b><i>nccad </i></b>wird die altbekannte Drehbank sehr komfortabel 
+  unterst&uuml;tzt und zu einer richtigen CNC-Drehmaschine. Die Voraussetzungen 
+  f&uuml;r den vollen Funktionsumfang sind:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Drehbank</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">2 Achsen mit 
+        Schrittmotor-Antrieb.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen:</b> 
+        Encoder mit min. 1000 Imp/Umdrehung zur Synchronisierung.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left">Zum Konturdrehen: 
+        Spielfreie Spindelantriebe.</font></li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Elektronik</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">KOSY-Steuerung 
+        f&uuml;r 2 Achsen mit:</font>
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Microcontroller 
+            ab 3/2003, Version ab 2.20. Die Version ist kontrollierbar in <i><b>nccad</b></i> 
+            &uuml;ber <b>Hilfe/Datei-Informationen</b>. Der Text &quot;Variable 
+            Endschalter&quot; und &quot;externer Takt U-Achse&quot; mu&szlig; 
+            erscheinen.</font></li>
+        </ul>
+      </li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen</b> 
+        ist eine Anpassung des verwendeten Encoders erforderlich:<br>
+        Fragen Sie hierzu Ihren Lieferanten (bitte keine unerlabten Eingriffe 
+        in die Elektronik).</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Modifizierter 
+            Anschluss f&uuml;r U-Achse mit Encoder-Verbindung.</font></li>
+          <li><font color="#000000" size="2" face="Arial">Passende Interface-Platine 
+            mit Anpassung der Optokoppler an den verwendeten Encoder.</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Software</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b><i>nccad 
+        7</i></b> , ab Rev.0.0x., <b>ab Sept. 2004</b></font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Arial">Fragen Sie im Zweifelsfall 
+  Ihren Lieferanten zu den Ausstattungsdetails, zum Stand der Entwicklung und 
+  zu den Einsatzm&ouml;glichkeiten.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Vorkenntnisse im 
+  Bereich CAD/CAM und CNC sind erforderlich.</b> Eine g&uuml;nstige Voraussetzung 
+  ist die vorangegangene Arbeit mit dem Koordinatentisch-System KOSY. Andernfalls 
+  empfehlen wir eine Schulung anl&auml;&szlig;lich der &Uuml;bergabe des Systems.</font></p>
+<p align="left"><font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma" size="6"><font size="5"><br>
+  1.</font></font><font face="Tahoma"> Grunds&auml;tzliches<br>
+  </font></b></font><font face="Arial" size="2" color="#000000">In <i><b>nccad</b></i> 
+  (ab Version 7) k&ouml;nnen Drehzyklen auf 2 verschiedene Arten entstehen:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left">Durch ein entsprechendes 
+    Zeichnungsteil mit zugeh&ouml;riger Technologie (CAD/CAM), Beispiel siehe 
+    2.1.</font></li>
+  <li><font color="#000000" size="2" face="Arial" align="left">Durch einen speziellen 
+    NC-Zyklus-Befehl mit den zugeh&ouml;rigen Parameter-Angaben, Beispiel siehe 
+    2.2.</font></li>
+</ul>
+<p align="left"><font face="Arial" size="2" color="#000000">Ein NC-Zyklus <b>fasst</b> 
+  eine <b>Anzahl von Einzelschritten- bzw. Einzelbefehlen</b> f&uuml;r eine spezielle 
+  Werkst&uuml;ck-Bearbeitung <b>zu einer einzigen Befehlszeile zusammen</b>. Es 
+  ist also ein Macrobefehl, der die Programmierung vereinfachen soll. Das Wort 
+  &quot;soll&quot; hat hier durchaus seine Berechtigung, denn die Befehle sind 
+  stark codiert, oft schwer zu verstehen und innerhalb der weltweit g&uuml;ltigen 
+  Norm DIN/ISO 66025 nicht eindeutig festgelegt. Jeder Maschinenhersteller hat 
+  in dieser sog. <b>80er-Gruppe</b> der CNC-Befehle v&ouml;llige Freiheit und 
+  nutzt diese auch aus. Der Zyklus <font color="#339966" face="Courier New, Courier, mono">G85</font> 
+  bedeutet z.B. beim einen Maschinenhersteller &quot;Langloch-Fr&auml;sen&quot; 
+  beim anderen &quot;Ein-/Abstechen&quot;.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial">Wir integrieren in 
+  <i> <b>nccad</b></i> ab Version 7 die wichtigsten Bearbeitungs-Zyklen und halten 
+  uns dabei weitgehend an die <b>Ver&ouml;ffentlichung in</b> den branchen&uuml;blichen 
+  <b>Tabellenb&uuml;chern</b> zu...</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial">... <b>Befehlscodierung 
+  f&uuml;r PAL-Drehmaschinen</b>: <font color="#339966" face="Courier New, Courier, mono"><b>G81</b></font>-<font color="#339966" face="Courier New, Courier, mono"><b>G84</b></font></font></p>
+<p align="left"><font color="#000000" size="2" face="Arial">... <b>Befehlscodierung 
+  f&uuml;r PAL-Fr&auml;smaschinen</b>: <font color="#339966" face="Courier New, Courier, mono"><b>G85</b></font>-<font color="#339966" face="Courier New, Courier, mono"><b>G89</b></font></font></p>
+<p align="left"><font color="#000000" size="2" face="Arial">Da aber die Nummern 
+  f&uuml;r die Vielzahl der gew&uuml;nschten Zyklen nicht ausreicht, haben wir 
+  vorsorglich f&uuml;r den gedachten Endausbau den <b>Nummernbereich</b> nach 
+  folgendem Schema <b>erweitert</b>:</font></p>
+<blockquote>
+  <p align="left"><font color="#000000" size="2" face="Arial">Mit einem <b>Befehl 
+    im CNC-Programmkopf</b> wird der <b>Maschinentyp</b> genannt:</font></p>
+  <ul>
+    <li><font color="#339966" size="2" face="Courier New, Courier, mono" align="left"><b>G26</b></font><font color="#000000" size="2" face="Arial"> 
+      CNC-Drehmaschine</font></li>
+    <li><font color="#339966" size="2" face="Courier New, Courier, mono" align="left"><b>G27</b></font><font color="#000000" size="2" face="Arial"> 
+      CNC-Fr&auml;smaschine</font></li>
+    <li><font color="#339966" size="2" face="Courier New, Courier, mono" align="left"><b>G28</b></font><font color="#000000" size="2" face="Arial"> 
+      CNC-Bohrmaschine</font></li>
+    <li><font color="#339966" size="2" face="Courier New, Courier, mono" align="left"><b>G29</b></font><font color="#000000" size="2" face="Arial"> 
+      frei</font></li>
+  </ul>
+  <p align="left"><font color="#000000" size="2" face="Arial"><b>Zusammen mit 
+    dieser Information kann &uuml;ber die PAL-Zuordnung hinaus die Anzahl der 
+    m&ouml;glichen Befehle erweitert werden</b>. F&uuml;r Drehmaschinen ab <font color="#339966" face="Courier New, Courier, mono">G84</font> 
+    nach oben bis <font color="#339966" face="Courier New, Courier, mono">G89</font>, 
+    f&uuml;r Fr&auml;smaschinen ab <font color="#339966" face="Courier New, Courier, mono">G85</font> 
+    nach unten bis <font color="#339966" face="Courier New, Courier, mono">G81</font>.<br>
+    <b>Derzeit</b>, im September 2004, werden diese M&ouml;glichkeiten noch <b>nicht 
+    genutzt</b>.</font></p>
+</blockquote>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b>1.1</b> Generierung 
+  von Zyklen aus CAD/CAM<br>
+  </font><font color="#000000" size="2" face="Arial">Die <b>Ausgabe </b>von CNC-Programmen 
+  aus CAD/CAM wir <b>vom</b> sog. <b>Postprozessor</b> <b>gesteuert</b>. Um diesen 
+  universell zu halten, werden meist keine komplizierten Zyklen f&uuml;r bestimmte 
+  Maschinen bzw. Hersteller generiert, sondern eine entsprechende Anzahl von einfachen 
+  Befehlen <font color="#339966" face="Courier New, Courier, mono">G00</font>, 
+  <font color="#339966" face="Courier New, Courier, mono">G01</font>, <font color="#339966" face="Courier New, Courier, mono">G02</font> 
+  und <font color="#339966" face="Courier New, Courier, mono">G03</font> so aneinander 
+  gereiht, da&szlig; dieselbe Bearbeitung entsteht. Diese 4 einfachen Befehle 
+  gibt es mit gleicher Bedeutung bei jeder CNC-Maschine, sie stellen den &quot;kleinsten 
+  gemeinsamen Nenner&quot; dar. Es ist ohnehin nicht sinnvoll ein solches CNC-Programm 
+  zu &auml;ndern oder zu analysieren. Es mu&szlig; lediglich an der Maschine &quot;ablaufen&quot;.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial">Aus dem o.g. Grund 
+  sind- oder werden in <i><b>nccad </b></i>nur einige wenige CNC-Zyklus-Befehle 
+  realisiert bzw. aus CAD/CAM generiert, dies vornehmlich nur zu Lern- und Lehrzwecken 
+  (Ausbildungs-Anwendungen).</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma" size="6"><font size="5">2.</font></font><font face="Tahoma"> 
+  Prinzip-Beispiel<br>
+  </font></b></font><font face="Arial" size="2" color="#000000">Es soll <b>den 
+  selben Bearbeitungsvorgang</b> in <b>CAD/CAM oder in CNC</b> zeigen. Als Beispiel 
+  wird das <b>Ein-/Abstechen</b> gew&auml;hlt.</font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b>2.1</b> Ein-/Abstechen 
+  mit CAD/CAM<br>
+  </font><font color="#000000" size="2" face="Arial">Die folgende Bilderreihe 
+  zeigt beispielhaft die <b>Reihenfolge der T&auml;tigkeiten</b>:</font></p>
+<table width="600" border="1" cellspacing="2" cellpadding="2">
+  <tr>
+    <td width="197"><img src="/Anhang/Bilder/DrehZykl_AbstechZeichng.gif" width="200" height="200"></td>
+    <td width="383"><p align="left"><font color="#000000" size="2" face="Arial"><b>1.</b> 
+        <br>
+        Ein spezielles Zeichnugsteil wird in der Icon-Gruppe Drehen ausgew&auml;hlt 
+        und an der entsprechenden Stelle am Drehteil eingezeichnet. Am Konstruktionspunkt 
+        mu&szlig; die Technologie &quot;angeh&auml;ngt&quot; werden. </font></p></td>
+  </tr>
+  <tr>
+    <td><img src="/Anhang/Bilder/DrehZykl_AbstechTechnOben.gif" width="200" height="200"></td>
+    <td><p align="left"><font color="#000000" size="2" face="Arial"><b>2.</b> 
+        <br>
+        F&uuml;r das gew&auml;hlte Zeichnungteil zum Drehen steht eine zugeh&ouml;rige 
+        Bearbeitung- und einige M&ouml;glichkeiten zur Bahnkorrektur zur Verf&uuml;gung.</font></p></td>
+  </tr>
+  <tr>
+    <td><img src="/Anhang/Bilder/DrehZykl_AbstechTechnUnten.gif" width="200" height="100"></td>
+    <td><p align="left"><font color="#000000" size="2" face="Arial"><b>3.</b> 
+        <br>
+        Detailierte Angaben im Technologie-Fenster sind&nbsp; sorgf&auml;ltig 
+        auszuw&auml;hlen. </font></p></td>
+  </tr>
+  <tr>
+    <td><img src="/Anhang/Bilder/DrehZykl_AbstechSimul.gif" width="200" height="200"></td>
+    <td><p align="left"><font color="#000000" size="2" face="Arial"><b>4.</b> 
+        <br>
+        Die Simulation kann die Wege zeigen, aber nicht die Qualit&auml;t dieser 
+        Bearbeitung. </font></p></td>
+  </tr>
+</table>
+<p align="left"><font color="#000000" size="2" face="Arial"></font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b>2.2</b> Ein-/Abstechen 
+  mit NC-Befehl<br>
+  </font><font color="#000000" size="2" face="Arial">Der Zyklus-Befehl wird, logisch 
+  richtig, <b>in ein CNC-Programm eingebunden</b>. Das Wissen &uuml;ber die Parameter-Angaben 
+  mu&szlig; bekannt sein. Ein Beispiel:</font></p>
+<table width="600" border="1" cellspacing="2" cellpadding="2">
+  <tr>
+    <td width="251"><p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">....</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono"><b>(G26&nbsp;&nbsp;&nbsp; 
+        <font size="1">;Umschaltung CNC-Drehmaschine</font>) </b></font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">....</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G00 
+        X22</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G00 
+        Z-27</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono"><b>G85 
+        X0 Z5 D0.5 Q1 H2 L0 F20 K2</b></font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G00 
+        X30</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G00 
+        Z100</font></p>
+      <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">....</font></p>
+</td>
+    <td width="329"><p align="left"><font color="#000000" size="2" face="Arial">X 
+        = Endwert in X (0 = Mitte = Abstechen<br>
+        Z = Breite des Ein-/Abstechkanals<br>
+        D = Teilzustellung<br>
+        Q = R&uuml;ckstellma&szlig; (mu&szlig; gr&ouml;&szlig;er Teilzust. D sein)<br>
+        H = Sicherheitsabstand<br>
+        L = Arbeitsrichtung (0 = R nach L, 1 = L nach R)<br>
+        F = Vorschub in ca. 0,1 mm/sec<br>
+        K = Werkzeugbreite</font></p>
+      </td>
+  </tr>
+</table>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma" size="6"><font size="5">3.</font></font><font face="Tahoma"> 
+  Zusammenstellung aller verf&uuml;gbaren Drehzyklen<br>
+  </font></b></font><font face="Arial" size="2" color="#000000">Dazu die nachfolgende 
+  Tabelle. Sie zeigt immer die Umsetzung in CAD/CAM mit der Technologie-Zuordnung 
+  und darunter - falls realisiert - den zugeh&ouml;rigen NC-Befehl mit derselben 
+  Wirkung. Ob aus einem CAD/CAM-Zyklus automatisch ein NC-Befehl beim <a href="/ImportExport/ImpExp_CncExport.htm">CNC-Export</a> 
+  (Simulation mit CNC-Export) entsteht, wird in der Tabelle angegeben.</font></p>
+<table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td><font color="#FF00FF" size="2" face="Tahoma"><b><a name="DrehenBohrzyklus"></a>Bohrzyklus</b></font></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="77"> <table width="679" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td width="278"><p><font color="#339966" size="5" face="Courier New, Courier, mono"><b>G..</b></font></p>
+            <p><font color="#339966" size="2" face="Courier New, Courier, mono">G...</font></p>
+            <p><font color="#000000" size="1" face="Courier New, Courier, mono">z.B.:</font><font color="#339966" size="1" face="Courier New, Courier, mono"> 
+              G..</font></p></td>
+          <td width="387"><font color="#000000" size="2" face="Arial">X = </font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p><table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td height="22"><font color="#FF00FF" size="2" face="Tahoma"><b><a name="Aussendrehzyklus"></a>Drehkontur 
+      aussen (Au&szlig;endrehzyklus)</b></font></td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="684" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="458"><img src="/Anhang/Bilder/DrehZykl_Aussen.gif" width="458" height="250"></td>
+          <td width="212"><p align="left"><font color="#000000" size="2" face="Tahoma">Die 
+              Fertigkontur wird gezeichnet, ein An- und Abfahren kann ber&uuml;cksichtigt 
+              werden. Die Kontur darf&nbsp; nicht im negativen Bereich verlaufen.</font></p>
+            <p align="left"><font color="#000000" size="2" face="Tahoma">Im Technologiefenster 
+              ist unter Bearbeitung die entsprechende und zugeh&ouml;rige Auswahl 
+              zu treffen.</font></p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="77"> <table width="679" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td width="327"><p><font color="#000000" size="1" face="Arial">Ein CNC-Zyklus 
+              steht zur Zeit nicht zur Verf&uuml;gung.<br>
+              Derzeit<b> keine</b> automatische Befehlsgenerierung beim <b>CNC-Export!</b></font></p>
+            <p><font color="#339966" size="5" face="Courier New, Courier, mono"><b>G..</b></font></p>
+            <p><font color="#339966" size="2" face="Courier New, Courier, mono">G...</font></p>
+            <p><font color="#000000" size="1" face="Courier New, Courier, mono">z.B.:</font><font color="#339966" size="1" face="Courier New, Courier, mono"> 
+              G..</font></p></td>
+          <td width="338"><font color="#000000" size="2" face="Arial">X = </font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p><table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td><font color="#FF00FF" size="2" face="Tahoma"><b><a name="Innendrehzyklus"></a>Drehkontur 
+      innen (Innendrehzyklus)</b></font></td>
+  </tr>
+  <tr> 
+    <td><table width="684" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="425"><img src="/Anhang/Bilder/DrehZykl_Innen.gif" width="425" height="277"></td>
+          <td width="240"><p align="left"><font color="#000000" size="2" face="Tahoma">Beim 
+              Start der Funktion unter <b>Drehen-Neue Zeichnung</b> mu&szlig; 
+              ein Innendurchmesser f&uuml;r die Bohrung angegeben werden.</font></p>
+            <p align="left"><font color="#000000" size="2" face="Tahoma">Die Fertigkontur 
+              wird unter Ber&uuml;cksichtigung der Bohrung (Innendurchmesser) 
+              gezeichnet, ein An- und Abfahren kann ber&uuml;cksichtigt werden. 
+              Die Kontur darf&nbsp;keine Koordinaten beinhalten, die der Innendrehmei&szlig;el 
+              nicht erreichen kann.</font></p>
+            <p align="left"><font color="#000000" size="2" face="Tahoma">Im Technologiefenster 
+              ist unter Bearbeitung die entsprechende und zugeh&ouml;rige Auswahl 
+              zu treffen.</font></p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="77"> <table width="679" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td width="318"><p><font color="#000000" size="1" face="Arial">Ein CNC-Zyklus 
+              steht zur Zeit nicht zur Verf&uuml;gung.<br>
+              Derzeit<b> keine</b> automatische Befehlsgenerierung beim <b>CNC-Export!</b></font></p>
+            <p><font color="#339966" size="5" face="Courier New, Courier, mono"><b>G..</b></font></p>
+            <p><font color="#339966" size="2" face="Courier New, Courier, mono">G...</font></p>
+            <p><font color="#000000" size="1" face="Courier New, Courier, mono">z.B.:</font><font color="#339966" size="1" face="Courier New, Courier, mono"> 
+              G..</font></p></td>
+          <td width="347"><font color="#000000" size="2" face="Arial">X = </font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="left">&nbsp;</p>
+<table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr>
+    <td><font color="#FF00FF" size="2" face="Tahoma"><b><a name="G85d"></a><a name="Abstechzyklus"></a>Ein-/Abstechzyklus</b></font></td>
+  </tr>
+  <tr>
+    <td height="207"> 
+      <p><img src="/Anhang/Bilder/DrehZykl_Abstech_680_170.gif" width="680" height="170"></p>
+      <p><font color="#000000" size="1" face="Arial">Derzeit<b> keine</b> automatische 
+        Befehlsgenerierung beim <b>CNC-Export!</b></font></p></td>
+  </tr>
+  <tr>
+    <td height="149"> 
+      <table width="679" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="278" height="136">
+<p><font color="#339966" size="5" face="Courier New, Courier, mono"><b>G85</b></font></p>
+            <p><font color="#339966" size="2" face="Courier New, Courier, mono">G85 
+              Xn Zn Dn Qn Hn Ln Fn Kn</font></p>
+            <p><font color="#000000" size="1" face="Courier New, Courier, mono">z.B.:</font><font color="#339966" size="1" face="Courier New, Courier, mono"> 
+              <br>
+              (G26)<br>
+              G85 X0 Z5 D0.5 Q1 H2 L0 F20 K2</font></p>
+            </td>
+          <td width="387"><font color="#000000" size="2" face="Arial">X = Endwert 
+            in X (0 = Mitte = Abstechen)<br>
+            Z = Breite des Ein-/Abstechkanals<br>
+            D = Teilzustellung<br>
+            Q = R&uuml;ckstellma&szlig; (mu&szlig; gr&ouml;&szlig;er Teilzust. 
+            D sein)<br>
+            H = Sicherheitsabstand<br>
+            L = Arbeitsrichtung (0 = R nach L, 1 = L nach R)<br>
+            F = Vorschub in ca. 0,1 mm/sec<br>
+            K = Werkzeugbreite</font></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td><font color="#FF00FF" size="2" face="Tahoma"><b><a name="Gewindedrehzyklus"></a>Gewindedrehzyklus</b></font></td>
+  </tr>
+  <tr> 
+    <td><table width="684" border="0" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="375"><img src="/Anhang/Bilder/DrehZykl_Gewinde.gif" width="375" height="316"></td>
+          <td width="295"><p align="left"><font color="#000000" size="2" face="Tahoma">Die 
+              Gewindestrecke wird am Gewinde-Nennma&szlig; als Gerade gezeichnet, 
+              ein An- und Abfahren kann ber&uuml;cksichtigt werden. </font></p>
+            <p align="left"><font color="#000000" size="2" face="Tahoma">Im Technologiefenster 
+              ist unter Bearbeitung die entsprechende und zugeh&ouml;rige Auswahl 
+              zu treffen.<br>
+              Danach ist das Gewinde auszuw&auml;hlen, bei Normgewinden ergeben 
+              sich die meisten Daten automatisch.</font></p>
+            <p align="left"><font color="#000000" size="2" face="Tahoma">Mehr 
+              erfahren Sie unter <a href="/Grundlagen_Drehmaschine/Spezial/Drehbank_Gewinde.htm">Spezial/Gewindedrehen</a>.</font></p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="77"> <table width="679" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td width="338"><p><font color="#000000" size="1" face="Arial">Ein CNC-Zyklus 
+              steht zur Zeit nicht zur Verf&uuml;gung.<br>
+              Derzeit<b> keine</b> automatische Befehlsgenerierung beim <b>CNC-Export!</b></font></p>
+            <p><font color="#339966" size="5" face="Courier New, Courier, mono"><b>G..</b></font></p>
+            <p><font color="#339966" size="2" face="Courier New, Courier, mono">G...</font></p>
+            <p><font color="#000000" size="1" face="Courier New, Courier, mono">z.B.:</font><font color="#339966" size="1" face="Courier New, Courier, mono"> 
+              G..</font></p></td>
+          <td width="327"><font color="#000000" size="2" face="Arial">X = </font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<p align="left"><font color="#000000" size="2" face="Arial"></font></p>
+</body>
+</html>

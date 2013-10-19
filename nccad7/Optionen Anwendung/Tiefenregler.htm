@@ -1,0 +1,204 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Tiefenregler</title>
+</head>
+
+<body>
+
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Der Tiefenregler</font></b></i><font face="Tahoma" size="1" color="#000000"><b><br>
+  &Uuml;bearbeitet: Mai 2003</b></font></p>
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="5"><br>
+  </font></b></i><font face="Tahoma" size="2">Es gibt Fräsaufgaben, bei denen 
+  die Eintauchtiefe konstant gehalten werden muß. Dazu wurde der Tiefenregler 
+  konstruiert. Er besteht aus folgenden Komponenten:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Der Hardware mit Mechanik, Elektronik und
+    Anschlußkabel</font></li>
+  <li><font face="Tahoma" size="2">Der Software-Erweiterung, die ab <i>nccad4.5</i>
+    integriert ist</font></li>
+</ul>
+
+<p><font face="Tahoma" size="2">Die Einsatzmöglichkeiten sind unterschiedlich:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Regeln der Eintauchtiefe beim Herstellen von
+    Gravuren, Leiterplatte, Folien u.Ä.</font></li>
+  <li><font face="Tahoma" size="2">Abtasten einer gewölbten Oberfläche zum
+    Kopierfräsen.</font></li>
+  <li><font face="Tahoma" size="2">Messen von Höhen in der Qualitätskontrolle.
+    Die Messwerte werden in einer Datei für Tabellenkalkulation abgespeichert.</font></li>
+</ul>
+
+<p><font face="Tahoma" size="2"><b>Bitte beachten:<br>
+  </b></font><font face="Tahoma" size="2">Der <b>Anschlu&szlig;</b> und die <b>Art 
+  der Steckverbindung</b> ist <b>abh&auml;ngig</b> von der verwendeten <b>Maschine 
+  und deren Steuerelektronik</b>. Bitte vergewissern Sie sich, da&szlig; beides 
+  zusammen passt, also richtig bestellt- oder geliefert wurde.</font></p>
+<p><font size="2" face="Tahoma">Die in der Steuerelektronik <b>eingebaute Controller-Version</b> 
+  ist <b>entscheidend f&uuml;r den Funktionsumfang</b> und f&uuml;r die Komfortstufe 
+  bei der Anwendung. Es ist m&ouml;glich, da&szlig; die hier dargestellte Anwendung 
+  mit dem eingebauten Controller nicht- oder nur unvollst&auml;ndig realisiert 
+  werden kann, ein Controller-Tausch ist erforderlich.<br>
+  Die <b>Controller-Version</b> <b>kann</b> f&uuml;r R&uuml;ckfragen auf folgende 
+  Weise <b>&uuml;berpr&uuml;ft werden</b>:</font></p>
+<ol>
+  <li><font size="2" face="Tahoma">CNC-Maschine oder Steuerung <b>einschalten</b>.</font></li>
+  <li><font size="2" face="Tahoma">Die <b>Handsteuerung</b> aufrufen und wieder 
+    verlassen (Kommunikation mit der Maschine aufbauen und &uuml;berpr&uuml;fen).</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Hilfe/Datei-Informationen</b> 
+    w&auml;hlen.</font></li>
+  <li><font size="2" face="Tahoma">Controller-Version und R&uuml;ckmeldetext <b>ablesen</b>.</font></li>
+</ol>
+<p>&nbsp;</p><p><font face="Tahoma" size="2">Im Folgenden sollen Einsatz und Bedienung näher 
+  erklärt werden.</font></p>
+
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><br>
+  </font> <font face="Tahoma"> <b><font color="#FF00FF" size="5"><img border="0" src="Bilder/TMR_gesamt.jpg" width="480" height="320"><br>
+  1. </font> </b></font><font face="Tahoma" size="2"><b><font color="#FF00FF">Montage 
+  und Justage</font></b><br>
+  Das Bild zeigt den kompletten und montierten Tiefenregler, mit den <b>Teilen</b>....<br>
+  ... Grundplatte<br>
+  ... F&uuml;hlerhebel<br>
+  ... F&uuml;hlerarm<br>
+  ... F&uuml;hler<br>
+  Der F&uuml;hlerhebel mit dem F&uuml;hler ist am F&uuml;hlerarm montiert, beides 
+  zusammen ist auf einer justierbaren Grundplatte am Z-Tisch befestigt.&nbsp;<br>
+  <b>Montage:</b> Befestigen Sie die Grundplatte mit den 2 Schrauben und Nutensteinen 
+  am Z-Tisch links neben der Bearbeitungseinheit. Der F&uuml;hlerarm muss sich 
+  ca. 10mm unterhalb der Spannzange- und der F&uuml;hler mittig zur Spannzange 
+  befinden. Stecken Sie den- hoffentlich passend bestellten- Stecker auf der R&uuml;ckseite 
+  der CNC-Maschine in die Buchse...<br>
+  ... &quot;Zusatzfunktionen&quot; bei der Standard-CNC-Maschine.<br>
+  ... &quot;Tiefenregler&quot; bei KOSY massiv oder Portal.&nbsp;<br>
+  Achten Sie dabei auf eine freie Kabelf&uuml;hrung, damit eine Bewegung der Tische 
+  nicht zum Verklemmen f&uuml;hrt.<b><br>
+  Fühlerarm an/abbauen:</b> Der Fühlerarm kann zusammen mit der gesamten Elektronik 
+  durch wenigen Handgriffe abgebaut werden, damit er bei normalen Fräsarbeiten 
+  nicht im Weg ist und die Justageeinstellung trotzdem erhalten bleibt. Dazu drücken 
+  Sie den Spannhebel links unten an der Grundplatte ganz nach rechts und ziehen 
+  den Fühlerarm nach links weg. Bitte achten Sie dabei auf den Fühler und das 
+  eventuell eingespannte Werkzeug.<br>
+  Zum Anbauen schieben Sie den Fühlerarm an der Anschlagkante in die Buchsenleiste 
+  des Elektronikanschlußes und kippen anschließend den Spannhebel nach links. 
+  Der Fühlerarm muß sauber an den Anschlagkanten anliegen und eine der Anzeigelampen 
+  leuchten. Durch Bewegung des Fühlerarm muß ein Wechsel der Anzeige möglich sein.</font></p>
+<p><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>1.1</b> 
+  Test der Digitalen Eing&auml;nge in der Handsteuerung</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie <b> Maschine/CNC-Maschine</b> die <b>Handsteuerung</b> auf und 
+  dr&uuml;cken die Funktionstaste <b>[F8]</b>. Es erscheint ein Fenster in dem 
+  alle Eingangszust&auml;nde dargestellt sind. Wenn Sie einen Eingangszustand 
+  &auml;ndern (Bewegen des F&uuml;hlerarms), mu&szlig; dies angezeigt werden. 
+  Zum Verlassen des Fensters klicken Sie auf den entsprechenden Ende-Button, m&ouml;glicherweise 
+  mu&szlig; dies wiederholt werden, sollte keine sofortige Reaktion erfolgen.</font></font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="5">2.</font><font color="#FF00FF" size="2" face="Tahoma">
+Funktionsweise</font></b><font face="Tahoma" size="2"><br>
+Der F&uuml;hler ist am F&uuml;hlerhebel, montiert, beides zusammen ist prinzipiell auf einer justierbaren Grundplatte am Z-Tisch befestigt. Wird der Z-Tisch in X-Y-Richtung bewegt, wird bei Unebenheiten des Werkst&uuml;ckes der obere oder der untere Grenzschalter bet&auml;tigt. Die Software nimmt die Schwankungen auf und wertet sie, je nach Anwendungsart
+(Tiefenregelung, Abtastung oder Dickenmessung), unterschiedlich aus. Der F&uuml;hler ist dabei nur wenig entfernt vom Drehpunkt des F&uuml;hlerhebels angebracht, die Grenzwertschalter jedoch weit. Dadurch entsteht zum Einen eine Weg&uuml;bersetzung bzw.
+Steigerung der Empfindlichkeit, zum Anderen wird dadurch das Werkst&uuml;ck niedergedr&uuml;ckt und festgehalten.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma" color="#FF00FF" size="5"><img border="0" src="Bilder/Tiefen1.gif" width="216" height="193"><br>
+  3.</font><font face="Tahoma" size="2" color="#FF00FF"> Aktivierung des Tiefenreglers<br>
+</font><font size="2" face="Tahoma">S</font></b><font face="Tahoma" size="2"><b>tarten Sie
+<i> nccad</i> </b> (ab Version 4.5 f&uuml;r Windows) bei ausgeschalteter
+CNC-Maschine. Die Aktivierung geht über das Men&uuml; <b>Parameter/KOSY</b>.&nbsp;
+Im Feld <b>Optionen</b> müssen Sie <b>Tiefenregelung montiert</b> anklicken und
+die Einstellung <b>Speichern</b>.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma" color="#FF00FF" size="5">4.</font><font face="Tahoma" size="2" color="#FF00FF">
+Inbetriebnahme und Test<br>
+</font></b><font face="Tahoma" size="2"><b>Schalten Sie die CNC-Maschine ein</b>. Spannen Sie ein
+<b> Werkzeug</b> b&uuml;ndig mit der F&uuml;hler-Unterkante ein (z.B. 60° Gravierstichel). Spannen Sie ein weiches
+<b> Werkst&uuml;ck</b> ein (z.B. Styropor).&nbsp;<br>
+  <b> Funktionstest:</b> Im Ruhezustand muss die gr&uuml;ne Lampe der Tiefen-Messung/Regelung 
+  leuchten. Bewegen Sie von Hand den F&uuml;hlerhebel nach oben, muss die rote 
+  Lampe leuchten. Fahren Sie mit Hilfe der Handsteuerung den Z-Tisch nach unten 
+  und lassen Sie das Werkzeug in das Werkst&uuml;ck eintauchen. Sie k&ouml;nnen 
+  den &Uuml;bergang von gr&uuml;n nach rot beobachten und gleichzeitig an der 
+  Positions-Anzeige die Wegdifferenzen ablesen. Versuchen Sie den Weg zu ermitteln, 
+  bei dem keine der Lampen leuchtet. Er darf nur wenige 1/100 mm betragen.</font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="5">5.</font><font color="#FF00FF" size="2" face="Tahoma"> 
+  Tiefenregelung mit NC-Befehlen</font></b><font face="Tahoma" size="2"><br>
+  <b>NC-Befehle:</b>&nbsp;<br>
+  </font><font face="Courier New" size="2"> <font face="Courier New, Courier, mono" color="#339966">M70</font></font><font face="Tahoma" size="2"> 
+  Tiefenregelung aus&nbsp;<br>
+  </font><font face="Courier New" size="2"> <font face="Courier New, Courier, mono" color="#339966">M71</font></font><font face="Tahoma" size="2"> 
+  Tiefenregelung ein (aktiv)&nbsp;&nbsp;<br>
+  <b>Arbeitsweise:</b> Die Tiefenregelung arbeitet nur bei Ein/Zweiachsbewegungen 
+  in der X-Y-Richtung. Sie arbeitet nicht im bei Dreiachs-Bewegungen, im Eilgang 
+  (<font face="Courier New, Courier, mono" color="#993333">G00</font>), beim Drehen 
+  oder bei Handbedienung mit den Cursortasten. Bei reinen Z-Achsenbewegungen gilt 
+  folgendes Verhalten f&uuml;r die Z-Achse: Bei einer Abw&auml;rtsbewegung deren 
+  Endpunkt unterhalb des WNP liegt, wird nicht die angegebene Eintauchtiefe angefahren, 
+  sondern nur solange nach unten gefahren, bis sich der F&uuml;hlerhebel zwischen 
+  den Schaltern befindet.&nbsp;<br>
+  <b>Eintauchtest:</b> Weiches Werkst&uuml;ck einspannen, WNP auf Oberfl&auml;che 
+  einstellen und anschließend mit </font><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+  Z50</font><font face="Tahoma" size="2"> hoch fahren. Spindel einschalten, </font><font face="Courier New, Courier, mono" size="2" color="#339966">M71</font><font face="Tahoma" size="2"> 
+  eingeben und dann </font><font face="Courier New, Courier, mono" size="2" color="#339966">G01 
+  Z-0.5</font><font face="Tahoma" size="2">. Drücken Sie von Hand den Fühler nach 
+  oben und simulieren Sie damit ein Eintauchen des Werkzeuges. Die Z-Achse stoppt 
+  automatisch, wenn die grüne Lampe ausgeht.&nbsp;<br>
+  <b>Fahrtest:</b> </font><font face="Courier New, Courier, mono" size="2" color="#339966">G01 
+  X100 F30</font><font face="Tahoma" size="2"> eingeben und Bewegung beobachten. 
+  Dabei "Unebenheiten" durch Druck auf den Fühler simulieren, sie m&uuml;ssen 
+  automatisch ausgeglichen werden, indem der Z-Tisch &quot;mitfährt&quot;.</font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="5">6.</font><font color="#FF00FF" size="2" face="Tahoma">
+Tiefenregelung &uuml;ber CAD</font></b><font face="Tahoma" size="2"><br>
+ Arbeitsweise: Die Tiefenregelung arbeitet nur bei Ein/Zweiachsbewegungen in der X-Y-Richtung. Sie arbeitet nicht beim Drehen oder bei Handbedienung mit den Cursortasten. Bei reinen Z-Achsenbewegungen gilt folgendes Verhalten f&uuml;r die Z-Achse:  Bei einer Abw&auml;rtsbewegung deren Endpunkt unterhalb des WNP liegt, wird nicht die in der Technologie angegebene Eintauchtiefe angefahren, sondern nur solange nach unten gefahren, bis sich der F&uuml;hlerhebel zwischen den Schaltern befindet.&nbsp;<br>
+<b> Test:</b> Weiches Werkst&uuml;ck einspannen, WNP auf Oberfl&auml;che einstellen. Einfache Zeichnung machen (z.B. Gerade), mit Technologie versorgen (z.B. Vorschub 50,
+Eintauchtiefe 0.5mm, BAE ein), dabei unbedingt das Feld &quot;<b>Tiefenregelung</b>&quot; anklicken. Programmlauf starten und beobachten. Dabei "Unebenheiten"
+</font><font face="Tahoma" size="2">durch Druck auf den Fühler simulieren, sie m&uuml;ssen automatisch ausgeglichen werden.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma" color="#FF00FF" size="5">7.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Feinjustage der Tiefenregelung</font></b><font face="Tahoma" size="2"><br>
+  Das Ziel beim Einsatz der Tiefenregelung ist die Konstanthaltung der Eintauchtiefe 
+  selbst bei unebenem Werkst&uuml;ck. Die gew&uuml;nschte Eintauchtiefe wird nicht 
+  mehr durch die Software-Angabe bestimmt, sondern durch die mechanische Justage 
+  der Regeleinrichtung.&nbsp;<br>
+  <b> Justage grob:</b> Spannen Sie ein Werkzeug in gew&uuml;nschter L&auml;nge 
+  (z.B. 60° Gravierstichel) und ein weiches Werkst&uuml;ck ein. L&ouml;sen Sie 
+  die Schrauben der Grundplatten-Befestigung und verschieben Sie die Grundplatte 
+  so, dass F&uuml;hlerunterkante und F&uuml;hlermitte mit der Werkzeugspitze &uuml;bereinstimmen. 
+  Befestigen Sie die Grundplatte wieder. Stellen Sie den WNP auf die Oberl&auml;che 
+  ein.&nbsp;<br>
+  <b> Justage fein:</b> Verfahren Sie mit der Handsteuerung so, dass der F&uuml;hler 
+  noch sauber auf der Werkst&uuml;ck-Oberfl&auml;che aufliegt, das Werkzeug aber 
+  neben dem Werkst&uuml;ck liegt. Fahren Sie das Werkzeug definiert soweit nach 
+  unten, wie Sie sp&auml;ter eintauchen wollen, z. B.: </font><font face="Courier New" size="2"> 
+  <font face="Courier New, Courier, mono" color="#339966">G01 Z-0.2 F20</font></font><font face="Tahoma" size="2"> 
+  (die rote Lampe muss leuchten). Drehen Sie jetzt solange an der R&auml;ndelschraube 
+  der Grundplatte, bis die rote Lampe wieder ausgeht.</font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="5">8.</font><font color="#FF00FF" size="2" face="Tahoma">
+Der Tiefenregler zum Abtasten</font></b><font face="Tahoma" size="2"><br>
+Die Oberfl&auml;che eines plastischen K&ouml;rpers soll abgetastet werden, damit sp&auml;ter eine Kopie gefr&auml;st werden kann. Dazu muss folgendermassen vorgegangen werden:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2"> Der Tiefenregler ist zu montieren und seine Funktion zu &uuml;berpr&uuml;fen.</font></li>
+  <li><font face="Tahoma" size="2">Der passende F&uuml;hlerfinger ist zu montieren.&nbsp;</font></li>
+  <li><font face="Tahoma" size="2"> Der abzutastende 3D-K&ouml;rper ist aufzuspannen 
+    und der Nullpunkt grob einzustellen.&nbsp;</font></li>
+  <li><font face="Tahoma" size="2">Das Abtastprogramm</font><font face="Courier New" size="2"> 
+    Abtast.KNC</font><font face="Tahoma" size="2"> im Verzeichnis Beispiel/TMR 
+    ist zu laden, evtl. die Wege zu &auml;ndern und zu starten. Es entsteht ein 
+    CNC-Programm mit dem Namen </font><font face="Courier New" size="2">Abtast_Beispiel.KNC</font><font face="Tahoma" size="2"> 
+    im Arbeitsverzeichnis).&nbsp;</font></li>
+</ol>
+<p><font face="Tahoma" size="2">Im CNC-Programm sind am Anfang und am Ende die Schaltbefehle f&uuml;r die Spindel
+hinzuzuf&uuml;gen, dann kann es gestartet werden, um den zuvor abgetasteten K&ouml;rper zu kopieren.&nbsp;<br>
+ Diese Abtastfunktion fordert noch Kenntnisse &uuml;ber die CNC-Programmierung. Aktuelle Infos &uuml;ber die Weiterentwicklung erhalten Sie in Zukunft im
+Internet und unter dem Hilfethema <b>Abtasten</b>.</font></p>
+<p><font face="Tahoma"><font size="2"><br>
+</font>
+</font></p>
+
+</body>
+
+</html>

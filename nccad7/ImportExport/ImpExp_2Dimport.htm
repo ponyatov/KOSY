@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Import Export/Import von 2D-Zeichnungsteilen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font face="Times New Roman" size="6" color="#FF00FF"><b><i>Import von 2D-Zeichnungsteilen<br>
+  </i></b></font><b><font face="Tahoma" size="1" color="#000000">Erstellt: August 
+  2002<br>
+  &Uuml;berarbeitet: 1.12.2002</font></b></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b><font face="Tahoma" color="#FF00FF" size="5"><img src="Bilder/2Dimport_gesamt.gif" width="418" height="409"><br>
+  1.</font><font face="Tahoma" color="#FF00FF"> Grundsätzliches<br>
+  </font></b></font><font face="Tahoma" size="2" color="#000000">Importieren Sie 
+  von anderen CAD-Programmen eine 2D-Zeichnung, dann gibt es in <i><b>nccad</b></i> 
+  zwei m&ouml;gliche Formate:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Das <b>DXF-Format</b>. Ein 
+    firmenspezifisches Format, das weltweit verbreitet ist, aber st&auml;ndig 
+    ver&auml;ndert wird. Dateien haben die Erweiterung <font face="Courier New, Courier, mono">*.dxf</font>.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Das <b>HPGL-Format</b>. Ein 
+    firmenspezifisches Format, das ebenfalls weltweit im Zusammenhang mit der 
+    Steuerung von Plottern verbreitet ist, aber st&auml;ndig ver&auml;ndert wird. 
+    Dateien haben die Erweiterung <font face="Courier New, Courier, mono">*.plt</font>.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Da <b>keines der 
+  Formate weltweite Norm</b> ist und die Details st&auml;ndig ver&auml;ndert werden, 
+  gibt es <b>grunds&auml;tzlich keine Sicherheit</b>, da&szlig; der Import zuverl&auml;ssig 
+  funktioniert oder da&szlig; alle Elemente unver&auml;ndert in <i><b>nccad</b></i> 
+  ankommen. Oft ist ein weiterer Versuch mit einem anderen Format bzw. einer anderen 
+  Quelle - oder ein Nacharbeiten in <i><b>nccad</b></i> erforderlich. Eine gro&szlig;e 
+  Rolle spielt auch die richtige und passende Einstellung des Exports im fremden 
+  CAD-Programm. Im Zweifelsfall m&uuml;ssen Sie sich an den Hersteller wenden.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="DXF"></a>2.</font> 
+  DXF-Import<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Dieses Format kommt 
+  aus der &quot;AutoCAD-Welt&quot; und ist sehr verbreitet, ist aber leider im 
+  Laufe der Jahre nicht konstant geblieben. <br>
+  In der Fremdsoftware sollte auf den Export R&uuml;cksicht genommen werden. Derzeit 
+  sind folgende Einstellungsdetails als &quot;funktionsf&ouml;rdernd&quot; bekannt:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Export f&uuml;r AutoCAD-Version 
+    10, bei h&ouml;heren Versionen besteht die Gefahr, da&szlig; nicht alle Zeichnungsteile 
+    original &uuml;bernommen werden. Stellen Sie versuchsweise die niederste Version 
+    beim Export ein oder machen Sie Grundlagenversuche.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Kreise als &quot;circle&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Rechtecke als &quot;rectangle&quot; 
+    nicht als Geradenfolge oder Polygonzug.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Nullpunkt in der Zeichnung 
+    an der linken, unteren Ecke (keine negativen Koordinatenwerte).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile am Ende der 
+    Konstruktionsarbeit evtl. &quot;auf Ursprung zur&uuml;ckf&uuml;hren&quot; 
+    (Funktionsaufruf).</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Der eigentliche <b>Import</b> 
+  in <i><b>nccad</b></i> erfordert folgende <b>Bedienschritte</b>:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; <b>Datei/Datei 
+    importieren/DXF-Datei</b> den Import aufrufen, Datei ausw&auml;hlen und &Ouml;ffnen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Art des Importfilters ausw&auml;hlen 
+    (siehe 2.1).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die <b>Zeichnungsteile erscheinen</b> 
+    auf der Zeichenfl&auml;che. Es entstehen evtl. <b>folgende Besonderheiten</b>:</font> 
+    <ol>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zeichnungsteile</b> 
+        ganz - oder teilweise<b> im Negativen</b>: Es wird automatisch das wei&szlig;e 
+        Fadenkreuz f&uuml;r den Werkst&uuml;ck-Nullpunk eingeblendet. Um dieses 
+        &quot;aus der Ecke zu holen&quot;, machen Sie alle Layer (rechte Maustaste/Layer), 
+        au&szlig;er Layer 9, unsichtbar und positionieren den Nullpunkt so in 
+        die Zeichenfl&auml;che, da&szlig; alle negativen Anteile der Zeichnung 
+        sichtbar werden.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zeichnungsteile au&szlig;erhalb</b> 
+        der Zeichenfl&auml;che: W&auml;hlen Sie im Men&uuml; Ansicht/Zeichenbereich 
+        eine gr&ouml;&szlig;ere Darstellung und verschieben Sie die Zeichnungteile 
+        insgesamt in die N&auml;he des Nullpunktes.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000">Frage &quot;<b>Gr&ouml;&szlig;e 
+        anpassen?</b>&quot; w&auml;hrend des Imports: Diese Frage wird gestellt, 
+        wenn die zu importierende Zeichnung gr&ouml;&szlig;er ist, als der momentan 
+        eingestellte Zeichenbereich. Antworten Sie mit &quot;Nein&quot;, wird 
+        nach dem Import nur ein Teil der Zeichnung sichtbar. Antworten Sie mit 
+        &quot;Ja&quot;, wird die Zeichnung so verkleinert, da&szlig; sie in den 
+        momentan eingestellten Zeichenbereich pa&szlig;t, gleichzeitig wird der 
+        <b>Fr&auml;s-Ma&szlig;stab</b> entsprechend angepasst (siehe Men&uuml; 
+        <a href="../Menues/Parameter/Menue_Parameter.htm">Parameter/CAM...</a>). 
+        Mit <a href="../Icons/Bearbeitung/Zoom_Masstab.htm">ZOOM MA&szlig;STAB</a> 
+        kann die Gr&ouml;&szlig;e der Zeichnung jederzeit wieder auf 1:1 gebracht 
+        werden.</font></li>
+    </ol>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile evtl. <b>nachbearbeiten</b> 
+    (Eigenschaften &auml;ndern - Layer, Farbe, Typ usw, Teile nachzeichnen oder 
+    L&ouml;schen u.&Auml;.m.).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile mit <b>CAM/Technologie</b> 
+    zur Bearbeitung mit der CNC-Maschine vorbereiten.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Machen Sie zun&auml;chst 
+  einige <b>Versuche</b>, indem Sie in der Fremdsoftware einige <b>einfache Teile</b> 
+  zeichnen und als DXF-Datei exportieren, sie anschlie&szlig;end in <b><i>nccad</i></b> 
+  importieren und dann untersuchen. &Uuml;ber das ICON <b>INFORMATION</b> k&ouml;nnen 
+  Sie die einzelnen Zeichnungsteile nach dem Import sehr genau studieren und mit 
+  dem Original vergleichen.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/2Dimport_DxfArt.gif" width="322" height="285"><br>
+  2.1</b> Importfilter-Einstellungen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Ab <i><b>nccad6</b></i> 
+  Rev. <b>1.01.12.02</b> kann der DXF-Import individuell eingestellt werden. In 
+  erster Linie betrifft dies die Zuordnung der (Original)Quell-Layer zu den Layern 
+  in nccad.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">In der Version 5 
+  von <i><b>nccad</b></i> wurde von einer Nummerierung der Layer ausgegangen. 
+  Bei vielen CAD-Programmen ist es mittlerweile g&auml;ngige Praxis, den Layern 
+  Namen zu geben, diese Namen sollen in <i><b>nccad</b></i> bestimmten Layern 
+  zugeornet werden k&ouml;nnen, sobald Sie entsprechend dem obigen Bild den Schalter 
+  &quot;Zuordnung erfolgt manuell&quot; aktivieren. Es erscheint das folgende 
+  Fenster:</font></p>
+<p align="left"><img src="Bilder/2Dimport_DxfZuordnung.gif" width="446" height="329"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>2.1.1</b> Layer zuordnen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Die Layer sind nach beliebigen 
+  Gesichtspunkten in der CAD-Software benannt- und sortiert worden. Mit Hilfe 
+  dieser hier gezeigten Tabelle k&ouml;nnen Sie den Quell-Layer in einen beliebigen 
+  Ziel-Layer &uuml;bertragen oder ihn ignorieren (nicht importieren). <br>
+  Bitte beachten Sie <b>f&uuml;r die Weiterbearbeitung</b> in <i><b>nccad</b></i> 
+  folgende <b>Regeln</b>:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"> Nur die Layer 1 bis 8 sind 
+    fr&auml;sbare Layer.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Der Layer 9 ist f&uuml;r Dokomentationen, 
+    er wird in der Regel schwarz dargestellt und ist nicht fr&auml;sbar.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Der Layer 10 ist f&uuml;r Technologie-Angaben 
+    reserviert und steht nicht zur Auswahl. </font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile, die Sie in 
+    gleicher Weise bearbeiten wollen, sollten nach dem Import im selben Layer 
+    &quot;landen&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die Reihenfolge der Bearbeitung 
+    sollte mit den Layer-Nummern &uuml;bereinstimmen.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">F&uuml;r die <b>Bedienung 
+  </b>des obigen Fenster gilt folgende <b>Reihenfolge</b>:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Im linken Feld den Quell-Layer 
+    markieren.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit dem PullDown-Men&uuml; 
+    techts oben den Ziel-Layer w&auml;hlen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit einem Klick auf die Transfer-Taste 
+    &quot;Pfeil nach rechts&quot; im Mittelteil des Fensters wird die Zuordnung 
+    aktiviert.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Eine einmal eingestellte 
+  Zuordnungstabelle kann f&uuml;r den Wiederholungsfall auch abgespeichert werden. 
+  Der <b>DXF-Import</b> wird endg&uuml;ltig <b>ausgef&uuml;hrt</b>, wenn Sie den 
+  <b>OK-Knopf klicken</b>.</font></p>
+<p align="left">&nbsp; </p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="HPGL"></a>3.</font> 
+  HPGL-Import<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Dieses Format kommt 
+  aus der &quot;HP- und Plotter-Welt&quot; und ist sehr verbreitet, ist aber leider 
+  im Laufe der Jahre nicht konstant geblieben. <br>
+  In der Fremdsoftware sollte auf den Export R&uuml;cksicht genommen werden, derzeit 
+  sind folgende Einstellungsdetails als &quot;funktionsf&ouml;rdernd&quot; bekannt:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Export f&uuml;r Plotter-Typ 
+    7475 (der einfachste und sicherste Datenumfang).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Nullpunkt in der Zeichnung 
+    an der linken, unteren Ecke (keine negativen Koordinatenwerte).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Klare Layer-Trennung nach Bearbeitungs-Gesichtspunkten, 
+    nicht nach Plotterstiften.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Der eigentliche <b>Import</b> 
+  in <i><b>nccad</b></i> erfordert folgende <b>Bedienschritte</b>:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; <b>Datei/CAD/CAM-Neue 
+    Zeichnung </b> eine Zeichenfl&auml;che &ouml;ffnen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; <b>Datei/Datei 
+    importieren/HPGL-Datei</b> den Import aufrufen, Datei ausw&auml;hlen und &Ouml;ffnen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die <b>Zeichnungsteile erscheinen</b> 
+    als Symbol auf der Zeichenfl&auml;che. Es k&ouml;nnen jederzeit weitere Zeichnungen 
+    als Symbole importiert werden.<br>
+    Es entstehen evtl. <b>folgende Besonderheiten</b>:</font> 
+    <ol>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zeichnungsteile</b> 
+        ganz - oder teilweise<b> im Negativen</b>: W&auml;hlen Sie das ICON CAM/Werkst&uuml;ck-Nullpunkt 
+        und positionieren Sie den Nullpunkt entsprechend in die Zeichenfl&auml;che, 
+        da&szlig; alle negativen Anteile der Zeichnung sichtbar werden.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zeichnungsteile au&szlig;erhalb</b> 
+        der Zeichenfl&auml;che: W&auml;hlen Sie im Men&uuml; Ansicht/Zeichenbereich.</font></li>
+    </ol>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile evtl. <b>nachbearbeiten</b> 
+    (Eigenschaften &auml;ndern - Layer, Farbe, Typ usw, Teile nachzeichnen oder 
+    L&ouml;schen u.&Auml;.m.).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnungsteile mit <b>CAM/Technologie</b> 
+    zur Bearbeitung mit der CNC-Maschine vorbereiten.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Machen Sie zun&auml;chst 
+  einige <b>Versuche</b>, indem Sie in der Fremdsoftware einige <b>einfache Teile</b> 
+  zeichnen und als HPGL-Datei exportieren, sie anschlie&szlig;end in <b><i>nccad</i></b> 
+  importieren und untersuchen. &Uuml;ber das ICON <b>INFORMATION</b> k&ouml;nnen 
+  Sie die einzelnen Zeichnungsteile nach dem Import sehr genau studieren und mit 
+  dem Original vergleichen.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="Scannen"></a></font></b></font><font size="5"><img src="Bilder/2Dimport_ScanPix.gif" width="177" height="132"><img src="Bilder/2Dimport_ScanVec.gif" width="177" height="132"><img src="Bilder/2Dimport_ScanVecDiff.gif" width="177" height="132"><br>
+  4.</font> Scannen und Vektorisieren<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Hier ist der <b>Unterschied</b> 
+  zwischen <b>&quot;pixelorientiert&quot;</b> (z.B. JPG-, GIF-, BMP-Dateien) und 
+  <b>&quot;vektororientiert&quot;</b> (z.B. DXF, HPGL-Dateien) zu beachten, das 
+  obige Bild zeigt ein Beispiel, in dem der Unterschied prinzipiell dargestellt 
+  ist:<br>
+  W&auml;hrend die Pixelbilder den Bildschirminhalt in Pixel einteilen und deren 
+  Farbe festhalten, arbeiten Vektorbilder mit &quot;Vektoren&quot;, also geradlinigen 
+  Verbindungen zwischen Koordinatenpunkten. Beinhaltet beispielsweise das Pixelbild 
+  eine breite schr&auml;ge Linie, dann mu&szlig; eine Vektorisier-Software den 
+  Anfangs- und Endpunkt dieser Linie &quot;suchen&quot;, dabei kann sie Fehler 
+  machen:<br>
+  M&ouml;glicherweise ist sie in der Lage, Punkte genau in der Mitte der breiten 
+  Linie auszuw&auml;hlen und diese durch einen Vektor zu verbinden, was keine 
+  Nachbearbeitung erforderlich macht. <br>
+  M&ouml;glicherweise bildet Sie mehrere parallele Vektoren, die zum Teil sp&auml;ter 
+  wieder gel&ouml;scht werden m&uuml;ssen. <br>
+  M&ouml;glicherweise teilt sie die breite schr&auml;ge Linie in viele, im ZickZack 
+  verlaufende, Vektoren auf, &uuml;ber denen in <b>nccad</b> sp&auml;ter eine 
+  neue Gerade in einem anderen Layer gezeichnet werden mu&szlig;, um das Original 
+  l&ouml;schen zu k&ouml;nnen. </font><font face="Tahoma" size="2" color="#000000">Weitere 
+  Beispiele sind nachvollziehbar....</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Der <b>Scanner</b> 
+  produziert zun&auml;chst ein <b>pixelorientiertes Bild</b>, das mit Hilfe einer 
+  &quot;<b>Vektorisier-Software</b>&quot; umgewandelt - und als DXF- oder HPGL-Datei 
+  ausgegeben werden mu&szlig;. Diese Software gibt es in h&ouml;chst unterschiedlichen 
+  Qualit&auml;tsstufen und Preislagen, entsprechend ist das Ergebnis. Oft sind 
+  die in <i><b>nccad</b></i> importierten Konturen l&uuml;ckenhaft, ungenau und 
+  unvollst&auml;ndig - eine Nachbearbeitung ist erforderlich. Zum Vektorisieren 
+  k&ouml;nnen beispielsweise verwendet werden: CorelDraw (Corel), Streamline (Adobe).</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="Nachbearbeitung"></a>5.</font> 
+  Bemerkungen zur Nachbearbeitung<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Vielfach ist der Import 
+  unvollkommen und viele Funktionen in <i><b>nccad</b></i> m&uuml;ssen genutzt 
+  werden, um eine &quot;fr&auml;sbare&quot; Zeichnung zu erhalten. Dazu einige 
+  Beispiele:<br>
+  </font></p>
+<p><font face="Tahoma" size="2" color="#000000"><b><img src="Bilder/2Dimport_Nachbearb.jpg" width="232" height="142"><br>
+  Das Original</b> - und die importierte Zeichnung besteht oft aus einer <b>Fülle 
+  von kleinen Geradenstücken oder Polygonzügen</b>. Eine besonders ausgeprägte 
+  &quot;Zerstückelung&quot; entsteht meist beim Scannen und nachfolgenden Vektorisieren 
+  (Schritt 1). Bitte bedenken Sie, daß in der Regel beim Zeichnen auf Papier oder 
+  beim Konstruieren am Computer keine Rücksicht auf das Verhalten einer CNC-Maschine 
+  genommen wird, das kann auch nicht verlangt werden. Außerdem haben die Vektorisier-Programme 
+  höchst unterschiedliche Qualität.<br>
+  <b>Eine Nacharbeit ist also erforderlich</b>: Mit den Zeichenfunktionen von 
+  <i> <b>nccad</b></i> muß die Kontur korrigiert bzw. vereinfacht werden, die 
+  Fachbegriffe dazu sind &quot;Konturverfolgung&quot; und &quot;Konturverdünnung&quot; 
+  (Schritt 2). Eine so überarbeitete Kontur läßt sich wesentlich besser fräsen 
+  und die Anzahl der Kommunikationen zwischen PC und CNC-Maschine ist wesentlich 
+  geringer.<br>
+  Die nachfolgende Bilderreihe soll beispielhaft nochmals die Zusammenhänge und 
+  die Arbeitsweise verdeutlichen:</font></p>
+<table border="0" width="354" cellspacing="5" cellpadding="2" height="376">
+  <tr> 
+    <td width="46%" height="376" align="left" valign="bottom"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b>1: 
+      Konturverfolgung</b><br>
+      um Lücken und Überschneidungen automatisch zu korrigieren</font> 
+      <p><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b>2: 
+        Konturverdünnung</b><br>
+        d.h. aus einem Polygonzug mit vielen Teilstücken werden wenige Bögen oder 
+        Linien innerhalb einer vorzugebenden Toleranzgrenze.<br>
+        <br>
+        </font></p>
+      <p><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b>3 
+        und 4: Taschen</b><br>
+        konturparallel (3) oder winkelparallel (4). Letztere kann automatisch 
+        einen Schlichtgang konturparallel machen .</font> </p>
+    </td>
+    <td width="54%" valign="top" height="376"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><img src="Bilder/2Dimport_Polygon.jpg" width="202" height="356"></font></b></font></td>
+  </tr>
+</table>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>5.1</b> Tips f&uuml;r die Nachbearbeitung</font></p>
+<ul>
+  <li><b><font face="Tahoma" size="2">Bei der Konturverd&uuml;nnung keine B&ouml;gen</font></b><font face="Tahoma" size="2"> 
+    verwenden, wenn Sie komplexe Technologien, wie Taschenfr&auml;sen, Bahnkorrektur 
+    o.&Auml;. anwenden wollen.</font></li>
+  <li><font face="Tahoma" size="2"><b>Der Einsatz des <a href="../Optionen%20Anwendung/Spooler.htm">Spoolers</a></b> 
+    ist in der Regel zu empfehlen, wenn Bilder mit vielen feinen Polygonz&uuml;gen 
+    importiert wurden.</font></li>
+  <li><font face="Tahoma" size="2"><b>Farbbilder und Fotos</b> sind nur schwer 
+    mit dem Scanner und einer Vektorisier-Software aufzul&ouml;sen und zu einer 
+    Fr&auml;sbearbeitung zu verwenden.</font></li>
+</ul>
+</body>
+</html>

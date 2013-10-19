@@ -1,0 +1,245 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/3D-Anwendungen/STL-Grundlagen</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Grundlagen der 
+  STL-Bearbeitung</font></b></i><font face="Tahoma" size="1" color="#000000"><b><br>
+  Erstellt: Februar 2003</b></font></p>
+<p><font face="Tahoma" size="2">Hier handelt es sich um eine spezielle Anwendung 
+  des Koordinatentisch-Systems KOSY. Bitte sammeln Sie zun&auml;chst mit <a href="../../Grundlagen_Anwendung/Einf%FChrungsbeispiel_Zeichnung%20zu%20Werkst%FCck.htm">2D-Bearbeitungen</a> 
+  und der <a href="../../Grundlagen_Anwendung/Handbedienung.htm">Bedienung des Systems</a> 
+  einige Erfahrung, bevor Sie sich diesem Thema zuwenden. </font></p>
+<p align="left"><b><i><font COLOR="#000000" face="Tahoma" size="2"><br>
+  </font></i><font color="#FF00FF"><font face="Tahoma" size="5"><img src="Bilder/CAD_3D_STLEditor.gif" width="227" height="260"><img src="Bilder/CAD_3D_STLNuss.jpg" width="300" height="233"><img src="Bilder/CAD_3D_STLNussDreiecke.jpg" width="144" height="134"><br>
+  1.</font><font face="Tahoma" size="2"> STL-Dateien&nbsp;</font></font><font COLOR="#000000" face="Tahoma" size="2"><i><br>
+  </i></font></b><font face="Tahoma" size="2">Alle 3D-f&auml;higen CAD-Programme 
+  k&ouml;nnen den gestalteten K&ouml;rper als sog. STL-Datei abspeichern. Dieses 
+  Beschreibungsformat f&uuml;r beliebige K&ouml;rper wurde im Zusammenhang mit 
+  der Stereolithographie erfunden und ist weltweit bekannt. Die obigen Bilder 
+  zeigen, da&szlig; STL-Dateien aus Texten bestehen, die den K&ouml;rper in Form 
+  von Dreiecken beschreiben, wie es in der Vergr&ouml;&szlig;erung zu sehen ist.</font></p>
+<p align="left"><font size="2" face="Tahoma">Die urspr&uuml;ngliche Konstruktion 
+  des K&ouml;rpers wurde in einem 3D-f&auml;higen CAD-Programm mit Hilfe von Konstuktionspunkten 
+  und geometrischen Figuren gemacht. Beim STL-Export wird der konstruierte K&ouml;rper 
+  durch verbundenen Dreiecke in verschiedenen Gr&ouml;&szlig;en und Winkellagen 
+  dargestellt. <br>
+  Die Minimalgr&ouml;&szlig;e der Dreiecke kann beim Export angegeben werden (oft 
+  Export-Aufl&ouml;sung genannt), es gilt: Je kleiner die Dreiecke, umso genauer 
+  wird der K&ouml;rper dargestellt, aber umso gr&ouml;&szlig;er wird die STL-Datei.</font></p>
+<p align="left"><font size="2" face="Tahoma">Aus diesem Prinzip lassen sich folgende 
+  Grunds&auml;tze ableiten:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma" align="left"><b>Die urspr&uuml;nglichen Konstruktionspunkte 
+    gehen</b> durch den STL-Export <b>verloren</b>, der K&ouml;rper wird durch 
+    verbundene Dreiecke &quot;angen&auml;hert&quot;.</font></li>
+  <li><font size="2" face="Tahoma" align="left"><b>Eine nachtr&auml;gliche Bearbeitung/Ver&auml;nderung</b> 
+    des K&ouml;rpers in der STL-Datei <b>ist</b> derzeit <b>nicht m&ouml;glich</b>. 
+    Es gibt keine uns bekannte Software, die das kann. Man mu&szlig; zur&uuml;ck 
+    zum 3D-CAD-Programm und dann erneut exportieren. </font></li>
+  <li><font size="2" face="Tahoma" align="left"><b>Die Genauigkeit der STL-Beschreibung 
+    </b>im Vergleich zur Originalkonstruktion <b>ist geringer</b> und von den 
+    Exportangaben abh&auml;ngig. Mit einer kleinen Export-Aufl&ouml;sung von 1/10 
+    bis 1/100mm wird die Originaltreue jedoch ausreichend gut. Beim Fr&auml;sen 
+    des K&ouml;rpers sind ohnehin durch die Genaugkeit der Maschine Grenzen gesetzt.</font></li>
+</ul>
+<p align="left"><font size="2" face="Tahoma">Die direkte Verarbeitung von STL-Dateien 
+  in einem Fr&auml;ssystem, wie z.B. KOSY, hat sich insgesamt bew&auml;hrt. Mit<i><b> 
+  nccad6</b></i> haben wir begonnen, diesen Weg zu gehen, zumal es keine vern&uuml;nftige 
+  Alternative gibt. </font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><b><font face="Tahoma"><font color="#FF00FF" size="5"><img src="Bilder/CAD_3D_STLNussSchruppX.jpg" width="150" height="150"><img src="Bilder/CAD_3D_STLNussSchruppXY.jpg" width="150" height="150"><img src="Bilder/CAD_3D_STLNussSchruppZustel.jpg" width="150" height="150"><br>
+  2. </font><font color="#FF00FF" size="2"> Herstellen des K&ouml;rpers mit einem 
+  Fr&auml;ssystem </font></font> </b><font face="Tahoma" size="2"><br>
+  Die STL-Datei wird in <i><b>nccad</b></i> importiert, dann die Art der Bearbeitung 
+  (Technologie) gew&auml;hlt und letztlich der K&ouml;rper &quot;aus dem Vollen&quot; 
+  gefr&auml;st. Wie das mit KOSY geht, wird unter <a href="CAD_3D_STL.htm">STL-Ebenenbearbeitung</a> 
+  oder <a href="CAD_3D_STLdrehen.htm">STL-Drehbearbeitung</a> genauer erkl&auml;rt. 
+  </font></p>
+<p align="left"><font face="Tahoma" size="2">Die obige Bilderreihe zeigt beispielhaft 
+  einige Fr&auml;sbahnen, wobei folgende Technologie-Angaben f&uuml;r die Originaltreue 
+  von Bedeutung sind:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma" align="left">Wie verlaufen die Fr&auml;sbahnen 
+    (hin und her (m&auml;anderf&ouml;rmig), kreuzweise (x-y-Orientierung), einfache- 
+    und mehrfache Zustellung, Abstand der Fr&auml;sbahnen u.A.m.).</font></li>
+  <li><font size="2" face="Tahoma" align="left">Wird grob vorbearbeitet (Schruppen) 
+    und dann fein nachbearbeitet, m&ouml;glicherweise mit einem d&uuml;nneren 
+    Fr&auml;ser (Schlichten).</font></li>
+</ul>
+<p align="left"><font size="2" face="Tahoma">Hier kommt es auf die Software an: 
+  </font></p>
+<ul>
+  <li><font size="2" face="Tahoma" align="left">Welche Bearbeitungsm&ouml;glichkeiten 
+    (Strategien) bietet sie.</font></li>
+  <li><font size="2" face="Tahoma" align="left">Wie genau und intensiv sind die 
+    Bahnberechnungen.</font></li>
+  <li><font size="2" face="Tahoma" align="left">Wie gut werden verschiedene Fr&auml;sergeometrien 
+    unterst&uuml;tzt.</font></li>
+  <li><font size="2" face="Tahoma" align="left">Und anderes mehr.</font></li>
+</ul>
+<p align="left"><font size="2" face="Tahoma">Diese Verarbeitung der STL-Daten, 
+  die Bahnberechnungen und das Erzeugen des Steuerprogramms f&uuml;r die CNC-Maschine 
+  ist Aufgabe eines CAM-Programms bzw. des CAM-Moduls innerhalb von <i><b>nccad</b></i>.</font></p>
+<p align="left"><font size="2" face="Tahoma">Es gibt CAM-Programme, die &uuml;ber 
+  eine Vielzahl von Strategien verf&uuml;gen und die aufgrund ihres Leistungsumfangs 
+  10.000 Euro und mehr kosten. Sie k&ouml;nnen z.B. Schruppen Z-Konstant, Schruppen 
+  ebene Bereiche, spiralf&ouml;rmiges Schlichten, Restmaterialbearbeitung, Kanten 
+  gl&auml;tten, Leitkurven verfolgen und Anderes mehr. In diese Leistungsklasse 
+  wird- und kann <i><b>nccad</b></i> nie vorstossen. Stehen dem KOSY-Anwender 
+  solche Programme zur Verf&uuml;gung, k&ouml;nnen mit ihrer Hilfe CNC-Programme 
+  f&uuml;r KOSY erzeugt- und innerhalb von <i><b>nccad</b></i> abgearbeitet werden.</font></p>
+<p align="left"><font size="2" face="Tahoma">Die Version 6 von <i><b>nccad</b></i> 
+  ist die erste Version, die STL-Dateien direkt verarbeiten kann. Mit Ihr lassen 
+  sich recht gute Ergebnisse erzielen, aber im Sinne des eben gesagten, k&ouml;nnen 
+  nicht alle W&uuml;nsche und Erwartungen erf&uuml;llt werden. Die wichtigsten 
+  derzeitigen Features sind:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma" align="left">Import</font> 
+    <ul>
+      <li><font size="2" face="Tahoma" align="left">Import von STL-Dateien in 
+        eine Zone auf der Zeichenfl&auml;che. Dadurch ist eine Kombination mit 
+        2 1/2 D - Bearbeitungen m&ouml;glich.</font></li>
+      <li><font size="2" face="Tahoma" align="left">Datei-Formate: Bin&auml;r 
+        oder Text</font></li>
+    </ul>
+  </li>
+  <li><font size="2" face="Tahoma" align="left">Darstellung, Positionierung und 
+    Vermessung</font></li>
+  <ul>
+    <li><font size="2" face="Tahoma" align="left">3D-Darstellung des K&ouml;rpers 
+      mit der M&ouml;glichkeit, die Bearbeitungslage festzulegen.</font></li>
+    <li><font size="2" face="Tahoma" align="left">Vermessen des K&ouml;rpers und 
+      Festlegung der Werkst&uuml;ck-Rohma&szlig;e.</font></li>
+  </ul>
+  <li><font size="2" face="Tahoma" align="left">Technologien</font> 
+    <ul>
+      <li><font size="2" face="Tahoma" align="left">Schruppen mit/ohne Haut und 
+        Schlichten.</font></li>
+      <li><font size="2" face="Tahoma" align="left">Zustellung frei w&auml;hlbar.</font></li>
+      <li><font size="2" face="Tahoma" align="left">Wahl von Fr&auml;sbahnabstand 
+        und Schrittweite in Abh&auml;ngigkeit vom Fr&auml;serdurchmesser.</font></li>
+      <li><font size="2" face="Tahoma" align="left">Bahnberechnung f&uuml;r zylindrischen 
+        Schaftfr&auml;ser oder f&uuml;r Gravierstichel.</font></li>
+      <li><font size="2" face="Tahoma" align="left">Freir&auml;umen einer Randzone 
+        (Graben fr&auml;sen).</font></li>
+    </ul>
+  </li>
+  <li><font size="2" face="Tahoma" align="left">Strategien</font> 
+    <ul>
+      <li><font size="2" face="Tahoma">Ebenenbearbeitung</font> 
+        <ul>
+          <li><font size="2" face="Tahoma" align="left">Schruppen m&auml;anderf&ouml;rmig 
+            in X, Y oder kreuzweise.</font></li>
+          <li><font size="2" face="Tahoma" align="left">Schlichten in X, Y oder 
+            kreuzweise.</font></li>
+        </ul>
+      </li>
+      <li><font size="2" face="Tahoma">Drehbearbeitung</font> 
+        <ul>
+          <li><font size="2" face="Tahoma">Fr&auml;sen in L&auml;ngsrichtung mit 
+            stufenweiser Ver&auml;nderung des Drehwinkels (Standard-Aufl&ouml;sung 
+            0,3&deg;).</font></li>
+          <li><font size="2" face="Tahoma">Ein- oder beidseitiger Zylinder zum 
+            Spannen in Drehfutter und Reitstock.</font></li>
+        </ul>
+      </li>
+    </ul>
+    <p align="left">&nbsp;</p>
+  </li>
+</ul>
+<p align="left"><b><font color="#FF00FF" size="5" face="Tahoma"> <img src="Bilder/CAD_3D_STLDrehBottle.jpg" width="200" height="150"> 
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"><br>
+  3. </font><font color="#FF00FF" size="2"> Beispiele und Grenzen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Unsere Koordinatentisch-System KOSY kann zusammen mit der zugeh&ouml;rigen 
+  Software <i><b>nccad6</b></i> sogar dreidimensionale K&ouml;rper rundum fr&auml;sen, 
+  wie das Bild zeigt. Vorausgesetzt, der optionale Drehzusatz steht zur Verf&uuml;gung. 
+  Was KOSY gut kann und wo Einschr&auml;nkungen zu machen sind, das soll hier 
+  erkl&auml;rt werden:</font></p>
+<p><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3D_STLHalbrund100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLBonaparte100.jpg" width="100" height="100"><br>
+  3.1</b> Konvexe K&ouml;rper ohne senkrechte Kanten<br>
+  </font><font face="Tahoma" size="2" color="#000000"><b>Sie k&ouml;nnen vergleichsweise 
+  am besten bearbeitet werden</b>. Beim Schlichten ist lediglich darauf zu achten, 
+  da&szlig; der Fr&auml;ser wesentlich d&uuml;nner als die aufzul&ouml;sende Oberfl&auml;chen-Struktur 
+  ist. </font></p>
+<p align="left"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3D_STLMulde100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLZylMulde100.jpg" width="100" height="100"><br>
+  3.2</b> Konkave K&ouml;rper ohne senkrechte Kanten<br>
+  </font><font face="Tahoma" size="2" color="#000000"><b>Mulden</b> k&ouml;nnen 
+  nur dann richtig gefr&auml;st werden, wenn der <b>Fr&auml;serdurchmesser</b> 
+  beim Schlichten <b>wesentlich kleiner ist als der Muldenradius</b>. Trotzdem 
+  entsteht im Umkehrpunkt (an der tiefsten Stelle) aufgrund des zylindrischen 
+  Fr&auml;sers ein Plateau.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3D_STLLoch100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLGehaeuse100.jpg" width="100" height="100"><br>
+  </b></font><font face="Tahoma" size="2" color="#FF00FF"><b>3.3</b> K&ouml;rper 
+  mit Bohrungen<br>
+  </font><font face="Tahoma" size="2" color="#000000"><b>Normale Bohrungen</b> 
+  <b>sollten nicht</b> innerhalb der 3D-Datei <b>exportiert werden</b>, dies f&uuml;hrt 
+  beim 3D-Fr&auml;sen zu &quot;unscharfen Randkonturen&quot; und zu einer langen 
+  Bearbeitungszeit. <br>
+  Besser ist es, wenn die Bohrungen als 2D-Teile in DXF oder HPGL separat exportiert- 
+  und &uuml;ber die STL- Zone importiert/positioniert werden.<br>
+  Vielfach kann es aber auch einfacher sein, wenn die Bohrungen in <i><b>nccad</b></i> 
+  als Punkte oder Kreise &quot;nachgezeichnet&quot; werden. </font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3D_STLHalbrundGravurErh.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLDuese100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLPleuel100.jpg" width="100" height="100"><br>
+  3.4</b> K&ouml;rper mit senkrechten Kanten<br>
+  </font><font face="Tahoma" size="2" color="#000000"><b>In der derzeitigen Version</b> 
+  von <i><b>nccad</b></i> <b>sollten solche Teile vermieden werden</b>. Es fehlt 
+  die M&ouml;glichkeit zur Nachbearbeitung von senkrechten Kanten und die Unterst&uuml;tzung 
+  verschiedener Fr&auml;sergeometrieen. Die Kanten werden ungenau und k&ouml;nnen 
+  bestenfalls in 2D- oder von Hand nachgearbeitet werden.<br>
+  Oft kann durch geringf&uuml;gige &Auml;nderungen oder durch Zerlegen in 2D- 
+  und 3D-Einzelteile Abhilfe geschaffen werden. Das Bild ganz rechts zeigt &uuml;brigens 
+  ein Beispiel, das besser, genauer und schneller mit einer 2 1/2-D-Bearbeitung 
+  herzustellen w&auml;re. Es hat ausschlie&szlig;lich senkrechte Wandungen und 
+  eine ebene Oberfl&auml;che.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3D_STLImpeller100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLTriangel100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLVentil100.jpg" width="100" height="100"><img src="Bilder/CAD_3D_STLGolfHalb100.jpg" width="100" height="100"><br>
+  3.5</b> K&ouml;rper, die nicht direkt mit KOSY hergestellt werden k&ouml;nnen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Immer dann, wenn Sie mehr 
+  als 4 Achsen oder Spann- und Aufteilungshilfen brauchen, um den K&ouml;rper 
+  herzustellen, sto&szlig;en Sie an Grenzen, z.B.:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma">Schaufelr&auml;der oder&nbsp; geschwungene 
+    Teile: Ohne Modifizierung oder Zerlegung sind die Teile mit KOSY nicht herzustellen. 
+    Beim Schaufelrad zum Beispiel k&ouml;nnten der Mittelzylinder und die Schaufeln 
+    einzeln gefertigt- und dann die Teile zusammengesetzt werden.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Hohlk&ouml;rper: 
+    Die K&ouml;rper m&uuml;ssen in Schichten zerlegt werden, daf&uuml;r gibt es 
+    spezielle CAM-Programme.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Hochpr&auml;zisionsteile: 
+    Durch den STL-Export geht Genauigkeit verloren, ein weiterer Fehler entsteht 
+    durch die Genauigkeit der Bearbeitung.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">K&ouml;rper mit 
+    gleichm&auml;&szlig;ig verteilter Oberfl&auml;chenstruktur: So hat z.B. ein 
+    Golfball auf der Kugeloberfl&auml;che gleichm&auml;&szlig;ig verteilte Mulden. 
+    Sie k&ouml;nnen nur pr&auml;zise hergestellt werden, wenn die Fr&auml;sachse 
+    senkrecht zur Oberfl&auml;che steht. Man braucht also beispielsweise eine 
+    5-Achs-Maschine, mit einer 3-Achs-Maschine entstehen Fehler und man kommt 
+    nat&uuml;rlich nicht &uuml;berall hin.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Abhilfe kann in all 
+  diesen F&auml;llen nur durch ein sehr leistungsf&auml;higes und teueres CAM-Programm 
+  und die dazugeh&ouml;rige Mehrachs-Maschine geschaffen werden.</font></p>
+<p align="left">&nbsp; </p>
+<p><font face="Tahoma" size="2"><br>
+  </font><b><font face="Tahoma"><font color="#FF00FF" size="5">4. </font><font color="#FF00FF" size="2"> 
+  Schlu&szlig;betrachtung</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Sicher wird <i><b>nccad</b></i> im 3D-Bereich weiterentwickelt und es 
+  werden bestehen L&uuml;cken geschlossen bzw. W&uuml;nsche erf&uuml;llt, aber 
+  es werden auch immer welche offen bleiben. </font></p>
+<p><font face="Tahoma" size="2">Gut ist, da&szlig; es auch immer Umwege und Auswege 
+  gibt und es gibt uns, wenn Sie einmal Hilfe brauchen.</font><b><font face="Tahoma"><font color="#FF00FF" size="5"> 
+  </font></font></b></p>
+</body>
+
+</html>

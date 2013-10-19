@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Grundlagen CAD/3D-Funktionen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font face="Times New Roman" size="6" color="#FF00FF"><b><i>3D-Funktionen <font size="4">in</font> 
+  nccad</i></b></font><b><font face="Tahoma" size="1" color="#000000"><br>
+  Erstellt: Oktober 2004<br>
+  &Uuml;berarbeitet: 17.10. 04</font></b></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Prinzipiell ist <i><b>nccad</b></i> 
+  ein CAD/CAM/DNC-Programm f&uuml;r die <b>Programmierung und Steuerung von kleinen 
+  Koordinatentischen und CNC-Maschinen</b>. Es kann niemals ein reines und vollst&auml;ndiges 
+  CAD-Programm f&uuml;r die Konstruktion von Maschinen oder f&uuml;r das professionelle 
+  Gestalten eines Produkt-Designs sein. </font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma"><b><i>nccad</i></b> 
+  beinhaltet derzeit<b> kein 3D-f&auml;higes Zeichenmodul</b>, hat <b>aber</b> 
+  <b>folgende 3D-Funktionen</b>:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Gestalten von 
+    <a href="../Grundlagen_Fraesmaschine/3D%20Anwendungen/CAD_3DKonstruktion.htm">Plastischen 
+    Zonen</a></b> &uuml;ber das 2 dimensionale Zeichnen und Zusammensetzen von 
+    Schnitten.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b><a href="../Optionen%20Anwendung/Abtasten.htm">Abtasten</a></b> 
+    von dreidimensionalen K&ouml;rpern mit max. 4 Achsen, <b>erstellen einer STL-Datei</b>, 
+    <b>darstellen in OpenGL</b> und <b>bearbeiten mit der CNC-Fr&auml;smaschine</b>.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b><a href="../Grundlagen_Fraesmaschine/3D%20Anwendungen/CAD_3D_STL.htm">Import 
+    einer STL-Datei</a></b>, </font><font color="#000000" size="2" face="Tahoma" align="left"><b>darstellen 
+    in OpenGL</b> und <b>bearbeiten mit der CNC-Fr&auml;smaschine</b>.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">&Uuml;ber die Links 
+  erhalten Sie n&auml;here Informationen und Bedienhinweise zu den genannten Funktionen.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma"> Im Folgenden sollen 
+  die <b>3D-Funktionen</b> n&auml;her beschrieben werden, <b>die in <i>nccad</i> 
+  7 neu sind</b>:</font></p>
+<p align="left"><font color="#FF00FF" size="6" face="Times New Roman"><b><font size="5" face="Tahoma">1.</font><font size="2" face="Tahoma"> 
+  Schnittdarstellung in Plastischer Zone STL</font></b></font><font color="#000000" size="2" face="Tahoma"><br>
+  Wird eine<b> STL-Datei</b> &uuml;ber das Men&uuml; <b>Datei/Datei importieren/STL-Datei</b> 
+  importiert, erscheint sie zun&auml;chst <b>in der Zeichenfl&auml;che als leeres 
+  Rechteck</b>, es stellt die <b>Draufsicht</b> in der X/Y-Darstellung dar (die 
+  Z-Achse ist hier nicht vorhanden). Diese zweidimensionale Darstellung <b>kann 
+  wie folgt grafisch weiterbearbeitet werden</b>:</font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2"><img src="Bilder/CAD3D_NussAufruf.gif" width="247" height="170"><br>
+  1.1</font></b><font size="2"> OpenGL-Darstellung aufrufen</font></font><font color="#000000" size="2" face="Tahoma"><br>
+  Mit einem Klick auf das Icon <b>3D-Ansicht</b> in der Icon-Gruppe <b>CAD 3D</b> 
+  erscheint das <b>Fadenkreuz mit dem Suchfenster</b>. <b>Positionieren</b> Sie 
+  dies <b>an einer Ecke</b> der Plastischen Zone, wird die Draufsicht markiert, 
+  in der Statuszeile erscheint die Meldung &quot;Plastische Zone STL&quot;. Mit 
+  einem <b>Klick</b> wird das Fenster 3D-Ansicht ge&ouml;ffnet (n&auml;chstes 
+  Bild unten).</font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2"><img src="Bilder/CAD3D_Nuss.gif" width="429" height="343"><br>
+  1.2</font></b><font size="2"> Schnitte ausw&auml;hlen und anzeigen</font></font><font color="#000000" size="2" face="Tahoma"><br>
+  &Uuml;ber das Men&uuml; erreichen Sie <b>Schnitt anzeigen</b>, Sie haben 2 M&ouml;glichkeiten:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Benutzerdefinierter 
+    Schnitt</b><br>
+    Hier kann die Lage des Schnittes bestimmt werden.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Vordefinierter 
+    Schnitt</b><br>
+    Hier werden automatisch 3 Schnitte in vorgegebenen Z-Positionen erzeugt (siehe 
+    Bild oben und unten).</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Nach Anwendung einer 
+  dieser Men&uuml;wahl erscheinen in der Zeichenf&auml;che und innerhalb der Draufsicht 
+  die Schnitte, wie das folgende Bild zeigt: </font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2"><img src="Bilder/CAD3D_NussSchnitte.gif" width="205" height="282"><br>
+  1.3</font></b><font size="2"> Schnitte darstellen</font></font><font color="#000000" size="2" face="Tahoma"><br>
+  Die <b>Schnitte</b> werden als <b>gemeinsames Symbol im Layer 9</b> (schwarz) 
+  dargestellt und geben in der zweidimensionalen Draufsicht einen Eindruck von 
+  der Form des dreidimensionalen K&ouml;rpers.</font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2">1.4</font></b><font size="2"> 
+  Schnitte bearbeiten und verwenden</font></font><font color="#000000" size="2" face="Tahoma"><br>
+  Eine Reihe von <b>Bearbeitungsfunktionen</b> sind m&ouml;glich, manche f&uuml;hren 
+  zu sinnvollen Anwendungsbeispielen:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">L&ouml;schen</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Verschieben</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Kopieren</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Symbol aufl&ouml;sen</b> 
+    und danach <b>Eigenschaften &auml;ndern</b> (Layer, Farbe).<br>
+    Die Schnitte k&ouml;nnen dann auch zur Herstellung von Fr&auml;steilen verwendet 
+    werden. </font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">W&auml;hlen Sie dabei 
+  nicht die einzelnen Konturen aus, sondern ziehen Sie einen Rahmen auf, der alle 
+  Konturen einschlie&szlig;t. Einige Funktionen, wie Drehen sind nur mit unangenehmen 
+  Folgen verbunden und sollten vermieden werden. </font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#FF00FF" size="6" face="Times New Roman"><b><font size="5" face="Tahoma">2.</font><font size="2" face="Tahoma"> 
+  OpenGL-Darstellung in Bild-Datei umwandeln</font></b></font><font color="#000000" size="2" face="Tahoma"><br>
+  Wird eine STL-Datei importiert, erscheint sie zun&auml;chst in der Zeichenfl&auml;che 
+  als leeres Rechteck, es stellt die <b>Draufsicht einer Plastischen Zone STL</b> 
+  dar. Die Darstellung kann wie folgt grafisch weiterbearbeitet werden:</font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2"><img src="Bilder/CAD3D_NussSpeichernBmp.gif" width="537" height="471"><br>
+  2.1</font></b><font size="2"> OpenGL-Darstellung in Bild-Datei umwandeln und 
+  abspeichern </font></font><font color="#000000" size="2" face="Tahoma"><br>
+  Entsprechend dem Bild oben ist Folgendes zu tun:</font></p>
+<ol>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Klicken</b> 
+    des Icons <b>3D-Ansicht</b> im Icon-Men&uuml; (links im Bild) in der Icon-Gruppe 
+    <b>CAD 3D</b></font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Bild-Darstellung</b> 
+    im Fenster <b>3D-Ansicht</b> an die gew&uuml;nschte Lage und Gr&ouml;&szlig;e 
+    <b>anpassen</b>.<b><br>
+    </b>Benutzen Sie dabei die Icon-Leiste am rechten Rand des Fensters, um die 
+    Winkellage aller Achsen variabel- oder fest einzustellen, die Darstellungsgr&ouml;&szlig;e 
+    anzupassen (zoomen) oder den Hintergrund schwarz- bzw. wei&szlig; einzustellen.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Icon <b>Umwandeln.... 
+    in ein Bitmap </b> klicken (unterstes Icon im Fenster &quot;3D-Ansicht&quot;)</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Im <b>Explorer-Fenster</b> 
+    Pfad w&auml;hlen, Dateinamen vergeben und <b>abspeichern</b>.<br>
+    Als <b>Pfad</b> wird derjenige <b>vorgegeben</b>, der im Men&uuml; <b>Parameter/Dateien/Ordner 
+    w&auml;hlen...</b> unter <b>Bild-Dateien</b> angegeben ist.</font></li>
+</ol>
+<p><font color="#000000" size="2" face="Tahoma"><b>Bitte beachten:</b> <br>
+  Im Fenster &quot;3D-Ansicht&quot; gibt es auch ein Men&uuml; &quot;Speichern&quot;. 
+  Es dient der Speicherung der STL-Daten innerhalb von <i><b>nccad</b></i> und 
+  nicht der Umwandlung.</font></p>
+<p align="left"><font color="#FF00FF" size="4" face="Tahoma"><b><font size="2">2.1</font></b><font size="2"> 
+  Bild verwenden</font></font><font color="#000000" size="2" face="Tahoma"><br>
+  Die Bild-Datei kann beliebig verwendet werden, z.B. durch Laden in anderen Programmen 
+  oder innnerhalb von <i><b>nccad</b></i> durch <a href="Grafik/BilderImport.htm">Bild-Datei 
+  importieren und nutzen</a>. </font></p>
+</body>
+</html>

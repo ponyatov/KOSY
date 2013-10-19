@@ -1,0 +1,513 @@
+<html>
+<head>
+<title>Drehbank - Testhilfen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Arial" size="1" color="#000000"><b><font face="Times New Roman" size="6" color="#FF00FF"><i><font size="3">Die 
+  &quot;Intelligente Drehbank&quot; </font><br>
+  Testhilfen</i></font><br>
+  <font face="Tahoma">Vorl&auml;ufige und unverbindliche Ausgabe zur Erprobung: 
+  24. November 2003</font></b></font></p>
+<p align="left"><font face="Arial" size="2" color="#000000">Mit der KOSY-Steuerung 
+  und einer weiterentwickelten Version von <b><i>nccad </i></b>wird die altbekannte 
+  Drehbank zu einer sehr komfortabelen CNC-Drehmaschine. Die <b>Voraussetzungen</b> 
+  <b>f&uuml;r</b> den <b>vollen Funktionsumfang</b> sind:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Drehbank</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">2 Achsen mit 
+        Schrittmotor-Antrieb.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen:</b> 
+        Encoder mit min. 1000 Imp/Umdrehung zur Synchronisierung.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left">Zum Konturdrehen 
+        und Hochgenauigkeitsdrehen: Spielfreie Spindelantriebe.</font></li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Elektronik</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">KOSY-Steuerung 
+        f&uuml;r 2 Achsen (2 Schrittmotor-Endstufen) mit:</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Microcontroller 
+            ab 3/2003, Version ab 2.20. Die Version ist kontrollierbar in <i><b>nccad</b></i> 
+            &uuml;ber <b>Hilfe/Datei-Informationen</b>. Der Text &quot;Variable 
+            Endschalter&quot; und &quot;externer Takt U-Achse&quot; mu&szlig; 
+            erscheinen.</font></li>
+        </ul>
+      </li>
+      <li><font color="#000000" size="2" face="Arial">3. Schrittmotor-Enstufe 
+        (Optionen &quot;3. Achse&quot;)</font></li>
+      <ul>
+        <li><font color="#000000" size="2" face="Arial">Bet&auml;tigung des Werkzeugwechsels 
+          </font></li>
+      </ul>
+      <li><font color="#000000" size="2" face="Arial">Steuerelemente f&uuml;r 
+        vollautomatischen Betrieb (Option &quot;Automatisierungselemente&quot;)</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial">Vollst&auml;ndige Relaisbest&uuml;ckung<br>
+            (Voraussetzung f&uuml;r die Steuerung von z.B. K&uuml;hlmittel, Werkzeugwechsel, 
+            Spindel-Drehrichtung usw.) </font></li>
+          <li><font color="#000000" size="2" face="Arial">Analoger Spannungsausgang 
+            f&uuml;r die Fernsteuerung der Spindel-Drehzahl<br>
+            (Die Steuerungselektronik der Spindel mu&szlig; ebenfalls entsprechend 
+            hochger&uuml;stet werden) </font></li>
+        </ul>
+      </li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen</b> 
+        ist eine Anpassung des verwendeten Encoders erforderlich:<br>
+        Fragen Sie hierzu Ihren Lieferanten (bitte keine unerlaubten Eingriffe 
+        in die Elektronik).</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Modifizierter 
+            Anschluss f&uuml;r U-Achse mit Encoder-Verbindung.</font></li>
+          <li><font color="#000000" size="2" face="Arial">Passende Interface-Platine 
+            mit Anpassung der Optokoppler an den verwendeten Encoder.</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Software</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b><i>nccad 
+        7</i></b> , ab Rev.0.0x , ab Dez. 2003</font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Arial">Fragen Sie im Zweifelsfall 
+  Ihren Lieferanten zu den Ausstattungsdetails, zum Stand der Entwicklung und 
+  zu den Einsatzm&ouml;glichkeiten.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Voraussetzung ist 
+  die odnungsgem&auml;&szlig;e Inbetriebnahme der Drehbank - </b>Siehe: <a href="Drehbank_ErsteSchritte.htm">Erste 
+  Schritte</a></font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Vorkenntnisse im 
+  Bereich CAD/CAM und CNC sind erforderlich.</b> Eine g&uuml;nstige Voraussetzung 
+  ist die vorangegangene Arbeit mit dem Koordinatentisch-System KOSY. Andernfalls 
+  empfehlen wir eine Schulung anl&auml;&szlig;lich der &Uuml;bergabe des Systems.</font></p>
+<p align="left"><b><font face="Tahoma" color="#FF00FF" size="5">1.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Grunds&auml;tzliches zum Test einer CNC-Drehmaschine (Drehbank)</font></b><font face="Tahoma" size="2"><br>
+  Der Anwender einer konventionellen Drehmaschine, er nennt sie liebevoll &quot;seine 
+  Drehbank&quot;, kennt alle angenehmen- und nicht angenehmen Eigenschaften dieser 
+  Maschine und hat damit umzugehen gelernt. Er ist ein wahrer &quot;Zauberer&quot; 
+  geworden, wenn man die hochpr&auml;zisen Teile betrachtet, die er damit gemacht 
+  hat. Baut man ihm &quot;seine Drehbank&quot; zu einer CNC-Drehmaschine um, dann 
+  f&auml;llt der <b>erforderliche Umdenkprozess</b> aus emotionalen und rationalen 
+  Gr&uuml;nden schwer. <b>Dazu ein frei konstruiertes, aber deutliches Beispiel</b>:</font></p>
+<blockquote> 
+  <p align="left"><font size="2" face="Tahoma">Zur &Uuml;berpr&uuml;fung der Genauigkeit 
+    dieser CNC-Drehmaschine montiert er am Support eine Me&szlig;uhr, verf&auml;hrt 
+    &uuml;ber die Handsteuerfunktion der Software und vergleicht die Nonius-Anzeige 
+    mit der Anzeige auf der Me&szlig;uhr, das Ergebnis ist miserabel. Anschlie&szlig;end 
+    dreht er mit eben dieser Handsteuerfunktion auf verschiedene Durchmesser ab 
+    und stellt am Werkst&uuml;ck fest, da&szlig; alle Durchmesser um 0,31 mm zu 
+    gro&szlig; sind und die Werte obendrein noch um ca. +- 0,02mm schwanken. Eine 
+    solche Drehbank lehnt er fortan kategorisch ab. F&uuml;r die Rettung seiner 
+    beruflichen Zukunft sollte jetzt ein Umdenkprozess eingeleitet werden. Deshalb, 
+    passend zum Beispiel, folgende Bemerkungen:</font></p>
+  <ul>
+    <li><font color="#000000" size="2" face="Tahoma" align="left">Es ist absolut- 
+      und furchtbar falsch, den Nonius und die Me&szlig;uhr zu vergleichen. Einzig 
+      richtig ist der <b>Zusammenhang </b>zwischen einem logisch richtigen CNC-Befehl 
+      f&uuml;r das <b>gewollte Ma&szlig;</b> und dem am Werkst&uuml;ck gemessenen 
+      Durchmesser als das <b>erreichte Ma&szlig;</b>. In diesem Fall <b>spielen 
+      viele Fehler keine Rolle, wie....</b></font> 
+      <ul>
+        <li><font color="#000000" size="2" face="Tahoma" align="left"> Nonius-Ablesewert 
+          ungenau (Genauigkeit der Skala, Justage, Fixierung bzw. Verstellen durch 
+          Vibration...). Eigentlich h&auml;tte der Nonius, zusammen mit dem Handrad, 
+          beim Umbau abmontiert werden k&ouml;nnen. Er hat nahezu keine Bedeutung 
+          mehr, verwirrt nur und erschwert den Einstieg in eine neue Welt. </font></li>
+        <li><font color="#000000" size="2" face="Tahoma" align="left">Anzeige 
+          der Me&szlig;uhr fehlerhaft (Me&szlig;uhr selbst, Befestigung, Nullstellung, 
+          Schmutz....)</font></li>
+        <li><font color="#000000" size="2" face="Tahoma" align="left"> pers&ouml;nliche 
+          Fehler (Ablesefehler, Konstruktionsfehler des Me&szlig;aufbaus u.&Auml;.m.)<br>
+          </font></li>
+      </ul>
+    </li>
+    <li><font color="#000000" size="2" face="Tahoma" align="left">Auff&auml;llig 
+      ist, da&szlig; die Durchmesser-Differenz mit ca. +- 0,02mm relativ klein 
+      ist, aber alle Durchmesser um 0,31mm zu gro&szlig; sind. Da br&auml;uchte 
+      man eigentlich nur den Werkst&uuml;ck-Nullpunkt (WNP) korrigieren.</font></li>
+  </ul>
+</blockquote>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Dieses frei konstruierte, 
+  aber deutliche Beispiel mag die grunds&auml;tzlichen Probleme erkl&auml;ren 
+  - <b>Der Umbau der Maschine gen&uuml;gt nicht</b>.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die<b> Genauigkeitsprobleme 
+  bei CNC-Drehmaschinen </b>im Vergleich zu konventionellen Drehmaschinen<b> verlagern 
+  sich</b>, eine ver&auml;nderte Betrachtung ist erforderlich. <b>Neu hinzu kommen 
+  bei CNC-Drehmaschinen folgende Fehler</b>:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Die schwierige- 
+    und fehlerbehaftete Behandlung des Umkehrspiels</b><br>
+    Im Grunde ist eine spielfreie Kugelumlaufspindel f&uuml;r die Vorsch&uuml;be 
+    erforderlich, denn das Umkehrspiel kann nicht immer von der Software &quot;herausgerechnet&quot; 
+    werden. Lassen Sie sich da nichts erz&auml;hlen, es geht nur bedingt und teilweise.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Fehler von Kugelumlaufspindel 
+    und deren Lagerung</b></font><font color="#000000" size="2" face="Tahoma"><br>
+    Der Einbau einer spielfreien Kugelumlaufspindel alleine ist noch keine Gew&auml;hr 
+    f&uuml;r einen Genauigkeitszuwachs. Solche Spindeln gibt es in sehr unterschiedlichen 
+    Qualit&auml;ten und bei Auswahl sowie Einbau k&ouml;nnen prinzipielle Fehler 
+    gemacht werden. </font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Fehler bei 
+    der Vermessung der Werkzeuge</b><br>
+    Es ist nicht praktikabel, nach einem Werkzeugwechsel immer &quot;anzukratzen&quot;. 
+    Man m&uuml;sste, angesichts der bei Drehmaschinen h&auml;ufigen Werkzeugwechsel, 
+    viel Zeit aufwenden und stehen bleiben, obwohl es eine CNC-Maschine ist. Also 
+    wird mit dem automatischen Werkzeugwechsel und dem Werkzeug-Korrekturspeicher 
+    gearbeitet, aber die dort eingetragenen Werte k&ouml;nnen falsch sein.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Fehler bei 
+    der Programmierung</b><br>
+    Falsche Befehlsreihenfolge, falsche Technologie-Werte, falsch verstandene 
+    Zyklen u.&Auml;.m.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Fehler durch die Steuerung 
+    verursacht</b><br>
+    Sie kann falsch eingestellt (paramtriert) sein, die Antriebe k&ouml;nnen im 
+    Anwendungsfall &uuml;berlastet- oder falsch dimensioniert sein u.&Auml;.m.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Einige <b>Fehlerquellen</b> 
+  <b>fallen</b> aber auch <b>bei CNC-Drehmaschinen</b> gegen&uuml;ber konventionellen 
+  Drehmaschinen <b>weg</b>:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Fehler </b>die 
+    <b>durch</b> den <b>manuellen Vorschub</b> entstehen<br>
+    Riefen, sichtbare und me&szlig;bare &Uuml;berg&auml;nge, aber auch die irrt&uuml;mliche 
+    Zustellung &uuml;ber das Ziel hinaus.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma"><b>Nichtber&uuml;cksichtigung 
+    des Umkehrspiels</b><br>
+    Umkehrspiel ist bei konventionellen Drehmaschinen normal. Aber immer wieder 
+    wird vergessen, welche Bedeutung es f&uuml;r die erreichbare Genauigkeit hat. 
+    Der menschliche Regelprozess wird gefordert, ist aber nicht zuverl&auml;ssig- 
+    und gleichbleibend vorhanden. Ein CNC-Zyklus kann es ber&uuml;cksichtigen 
+    oder nicht, auf jeden Fall gleichbleibend.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Konzentrationsfehler 
+    beim Bedienpersonal</b><br>
+    Am Anfang ist die Fehlerquote noch gering, sie steigt aber zwangsl&auml;ufig. 
+    Die CNC-Drehmaschine hat dieses &quot;pers&ouml;nliche Problem&quot; nicht.</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Bei all diesen Betrachtungen 
+  sind grunds&auml;tzliche Fehlerquellen (Justage des Spindelbocks, Rundlaufgenauigkeit 
+  .......) nicht einbezogen, sie sind unabh&auml;ngig vom Typ immer vorhanden.<br>
+  Es mag der Eindruck entstehen, da&szlig; CNC-Drehmaschinen einen schlechteren 
+  Qualit&auml;tsstandard haben als konventionelle Drehmaschinen, er ist falsch. 
+  Richtig ist, da&szlig; bei einer CNC-Maschine wesentlich mehr Komponenten- also 
+  auch mehr Fehlerm&ouml;glichkeiten vorhanden sind. Konventionelle Drehmaschinen 
+  bestehen in erster Linie aus Mechanik, CNC-Maschinen sind hingegen komplexe 
+  mechatronische Systeme mit den Komponenten...</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Mechanik</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Elektrik</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Elektronik</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Computer-Hardware</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Software</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Viel mehr Komponenten 
+  m&uuml;ssen also von hoher Qualit&auml;t sein und die Anforderungen an das Service-Personal 
+  werden h&ouml;her. Damit ist auch erkl&auml;rt, warum CNC-Drehmaschinen mehr 
+  Geld kosten. Der Rationalisierungs-/Automatisierungseffekt und die Verbesserung 
+  der Reproduzierbarkeit rechtfertigen diesen Mehraufwand.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Nachfolgend sollen 
+  einige <b>Testhilfen f&uuml;r eine CNC-Drehmaschine mit KOSY-Steuerung</b> vorgestellt 
+  werden. <br>
+  </font></p>
+<p align="left"><b><font face="Tahoma" color="#FF00FF" size="5">2.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Pr&uuml;fung von Einzelelementen und Komponeneten </font></b><font face="Tahoma" size="2"><br>
+  Besonderen <b>Einflu&szlig; auf die erreichbare Genauigkeit</b> von CNC-Drehmaschinen 
+  <b>haben folgende Elemente bzw. Systemkomponeneten</b>:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma" align="left">Die Spindeln f&uuml;r den Vorschub</font></li>
+  <li><font size="2" face="Tahoma" align="left">Die F&uuml;hrungen</font></li>
+  <li><font size="2" face="Tahoma" align="left">Die Zuverl&auml;ssigkeit- und 
+    die Art der Steuerung</font></li>
+  <li><font size="2" face="Tahoma" align="left">Die Daten der Drehspindel (Hauptspindel)</font></li>
+  <li><font size="2" face="Tahoma">Teile der Steuerung</font></li>
+</ul>
+<p align="left"><font size="2" face="Tahoma">Einige Pr&uuml;fprogramme sollen 
+  helfen Fehler zu erkennen und Fehlerursachen herauszufiltern.</font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4">2.1</font> 
+  &Uuml;berpr&uuml;fung des L&auml;ngs-Vorschubes<br>
+  </b></font><font size="2" face="Tahoma">Spannen Sie ein Rundteil (Daten lt. 
+  Programm) zwischen Drehfutter und mitlaufende K&ouml;rnerspitze und geben Sie 
+  das nachfolgende CNC-Programm ein. Ab Dezember 2003 wird es im Ordner <b>Testprogramme</b> 
+  auch mitgeliefert.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">; 
+  Testprogramm L&auml;ngsdrehen, Version1<br>
+  ; Rohteil rund, d=20 l=200 <br>
+  ; Material beliebig aber gut bearbeitbar<br>
+  ; WNP rechts am Rohteilende auf Drehachse<br>
+  ; Zustellachse X<br>
+  ; Normaler Drehmei&szlig;el mit feiner Spitze<br>
+  <br>
+  G76&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp; ;Referenzlauf<br>
+  G00 Z0<br>
+  G00 X22<br>
+  M10 O2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Drehspindel 
+  ein<br>
+  M30 P100<br>
+  G91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp; ;Relativma&szlig;<br>
+  <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font><br>
+  G24 N10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Wiederholschleife 
+  10 mal links</font></p>
+<blockquote> 
+  <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G01 
+    Z-10 F30</font><br>
+    <font color="#339966" size="2" face="Courier New, Courier, mono">G01 X-3 <br>
+    G01 X3</font></p>
+  </blockquote>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G01 
+  Z2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ;2mm nach rechts 
+  in Paarposition</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G24 
+  N10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ;Wiederholschleife 
+  10 mal rechts</font></p>
+<blockquote> 
+  <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono"> G01 X-3 F30<br>
+    G01 X3<br>
+    G01 Z10</font></p>
+</blockquote>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98<br>
+  G01 Z-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Korrektur<br>
+  <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font><br>
+  </font><font color="#339966" size="2" face="Courier New, Courier, mono">G90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp;&nbsp;&nbsp; ;Absolutma&szlig;<br>
+  M10 O2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Drehspindel 
+  aus<br>
+  G00 X30&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Ausspannposition</font></p>
+<p align="left"><font size="2" face="Tahoma">Vielleicht gelingt es Ihnen nach 
+  dem Stillstand noch eine horizontale L&auml;ngsrille einzuritzen, bevor Sie 
+  ausspannen.<br>
+  Auf dem Drehteil m&uuml;ssen Einstichpaare zu sehen sein, die...</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....zueinander 
+    einen Abstand von 10 mm haben.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma"> Linearit&auml;tsfehler</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....absolut immer 
+    weitere 10mm vom ersten Paar entfernt sein m&uuml;ssen.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font>
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma"> Linearit&auml;tsfehler</font></li>
+          <li><font color="#000000" size="2" face="Tahoma">Steigungsfehler</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....innerhalb 
+    eines Paares immer 2mm voneinander entfernt sind.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma">Umkehrspiel</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma">....eine konstante Einstichbreite 
+    haben.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Abweichungen liefern eine 
+        Aussage &uuml;ber....</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma">Justage des Spindelblocks</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die Me&szlig;methode 
+  mu&szlig; Ihnen &uuml;berlassen werden, sie sollte nat&uuml;rlich sehr genau 
+  sein.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Wenn Sie an den <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font> 
+  markierten Stellen des Programms die folgenden Befehle einf&uuml;gen, kann die 
+  Wiederholgenauigkeit getestet werden. </font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G24 N3</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die Anzahl der Wiederholungen 
+  ist nat&uuml;rlich ver&auml;nderbar, nur mu&szlig; die Maschine unter Beobachtung 
+  bleiben.</font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4">2.2</font> 
+  &Uuml;berpr&uuml;fung des Plan-Vorschubes<br>
+  </b></font><font size="2" face="Tahoma">Spannen Sie ein Rundteil (Daten lt. 
+  Programm) in das Drehfutter ein, drehen Sie die Oberfl&auml;che plan und geben 
+  Sie das nachfolgende CNC-Programm ein. Ab Dezember 2003 wird es im Ordner <b>Testprogramme</b> 
+  auch mitgeliefert.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">; 
+  Testprogramm L&auml;ngsdrehen, Version1<br>
+  ; Rohteil rund, d=20 l=200 <br>
+  ; Material beliebig aber gut bearbeitbar<br>
+  ; WNP rechts am Rohteilende auf Drehachse<br>
+  ; Zustellachse Z<br>
+  ; Normaler Drehmei&szlig;el quer mit feiner Spitze<br>
+  <br>
+  G76&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp; ;Referenzlauf<br>
+  G00 Z2<br>
+  G00 X52<br>
+  M10 O2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Drehspindel 
+  ein<br>
+  M30 P100<br>
+  G91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp; ;Relativma&szlig;<br>
+  <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font><br>
+  G24 N10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Wiederholschleife 
+  10 mal nach innen</font></p>
+<blockquote> 
+  <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G01 
+    X-4 F30</font><br>
+    <font color="#339966" size="2" face="Courier New, Courier, mono">G01 Z-3 <br>
+    G01 Z3</font></p>
+</blockquote>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G01 
+  X1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ;1mm nach au&szlig;en 
+  in Paarposition</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G24 
+  N10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ;Wiederholschleife 
+  10 mal nach au&szlig;en</font></p>
+<blockquote> 
+  <p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono"> 
+    G01 Z-3 F30<br>
+    G01 Z3<br>
+    G01 X4</font></p>
+</blockquote>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98<br>
+  G01 X-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Korrektur<br>
+  <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font><br>
+  </font><font color="#339966" size="2" face="Courier New, Courier, mono">G90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &nbsp;&nbsp;&nbsp; ;Absolutma&szlig;<br>
+  M10 O2.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Drehspindel 
+  aus<br>
+  G00 X30&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;Ausspannposition</font></p>
+<p align="left"><font size="2" face="Tahoma">Vielleicht gelingt es Ihnen nach 
+  dem Stillstand noch eine horizontale Hilfslinie einzuritzen, bevor Sie ausspannen.<br>
+  Auf dem Drehteil m&uuml;ssen Einstichpaare zu sehen sein, die...</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....zueinander 
+    einen Abstand von 4 mm haben.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma"> Linearit&auml;tsfehler</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....absolut immer 
+    weitere 4mm vom ersten Paar entfernt sein m&uuml;ssen.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma"> Linearit&auml;tsfehler</font></li>
+          <li><font color="#000000" size="2" face="Tahoma">Steigungsfehler</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">....innerhalb 
+    eines Paares immer 1mm voneinander entfernt sind.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Die Abweichung liefert 
+        eine Aussage &uuml;ber...</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma">Umkehrspiel</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma">....eine konstante Einstichbreite 
+    haben.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma">Abweichungen liefern eine 
+        Aussage &uuml;ber....</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Tahoma">Justage des Supports</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die Me&szlig;methode 
+  mu&szlig; Ihnen &uuml;berlassen werden, sie sollte nat&uuml;rlich sehr genau 
+  sein.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Wenn Sie an den <font color="#FF0000">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</font> 
+  markierten Stellen des Programms die folgenden Befehle einf&uuml;gen, kann die 
+  Wiederholgenauigkeit getestet werden. </font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G24 
+  N3</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">.</font></p>
+<p align="left"><font color="#339966" size="2" face="Courier New, Courier, mono">G98</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die Anzahl der Wiederholungen 
+  ist nat&uuml;rlich ver&auml;nderbar, nur mu&szlig; die Maschine unter Beobachtung 
+  bleiben.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p><img src="1_Bilder/CNC_ProgrDreh.gif" width="484" height="599"><b><font face="Tahoma" color="#FF00FF" size="5"><br>
+  3.</font><font face="Tahoma" size="2" color="#FF00FF"> Herstellen eines Pr&uuml;fk&ouml;rpers</font></b><font face="Tahoma" size="2"><br>
+  Im Bild wird ein einfaches Programmbeispiel gezeigt, das Sie jederzeit eingeben/(laden) 
+  können. Gehen Sie dazu in <b>Datei/CNC-Programm &ouml;ffnen</b> und in den Ordner 
+  <b>.........</b></font></p>
+<p><font size="2" face="Tahoma"><b>Übungsanleitung</b>: Versuchen Sie mit Hilfe 
+  der NC-Befehlsliste im Anhang dieses Programm zu analysieren. Wenn Sie im Menü 
+  <b>Maschine</b> die <b>Simulation/Tisch</b> wählen, läßt sich dieser zugehörige 
+  Programmlauf am Bildschirm darstellen.&nbsp; </font></p>
+
+<p><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font><br>
+  </font><b><font size="4"><b>3.1 </b></font>Einstellen des Werkst&uuml;ck-Nullpunktes 
+  und Start</b><font face="Arial" size="2" color="#FF00FF"><font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font>Sobald Sie den Drehmei&szlig;el- aber vorerst noch kein Werkst&uuml;ck 
+  montiert haben, ist Folgendes zu tun:</font></font></font></font></p>
+<ol>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial, Helvetica, sans-serif">Durch 
+    Dr&uuml;cken der Taste <b>&lt;Pos1&gt;</b> machen Sie zun&auml;chst einen 
+    <b>Referenzlauf </b>(Support mu&szlig; Ihnen entgegen fahren und dann in Richtung 
+    Drehfutter).</font></font></font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Stellen Sie mit Hilfe der Cursortasten 
+    einen <b>Werkst&uuml;ck-Nullpunkt (WNP) rechts vom Drehfutter </b>(min. ca. 
+    60 mm)<b> auf der Drehachse</b> ein. Durch Dr&uuml;cken der Tastenkombination 
+    <b>&lt;Strg&gt; + &lt;Ende&gt;</b> wird der voreingestellte WNP Nr.2 Null.</font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Geben 
+    Sie zur Probe einige <b>CNC-Befehle</b> ein, z.B.:<br>
+    <font color="#339966" face="Courier New, Courier, mono">G00 X10</font> oder 
+    <font color="#339966" face="Courier New, Courier, mono">G00 Z20</font> und 
+    beobachten Sie die Bewegungen. <br>
+    <b>Bei Gefahr dr&uuml;cken Sie eine beliebige Taste</b> auf der Tastatur, 
+    um sofort anzuhalten.</font></font></font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><b>Schalten</b> 
+    Sie durch Mausklick das <b>Relais</b> ein und wieder aus, an dem die <b>Fernsteuerung 
+    der Drehspindel</b> angeschlossen ist (Rahmen &quot;Relais&quot;). Normalerweise 
+    ist das Relais Nr. 2, also einschalten mit der Tastenkombination <b>&lt;Strg&gt; 
+    + &lt;F2&gt;</b> und ebenso wieder ausschalten.</font></font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Starten Sie die Bearbeitung 
+    mit der Tastenkombination &lt;Strg&gt; + &lt;A&gt;<br>
+    </font><font color="#000000" size="2" face="Tahoma">Zum sofortigen <b>Stop 
+    bei Gefahr</b> dr&uuml;cken Sie eine <b>beliebige Taste</b> auf der Tastatur.<br>
+    Andernfalls beantworten Sie die Frage &quot;Programm wiederholen&quot; mit 
+    &quot;Nein&quot;, es wird beendet und Sie befinden sich in der Handsteuerung.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Spannen Sie ein Werkst&uuml;ck 
+    ein und stellen Sie den WNP nochmals genauer an den rechten Rohteilrand mittig. 
+    Wiederholen Sie den Programmlauf.</font></li>
+</ol>
+<p><font face="Arial" size="2" color="#000000"> </font></p>
+</body>
+</html>

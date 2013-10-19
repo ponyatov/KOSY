@@ -1,0 +1,209 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Grundlagen/CAD-3D Konstruktion</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">3D-Konstruktion 
+  in plastischen Zonen<br>
+  </font></b></i><font face="Tahoma" size="1" color="#000000"><b>&Uuml;berarbeitet: 
+  Oktober 2002</b></font></p>
+<p><font face="Tahoma" size="2">Auf dieser Seite werden die einzelnen Schritte 
+  zum Fräsen von 3D-Körpern mit KOSY erklärt. Dies sind die Grundlagen, die Sie 
+  unbedingt beachten müssen, um weitere individuelle Anwendungen erfolgreich ausführen 
+  zu können.&nbsp;<br>
+  Aber Sie sollten schon einige Sicherheit beim Herstellen von 2D-Werkstücken 
+  gesammelt haben, bevor Sie dieses Thema 3D angehen.<br>
+  Bitte bearbeiten Sie die folgenden Abschnitte ausführlich.&nbsp;&nbsp;</font><i><b><font color="#FF00FF" face="Times New Roman" size="5"><br>
+  </font></b></i></p>
+<p ALIGN="JUSTIFY"><b> <i><font COLOR="#000000" face="Tahoma" size="2"><img border="0" src="Bilder/PlZone_Rundk%F6rper.jpg" width="358" height="239"><br>
+</font></i><font color="#FF00FF"><font face="Tahoma" size="5">1.</font><font face="Tahoma" size="2">
+</font><font face="Tahoma" size="2">3D - aus dem Vollen gefräst, eine
+allgemeine Betrachtung&nbsp;</font></font><font COLOR="#000000" face="Tahoma" size="2"><i><br>
+  </i></font></b><font face="Tahoma" size="2">Eine der herausragenden Funktionen 
+  ist die vollständige Unterstützung von 3D, von der Konstruktion bis zum Werkstück.&nbsp;<br>
+Es muß folgendes vorausgeschickt werden: Seit langem unterstützen wir den Weg
+von beliebigen 3D-CAD-Programmen zu unserer CNC-Maschine, wir bieten
+Postprozessoren an, die der KOSY-Preiskategorie gerecht werden und viele Kunden
+arbeiten erfolgreich auf dieser Schiene. Wenn nun innerhalb von <b><i>nccad</i> </b>zukünftig
+alle Schritte von der 3D-Konstruktion bis zum Werkstück direkt unterstützt
+werden, dann wollen wir ganz bewußt neue Wege gehen und eine Alternative
+bieten. Auch wenn wir diesbezüglich noch ganz am Anfang sind: In praktischen
+Beispielen ist die Richtigkeit bewiesen.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="Bilder/CAD_3D1.gif" width="262" height="157"><br>
+  </font><b><font face="Tahoma"><font color="#FF00FF" size="5">2. </font><font color="#FF00FF" size="2"> 
+  Start</font></font> </b><font face="Tahoma" size="2"><br>
+  Im Menü wählen Sie <b>Datei/Neu/CAD</b>. Es erscheint die übliche Zeichenfläche, 
+  rechts daneben ist die Icon-Hauptleiste mit neuen Icons am unteren Ende.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="Bilder/CAD_3D2.gif" width="280" height="133"><br>
+  </font><b><font face="Tahoma"><font color="#FF00FF" size="5">3. </font><font color="#FF00FF" size="2"> 
+  Die &quot;Plastischen Zonen&quot; zeichnen (Draufsicht)</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>3D-Konstuktion in &quot;Plastischen Zonen&quot; ist die Kernidee bei 
+  <i><b>nccad6</b></i>: In der erweiterten Icon-Leiste wählen Sie zum Beispiel 
+  <b>PLASTISCHE ZONE RECHTECK</b> und zeichnen durch Eingabe von <b>2 Eckpunkten</b> 
+  die <b>Draufsicht</b> des Fräsbereiches, der später plastisch bearbeitet werden 
+  soll. Solche Zonen können übrigens beliebig oft auf der Bearbeitungsfläche positioniert 
+  werden. </font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><font color="#FF00FF"><br>
+  </font></font><b><font color="#FF00FF" face="Tahoma" size="4"><img src="Bilder/CAD_3D3.gif" width="242" height="131"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"> 4. </font><font color="#FF00FF" size="2"> 
+  Die Schnitte positionieren</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Bei einer Kreisförmigen plastischen Zone gibt es nur einen möglichen 
+  Schnitt, der direkt markiert wird. Bei rechteckigen plastischen Zonen können 
+  in Y-Richtung (auf der Zeichenfläche von unten nach oben) ein- oder mehrere 
+  Schnitte konstruiert werden, zwischen denen die Fräsbahnen dann interpoliert 
+  werden. Im Beispiel sollen zunächst 3 Schnitte positioniert werden:<br>
+  Klicken Sie das Icon <b>NEUER SCHNITT</b> es erscheint das Fadenkreuz mit <b>Suchfenster</b>, 
+  dieses <b>positionieren</b> Sie in eine Ecke der plastischen Zone und warten 
+  ca. 1/10 Sekunde, bis die plastische Zone markiert - also &quot;gefunden&quot; 
+  ist. Klicken Sie erneut, um diese <b>Zone auszuwählen</b>. Danach erscheint 
+  eine Positionierungslinie. <b>Klicken</b> Sie nun am unteren Rand, in der Mitte 
+  und am oberen Rand der plastischen Zone, wie es das obige Bild zeigt. In den 
+  3 Positionen werden &quot;<b>Schnittlinien&quot; markiert</b>. <br>
+  </font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="4"><img src="Bilder/CAD_3D4.gif" width="244" height="126"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"> 5. </font><font color="#FF00FF" size="2"> 
+  Schnitt zum Bearbeiten wählen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Wählen Sie das Icon <b>SCHNITT BEARBEITEN</b> . Mit Fadenkreuz und <b>Suchfenster</b> 
+  fahren Sie an die <b>untere</b>, <b> linke Ecke</b> der plastischen Zone und 
+  <b>klicken</b>, damit ist die 1. (unterste) <b>Schnittlinie ausgewählt</b> und 
+  es erscheint ein Konstruktionsfenster zum Bearbeiten der Schnitte gleichbedeutend 
+  mit der Vorderansicht der plastischen Zone.</font></p>
+<p><a name="SchnittBearb"></a></p>
+<p><b><font color="#FF00FF" face="Tahoma" size="4"><img src="Bilder/CAD_3D5.gif" width="504" height="291"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"> 6. </font><font color="#FF00FF" size="2"> 
+  Schnitt bearbeiten</font></font></b><font face="Tahoma" size="2"><i><b><br>
+  </b></i>In der Schnitt-Ansicht haben Sie alle sinnvollen und erforderlichen 
+  Konstruktionselemente zur Verfügung. Sie werden in gleicher Weise bedient, wie 
+  in der 2D-Zeichenfläche. Zunächst sollten Sie über Darstellung/<b>AUSSCHNITT 
+  WÄHLEN</b> den Darstellungsbereich <b>vergrößern</b> und dann über CAD Standard/<b>POLYGON</b> 
+  eine einfache <b>Schnitt-Kontur zeichnen</b> (siehe Bild). Bleiben Sie dabei 
+  <b>unterhalb der weißen Linie</b> (Werkstückoberfläche) und <b>innerhalb der 
+  roten Begrenzungslinien</b> (Breite der plastischen Zone). <br>
+  Über die <b>Schnittumschaltung</b> [&lt;] oder [&gt;] können Sie den nächsten 
+  Schnitt aufrufen. Werfen Sie dabei einen Blick auf die Draufsicht der plastischen 
+  Zone (große 2D-Zeichenfläche), dann sehen Sie die <b>farbliche Markierung</b> 
+  des gewählten Schnittes. <b>Zeichnen </b>Sie die<b> beiden anderen Schnitte</b> 
+  mit beliebigen, aber einfachen Polygonzügen. Unter Bearbeitung/<b>KOPIEREN</b> 
+  ist auch die <b>&Uuml;bernahme</b> einer Konstruktion <b>in</b> einen <b>anderen 
+  Schnitt</b> m&ouml;glich.</font></p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b><a name="SymbolPlZone"></a></b></font></p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b><img src="Bilder/CAD_3DplZo_Symbole.gif" width="833" height="322"><br>
+  6.1</b> Einbinden von Symbolen<br>
+  </font><font face="Tahoma" size="2">Dazu ist Folgendes zu tun:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Zu einem beliebigen Zeitpunkt haben Sie ein 
+    <b>Symbol gezeichnet und gespeichert</b>. <br>
+    Das Bild zeigt ein Symbol in der X-Y-Zeichnungsebene mit einem Rechteck im 
+    Layer 1 und einem Polygonzug im Layer 2. Beim Speichern wurde als Einf&uuml;gepunkt 
+    bewu&szlig;t die linke, obere Ecke gew&auml;hlt.</font></li>
+  <li><font face="Tahoma" size="2">In der Icon-Gruppe <b>CAD 3D</b> w&auml;hlen 
+    Sie <b>SCHNITT BEARBEITEN</b>, dann die plastische Zone mit dem Anfangsschnitt. 
+    Es erscheint das Fenster <b>Schnitt-Ansicht XZ</b>.</font></li>
+  <li><font face="Tahoma" size="2">&Uuml;ber das Icon Darstellung/<b>AUSSCHNITT 
+    W&Auml;HLEN</b> vergr&ouml;&szlig;ern Sie das Bild.</font></li>
+  <li><font face="Tahoma" size="2">In der Icon-Gruppe Symbole w&auml;hlen Sie 
+    <b>SYMBOL LADEN</b> und dann im Explorer-Fenster die entsprechende Symbol-Datei 
+    (vergleiche <a href="../../Icons/Symbole/Symbol_laden.htm">Symbol laden</a>).</font></li>
+  <li><font face="Tahoma" size="2">Beim <b>Positionieren</b> des Symbols bew&auml;hrt 
+    sich der linke, obere<b> Einf&uuml;gepunkt</b>, er wird z.B. an der Oberfl&auml;che 
+    (wei&szlig;e Linie) positioniert.</font></li>
+  <li><font face="Tahoma" size="2">Wenn Sie <b>nach dem ersten Klick</b> die <b>Leertaste</b> 
+    dr&uuml;cken, kann die <b>Gr&ouml;&szlig;e</b> des Symbols an die Grenzlinien 
+    der plastischen Zone <b>angepa&szlig;t</b> (skaliert) werden.</font></li>
+  <li><font face="Tahoma" size="2"><b>Nach den zweiten Klick</b> wird das Symbol 
+    <b>eingef&uuml;gt</b>, wobei am Symbol <b>folgende Ver&auml;nderungen automatisch 
+    vorgenommen werden:</b></font> 
+    <ul>
+      <li><font face="Tahoma" size="2"><b>Geschlossene Bahnen/Konturen</b> (Rechtecke, 
+        Kreise, geschlossene Polygonz&uuml;ge u.&Auml;.m.) <b>werden ignoriert</b>, 
+        sie k&ouml;nnen von der Fr&auml;sfunktion nicht verarbeitet werden.</font></li>
+      <li><font face="Tahoma" size="2">Das <b>Symbol wird aufgel&ouml;st </b>(in 
+        einzelne Zeichnungteile zerlegt), um eine Nachbearbeitung zu erm&ouml;glichen.</font></li>
+      <li><font face="Tahoma" size="2">Die <b>Zeichnungsteile</b> werden in den 
+        <b>Layer 1</b> transferiert, denn Schnitte k&ouml;nnen nur dort abgelegt 
+        werden.</font></li>
+    </ul>
+    <p>&nbsp;</p>
+  </li>
+</ul>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>6.2</b> Konstruktion abspeichern<br>
+  </font><font face="Tahoma" size="2">&Uuml;ber das Men&uuml; <b>Datei/Speichern...</b> 
+  sollten Sie die Konstruktion sichern.<br>
+  Die plastische Zone kann auch in ein <a href="../../Icons/CAD_3D/Plastische_Zone_STL.htm">STL-Format 
+  umgewandelt</a> - und als <b>STL-Datei</b> abgespeichert (exportiert) werden.</font></p>
+<p><font face="Tahoma" size="2"><br>
+  Durch Interpolation wird eine Verbindung zwischen den verschiedenen Schnitten 
+  hergestellt. Um die Vorstellung zu unterstützen, kann eine Zone in einem separaten 
+  Fenster dreidimensional dargestellt werden. Dazu klicken Sie auf das Icon <b>3D-Ansicht</b>, 
+  es erscheint ein separates Fenster.</font></p>
+<p>&nbsp;</p>
+<p><img src="Bilder/CAD_3D6.gif" width="414" height="331"><br>
+  <b><font face="Tahoma"><font color="#FF00FF" size="5">7. </font><font color="#FF00FF" size="2"> 
+  3D-Ansicht</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Das Bild zeigt die 3D-Ansicht einer plastischen Zone mit 3 unterschiedlichen 
+  Schnitten. Mit der Bedienung dieses Fensters sollten Sie ein wenig experimentieren, 
+  versuchen Sie die folgenden <b>Veränderungen der 3D-Ansicht </b>auszuführen:<br>
+  </font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Das Bild in den verschiedenen Achsen drehen.<br>
+    </font></li>
+  <li><font face="Tahoma" size="2">Die Ansicht vergrößern oder verkleinern.<br>
+    </font></li>
+  <li><font face="Tahoma" size="2">Die gezeichneten Schnittkonturen einblenden.<br>
+    </font></li>
+  <li><font face="Tahoma" size="2">Das Gitternetz dichter oder weiter machen.<br>
+    </font></li>
+  <li><font face="Tahoma" size="2">Den Hintergrund schwarz/weiß umschalten.<br>
+    </font></li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="Bilder/CAD_3DplZo_Technol.gif" width="438" height="533"><br>
+  <b><font face="Tahoma"><font color="#FF00FF" size="5">8. </font><font color="#FF00FF" size="2"> 
+  Technologie-Angaben zuordnen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i>Schließen</b> Sie das Fenster für die <b>3D-Ansicht</b> <b>und</b> für die 
+  <b>Schnitt-Ansicht</b> und wenden Sie sich wieder der Draufsicht- sprich der 
+  plastischen Zone zu. Wählen Sie das Icon <b>TECHNOLOGIE</b>, dann mit dem <b>Suchfenster</b> 
+  die <b>plastische Zone</b>, ziehen Sie einen <b>Gummifaden</b> auf und klicken 
+  Sie dessen <b>Endpunkt</b> an. Es erscheint das Fenster<b> Technologie</b>, 
+  in das Sie die <b>Daten wie im Bild dargestellt eingeben</b>. Klicken Sie auf 
+  <b>OK</b>, an der plastischen Zone hängt die Technologie mit der Nr. 1.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p><b><font face="Tahoma"><font color="#FF00FF" size="5">9. </font><font color="#FF00FF" size="2"> 
+  Simulieren und Speichern</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Starten Sie eine der Simulationen, dann wird der <b>&Uuml;bersetzungs-Vorgang</b> 
+  eingeleitet, der aus den Kontur- und Technologie-Daten eine <b>Steuerliste</b> 
+  erzeugt. Sie steht danach als sogenannte <b>&quot;KOSY-Liste&quot;</b> f&uuml;r 
+  die <a href="../../Menues/Simulation/Menue_Simulation.htm#Einzelschritt">Einzelschritt-Simulation</a> 
+  zur Verf&uuml;gung und wird bei der Bearbeitung mit der CNC-Maschine verwendet.</font></p>
+<p><font face="Tahoma" size="2">Da der <b>Vorgang des &Uuml;bersetzens sehr lange 
+  dauern kann</b>, empfiehlt sich die <b>Abspeicherung der KOSY-Liste zusammen 
+  mit den CAD/CAM-Daten</b> (siehe Men&uuml; <a href="../../Menues/Parameter/Menue_Parameter.htm#ImpExport">Parameter/Dateien/ImportExport/Export....</a>). 
+  Beim sp&auml;teren &Ouml;ffnen der Datei entf&auml;llt der zeitraubende &Uuml;bersetzungs-Vorgang, 
+  solange an Zeichnung- oder Technologie nichts ver&auml;ndert wird.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p ALIGN="JUSTIFY"><b><font face="Tahoma"><font color="#FF00FF" size="5">10. </font><font color="#FF00FF" size="2"> 
+  Werkstück einspannen, Nullpunkt einstellen, Werkstück fräsen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+</i></b>Von 2D-Fräsaufgaben sollten Sie bereits wissen, wie die CNC-Maschine
+bedient- und ein Programm gestartet wird.&nbsp; Auf gleiche Weise verfahren Sie
+hier.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p ALIGN="JUSTIFY"><b><font face="Tahoma"><font color="#FF00FF" size="5">11. </font><font color="#FF00FF" size="2"> 
+  Zusätzliche Möglichkeiten</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Übrigens können innerhalb solcher 
+  Zonen ganz normale 2D-Teile angeordnet werden, für Bohrungen, Abplattungen, 
+  Trennschnitte u.A.m. Sie erhalten ihre eigene Technologie.</font></p>
+
+</body>
+
+</html>

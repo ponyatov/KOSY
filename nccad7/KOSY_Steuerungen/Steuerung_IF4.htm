@@ -1,0 +1,704 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Steuerung Fremdmaschinen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p>&nbsp;</p>
+<table width="692" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="300"><img src="Bilder/Wabeco_TestmaschineFraes_30.jpg" width="300" height="199"></td>
+    <td width="601" valign="bottom"> 
+      <p><font face="Times New Roman" size="6" color="#FF00FF"><b><i>Die CNC-Steuerung 
+        <br>
+        f&uuml;r<br>
+        Fremdmaschinen<br>
+        </i></b></font><font face="Tahoma" size="2" color="#000000"><b><font size="1">Ausf&uuml;hrung 
+        mit IF4xx (bis 4A Strangstrom) und <i><br>
+        nccad6</i> ab Rev. 1.01.12.02, Controller ab 2.10</font></b></font></p>
+      <p><font face="Tahoma" size="2" color="#000000"><b><font size="1"><br>
+        &Uuml;berarbeitet: 28. Mai 2003</font></b></font></p>
+      </td>
+  </tr>
+</table>
+<p><font face="Tahoma" size="2" color="#000000">Die folgenden Seiten sollen Ihnen 
+  helfen, die Hintergr&uuml;nde zu verstehen, die Systemkomponenten kennenzulernen 
+  und die Inbetriebnahme der Steuerung durchzuf&uuml;hren. Alle weiteren Informationen 
+  und Hilfen finden Sie dann im elektronischen Handbuch unserer CAD/CAM-Software 
+  <i><b>nccad</b></i> im Men&uuml; <b>Hilfe</b>.</font> </p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Times New Roman" size="6" color="#FF00FF"><b><font size="5" color="#FF0080"><font face="Tahoma" color="#FF00FF">1.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Steuerungen auf KOSY-Basis<br>
+  </font></font></b></font><font face="Tahoma" color="#000000" size="2">Seit mehr 
+  als 10 Jahren gibt es das Koordinatentisch-System KOSY als komplettes CNC und 
+  CAD/CAM-System. Mittlerweile hat es sich gezeigt, da&szlig; viele KOSY-Systemkomponenten 
+  auch f&uuml;r fremde Systeme sehr gut geeignet sind. Dazu einige Beispiele:</font></p>
+<ul>
+  <li><font face="Tahoma" color="#000000" size="2"><b><i>Fremde Bewegungs-Mechaniken 
+    mit unserer Elektronik steuern.</i></b><br>
+    Der Kunde erh&auml;lt eine der, auch im System KOSY verwendeten, Elektroniken 
+    (z.B. Microcontroller, Interface und Netzteil) und eine Beschreibung des Datenprotokolls 
+    f&uuml;r den Datenverkehr zwischen PC und Microcontroller. Er erstellt sich 
+    ein eigenes Steuer- und Bedienprogramm.<br>
+    Kunde kann in diesem Fall nur ein Industriebetrieb sein, mit dem eine sog. 
+    OEM-Vereinbarung getroffen wird.<br>
+    </font></li>
+  <li><font face="Tahoma" color="#000000" size="2"><b><i>&quot;Handkurbel-Maschinen&quot; 
+    zu CNC-Maschinen aufr&uuml;sten</i></b> mit Hilfe unserer Elektronik und CAD/CAM-Software.<br>
+    Der Kunde erh&auml;lt eine der, auch im System KOSY verwendeten, Elektroniken 
+    (Microcontroller, Interface und Netzteil) in einem geschlossenen Geh&auml;use. 
+    Als Steuer- und Bedienprogramm wird unsere CAD/CAM-Software <i><b>nccad</b></i> 
+    mitgeliefert.<br>
+    Der Kunde kann in diesem Fall eine vorhandene handbediente Bearbeitungsmaschine 
+    zu einem programmierbaren Automaten machen (Aufr&uuml;sten der Mechanik).<br>
+    </font></li>
+  <li><font face="Tahoma" color="#000000" size="2"><b><i>CNC-Programme f&uuml;r 
+    fremde CNC-Maschinen</i></b> mit Hilfe unserer CAD/CAM-Software <i> <b>generieren</b></i>.<br>
+    Eine modifizierte Version unserer CAD/CAM-Software <i><b>nccad</b></i> wird 
+    geliefert. Sie kann ein CNC-Programm f&uuml;r die bereits vorhandene fremde 
+    CNC-Maschine generieren. <br>
+    </font></li>
+</ul>
+<p><b><font face="Tahoma" size="2" color="#000000">Nutzen Sie unsere <u>Maschinensteuerung</u> 
+  </font> </b></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Sie haben eine Mechanik und 
+    suchen ein hochwertiges und leistungsstarkes Steuerungspaket mit CAD/CAM-Anbindung.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Sie haben eine NC-Maschine 
+    und möchten alle Vorteile und Möglichkeiten einer modernen CAD/CAM-Steuersoftware 
+    nutzen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Sie sind mit den vorhandenen 
+    Möglichkeiten Ihrer Steuersoftware unzufrieden und scheuen die Investition 
+    einer neuen Maschine.</font> </li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Wir bieten Ihnen 
+  ein Komplettpaket, bestehend aus Elektronik und Software.</font> </p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Sie montieren den 
+  Schrittmotor-Antrieb, installieren unsere CAD/CAM-Software <i><b>nccad</b></i> 
+  und verfügen über den ganzen Bedien- und Programmierkomfort, den auch unsere 
+  KOSY-Kunden haben.</font></p>
+<p><font face="Tahoma" size="2" color="#000000">Die gesamte Elektronik befindet 
+  sich samt Netzteil in einem geschlossenen Gehäuse. Eingangsseitig gibt es eine 
+  serielle Verbindung zum PC. Ausgangsseitig gibt es die Steckverbindungen zu 
+  den Schrittmotoren und Endschaltern. Die folgende Bilderreihe zeigt Ihnen die 
+  CNC-Steuerung (hier mit MAX-Gehäuse):</font> </p>
+<table width="693" border="0" cellspacing="10" cellpadding="0">
+  <tr> 
+    <td width="300"><img src="Bilder/Strg_KomplettVorne.jpg" width="300" height="83"></td>
+    <td width="363" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild1:</i></b> 
+        Die CNC-Steuerung 4.5 im MAX-Geh&auml;use in der standardm&auml;&szlig;igen 
+        Ausf&uuml;hrung. </font></p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="300"><img src="Bilder/Strg_KomplettHinten.jpg" width="300" height="91"></td>
+    <td width="363" valign="bottom"> 
+      <p><font face="Arial" size="2" color="#808080"><b><i>Bild 2:</i></b></font><font face="Arial" size="2" color="#808080"> 
+        Die CNC-Steuerung 4.5 im MAX-Geh&auml;use in der standardm&auml;&szlig;igen 
+        Ausf&uuml;hrung von hinten.</font><br>
+        <font face="Tahoma" size="1" color="#000000">Mit den Anschl&uuml;ssen 
+        (von links nach rechts): Schrittmotor X, Y, Z und U (Drehachse), TMR (Tiefenregler), 
+        Zusatzfunktionen, Verbindung zum Steuer-PC, Bearbeitungseinheit 230V/750W 
+        und Netzzuf&uuml;hrung.</font></p>
+      </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr> 
+    <td width="392"><img src="Bilder/SteuergerDr_Ganz_400.jpg" width="400" height="118"></td>
+    <td width="264" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 3:</i></b> 
+        Die CNC-Steuerung mit zus&auml;tzlichen Bedienelementen f&uuml;r die Drehstromspindel 
+        <font size="1">(Ausf&uuml;hrung, wenn Drehstromspindel und fernsteuerbarer 
+        Frequenzumrichter vorhanden) </font></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5">2.</font> Die 
+  Komponenten<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Im Lieferumfang enthalten 
+  sind:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Die CAD/CAM-Software<b><i> 
+    nccad</i></b> in der aktuellen Version. Beschreibung siehe <i>http://www.max-computer.de/</i> 
+    .</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Das Handbuch. Gedruckter Teil 
+    mit den Kapiteln 0 (Inbetriebnahme und Erste Schritte) und Kapitel 11 (Daten 
+    und Wartung). Elektronischer Teil innerhalb der Software nccad (&uuml;ber 
+    Men&uuml; Hilfe/Hilfethemen erreichbar).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Das Steuerger&auml;t im separaten 
+    Geh&auml;use (normalerweise MAX-Geh&auml;use lt den Bildern 1 bis 3), mit 
+    den folgenden Kabeln:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000">Netzkabel </font></li>
+      <li><font face="Tahoma" size="2" color="#000000">Kommunikationskabel</font></li>
+      <li><font face="Tahoma" size="2" color="#000000">Die Kabel zu den Motoren 
+        und Maschinenkomponenten nur als Option</font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="Inbetriebnahme"></a>3.</font> 
+  Anschlu&szlig; und Inbetriebnahme<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Grunds&auml;tzlich gilt 
+  f&uuml;r Inbetriebnahme und Test der CNC-Steuerung das gedruckte KOSY-Handbuch- 
+  Kapitel 0-1.3, 0-2.1 und 0-2.2, es ist lediglich das Wort &quot;CNC-Maschine&quot; 
+  durch das Wort &quot;CNC-Steuerung&quot; zu ersetzen.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">F&uuml;r die Inbetriebnahme 
+  der CNC-Steuerung zun&auml;chst folgende Bilder zum Verst&auml;ndnis:</font></p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="152"><img src="Bilder/Strg_FrontStatusanz.jpg" width="150" height="148"></td>
+    <td width="504" valign="bottom"> 
+      <p><font face="Arial" size="2" color="#808080"><b><i>Bild 4:</i></b> Statusfeld 
+        an der Frontseite der CNC-Steuerung<br>
+        </font><font face="Tahoma" size="2" color="#000000">Es zeigt den Zustand 
+        der Steuerung und erm&ouml;glicht eine Sperrung der Maschine.</font></p>
+      </td>
+  </tr>
+</table>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr> 
+    <td width="301"><img src="Bilder/Strg_HintenNetzComZus.jpg" width="300" height="195"></td>
+    <td width="355" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 5:</i></b> 
+        Kabelanschl&uuml;sse auf der R&uuml;ckseite der CNC-Steuerung<br>
+        </font><font face="Tahoma" size="2" color="#000000">Die 2 Kabel sind nicht 
+        vertauschbar. Das Kommunikationskabel mu&szlig; in die Buchse &quot;Verbindung 
+        zum Steuer-PC&quot;. Das andere Ende wird am COM-Port 2 des PC angeschlossen.<br>
+        Das Netzkabel ist am Ger&auml;testecker einzustecken.</font></p>
+    </td>
+  </tr>
+</table>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>3.1 Erster Test</b></font><font face="Tahoma" size="2" color="#000000"><br>
+  Um das Zusammenspiel der Software mit der Steuerung testen zu k&ouml;nnen, mu&szlig; 
+  das Steuerger&auml;t in Betrieb genommen werden. Es wird z.B. neben der Maschine 
+  auf dem Tisch oder auf einem Podest angeordnet.<br>
+  Die Steuerung beinhaltet einen Computer (Microcontroller). Er hat, wie der PC 
+  auch, eine seriellle Schnittstelle (COM-Port). Dar&uuml;ber &quot;unterhalten&quot; 
+  sich die beiden Computer. Um diese Kommunikation zu testen, sind folgende Schritte 
+  zu tun:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Schliessen Sie die Steuerung 
+    gem&auml;&szlig; Bild 5 an, verwenden Sie am PC den COM-Port 2.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Starten Sie<i><b> nccad</b></i></font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie das Steuerger&auml;t 
+    vorne am Netzschalter ein. Die Lampe &quot;Frei&quot; mu&szlig; leuchten. 
+    Beachten Sie den Schalter &quot;Steuerung sperren&quot;, er mu&szlig; auf 
+    &quot;Ein&quot; stehen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Im Men&uuml; Lauf w&auml;hlen 
+    Sie CNC-Maschine. Beobachten Sie dabei die Statusanzeige an der Steuerung, 
+    sie mu&szlig; f&uuml;r kurze Zeit blinken (vgl. Bild 4). Dies ist ein Zeichen 
+    daf&uuml;r, da&szlig; die Kommunikation arbeitet. Das Fenster &quot;Handsteuerung&quot; 
+    mu&szlig; erscheinen. <br>
+    Eine Fehlermeldung weist m&ouml;glicherweise auf die falsche Schnittstelle 
+    hin. &Uuml;ber das Men&uuml; Parameter/KOSY kann die Schnittstelle umgestellt 
+    werden.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">In der Handsteuerung k&ouml;nnen 
+    Sie noch keine Funktionen ausf&uuml;hren, den an der Steuerung sind keine 
+    Motoren angeschlossen. Sie wissen jetzt lediglich, da&szlig; PC und Steuerung 
+    ordnungsgem&auml;&szlig; zusammemnarbeiten (sie verstehen sich).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schliessen Sie die Handsteuerung 
+    (Button &quot;CNC-Maschine Ende&quot; klicken).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie die Steuerung 
+    am Netzschalter aus.</font></li>
+</ol>
+<p><font face="Tahoma" size="2"><b>Bitte beachten:<br>
+  </b></font><font size="2" face="Tahoma">Die in der Steuerelektronik <b>eingebaute 
+  Controller-Version</b> ist <b>entscheidend f&uuml;r den Funktionsumfang</b> 
+  und f&uuml;r die Komfortstufe bei der Anwendung. Es ist m&ouml;glich, da&szlig; 
+  die hier dargestellte Anwendung mit dem eingebauten Controller nicht- oder nur 
+  unvollst&auml;ndig realisiert werden kann, ein Controller-Tausch ist erforderlich.<br>
+  Die <b>Controller-Version</b> <b>kann</b> f&uuml;r R&uuml;ckfragen auf folgende 
+  Weise <b>&uuml;berpr&uuml;ft werden</b>:</font></p>
+<ol>
+  <li><font size="2" face="Tahoma">Steuerung <b>einschalten</b>.</font></li>
+  <li><font size="2" face="Tahoma">Die <b>Handsteuerung</b> aufrufen und wieder 
+    verlassen (Kommunikation mit der Maschine aufbauen und &uuml;berpr&uuml;fen).</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Hilfe/Datei-Informationen</b> 
+    w&auml;hlen.</font></li>
+  <li><font size="2" face="Tahoma">Controller-Version und R&uuml;ckmeldetext <b>ablesen</b>.</font></li>
+</ol>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die <b>Controller-Version 
+  </b>mu&szlig; <b>mindestens 2.10</b> sein und der <b>Text &quot;Variable Endschalter&quot;</b> 
+  im Textblock enthalten sein.</font></p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>3.2 Anschlu&szlig; und Test 
+  eines Schrittmotors</b></font><font face="Tahoma" size="2" color="#000000"><br>
+  Ein erster Motor soll versuchsweise angeschlossen- und getestet werden. Bei 
+  der Lieferung ist die Elektronik auf einen vorher festgelegten Schrittmotor-Typ 
+  eingestellt, den Sie unbedingt verwenden m&uuml;ssen. Andere Motoren k&ouml;nnen 
+  die Elektronik besch&auml;digen.</font></p>
+<p><font face="Tahoma" size="2" color="#000000"><b>Vor Arbeiten an den Anschl&uuml;ssen 
+  der Steuerung bitte beachten: </b></font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"><b>CNC-Steuerung ausschalten</b> 
+    oder Netzstecker ziehen!</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Fachkenntnisse</b> &uuml;ber 
+    Elektronik m&uuml;ssen <b>vorausgesetzt</b> werden!</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Ein <b>Kurzschluss</b> an den 
+    Schrittmotor-Anschl&uuml;ssen <b>f&uuml;hrt</b> bei eingeschalteter Steuerung 
+    <b>zur sofortigen Zerst&ouml;rung</b> der Endstufen! </font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die <b>Steuerung</b> darf <b>nur 
+    von geschultem Servicepersonal </b>ge&ouml;ffnet werden! Zum Anschliessen 
+    von Schrittmotoren mu&szlig; die Steuerung ohnehin nicht ge&ouml;ffnet werden.</font></li>
+</ul>
+<p><font face="Tahoma" size="2" color="#000000">F&uuml;r den Anschluss von Schrittmotoren 
+  ben&ouml;tigen Sie 9pol D-Sub-Stecker und geeignete Kabel, die den Sicherheitsvorschriften 
+  und den Gegebenheiten der Maschine entsprechen (Elastizit&auml;t, Strombelastung, 
+  Quetschsicherheit u.&Auml;.m.). <br>
+  Die Motoranschl&uuml;sse finden Sie auf der R&uuml;ckseite der CNC-Steuerung 
+  (siehe Bild 2). Ein sog. 2-Strang-Schrittmotor hat 2 Spulen, also normalerweise 
+  4 Anschlussleitungen, die nach dem Schema in Bild 6 anzuschlie&szlig;en sind. 
+  Jede Achse braucht einen Endschalter, der als sog. Schlie&szlig;er ebenfalls 
+  entsprechend Bild 6 anzuschlie&szlig;en ist.</font></p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="401"><img src="Bilder/Strg_AnschlussSmotKabel.gif" width="400" height="312"></td>
+    <td width="255" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 6:</i></b> 
+        Anschluss-Schema f&uuml;r Schrittmotoren</font></p>
+    </td>
+  </tr>
+</table>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Nachdem Sie einen 
+  Motor angeschlossen haben, ist eine sofortige Pr&uuml;fung sinnvoll:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">&Uuml;berpr&uuml;fen Sie die 
+    Kombination - Kabel, D-Sub-Stecker und Schrittmotor mit dem Ohmmeter, bevor 
+    Sie den Stecker in die Buchse der Steuerung stecken. Eine Spule des Schrittmotors 
+    hat nur einen Widerstand von wenigen Ohm, von Spule zu Spule darf keine Verbindung 
+    existieren.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Ist die &Uuml;berpr&uuml;fung 
+    mit dem Ohmmeter ok, stecken Sie den D-Sub-Stecker in die Buchse &quot;<b>X-Achse</b>&quot; 
+    auf der R&uuml;ckseite der Steuerung.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie die CNC-Steuerung 
+    ein.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Durch mechanische Drehbewegung 
+    an der Schrittmotorachse m&uuml;ssen Sie ein Haltemoment sp&uuml;ren.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Rufen Sie die Handsteuerung 
+    in <i><b>nccad</b></i> auf (Men&uuml; Maschine/CNC-Maschine).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Dr&uuml;cken Sie kurz die <b>Cursor-Tasten</b> 
+    &quot;Rechts&quot; und &quot;Links&quot;- der Schrittmotor mu&szlig; sich 
+    drehen. Eine Bewegung stoppen Sie durch Dr&uuml;cken einer beliebigen anderen 
+    Taste. Es gilt entsprechend Bild 7:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Rechts&quot;:</b> 
+        X-Tisch mu&szlig; sich so bewegen, da&szlig; das <b>Werkzeug im Werkst&uuml;ck 
+        nach rechts</b> f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        Sollte er sich in die entgegengesetzte Richtung bewegen, dr&uuml;cken 
+        Sie eine beliebige Taste zum Stoppen. Schalten Sie die Steuerung aus und 
+        vertauschen Sie die beiden Enden einer Schrittmotor-Spule. Wiederholen 
+        Sie den Test.</font> </li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Links&quot;:</b> 
+        X-Tisch mu&szlig; sich so bewegen, da&szlig; das <b>Werkzeug im Werkst&uuml;ck 
+        nach links</b> f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        </font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Schliessen Sie die Handsteuerung 
+    (Button &quot;CNC-Maschine Ende&quot; klicken).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie die CNC-Steuerung 
+    am Netzschalter aus.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Schlie&szlig;en Sie 
+  in gleicher Weise erst jetzt den Y-Motor - und dann den Z-Motor an. F&uuml;r 
+  den Test der Drehrichtung gilt:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Rufen Sie die Handsteuerung 
+    in <i><b>nccad</b></i> auf (Men&uuml; Maschine/CNC-Maschine).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Dr&uuml;cken Sie nacheinander 
+    die <b>Cursor-Tasten</b> f&uuml;r die Achsenbewegungen - der zugeh&ouml;rige 
+    Schrittmotor mu&szlig; sich drehen und den Tisch entsprechend bewegen. Bild 
+    6 unten zeigt die Achszuordnung und die Bewegungsrichtungen. Es gilt entsprechend 
+    Bild 7:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Hinter/Auf&quot;</b>: 
+        Y-Tisch mu&szlig; sich so bewegen, da&szlig; das Werkzeug im Werkst&uuml;ck 
+        nach hinten f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        Sollte er sich in die entgegengesetzte Richtung bewegen, dr&uuml;cken 
+        Sie eine beliebige Taste zum stoppen. Schalten Sie die Steuerung aus und 
+        vertauschen Sie die beiden Enden einer Schrittmotor-Spule. Wiederholen 
+        Sie den Test.</font> </li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Vor/Ab&quot;:</b> 
+        Y-Tisch mu&szlig; sich so bewegen, da&szlig; das Werkzeug im Werkst&uuml;ck 
+        nach vorne f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        </font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Bild Auf 
+        &quot;:</b> Z-Tisch mu&szlig; sich so bewegen, da&szlig; das Werkzeug 
+        aus dem Werkst&uuml;ck heraus f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        Sollte er sich in die entgegengesetzte Richtung bewegen, dr&uuml;cken 
+        Sie eine beliebige Taste zum stoppen. Schalten Sie die Steuerung aus und 
+        vertauschen Sie die beiden Enden einer Schrittmotor-Spule. Wiederholen 
+        Sie den Test.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Taste &quot;Bild Ab 
+        &quot;:</b> Z-Tisch mu&szlig; sich so bewegen, da&szlig; das Werkzeug 
+        in das Werkst&uuml;ck hinein f&auml;hrt (unabh&auml;ngig von der Maschinenkonstruktion). 
+        </font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine Bewegung <b>stoppen</b> 
+    Sie durch <b>Dr&uuml;cken einer beliebigen</b> anderen <b>Taste</b>.</font></li>
+</ul>
+<table width="680" border="0" cellspacing="5" cellpadding="2">
+  <tr> 
+    <td width="298"><img src="Bilder/Wab_WerkstNullpktBeschr.jpg" width="300" height="229"></td>
+    <td width="368" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      7:</i></b> Bewegungsrichtungen des Fr&auml;sers im Werkst&uuml;ck</font></td>
+  </tr>
+</table>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>3.3 Maschinen-Nullpunkt, 
+  Referenzpunkt und Endschalterpositionen</b></font><font face="Tahoma" size="2" color="#000000"><br>
+  Grunds&auml;tzlich sollten Sie sich jetzt um den Einbau der Motoren und Endschalter 
+  k&uuml;mmern. Die Zuordnung der Achsen der CNC-Maschine zur Steuerung und zur 
+  Zeichenebene mu&szlig; eindeutig sein.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Die CNC-Steuerung 
+  und die zugeh&ouml;rige CAD/CAM-Software <i><b>nccad6</b></i> unterscheidet 
+  zwischen Maschinen-Nullpunkt und Referenzpunkt. Damit ist die Anordnung der 
+  Endschalter f&uuml;r den Referenzlauf unabh&auml;ngig von der Software. Es gilt:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Der <b>Maschinen-Nullpunkt</b> 
+    ist der Nullpunkt f&uuml;r die Berechnungen von Positionen im Inneren der 
+    Software. Er ist in dieser Steuerung gem&auml;&szlig; Bild 8 absolut festgelegt.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Der <b>Referenzpunkt</b> ist 
+    der Punkt, der bei einem Referenzlauf angefahren wird. Dort sind die Endschalter 
+    angeordnet.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Beide Punkte k&ouml;nnen 
+  - m&uuml;ssen aber nicht identisch sein. </font></p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr> 
+    <td width="197" height="133"><img src="Bilder/Strg_Achsen_Skizze.gif" width="200" height="158"></td>
+    <td width="459" valign="bottom" height="133"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 8: 
+        </i></b>Darstellung des Maschinen-Nullpunktes</font></p>
+      <p align="left"><font color="#000000" size="2" face="Tahoma">Der Maschinen-Nullpunkt ist erreicht, 
+        wenn...</font></p>
+      <ul>
+        <li><font face="Tahoma" size="2" color="#000000">Der <b>Z</b>-Tisch ganz 
+          nach <b>oben</b> f&auml;hrt (Bewegung +Z).</font></li>
+        <li><font face="Tahoma" size="2" color="#000000">D</font><font face="Tahoma" size="2" color="#000000">as 
+          <b>Werkzeug</b> ganz <b>links</b> eingreift (Bewegung -X), also gem&auml;&szlig; 
+          Konstruktionsbeispiel der X-Tisch ganz nach rechts f&auml;hrt.</font></li>
+        <li><font face="Tahoma" size="2" color="#000000">D</font><font face="Tahoma" size="2" color="#000000">as 
+          <b>Werkzeug</b> ganz <b>vorne</b> eingreift (Bewegung -Y), also gem&auml;&szlig; 
+          Konstruktionsbeispiel der Y-Tisch ganz nach hinten f&auml;hrt</font></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Nach der Installation 
+  von <i><b>nccad6</b></i> ist der Referenzpunkt identisch mit dem Maschinen-Nullpunkt. 
+  Die Software geht also zun&auml;chst davon aus, da&szlig; die Endschalter entsprechend 
+  angeordnet sind (in den Bewegungsrichtungen -X, -Y, +Z. Vgl. Bild 7).</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>3.4 Test des Referenzlaufes 
+  und Umkehren der Enschalterpositionen</b></font><font face="Tahoma" size="2" color="#000000"><br>
+  In 3.2 und 3.3 sind die Motoren angeschlossen und getestet worden. Nachdem Sie 
+  mit der Mechanik verbunden sind, kann die Steuerung insgesamt getestet werden. 
+  Dazu ist Folgendes zu tun:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Der</font><font face="Tahoma" size="2" color="#000000"> 
+    Test des <b>Referenzlaufes</b> soll zun&auml;chst f&uuml;r jede Achse getrennt 
+    durchgef&uuml;hrt werden:</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Rufen Sie die Handsteuerung 
+    in <i><b>nccad</b></i> auf (Men&uuml; Maschine/CNC-Maschine).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Geben Sie nacheinander im Feld 
+    &quot;Direkt&quot; (siehe Bild 9) die folgenden CNC-Befehle ein:</font> 
+    <ul>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G76 
+        Z0</font><font face="Tahoma" size="2" color="#000000"><br>
+        Z</font><font face="Tahoma" size="2" color="#000000">-Tisch mu&szlig; 
+        solange fahren (unabh&auml;ngig von der Maschinenkonstruktion), bis der 
+        Endschalter erreicht ist. Aus Sicherheitsgr&uuml;nden sollte der Endschalter 
+        so angeordnet sein, da&szlig; das Werkzeug aus dem Werkst&uuml;cks heraus 
+        f&auml;hrt.<br>
+        F&uuml;r den Fall, da&szlig; die Bewegungsrichtung nicht zum Z-Endschalter 
+        hin f&uuml;hrt, stellen Sie gem&auml;&szlig; Bild 10 die Endschalter-Fahrtrichtung 
+        um (auf keinen Fall den Schrittmotor umpolen).</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G76 
+        X0</font><br>
+        <font face="Tahoma" size="2" color="#000000">X-Tisch mu&szlig; solange 
+        fahren (unabh&auml;ngig von der Maschinenkonstruktion), bis der Endschalter 
+        erreicht ist.<br>
+        F&uuml;r den Fall, da&szlig; die Bewegungsrichtung nicht zum X-Endschalter 
+        hin f&uuml;hrt, stellen Sie gem&auml;&szlig; Bild 10 die Endschalter-Fahrtrichtung 
+        um (auf keinen Fall den Schrittmotor umpolen). </font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G76 
+        Y0</font><br>
+        <font face="Tahoma" size="2" color="#000000">Y-Tisch mu&szlig; solange 
+        fahren (unabh&auml;ngig von der Maschinenkonstruktion), bis der Endschalter 
+        erreicht ist.<br>
+        F&uuml;r den Fall, da&szlig; die Bewegungsrichtung nicht zum Y-Endschalter 
+        hin f&uuml;hrt, stellen Sie gem&auml;&szlig; Bild 10 die Endschalter-Fahrtrichtung 
+        um (auf keinen Fall den Schrittmotor umpolen). </font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Sollten die Bewegungen zu schnell 
+    ausgef&uuml;hrt werden und die Schrittmotoren durchdrehen, mu&szlig; die Parametereinstellung 
+    durchgef&uuml;hrt- und dieser Test nochmals wiederholt werden, siehe 3.5.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Durch Klicken des Button &quot;Referenzpunkt 
+    anfahren&quot; oder durch Dr&uuml;cken der Taste Pos1 werden automatisch alle 
+    Endschalter nacheinander angefahren (siehe Bild 9).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schliessen Sie die Handsteuerung 
+    (Button &quot;CNC-Maschine Ende&quot; klicken).</font></li>
+</ul>
+<table width="680" border="0" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td width="337"><img src="Bilder/Wab_HandstrgRef.gif" width="349" height="489"></td>
+    <td width="329" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      9: </i></b>Start des Referenzlaufes innerhalb der Handsteuerung</font></td>
+  </tr>
+</table>
+<table width="680" border="0" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td width="150"><img src="Bilder/Wab_ParamEndschalter.gif" width="151" height="102"></td>
+    <td width="516" valign="bottom"> 
+      <p><font face="Arial" size="2" color="#808080"><b><i>Bild 10: </i></b>Umkehrung 
+        der Fahrtrichtung zu den Endschaltern</font></p>
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Dazu w&auml;hlen 
+        Sie das Men&uuml; <b>Parameter/KOSY</b>, es erscheint ein Fenster mit 
+        dem nebenstehenden Ausschnitt. F&uuml;hren Sie nur in diesem die Ver&auml;nderung 
+        vor.</font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b>3.5 Parametereinstellungen</b></font><font face="Tahoma" size="2" color="#000000"><br>
+  F&uuml;r den Fall, da&szlig; Sie keine Erfahrung mit Maschinen-Steuerungen und 
+  keine Kenntnisse &uuml;ber deren physikalische Gesetzm&auml;&szlig;igkeiten 
+  haben, sollten Sie zuvor die Hotline anrufen. </font></p>
+<p><font face="Tahoma" size="2" color="#000000">Um die Software <i><b>nccad</b></i> 
+  auf die unterschiedlichen mechanischen Bedingungen einstellen zu k&ouml;nnen, 
+  gehen Sie in das Men&uuml; <b>Parameter/Maschine/KOSY</b>. Es erscheint ein 
+  Fenster (Bild 11), in dem die wichtigsten Grundeinstellungen f&uuml;r Maschinengr&ouml;&szlig;e, 
+  Geschwindigkeitsniveau, Schnittstelle und aktivierte (installierte) Optionen 
+  gemacht werden. In einem erweiterten Fenster (Bild 12) werden alle speziellen 
+  Einstellungen vorgenommen. Besondere Sorgfalt ist der Angabe &quot;Weg pro Schritt&quot; 
+  zu widmen. Sie ergibt sich aus der Spindelsteigung, der &Uuml;bersetzung zum 
+  Schrittmotor und dem Schrittwinkel der Motoren im Halbschritt-Betrieb.</font></p>
+<p><font face="Tahoma" size="2" color="#000000">Alle Angaben f&uuml;r Geschwindigkeit, 
+  Vorschub und Rampe k&ouml;nnen zwar empirisch ermittelt werden, Sie sollten 
+  aber folgende Grundregeln beachten:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Das Drehmoment eines Schrittmotors 
+    ist umso kleiner, je h&ouml;her die Geschwindigkeit bzw. der Vorschub ist 
+    und je kleiner der Strangstrom (Nennstrom) ist. </font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Je gr&ouml;&szlig;er die zu 
+    bewegende Masse ist, umso kleiner m&uuml;ssen Beschleunigung und Verz&ouml;gerung 
+    sein (kleinere Zahl im Feld &quot;Rampe&quot;).</font></li>
+</ul>
+<p><font face="Tahoma" size="2" color="#000000"><b>Die folgenden Bilder zeigen 
+  Ihnen die Parameterfenster ohne Werteangaben</b>. Nach der Erstinstallation 
+  stehen allerdings in allen Feldern Vorgabewerte, die aber nicht unbedingt zu 
+  Ihrer Masachine passen. Die durch Versuche ermittelten Einstellungen sind in 
+  den leeren Feldern einzutragen und sollen Ihnen eine Hilfe sein, wenn z.B. die 
+  Software an einem anderen Rechner neu installiert werden mu&szlig;.</font></p>
+<table width="683" border="0" cellspacing="10" cellpadding="0">
+  <tr> 
+    <td width="434"><img src="Bilder/Wab_ParamLeer1.gif" width="434" height="593"></td>
+    <td width="219" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 11:</i></b> 
+        Einstellungen im Men&uuml; Parameter/Maschine/KOSY. </font></p>
+      <p align="left"><b><font face="Arial" size="1" color="#000000">In die freien 
+        Felder sind die Werte f&uuml;r Ihr System einzutragen.</font></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="621" border="0" cellspacing="5" cellpadding="2">
+  <tr> 
+    <td width="603"><img src="Bilder/Wab_ParamLeer2.gif" width="603" height="404"></td>
+    <td valign="bottom" width="12">&nbsp;</td>
+  </tr>
+</table>
+<font face="Arial" size="2" color="#808080"><b><i>Bild 12:</i></b> Einstellungen 
+im Fenster &quot;KOSY Erweitert&quot;. </font><b><font face="Arial" size="1" color="#000000">In 
+die freien Felder sind die Werte f&uuml;r Ihr System einzutragen.</font></b><br>
+<p><font face="Tahoma" size="2" color="#000000">Um die Parametereinstellungen 
+  zu testen, k&ouml;nnen Sie Folgendes tun:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Rufen Sie die Handsteuerung 
+    in <i><b>nccad</b></i> auf (Men&uuml; Maschine/CNC-Maschine).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Geben Sie nacheinander die 
+    CNC-Befehle ein:</font> 
+    <ul>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        X100</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        X0</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        Y100</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        Y0</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        Z-50</font></li>
+      <li><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+        Z0</font><font face="Tahoma" size="2" color="#000000"> (Die Maximalwege 
+        richten sich nach der Konstruktion. Die Werte k&ouml;nnen angepasst werden, 
+        um probeweise den vollen Weg lt. Bild 11 abzufahren).</font></li>
+    </ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="Drehstrom"></a>4.</font> 
+  Die Steuerung einer Drehstromspindel<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Sofern die CNC-Maschine 
+  &uuml;ber eine Drehstromspindel mit fernsteuerbarem Frequenzumrichter verf&uuml;gt 
+  und die CNC-Steuerung entsprechen geliefert wurde, sind sehr sinnvolle Maschinenfunktionen 
+  nutzbar. &Auml;u&szlig;erlich erkennen Sie die Steuerungen an zus&auml;tzlichen 
+  Bedienelementen auf der Frontseite (Bild 10).</font></p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="202"><img src="Bilder/SteuergerDr_FrontplKnopf_20.jpg" width="200" height="55"></td>
+    <td width="454" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 13: 
+        </i></b>Die Bedienelemente der Drehstromspindel-Steuerung<br>
+        </font><font face="Tahoma" size="2" color="#000000">Von links nach rechts: 
+        Umschalter &quot;Hand/Automatik&quot;, Spindelschalter &quot;Hand EIN&quot;, 
+        Poti &quot;Drehzahl Hand&quot; und Poti &quot;Drehzahlabweichung Auto&quot; 
+        .</font></p>
+      </td>
+  </tr>
+</table>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Nacheinander schalten 
+  Sie zum Test ein:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Den PC- und dort die Software 
+    <i> <b>nccad</b></i> starten</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die CNC-Maschine (gr&uuml;ne 
+    Lampe &quot;frei&quot; mu&szlig; leuchten)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Das Steuerger&auml;t am Hauptschalter 
+    an der Frontseite</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Um die Spindel von 
+  Hand zu testen, ist folgendes zu tun:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">Drehen Sie das Poti &quot;Drehzahl 
+    Hand&quot; auf Linksanschlag (kleinste Drehzahl)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Stellen Sie den Umschalter 
+    &quot;Hand/Auto&quot; in Stellung &quot;Hand&quot; </font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie den Spindelschalter 
+    auf &quot;EIN&quot;</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Die Spindel mu&szlig; 
+  sich drehen. Wenn Sie die Potistellung &quot;Drehzahl Hand&quot; ver&auml;ndern, 
+  mu&szlig; sich auch die Drehzahl ver&auml;ndern. Schalten Sie die Spindel am 
+  Spindelschalter wieder aus.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>4.1 Der Test der 
+  Automatik<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Sofern der Test im Handbetrieb 
+  erfolgreich war, kann der Automatikbetrieb getestet werden:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">&Ouml;ffnen Sie in <i> <b>nccad</b></i> 
+    die Handsteuerung der CNC-Maschine (siehe gedrucktes Handbuch, Kapitel 0)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie am Steuerger&auml;t 
+    den Umschalter &quot;Hand/Automatik&quot; auf &quot;Auto&quot;</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie in der Handsteuerung 
+    das Relais 1 ein - Tastenkombination </font><font face="Tahoma" size="2"><font face="Courier New, Courier, mono"><font color="#000000"><b>[Strg] 
+    + [F1]</b></font></font></font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie in der Handsteuerung 
+    das Relais 2 ein - Tastenkombination </font><font face="Tahoma" size="2"><font face="Courier New, Courier, mono"><font color="#000000"><b>[Strg] 
+    + [F1]</b></font></font></font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die Spindel mu&szlig; laufen</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Geben Sie im Direktfeld den 
+    NC-Befehl </font><font face="Tahoma" size="2"><font face="Courier New, Courier, mono" color="#339966">M25 
+    U12</font></font><font face="Tahoma" size="2" color="#000000"> ein</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die Spindel mu&szlig; schneller 
+    laufen</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Durch Drehen am Poti &quot;Drehzahlabweichung&quot; 
+    kann die Drehzahl geringf&uuml;gig ver&auml;ndert werden</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Geben Sie im Direktfeld den 
+    NC-Befehl </font><font face="Tahoma" size="2"><font face="Courier New, Courier, mono" color="#339966">M25 
+    U20</font></font><font face="Tahoma" size="2" color="#000000"> ein</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die Spindel mu&szlig; noch 
+    schneller laufen</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schalten Sie in der Handsteuerung 
+    die Relais 1 und 2 wieder aus- Tastenkombination </font><font face="Tahoma" size="2"><font face="Tahoma" size="2"><font face="Courier New, Courier, mono"><font color="#000000"><b>[Strg] 
+    + [F1] </b></font></font></font><font face="Courier New, Courier, mono">und 
+    </font><font face="Tahoma" size="2" color="#000000">Tastenkombination </font><font face="Tahoma" size="2"><font face="Courier New, Courier, mono"><font color="#000000"><b>[Strg] 
+    + [F2]</b></font></font></font></font></li>
+</ol>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>4.2 Die Drehzahlabh&auml;ngigkeit 
+  von der Steuerspannung<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Im Automatikbetrieb 
+  ist die Drehzahl von der Gr&ouml;&szlig;e der Steuerspannung abh&auml;ngig, 
+  die einen Wert von 0 bis 25 Volt haben kann, entsprechend 0 bis 100%.<br>
+  Wenn der CNC-Befehl <font face="Courier New, Courier, mono" color="#339966">M25 
+  U12.5</font> ausgef&uuml;hrt wird, entspricht dies also 50%.<br>
+  Das folgende Diagramm zeigt den Zusammenhang:</font></p>
+<p align="left"><img src="Bilder/DrSpindel_Diagramm.gif" width="534" height="529"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><a name="Zusatzfunktionen"></a>5.</font> 
+  Optionen und Zusatzfunktionen der CNC-Steuerung <br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Das System KOSY- und 
+  damit auch die CNC-Steuerung f&uuml;r fremde Maschinen, bietet in Hard- und 
+  Software eine F&uuml;lle von Erweiterungsm&ouml;glichkeiten. Z.B.:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Drehzusatz zum Drehen und Teilen 
+    (U-Achse)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Tiefenregelung und Abtastung 
+    von 3D-K&ouml;rpern</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Werkzeugl&auml;ngenmessung</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Spindeln mit automatischem 
+    Werkzeugwechsel</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mindermengendosierung</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Einbindung in Automatisierungen 
+    (programmierbare Ein/Ausg&auml;nge)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Spooler-Betrieb</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Innerhalb des Hilfesystems 
+  werden die Optionen meist ausf&uuml;hrlich erkl&auml;rt, die folgenden Bilder 
+  zeigen lediglich die Anschlussbelegungen der D-Sub-Buchsen/Stecker auf der R&uuml;ckseite 
+  der CNC-Steuerung:</font></p>
+<table width="686" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td width="301"><img src="Bilder/Strg_AnschlussUachse.gif" width="300" height="275"></td>
+    <td width="355" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      14:</i></b> Buchse f&uuml;r die U-Achse der CNC-Steuerung<br>
+      </font><font face="Tahoma" size="2" color="#000000">Hier wird der Drehzusatz 
+      angeschlossen.</font></td>
+  </tr>
+  <tr>
+    <td width="301"><img src="Bilder/Strg_AnschlussTrm.jpg" width="300" height="251"></td>
+    <td width="355" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      15:</i></b> Anschluss f&uuml;r Tiefenregler oder Abtastung<br>
+      </font><font face="Tahoma" size="2" color="#000000">Dies Optionen sind nicht 
+      bei jeder Maschinenkonstruktion einsetzbar.</font></td>
+  </tr>
+  <tr>
+    <td width="301"><img src="Bilder/Strg_AnschlussZusFunkt.gif" width="300" height="452"></td>
+    <td width="355" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      16:</i></b> Anschluss f&uuml;r die Zusatzfunktionen der CNC-Steuerung<br>
+      </font><font face="Tahoma" size="2" color="#000000">Hier werden Elemente 
+      f&uuml;r zus&auml;tzliche Automatisierung angeschlossen (Mindermengendosierung, 
+      pneumatisch bet&auml;tigte Halterungen, Start-Taster, spannungsgesteuerte 
+      Spindeln, Sensoren u.&Auml;.m.).</font></td>
+  </tr>
+  <tr>
+    <td width="301"><img src="Bilder/Strg_AnschlussWzlmesser.jpg" width="300" height="277"></td>
+    <td width="355" valign="bottom"><font face="Arial" size="2" color="#808080"><b><i>Bild 
+      17:</i></b> Anschluss f&uuml;r die Werkzeugl&auml;ngenmessung<br>
+      </font><font face="Tahoma" size="2" color="#000000">Nicht in jeder Steuerun 
+      vorhanden, jedoch besonders wichtig bei Systemen mit automatischem Werkzeugwechsel.</font></td>
+  </tr>
+  <tr>
+    <td width="301"><img src="Bilder/Strg_AnschlussCom.gif" width="300" height="261"></td>
+    <td width="355" valign="bottom"> 
+      <p align="left"><font face="Arial" size="2" color="#808080"><b><i>Bild 18:</i></b> 
+        Com-Port der CNC-Steuerung<br>
+        </font><font face="Tahoma" size="2" color="#000000">Das passende Verbindungskabel 
+        zur seriellen Schnittstelle des PC wird mitgeliefert.</font></p>
+      </td>
+  </tr>
+</table>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+</body>
+</html>

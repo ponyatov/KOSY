@@ -1,0 +1,222 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Automation/Dosieren</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Dosieren mit KOSY<br>
+  </font></b></i><font face="Tahoma" size="1" color="#000000"><b>Überarbeitet: 
+  August 2002</b></font></p>
+<p><font face="Tahoma" size="2" color="#000000">Das Koordinatentisch-System KOSY 
+  ist sehr gut f&uuml;r Dosieraufgaben geeignet. Innerhalb von <i><b>nccad</b></i> 
+  werden dabei folgende Funktionen genutzt:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Steuern von Ralaiskontakten 
+    und Abfragen von Schaltern (vgl. <a href="../Automation/Automation.htm">Automation</a>).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zeichnen von Dosierpunkten 
+    oder Konturen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Aufnehmen der Dosierpunkte 
+    oder Bahnen mit der Handsteuerung der CNC-Maschine (siehe TeachIn...).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Importieren der Punkte oder 
+    Bahnen von fremden CAD-Programmen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Direkte Steuerung des Dosiervorgangs 
+    aus Kartuschen mit der Technologie-Funktion &quot;Punkt/Bahn-Dosierung&quot; 
+    ab <i><b>nccad6</b></i>.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">W&auml;hrend bei 
+  einer Handdosiereung ein Dosiervorgang beispielsweise durch den Fu&szlig;schalter 
+  ausgel&ouml;st wird und das Steuerger&auml;t f&uuml;r die richtige Dosier-Menge 
+  und -Zeit sorgt, mu&szlig; bei der automatischen Dosierung die Maschinenbewegung 
+  und die Steuerung &quot;synchronisiert&quot; werden, dies erledigt <i><b>nccad</b></i>.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><b>Bevor Sie eine 
+  eigene Dosierungsl&ouml;sung aufbauen</b>, sollten Sie sich mit der Dosieraufgabe 
+  -, dem Dosiermedium -, den Sicherheitsvorschriften - und den physikalischen 
+  Zusammenh&auml;ngen (Viskosit&auml;t, Str&ouml;mung, Temperatur usw.) vertraut 
+  machen. Ohne Wissen und Erfahrung kann die L&ouml;sung scheitern. <br>
+  Au&szlig;erdem m&uuml;ssen die<a href="../Grundlagen_CAD/CAD_Konstruktionsgrundlagen.htm"> 
+  CAD-Konstruktionsgrundlagen</a>, die <a href="../Grundlagen_Fraesmaschine/Einf%FChrungsbeispiel_Zeichnung%20zu%20Werkst%FCck.htm">CAD/CAM-Grundlagen</a> 
+  und die <a href="../Grundlagen_Fraesmaschine/Handbedienung.htm">Handbedienung</a> 
+  der CNC-Maschine bekannt sein.</font></p>
+<p align="left"><font face="Arial" size="2" color="#000000"><br>
+  <b><font color="#FF00FF" face="Tahoma" size="5">1.</font></b> <font face="Tahoma" color="#FF00FF"><b>Verschiedene 
+  Dosiersysteme <br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Dosieren kann mit sehr 
+  verschiedenen technischen Hilfsmitteln - und mit den verschiedenen CNC-Maschinen 
+  erfolgen, wie die folgende Bilderreihe zeigt:</font><font face="Tahoma" color="#FF00FF"><b> 
+  </b></font> </font></p>
+<table width="479" border="0" cellspacing="5" cellpadding="0">
+  <tr>
+    <td width="301"><font face="Arial" size="2" color="#000000"><img src="Bilder/STIHL_Dosiersystem_gesamt.jpg" width="300" height="315"></font></td>
+    <td width="163" valign="bottom"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Dosieren mit 
+        Dosierventil und Steuerger&auml;t, das mit KOSY synchronisiert wurde.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="301"><font face="Arial" size="2" color="#000000"><img src="Bilder/Wuerth_Gesamt.jpg" width="300" height="200"></font></td>
+    <td width="163" valign="bottom"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Dosieren mit 
+        geheiztem Spezialventil auf Drehteller montiert.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="301"><font face="Arial" size="2" color="#000000"><img src="Bilder/Stihl_02_Dosierung4137_gesa.jpg" width="300" height="321"></font></td>
+    <td width="163" valign="bottom"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Dosieren aus 
+        dem Fa&szlig; mit Ausla&szlig;ventil.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="301"><font face="Arial" size="2" color="#000000"><img src="Bilder/KOSY_Dosiersystem_Gesamt.jpg" width="300" height="306"></font></td>
+    <td width="163" valign="bottom"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Dosieren mit 
+        dem <b>KOSY-Dosiersystem</b> direkt aus der Kartusche.</font></p>
+    </td>
+  </tr>
+</table>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><br>
+  Im Folgenden wird die <b>Anwendung des KOSY-Dosiersystems</b> ausf&uuml;hrlich 
+  erl&auml;utert. <b>Andere Dosiersysteme</b> erfordern spezielles KnowHow und 
+  werden als <b>kundenspezifische</b> Systeme von MAXcomputer - oder einem Partner 
+  angeboten bzw. hergestellt. </font></p>
+<p align="left"><font face="Arial" size="2" color="#000000"></font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><br>
+  </font></p>
+<p align="left"><font face="Tahoma"><b><font color="#FF00FF" size="4"><font face="Arial" size="5"><img src="Bilder/Dosieren_TechFoto.jpg" width="389" height="355"><br>
+  2.</font> </font> <font color="#FF00FF" size="2"> <font face="Arial">Direkte 
+  Bahn- und Punkt-Dosierung mit KOSY<br>
+  </font></font></b></font><font face="Tahoma" size="2" color="#000000">Das <b>KOSY-Dosiersystem</b> 
+  basiert auf einer pneumatischen <b>Druck/Sog-Steuerung</b> und der direkten 
+  Materialversorgung aus der Kartusche. In <i><b>nccad</b></i> wird die Steuerung 
+  der Pneumatik innerhalb der Technologie programmiert. Das Bild zeigt den Zusammenhang.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>2.1</b> Komponenten 
+  f&uuml;r das KOSY-Dosiersystem</font><font face="Tahoma" size="2" color="#000000"><br>
+  Um ein KOSY-Dosiersystem aufzubauen, ben&ouml;tigen Sie:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Eine <b>CNC-Maschine</b> aus 
+    dem Lieferprogramm.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die <b>Pneumatik-Elemente</b> 
+    als Fertigprodukt &quot;KOSY-Dosierzusatz&quot; mit allen Anschlu&szlig;teilen. 
+    Alles ist auf einer Grundplatte montiert (im Bild oben schwarz), die oben 
+    an der CNC-Maschine angeschraubt - und mit der Elektronik verbunden werden 
+    mu&szlig;. Die verschiedenen Steckverbindungen m&uuml;ssen bei der Bestellung 
+    ber&uuml;cksichtigt werden.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine <b>Halterung</b> f&uuml;r 
+    die Kartusche, montierbar am Z-Tisch (kann als Zubeh&ouml;rteil geliefert 
+    werden).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine <b>Kartuschen-Anschlu&szlig;kappe</b> 
+    mit O-Ring und Schlauchanschlu&szlig;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine <b>Kartusche</b> mit dem 
+    Dosiermedium. Sie mu&szlig; unbedingt einen Stopfen zur Trennung von Pre&szlig;luft 
+    und Dosiermedium haben.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine Sammlung von geeigneten 
+    <b>Dosiernadeln</b> sowie eine Verschlu&szlig;kappe zur Vermeidung von Austrocknung.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Eine <b>Pre&szlig;luft-Versorgung</b> 
+    mit einem Minimaldruck von 5 bar.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Die Software <i><b>nccad</b></i>, 
+    ab Version <b>6</b>, mit der speziellen Technologie-Funktion &quot;Punkt/Bahn-Dosierung&quot;.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b>2.2</b> Der automatische 
+  Dosiervorgang</font><font face="Tahoma" size="2" color="#000000"><br>
+  Der eigentliche Dosiervorgang wird innerhalb von <b>nccad</b> &uuml;ber die 
+  <b>CAM-Funktion</b> <b>Technologie</b> programmiert und l&auml;uft automatisch 
+  wie folgt ab:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000">X-Y-Position anfahren und anschlie&szlig;end 
+    in Z-Richtung im Eilgang auf Sicherheitsabstand. Dann mit dem eingestellten 
+    Vorschub auf Werkst&uuml;ck-Nullpunkt und tiefer auf die eingestellte Gesamttiefe 
+    (falls Der Wert ungleich Null ist).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Druck &uuml;ber &quot;Dosieren 
+    Relais ...&quot; einschalten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Keine Bewegung w&auml;hrend 
+    der &quot;Dosieren Wartezeit&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Bahn wird abgefahren (falls 
+    kein Punkt).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Druck ausschalten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Keine Bewegung w&auml;hrend 
+    der &quot;Dosieren Wartezeit AUS&quot;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Hochfahren auf Z-Position &quot;Saugen 
+    R&uuml;ckzug&quot;</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Sog &uuml;ber &quot;Saugen 
+    Relais ...&quot; einschalten</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Keine Bewegung w&auml;hren 
+    der &quot;Saugen Wartezeit&quot;</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Sog ausschalten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">N&auml;chsten Startpunkt anfahren 
+    oder Programm beenden.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="5" color="#FF00FF"><font size="2"><b>2.3</b></font></font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Der Weg von der Zeichnung zum Dosieren</font><font face="Tahoma" size="2" color="#000000"><br>
+  Um von der gezeichneten (oder importierten) Kontur - oder vom Punktebild zur 
+  Dosierung zu kommen, ist also innerhalb von <i><b>nccad</b></i> Folgendes zu 
+  tun:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Kontur - oder Punktebild</b> 
+    <b>zeichnen</b> (siehe <a href="../Grundlagen_CAD/CAD_Konstruktionsgrundlagen.htm">CAD-Konstruktionsgrundlagen</a>).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Technologie</b> zuordnen 
+    (siehe <a href="../Grundlagen_Anwendung/Technologien%20zum%20Bearbeiten.htm">Technologie-Angaben</a>). 
+    <br>
+    Im Fenster <b>Technologie</b> ist zun&auml;chst die Karteikarte <b>Bearbeitung</b> 
+    offen. In dieser sind die Felder f&uuml;r Vorschub, Gesamttiefe und Teilzustellung 
+    besonders zu beachten:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Vorschub</b><br>
+        Der Wert mu&szlig; in Einklang zu der verwendeten Dosiernadel, der Viskosit&auml;t 
+        und dem eingestellten Druck sein.</font> </li>
+    </ul>
+  </li>
+  <ul>
+    <li><font face="Tahoma" size="2" color="#000000"><b>Gesamttiefe</b><br>
+      Sobald die Dosierung gestartet wird, f&auml;hrt der Z-Tisch dieses Ma&szlig; 
+      vom eingestellten Werkst&uuml;ck-Nullpunkt aus nach unten. Dabei darf allerdings 
+      die Nadel nicht aufsitzen.</font></li>
+    <li><font face="Tahoma" size="2" color="#000000"><b>Teilzustellung</b><br>
+      Dieser Wert sollte beim Dosieren 0 sein. Er wird aber ignoriert, wenn er 
+      ungleich Null ist.</font></li>
+  </ul>
+  <li><font face="Tahoma" size="2" color="#000000">F&uuml;r die <b>Programmierung 
+    der Dosierung</b> der Reiter <b>Punkt/Bahn-Dosierung</b> zu klicken und in 
+    dieser Karteikarte Folgendes einzustellen:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Dosieren Relais</b><br>
+        Zuordnung des Pneumatik-Ventils f&uuml;r den Druck (beim Original KOSY-Dosierzusatz 
+        ist dies Relais Nr. 3)</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Dosieren Wartezeit</b><br>
+        Die Zeit zum Aufbauen des Druckes und zum Bereitstellen des Dosiermediums, 
+        bevor eine Kontur-Bewegung beginnt.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Dosieren Wartezeit AUS</b><br>
+        Die Zeit zum &quot;Nachlaufen&quot; des Mediums, nachdem das Dosieren 
+        Relais ausgeschaltet ist.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Saugen R&uuml;ckzug</b><br>
+        Hochfahren um das genannte Ma&szlig;, damit eventuell sich bildende &quot;F&auml;den&quot; 
+        abrei&szlig;en.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Saugen Relais</b><br>
+        Zuordnung des Pneumatik-Ventils f&uuml;r den Sog (beim Original KOSY-Dosierzusatz 
+        ist dies Relais Nr. 4) </font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Saugen Wartezeit</b><br>
+        Zeitdauer, w&auml;hrend der das Pneumatik-Ventil zum Saugen ge&ouml;ffnet 
+        ist.</font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000">Zum <b>Testen</b> der Programmierung 
+    und der Dosierfunktionen sollten Sie zun&auml;chst in die <b>Handsteuerung</b> 
+    gehen und die Relais 3 und 4 manuell ein/ausschalten (siehe <a href="../Grundlagen_Anwendung/Handbedienung.htm">Handbedienung</a>).<br>
+    <b>Vorsicht:</b> Pre&szlig;luft mu&szlig; vorhanden - und der Zufuhr-Hahn 
+    ge&ouml;ffnet sein. Unter der Dosiernadel sollte ein &quot;Auffangtuch&quot; 
+    liegen.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Das <b>Werkst&uuml;ck</b> ist 
+    einzuspannen und der <b>Werkst&uuml;ck Nullpunkt</b> einzustellen. Er sollte 
+    in Z so hoch &uuml;ber der Oberfl&auml;che liegen, da&szlig; die Nadel nicht 
+    aufsitzen kann, sondern eine saubere Ausbreitung des Dosiermediums m&ouml;glich 
+    ist.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Start des Programms</b> 
+    &uuml;ber den Button <b>Ausf&uuml;hren</b> innerhalb des Fensters <b>Handsteuerung</b>.</font></li>
+</ul>
+</body>
+
+</html>

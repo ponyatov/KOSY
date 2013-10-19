@@ -1,0 +1,324 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+<title>KOSDY-Hilfe/Spezialanwendungen/Leiterplatten fraesen</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font SIZE="6" COLOR="#ff00ff"><i> <b><font face="Times New Roman">Leiterplatten 
+  entwerfen und fr&auml;sen<br>
+  </font></b></i></font><font SIZE="2" COLOR="#000000" face="Tahoma"><b><font size="1">Überarbeitet: 
+  Oktober 2002</font></b></font></p>
+<p><font size="2" color="#000000" face="Tahoma"><br>
+  </font><font size="2" color="#000000"><font face="Tahoma">Leiterbahnen und Lötpunkte 
+  werden im CAD-Teil von <i><b>nccad</b></i> konstruiert, die zugehörigen Fräslinien 
+  </font><font size="2" color="#000000"><font face="Tahoma"> mit speziellen <i><b>nccad</b></i>-Funktionen</font></font> 
+  <font face="Tahoma">automatisch erzeugt und mit den notwendigen Technologiedaten 
+  versehen. Abschließend fräst die CNC-Maschine Trennlinien und bohrt die Lötpunkte 
+  ...<br>
+  Professionelle <b>Layout-Programme</b> werden dadurch nicht ersetzt, sie verf&uuml;gen 
+  &uuml;ber Funktionen, die <i><b>nccad</b></i> nicht bieten kann und will (Schaltungserstellung 
+  mit automatischem Routen, Gerber-Ausgabe u.&Auml;.m.). Eine Verbindung von solchen 
+  Layout-Programmen zu <i><b>nccad</b></i> ist jedoch m&ouml;glich und sinnvoll, 
+  um die Leiterplatten bohren und fr&auml;sen</font></font><font size="2" color="#000000" face="Tahoma"> 
+  zu k&ouml;nnen oder Kleber und L&ouml;tpaste zu dosieren. Siehe dazu unter <b>Elektronik-System</b> 
+  auf unserer HomePage <u>www.max-computer.de</u> oder unter <a href="LayoutProgr.htm">Layout-Programme 
+  und die Zusammenarbeit mit KOSY</a>.</font></p>
+<font SIZE="2" COLOR="#000000">
+<p><font face="Tahoma">Systematisches Vorgehen von Anfang an erleichtert den Einstieg 
+  und fördert die Routine im Umgang mit diesem vorteilhaften Programmteil !</font></p>
+</font> 
+<p><font face="Tahoma"><font SIZE="2" COLOR="#000000"> <br>
+  <img border="0" src="Bilder/LP_Dold_Beispiel.jpg" width="232" height="207"><br>
+  </font><b><font color="#FF00FF"><font size="5">1. </font><font size="2">Das 
+  Ziel: Eine gefräste Leiterplatte</font></font><font SIZE="2" COLOR="#000000"><br>
+  </font></b><font size="2">Um mit dieser Technik vertraut zu werden, ist bewusst 
+  ein einfaches Zugangsthema mit einem übersichtlichen Platinenlayout gewählt: 
+  Eine Transistorschaltung</font></font><font size="2" color="#400040" face="Tahoma">.&nbsp;</font></p>
+<p><font size="2" color="#400040" face="Tahoma"><br>
+  Bearbeiten Sie dazu die folgenden Punkte:</font></p>
+<p> <font face="Tahoma" size="2"><br>
+<img border="0" src="Bilder/Lp_01start.gif" width="234" height="104">
+  </font><font face="Tahoma"><strong><font color="#FF00FF" size="5"><br>
+  2.</font> <font SIZE="2" color="#FF00FF">Start<br>
+  </font></strong><font size="2">Über die Menü-Leiste <b>Datei</b> wird die Zeichenfläche 
+  geöffnet:&nbsp; <b>CAD/CAM - Neue Zeichnung</b></font></font></p>
+<p> <font face="Tahoma"><font size="2" color="#400040"><br>
+  </font><strong><font SIZE="2" COLOR="#ff00ff"><br>
+  </font><font color="#ff00ff" size="5">3. </font><font SIZE="2" COLOR="#ff00ff">Grundeinstellungen</font></strong><font SIZE="2"><br>
+  Um rationell und zügig zum Ziel zu kommen, sind Grundeinstellungen notwendig, 
+  die einmal gemacht für alle weiteren Leiterplatten Bestand haben und deshalb 
+  in der Datei <b> LP-GRUND</b> abgespeichert werden. Die folgende Darstellungsweise 
+  ist so aufgebaut, dass über die <b>Icon-Menüleiste</b> die <b> FUNKTIONEN</b>&nbsp;
+mit der Maus angewählt werden. Die Konstruktionspunkte werden entweder über die linke 
+  Maustaste angeklickt oder über die Tastatur numerisch eingegeben.&nbsp;</font></font></p>
+<p> <font size="2" color="#ff00ff" face="Tahoma"><strong><br>
+<img border="0" src="Bilder/Lp_02nullp.gif" width="192" height="118"></strong></font></p>
+<p> <img border="0" src="Bilder/Lp_03aussp.gif" width="173" height="78">&nbsp;&nbsp;
+<img border="0" src="Bilder/Lp_04aus-z.gif" width="208" height="98"></p>
+<p><font face="Tahoma"><font SIZE="2"><b>
+  <font color="#FF00FF">3.1 </font></b><font color="#FF00FF">Nullpunkt und Ausspannposition<br>
+  </font></font><font SIZE="2" color="#000000">Im Icon-Menü <b>CAM</b> wählen 
+  Sie&nbsp; <b>WERKSTÜCK-NULLPUNKT</b> 
+  (WNP). Geben Sie für den WNP die Werte <b> 20,20</b> ein. Dazu</font></font><font size="2" face="Tahoma"> 
+  wird mit der Taste <b>K - </b>oder mit der Maus - das Eingabefeld KA (kartesisch-absolut) 
+  aktiviert. Durch ein Komma getrennt werden die X -Y - Koordinaten eingetragen. 
+  Auf dieselbe Weise wählen Sie <b> AUSSPANNPOSITION </b> und geben <b> 0,60</b> 
+  sowie Z-Höhe <b> 20</b> ein (siehe Bild)</font></p>
+<p><font color="#FF00FF" size="2" face="Tahoma"><b><br>
+<img border="0" src="Bilder/Lp_05einst.gif" width="204" height="67">
+  </b></font></p>
+<font SIZE="2">
+<p><font face="Tahoma"><img border="0" src="Bilder/Lp_06raster.gif" width="245" height="372"><br>
+  <font color="#FF00FF"><b>3.2 </b>Lineal, Raster, Fang einstellen<br>
+  </font><font color="#000000">Unter <b>Einstellungen </b>wählen Sie </font><b>LINEAL/RASTER/FANG</b> 
+  und geben dort die Werte, wie im Bild dargestellt, ein.<br>
+  <br>
+  <br>
+<img border="0" src="Bilder/Lp_07layer.gif" width="242" height="413"><br>
+  <font color="#FF00FF"><b>3.3 </b>Layer einstellen<br>
+  </font><font color="#000000">Ebenfalls im Icon-Menü wählen Sie </font><b>LAYER</b> 
+  und dort&nbsp; Layer<b> 9</b> (schwarz), um das Schaltbild zeichnen zu können.</font></p>
+<p><font face="Tahoma"><br>
+  <font color="#FF00FF"><b>3.4 </b>Grundeinstellungen abspeichern<br>
+  </font>Diese Grundeinstellungen werden&nbsp; unter <b> LP-GRUND</b> gespeichert. 
+  <br>
+  Damit stehen sie für weitere Projekte dieser Art zur Verfügung.</font></p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_09symb.gif" width="118" height="71"></p>
+</font>
+<p><font face="Tahoma" size="2"><img border="0" src="Bilder/Lp_10symb.gif" width="437" height="267"><br>
+  </font><font face="Tahoma"><b><font color="#ff00ff" size="5">4.</font><font SIZE="2"> 
+  </font><font color="#FF00FF" SIZE="2">Symbole laden</font></b></font><font face="Tahoma" size="2"><br>
+Im Icon-Menü <b>Symbole: SYMBOLE LADEN</b> . Die Elektronik-Symbole 
+  sind unter dem Verzeichnis <b>Elektro9</b> im Layer 9 abgespeichert. <br>
+  Danach erscheint das obige Auswahlfenster. Folgende Symbole werden geladen und 
+  auf der Zeichenfläche abgelegt:</font></p>
+<font SIZE="2">
+<p><font face="Tahoma">O_quelle.sym /&nbsp; O_npn-tr.sym / O_led.sym / O_schalt 
+  / O_widers.sym </font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><img src="Bilder/LP_FR7.GIF" alt="LP_fr7.gif (3401 Byte)" width="309" height="114"></font></p>
+<p><font face="Tahoma"><img border="0" src="Bilder/LP_FR8.GIF" width="247" height="199"><br>
+  <b><font color="#FF00FF" size="5">5.</font><font color="#FF00FF" SIZE="2"> Schaltbild 
+  zeichnen</font></b><br>
+  Die so abgelegten Symbole müssen gedreht, verschoben, kopiert werden...<br>
+  Zum <b> DREHEN</b> Teil markierenen... (LED / Widerstand), Drehpunkt setzen..., 
+  Drehwinkel wählen...<br>
+  Zum <b> VERSCHIEBEN</b> Teil wählen..., von-Position klicken..., nach-Position 
+  klicken...<br>
+  Zum <b> KOPIERENEN</b> Teil wählen..., von-Position klicken..., nach-Position 
+  klicken...<br>
+  Die Bauteile werden über <b> POLYGONE</b> oder <b> GERADEN</b> verbunden.<br>
+  Dieses Schaltbild dient als Vorlage für das Layout. </font></p>
+</font>
+<p><font size="2" face="Tahoma"><b>DATEI/ SPEICHERN UNTER</b>&nbsp;......&nbsp;&nbsp;&nbsp;&nbsp;<b> 
+  LP-NAME1</b> <br>
+  (Dieses Layout wird mit neuem Namen&nbsp; abgespeichert!)<br>
+  </font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img border="0" src="Bilder/LP_FR9.GIF" width="389" height="269"><br>
+  </font><font face="Tahoma"><font size="5" color="#ff00ff"><b>6.</b> </font><font SIZE="2"><font SIZE="2" COLOR="#ff00ff"><b>Layout 
+  planen</b></font><br>
+  Zunächst werden die Bauteile entsprechend ihrer Größe angeordnet. Schaltbild 
+  und Layout unterscheiden sich dabei, denn die Bauteile sollten platzsparend- 
+  und vorausschauend für eine optimale kreuzungsfreie Leitungsverbindung platziert 
+  werden.<br>
+  Oft hilft dabei eine Lochrasterplatte, in die die Originalbauteile eingesteckt 
+  werden.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font SIZE="2" COLOR="#ff00ff"><img border="0" src="Bilder/LP_FR10.GIF" WIDTH="202" HEIGHT="182"><br>
+  </font><font size="5" color="#ff00ff">7.</font> <font size="2" color="#ff00ff">Bohrpunkte 
+  setzen</font></b></font><font size="2" face="Tahoma"><br>
+  Zur Aufnahme der Bauteile und für die Erzeugung der Pads müssen, entsprechend 
+  der in 6. festgelegten Bauteile-Anordnung, Punkte gezeichnet werden. Die später 
+  generierte Padgröße ist vom Layer abhängig (siehe Parameter/ Leiterplatte). 
+  In diesem Fall werden im Layer 2 (blau) die Bohrungen für die Bauteile gezeichnet&nbsp; 
+  und im Layer 4 die Bohrpunkte für die Lötfahnen.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font size="5" color="#ff00ff"><img border="0" src="Bilder/Lp_12polyg.gif" width="221" height="144"><br>
+  8.</font><font SIZE="2"> </font><font color="#ff00ff" SIZE="2">Bohrpunkte verbinden</font></b><font SIZE="2"><br>
+  Zur Verbindung der Bauteile müssen entsprechend dem Schaltbild <b> POLYGONE</b> 
+  gezeichnet werden. Sie sind alle im Layer 3 (cyan)gezeichnet, was zu einer&nbsp;
+Leiterbahnbreite von1.56mm führt. Folgende Grundsätze <b> müssen</b> beachtet werden:
+  </font></font><font SIZE="2"><br>
+ <br>
+<b>
+  - Bohrpunkte mindestens 2/10 Zoll auseinander setzen!<br>
+  - Die Über-Eck-Verbindungslinien als POLYGONE zeichnen!<br>
+  - Am Ende jeder Linie muss ein Punkt vorhanden sein!</b><br>
+  </font></p>
+<p><font size="2" face="Tahoma">Es ist sinnvoll, nach diesem Schritt erneut abzuspeichern!<br>
+<b>Datei / Datei speichern unter......&nbsp; LPL-NAME2&nbsp;</b></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_13pad.gif" width="239" height="165"></p>
+<p><font face="Tahoma"><b><font color="#ff00ff" size="5">9. </font> <font SIZE="2" COLOR="#ff00ff"> 
+  Automatisches Generieren von Pad und Bahn<br>
+  </font> </b><font size="2">Dies ist&nbsp; das Kernstück der <em><strong>nccad</strong></em> 
+  - Leiterplatten - Fräsfunktion. Sie wählen unter <b>CAD Besonderes:&nbsp;</b><br>
+<b>&nbsp;PAD/BAHNGENERIERUNG</b><br>
+  --&gt; Die Pads werden mit Achtecken umschlossen...<br>
+  --&gt; Die Polygone werden mit Parallelen versehen...</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><img border="0" src="Bilder/Lp_14outline.gif" width="239" height="144"><br>
+  </font> <font face="Tahoma"><b><font color="#ff00ff" size="5">10.</font><font size="2" color="#ff00ff"> 
+  Automatisches Generieren von Outline-Bahnen<br>
+  </font> </b><font SIZE="2">Wählen Sie das Icon<b><font color="#ff00ff">&nbsp;</font>
+OUTLINE GENERIERUNG</b><br>
+  --&gt; Die Achtecke und die Parallelen werden miteinander verbunden...</font></font></p>
+<p><font SIZE="2"><img border="0" src="Bilder/Lp_15polgen.gif" width="423" height="297"><br>
+<font face="Tahoma">
+  dann unter <b>Bearbeitung</b>:&nbsp;<b> POLYGON GENERIERUNG&nbsp;</b> Layer
+wählen...<br>
+  --&gt; Aus einzelnen Geraden wird ein Polygon...</font></font></p>
+<p><img border="0" src="Bilder/Lp_16unsicht.gif" width="310" height="124"></p>
+<p><font SIZE="2" face="Tahoma"><b>Einstellungen:</b>&nbsp;<b> LAYER</b>&nbsp;:&nbsp; Layer 3 unsichtbar machen.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_17mass.gif" width="166" height="169"></p>
+<p><img border="0" src="Bilder/Lp_18spieg.gif" width="245" height="171"><font face="Tahoma"><br>
+  <b><font size="5" color="#ff00ff">11.</font><font SIZE="2"> </font><font size="2" color="#ff00ff">Außenmaße 
+  festlegen und spiegeln</font></b><font SIZE="2"><br>
+  Die Außenmaße richten sich nach dem Platzbedarf des Layouts. Wenn die Außenkontur 
+  nicht gefräst werden muss, genügt es, über <b>Einstellungen:</b> <b>LAYER</b> die Zeichnungslage 9 
+  (schwarz) zu wählen und mit <b>RECHTECK</b> einen Rahmen zu zeichnen und danach 
+  über <b>Dokumentation:</b> <b>BEMASSUNG/VERTIKAL</b> eine Seite zu bemaßen.<br>
+  Da die Rückseite der Leiterplatte bestückt wird, muss dieses Layout gespiegelt 
+  werden:<br>
+  Dazu wählen Sie im Icon-Menü<b> Bearbeitung: SPIEGELN VERTIKAL</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+  Layout markieren... (Fenster: 1. Ecke / 2. Ecke), Spiegelachse an einer Kante 
+  positionieren und anschließend das gesamte Bild in den Werkstück-Nullpunkt verschieben 
+  (siehe Bild).</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font size="5" color="#ff00ff"><img border="0" src="Bilder/Lp_19layout.gif" width="162" height="225"><br>
+  12.</font><font SIZE="2"> </font><font size="2" color="#ff00ff">Layout ergänze</font><font SIZE="2" color="#ff00ff">n</font></b><font SIZE="2"><br>
+  Die mit roten Punkten markierten Pads benötigen zur Aufnahme der Lötstifte eine 
+  1,4mm große Bohrung. Dazu müssen Kreise mit diesem Durchmesser gezeichnet werden. 
+  <br>
+  Wählen Sie <b>Einstellungen:</b> <b>LAYER</b>, dann Layer 4 und unter <b>CAD 
+  Standart:</b>&nbsp; <b>KREIS</b>. Den Mittelpunkt setzen Sie auf einen roten 
+  Padpunkt.&nbsp; Den &quot;Punkt am Kreis&quot; können Sie in dieser Genauigkeit 
+  nur über die Koordinaten <strong>KR</strong> (kartesisch relativ) eingeben. 
+  Der Radius beträgt&nbsp; 0.7mm. Markieren Sie das Eingabefeld KR (Taste K oder 
+  Maus) und geben Sie die Werte ein (siehe Bild: Die Dezimalen werden durch Punkt 
+  getrennt, die Koordinatenwerte durch Komma!). <br>
+  Der einmal gezeichnete Kreis wird an die restlichen drei Punkte kopiert. Die 
+  zuvor zum Generieren benötigten roten Punkte werden gelöscht</font></font></p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_23techzu.gif" width="307" height="218"></p>
+<p><font face="Tahoma"><b><font size="2" color="#ff00ff"><img border="0" src="Bilder/Lp_20techn.gif" width="440" height="535"><br>
+  </font><font size="5" color="#ff00ff">13.</font><font SIZE="2"> </font><font size="2" color="#ff00ff">Zuordnung 
+  der Technologiedaten:<br>
+  </font></b><font SIZE="2">Die&nbsp;generierten Leiterbahnen (Layer 1), die Bohrpunkte 
+  (Layer 2), sowie die Sacklöcher (Layer 4) müssen mit Technologiedaten versehen 
+  werden.<br>
+  Dazu wählen Sie im Icon-Menü <b>CAM</b> und suchen in der 
+  Zeichnung einen Konstruktionspunkt des </font></font><font size="2" color="#400040" face="Tahoma">bestimmten 
+  Layers. Dieser wird mit der linken Maustaste bestätigt. Von diesem Punkt wird 
+  eine Gerade nach außen gezogen und wiederum bestätigt. Ein Technologiefenster 
+  öffnet sich (siehe Bild: Eingaben für Layer 1).<br>
+  Für die drei anderen Layer ergeben sich nacheinander folgende zwingende Eingaben: 
+  <br>
+  <br>
+  <u>Layer 1 (=Leiterbahnen)</u><br>
+  Bahnkorrektur: keine<br>
+  Relais vorher/nachher: x<br>
+  Vorschub: 150<br>
+  Werkzeugdurchmesser: 0.8<br>
+  Gesamttiefe: 0.3<br>
+  <br>
+  <u>Layer 2 (=Bohrpunkte)<br>
+  </u>Bahnkorrektur: keine<br>
+  Relais vorher/nachher: x<br>
+  Vorschub: 150<br>
+  Werkzeugdurchmesser: 0.8<br>
+  Gesamttiefe: 1.2 </font></p>
+<font SIZE="2">
+<p><font face="Tahoma"><u>Layer 4 (=Sacklöcher)</u><br>
+  Bearbeitung: Sackloch<br>
+  Bahnkorrektur: automatisch<br>
+  Relais vorher/nachher: x<br>
+  Vorschub: 150<br>
+  Werkzeugdurchmesser: 0.8<br>
+  Gesamttiefe: 1.2<br>
+Teilzustellung: 0.4</font></p>
+<p><font face="Tahoma">Speichern Sie unter <b>Datei: Datei speichern</b></font></p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_21simu.gif" width="151" height="123"></p>
+</font>
+<p><font size="2" face="Tahoma"><img border="0" src="Bilder/Lp_22simu.gif" width="313" height="438"><br>
+  <b><font size="5" color="#ff00ff">14.</font></b></font><font face="Tahoma"><b><font size="2" color="#ff00ff"> 
+  Simulieren</font></b><font SIZE="2"><br>
+  Mit der Simulation kann das Leiterplatten fräsen kontrolliert werden.<br>
+  Wählen Sie in der Menüleiste <b> Simulation:&nbsp; ZOOM automatisch </b>...<br>
+  ...mit Z-Achse --&gt; ja.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><img src="Bilder/LP_FR18.GIF" alt="LP_fr18.gif (5057 Byte)" width="367" height="286"><br>
+  <b><font size="5" color="#ff00ff">15.</font><font SIZE="2" color="#ff00ff"> 
+  Befestigung der Leiterplatte</font></b><font SIZE="2"> </font></font><font size="2" face="Tahoma"><br>
+  Die Leiterplatte wird mit leichtem Druck (damit sie sich nicht wölbt) in einen 
+  Maschinenschraubstock gespannt. Der Werkstück-Nullpunkt ist links unten. Der 
+  Maschinenschraubstock wird mit dem Excenterspanner auf dem Y-Tisch befestigt.<br>
+  Werden wesentlich größere Leiterplatten verwendet, so empfiehlt sich das Aufkleben 
+  auf einer Spanplatte.</font></p>
+<p>&nbsp;</p>
+<p><img border="0" src="Bilder/Lp_23masch.gif" width="124" height="66"></p>
+<p> <font size="2" face="Tahoma"><img src="Bilder/LP_FR20.GIF" alt="LP_fr20.gif (10244 Byte)" width="334" height="257"><br>
+  <b><font size="5" color="#ff00ff">16.</font></b></font><font SIZE="2" color="#ff00ff"> 
+  <b>Fräsen</b><br>
+  </font><font SIZE="2" color="#ff00ff"> </font><font SIZE="2">Über das Menü <b>Maschine</b> 
+  wählt man die Handsteuerung der <b>CNC-Maschine</b> an. <br>
+  Mit der Maus (siehe Bildschirm: Handbedienung - Pfeile) oder <b> mit den Pfeiltasten</b> 
+  der Tastatur werden die Bewegungen des Koordinatentisches&nbsp;gesteuert. Auf 
+  diese Weise wird der <b> Werkstück-Nullpunkt angefahren</b>.<br>
+  Mit der Tastenkombination <b>[Strg] + [Ende]</b> wird der <b> Nullpunkt
+gesetzt</b>. 
+  Alle Koordinatenwerte zeigen Null an!<br>
+  Zuletzt erfolgt eine Startkontrolle:<br>
+  - Fräser eingespannt?<br>
+  - Material befestigt?<br>
+  - Oberfräse eingeschaltet?<br>
+  - Spindel eingestellt? (Wert 4)<br>
+  - Nullpunkt gesetzt?<br>
+  <br>
+  <img src="Bilder/LP_FR21.GIF" alt="LP_fr21.gif (10244 Byte)" width="88" height="47"><br>
+  Mit dem Mausklick auf das <b> Start-Icon</b> (siehe Bild) oder mit der Tastenkombination 
+  <b>[Alt] +[a]</b>&nbsp; werden die Daten eingelesen. <br>
+  Mit der Bestätigung der Abfrage &quot;Mit Z-Achse... ja?&quot; startet der Fräsvorgang.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font size="5" color="#ff00ff">17.</font><font SIZE="2" color="#ff00ff"> 
+  Beenden<br>
+  </font></b><font SIZE="2">N</font></font><font size="2" face="Tahoma">ach Beendigung 
+  des Programmablaufs fährt die Maschine in die vorgesehene Ausspannposition.&nbsp;<br>
+</font><font size="2" color="#400040" face="Tahoma">Vor Abschluss eines Projekts sollte 
+  die Fräsmaschine im Maschinen-Nullpunkt &quot;geparkt&quot; werden.</font></p>
+<p><font size="2" color="#400040" face="Tahoma"> <br>
+  <img src="Bilder/LP_FR22.GIF" alt="LP_fr22.gif (10244 Byte)" width="126" height="191"><br>
+  Dazu wird mit der Maus das entsprechende Icon (siehe Bild, Button links oben) 
+  angeklickt oder die Taste<b> [Pos1]</b> gedrückt.</font></p>
+<font size="2">
+<p><font face="Tahoma"><img src="Bilder/LP_FR23.GIF" alt="LP_fr23.gif (9749 Byte)" width="289" height="39"><br>
+  Mit einem Mausklick auf obige Leiste verlässt man die Handsteuerung. <br>
+  Das Programm kann auf übliche Weise beendet werden.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</font>
+<p><font face="Tahoma"><b><font size="5" color="#ff00ff">18.</font><font SIZE="2" color="#ff00ff"> 
+  Ausblick<br>
+  </font></b><font SIZE="2">Dieses Beispiel ist bewusst einfach gehalten. Es soll 
+  den Einstieg in diesen vorteilhaften Programmteil erleichtern. Doch lassen sich 
+  auch kompliziertere Layouts ausfräsen. IC`s mit 2/10 Zoll Fußabständen sind 
+  mit den Grundeinstellungen und einem 0.8mm-Fräser möglich. <br>
+  </font></font></p>
+
+</body>
+</html>

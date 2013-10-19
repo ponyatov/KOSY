@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Umgang/WNP Z verschieben</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Werkst&uuml;cknullpunkt 
+  in Z korrigieren</font></b></i><b><font face="Tahoma" size="1" color="#000000"><br>
+  Überarbeitet: 30. November 2002</font></b></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Nach einemn Werkzeugwechsel 
+  oder der Ver&auml;nderung der Werkst&uuml;ckdicke mu&szlig; lediglich in der 
+  Z-Achse der Nullpunkt neu eingestellt werden. Es gibt einen einfachen Trick, 
+  der immer dann nach einem Werkzeug- oder Werkst&uuml;ck-Wechsel anzuwenden ist, 
+  wenn keine automatische Werkzeugl&auml;ngenmessung zur Verf&uuml;gung steht:</font></p>
+<p align="left"><img src="Bilder/Tip_Zneu.jpg" width="360" height="298"></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Einspannen</b> des neuen 
+    Werkzeugs oder Werkst&uuml;cks.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit dem CNC-Befehl <font face="Courier New, Courier, mono" color="#339966">G00 
+    X... Y...</font> etwa <b>in die Mitte</b> des sp&auml;teren Arbeitsbereiches 
+    <b>fahren</b>.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit der Handsteuerung (Bild 
+    ab)das Werkzeug auf die Oberfl&auml;che fahren.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Z-Position ablesen</b>,</font> 
+    <ol>
+      <li><font face="Tahoma" size="2" color="#000000">z.B.: <b>-2.33</b> <br>
+        Die Z-Position der Oberfl&auml;che ist gegen&uuml;ber vorher um 2,33 mm 
+        niedriger. Der Werkst&uuml;ck-Nullpunkt mu&szlig; also um dieses Ma&szlig; 
+        nach unten verschoben werden, d.h. der CNC-Befehl <font face="Courier New, Courier, mono" color="#339966">G54 
+        Z-2.33</font> ist im Direktfeld der Handsteuerung einzugeben.</font></li>
+      <li><font face="Tahoma" size="2" color="#000000">z.B.: <b>12.76</b> <br>
+        Die Z-Position der Oberfl&auml;che ist gegen&uuml;ber vorher um 12,76 
+        mm h&ouml;her. Der Werkst&uuml;ck-Nullpunkt mu&szlig; also um dieses Ma&szlig; 
+        nach oben verschoben werden, d.h. der CNC-Befehl <font face="Courier New, Courier, mono" color="#339966">G54 
+        Z12.76</font> ist im Direktfeld der Handsteuerung einzugeben.</font><br>
+        <br>
+        <font face="Tahoma" size="2" color="#000000"><b>Es gilt also immer: </b><br>
+        Der Z-Ablesewert mu&szlig; unmittelbar in den G54-Befehl eingebunden werden.</font></li>
+    </ol>
+  </li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Ab <i>nccad6</i></b> Rev. 
+    1.01.<b>12.02 </b>gibt es zus&auml;tzlich folgende M&ouml;glichkeit zu Nullstellung 
+    des Z-Wertes:<br>
+    Die Tastenkombination <b>&lt;Strg&gt; + &lt;Z&gt;</b>.</font></li>
+</ol>
+<p align="left"><font face="Arial" size="2" color="#000000"><br>
+  </font></p>
+</body>
+
+</html>

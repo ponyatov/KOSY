@@ -1,0 +1,220 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Grundlagen/Technologien</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p align="left"><font face="Tahoma" size="1" color="#000000"> <i><b><font face="Times New Roman" size="6" color="#FF00FF">Technologien 
+  zum Bearbeiten</font></b></i><br>
+  </font><font face="Tahoma" size="1" color="#000000"><b>Überarbeitet: Oktober 
+  2004</b><br>
+  <br>
+  <font size="2">Nachdem Sie mit dem CAD-Modul von <i><b>nccad</b></i> Konturen 
+  (Zeichnungsteile) gezeichnet haben oder die Konturen von anderen CAD-Programmen 
+  importiert haben, brauchen Sie weitere Angaben für die Fertigung der Teile - 
+  die sog. Technologie-Angaben. Es muss beispielsweise angegeben werden, wie schnell, 
+  wie tief, mit welcher Zustellung und auf welche Weise die gezeichnete Kontur 
+  bearbeitet werden soll. Dies alles ist unter dem Begriff CAM zusammengefasst 
+  (Computer Aided Manufactoring = computerunterst&uuml;tzte Fertigung).<br>
+  Alle dafür erforderlichen Software-Funktionen sind innerhalb von <i><b>nccad</b></i> 
+  im CAM-Modul zusammengefasst, das im Laufe der Jahre einen erheblichen Umfang 
+  angenommen hat und über sehr komplexe Funktionen verfügt.<br>
+  Im Folgenden soll zunächst im 1. Kapitel das Prinzip erklärt werden, die einzelnen 
+  Technologien sind im <a href="../Anhang/Technologien.htm">Anhang gesondert zusammengefasst</a>.</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"> <img src="1_Bilder/Technologie_aufrufen.gif" width="223" height="165"> 
+  <br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="5">1. </font><font color="#FF00FF" size="2" face="Tahoma">Arbeiten 
+  mit </font><font color="#FF00FF" size="2" face="Tahoma"> Technologieen<br>
+  1.1 </font></b><font color="#FF00FF" face="Tahoma" size="2">Zeichnen und Technologie 
+  aufrufen</font><font face="Tahoma" size="2"><br>
+  Zuerst wird das Zeichnungsteil gezeichnet. Dazu wählen Sie im Menü <b>Datei/ 
+  CAD/CAM..... - Neue Zeichnung</b> und dann im Icon-Men&uuml; in der Gruppe <b>CAD 
+  Standard </b>das Icon <b>Gerade</b>. Mit zwei Mausklicks geben Sie die Endpunkte 
+  der Geraden ein. Dann klicken Sie auf das Icon <b>TECHNOLOGIE</b> in der Gruppe 
+  <b>CAM</b>, es wird das Fadenkreuz mit einem Suchfenster aktiviert. Das Zentrum 
+  dieses Suchfensters bewegen Sie zu einem der Konstruktionspunkte der Geraden 
+  und warten kurze Zeit. Es &quot;rastet&quot; am Konstruktionspunkt ein, in der 
+  Statuszeile (ganz unten, unterhalb der Zeichenfläche) wird gemeldet, dass eine 
+  Gerade gefunden wurde, gleichzeitig wird die Gerade farblich markiert. Drücken 
+  Sie unter dieser Bedingung die linke Maustaste (klicken) und bewegen Sie die 
+  Maus etwas: An der Geraden hängt ein &quot;Gummifaden&quot; - die sogenannte 
+  <b>Zuordnungslinie</b>. Jetzt wird nochmals die linke Maustaste gedr&uuml;ckt. 
+  Es erscheint das folgende Technologie-Editierfenster.&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="1_Bilder/Technologie_Fenster.gif" width="438" height="533"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="2"> 1.2 </font></b><font color="#FF00FF" face="Tahoma" size="2">Editieren 
+  der Technologie</font><font face="Tahoma" size="2"><br>
+  Im Technologie-Fenster wird in Zeile 1 die <b> Bearbeitungs-Nummer</b> eingegeben. 
+  In den weiteren Zeilen folgen die <b>Technologie-Angaben</b> f&uuml;r die gew&uuml;nschte 
+  Bearbeitung, wie im Bild beispielhaft dargestellt.<br>
+  Durch einen Klick auf <b>OK</b> verlassen Sie das Fenster, es erscheint beispielsweise 
+  das folgende Bild.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="1_Bilder/Beispiel.gif" width="133" height="110"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="2"> 1.3</font></b><font color="#FF00FF" face="Tahoma" size="2"> 
+  Kontur mit Technologie</font><font face="Tahoma" size="2"><br>
+  Die Gerade wird in ihrer ursprünglichen Form dargestellt, am Ende &quot;hängt&quot; 
+  die rote Zuordnungslinie mit der Angabe der Nummer - und, nach einem Schr&auml;gstrich, 
+  die Layer-Nummer, falls sie nicht 1 ist. <br>
+  Informationen in rot werden &uuml;brigens immer der Zeichnungslage (Layer) 10 
+  zugeordnet.<br>
+  Sollten mehrere Konturen gezeichnet werden, erhält jede Kontur auf die gleiche 
+  Weise eine Technologie. Die Nummern bestimmen die Reihenfolge der Bearbeitung, 
+  sie dürfen deshalb nur einmal vergeben werden.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><a name="TechnologieAendern"></a><img src="1_Bilder/tech_aendern.gif" width="168" height="159"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="2">1.4 </font></b><font color="#FF00FF" face="Tahoma" size="2">Ändern 
+  der Technologie</font><font face="Tahoma" size="2"><br>
+  Dazu ist folgendes zu tun: Das Icon <b>TECHNOLOGIE</b> klicken, <b> Suchfenster</b> 
+  an das Ende der roten Zuordnungs-Linie <b>positionieren</b>, Markierung abwarten 
+  und <b>klicken</b>. Es erscheint wiederum das Technologie-Fenster, in dem Sie 
+  die <b>Angaben überschreiben</b> können. Auf <b>OK klicken</b>, damit sind die 
+  geänderten Technologie-Angaben übernommen. Vergessen Sie nicht, die Datei unter 
+  gleichem Namen (Speichern) oder unter einem neuen Namen (Speichern unter) abzuspeichern!</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="1_Bilder/Technologie_angeben.gif" width="140" height="178"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="2">1.5 </font></b><font color="#FF00FF" face="Tahoma" size="2">Technologien 
+  für verschiedene Konturen</font><font face="Tahoma" size="2"><br>
+  Besonders leistungsf&auml;hig wird <b><i> nccad</i></b> dadurch, dass <b>jedem 
+  Zeichnungsteil</b> eine <b>individuelle Technologie</b> zugeordnet werden kann, 
+  d.h. jedes der gezeichneten Teile kann unterschiedlich bearbeitet werden. Dazu 
+  erh&auml;lt es &uuml;ber eine "Zuordnungslinie" und &uuml;ber die Nummerierung 
+  seine spezifischen Technologiedaten, das obige Beispiel zeigt das Prinzip.<br>
+  Eine <b>Gleichbehandlung aller Teile </b>ist ebenfalls m&ouml;glich, indem nur 
+  einem der Teile eine Technologie mit der <b>Nummer 0</b> zugeordnet wird.&nbsp;<br>
+  Sollen <b>individuelle- und gleiche Bearbeitung gemischt</b> werden, so ist 
+  auch dies &uuml;ber die Nummernvergabe erreichbar: Die individuell zu bearbeitenden 
+  Teile erhalten Nummern ab 1, eines der gleich zu bearbeitenden Teile erh&auml;lt 
+  die Nummer 0.&nbsp;<br>
+  <br>
+  Zwischen den Nummern können Lücken gelassen werden.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"> <img src="1_Bilder/Technologie_Layer.gif" width="149" height="184"> 
+  <br>
+  </font><font face="Tahoma" size="2"><b><font color="#FF00FF"> 1.6 </font></b><font color="#FF00FF">Technologien 
+  in verschiedenen Layern</font><br>
+  Oft muß die Bearbeitungsreihenfolge sehr komplex gestaltet werden. Um einen 
+  besseren Überblick zu erhalten, können die Zeichnungsteile auf mehrere Layer 
+  (Zeichnungslagen) verteilt werden. Zur Technologie-Nummer wird automatisch die 
+  Layer-Nummer ergänzt (z.B.: 10/4), wenn der Layer größer 1 ist.&nbsp;<br>
+  Die Nummer 0 kann in allen Layern vorhanden sein. Die Nummern größer 0 dürfen 
+  allerdings nur einmal vergeben werden.&nbsp;<br>
+  Die Abarbeitung des obigen Beispiels geschieht in folgender Reihenfolge:<br>
+  </font><font face="Tahoma" size="1">1. Die Nummern 1, 2, usw. im Layer 1<br>
+  2. Die Nummern 3 höheren Layer<br>
+  3. Das Teil mit der Nr. 0 im Layer 1<br>
+  4. Die Teile ohne Technologie im Layer 1, bearbeitet wie Nr. 0<br>
+  </font><font face="Tahoma" size="2"><br>
+  Über das Icon <b>Layer</b> in der Gruppe <b>Darstellung</b> kann die zugehörige 
+  Bearbeitung völlig umgangen werden, indem dieser Layer unsichtbar gemacht wird.</font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF00FF" face="Tahoma" size="5">2.</font><font color="#FF00FF" face="Tahoma" size="2"> 
+  Erweiterte Technologieen<br>
+  </font></b><font face="Tahoma" size="2">Eine F&uuml;lle von <b>weiteren Bearbeitungsfunktionen</b>, 
+  Strategieen und Hilfsfunktionen erschlie&szlig;en sich &uuml;ber die verschiedenen 
+  <b>Reiter am oberen Rand </b>desTechnologie-Fensters. Die Wichtigsten davon 
+  sollen im Folgenden erkl&auml;rt werden, soweit sie nicht selbsterkl&auml;rend 
+  und trivial sind.</font></p>
+<p><font face="Tahoma" size="2"><b><font color="#FF00FF"><img src="1_Bilder/TechnoErw_Steuerung.gif" width="430" height="357"><br>
+  <a name="TechnologieSteuerung"></a>2.1</font></b><font color="#FF00FF"> Reiter 
+  &quot;Steuerung&quot;</font><br>
+  Dazu folgende Bemerkungen:</font></p>
+<ul>
+  <li><font size="2" face="Tahoma"><b>Fr&auml;srichtung</b><br>
+    Im Zusammenhang mit Material und Fr&auml;serkonstruktion kann sie eine Rolle 
+    spielen, man spricht hier auch von Gegenlauf- und Mitlauf-Fr&auml;sen. Die 
+    Einstellung hat <b>nur Wirkung bei geschlossenen Zeichnungsteilen</b>, wie 
+    Kreisen, Taschen u.&Auml;., <b>nicht aber....<br>
+    </b></font><font size="2" face="Tahoma">.... bei Strecken an denen die Bearbeitung 
+    dort beginnt, wo die Technologie-Zuordnungslinie &quot;h&auml;ngt&quot;,<br>
+    </font><font size="2" face="Tahoma">.... bei Anwendung der Technologie-Nummer 
+    0.</font></li>
+  <li><font size="2" face="Tahoma"><b>Spannung</b><br>
+    Sofern die Elektronik &uuml;ber einen Analog-Ausgang verf&uuml;gt (ab 2004 
+    bei allen gelieferten Maschinen) kann an dieser Stelle der Wert der Spannung 
+    zwischen 3 und 25 Volt.</font></li>
+  <li><font size="2" face="Tahoma"><b>Pause...</b><br>
+    Vor- oder nach der Ausf&uuml;hrung der im Fenster genannten Technologie kann 
+    eine Wartezeit programmiert werden. Besondere Bedeutung hat dies bei Verwendung 
+    einer Fr&auml;sspindel mit Hochlaufzeit.</font></li>
+  <li><font size="2" face="Tahoma"><b>Digitale Eing&auml;nge</b><br>
+    F&uuml;r Automatisierungs-Anwendungen. Mehr dazu unter <a href="../Automation/Automation.htm">Automation</a>.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><b><font color="#FF00FF"><img src="1_Bilder/TechnoErw_Eintauchen.gif" width="321" height="170"><br>
+  <a name="TechnologieEintauchen"></a>2.2</font></b><font color="#FF00FF"> Reiter 
+  &quot;Eintauchen&quot;</font><br>
+  Bei vielen Materialien ist ein sanftes Eintauchen in das Material erforderlich, 
+  es schont Maschine und Werkzeug und erzeugt weniger Bearbeitungsger&auml;usche. 
+  Genutzt wird hier eine, ab <i><b>nccad</b></i> 7 zur Verf&uuml;gung stehende, 
+  Funktion f&uuml;r Wendelbewegungen (Helix).</font></p>
+<p><font size="2" face="Tahoma">Sie mu&szlig; lediglich aktiviert werden (siehe 
+  Bild oben). Beim Eintauchen wird dann ein Wendel bis zur Zustellungseben gefahren, 
+  wie das Bild unten in der Simulation zeigt. <br>
+  <b>Bitte beachten Sie</b>, da&szlig; dieses <b>Helix-Eintauchen nur m&ouml;glich 
+  ist, wenn...</b></font></p>
+<p><font size="2" face="Tahoma">..... genug Platz f&uuml;r eine solche Bewegung 
+  vorhanden ist, also der Fr&auml;ser wesentlich kleiner ist als das entstehende 
+  Loch. </font></p>
+<p><font size="2" face="Tahoma">..... die Zeichnungsteile Sackloch, Stufenbohrung, 
+  Tasche bearbeitet werden sollen.</font></p>
+<p><font size="2" face="Tahoma"><img src="1_Bilder/TechnoErw_EintauchHelix.gif" width="263" height="194"></font></p>
+<p><font size="2" face="Tahoma">Der &Uuml;berlappungsfaktor hat in der Normalversion 
+  keine Auswirkungen.</font></p>
+<p><font face="Tahoma" size="2"><b><font color="#FF00FF"><br>
+  2.3 </font></b><font color="#FF00FF">Reiter &quot;Mindermengen-Dosierung&quot;</font><br>
+  Hier mu&szlig; die optional lieferbare Mindermengen-Dosierung vorhanden sein. 
+  Sie finden Hinweise dazu unter <a href="../Optionen%20Anwendung/Mindermengendosierung.htm">Optionen/Mindermengen-Dosierung</a>.</font></p>
+<p><font face="Tahoma" size="2"><b><font color="#FF00FF">2.4 </font></b><font color="#FF00FF">Reiter 
+  &quot;Punkt-/Bahn-Dosierung&quot;</font><br>
+  Hier mu&szlig; das optional lieferbare KOSY-Dosiersystem vorhanden sein. Sie 
+  finden Hinweise dazu unter <a href="../Grundlagen_Dosiersystem/Dosieren.htm">Grundlagen 
+  Dosiersystem</a>.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img border="0" src="1_Bilder/Techno8.gif" width="333" height="293"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="5"><a name="TechnologieVorgaben"></a>3.</font><font color="#FF00FF" face="Tahoma" size="2"> 
+  Technologie-Vorgaben<br>
+  </font></b><font face="Tahoma" size="2">Da die Anzahl der Technologie-Angaben 
+  mittlerweile so umfangreich ist, werden sie auf 2 Seiten verteilt, zwischen 
+  denen &uuml;ber das Feld <b>Seite 2</b> oder <b>Seite 1</b> unten im Technologie-Fenster 
+  umgeschaltet werden kann. Die wichtigsten Angaben sind jedoch im Hauptfenster 
+  (Seite 1) zusammengefasst.</font></p>
+<p><font face="Tahoma" size="2">Damit <b> häufig wiederkehrende Technologien</b> nicht
+immer wieder eingegeben werden müssen, können <b> Vorgaben</b> individuell eingestellt
+werden. Dazu gehen Sie in das Menü <b>Parameter/Technologie</b>, es erscheint
+das obige Fenster mit den Technologie-Seiten, in denen Sie - soweit sinnvoll -
+Ihre Vorgaben editieren können. Wenn Sie auf <b>Speichern</b> klicken, werden
+diese Vorgaben dauerhaft zur Verfügung stehen.</font></p>
+<p><font face="Tahoma" size="2">Einen &Uuml;berblick &uuml;ber die vorhandenen Technologie-Angaben- und deren Einsatz
+finden Sie im Anhang.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="1_Bilder/Bearbeitungs_Datenbank.gif" width="418" height="413"><br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="5"><a name="BearbeitungsDatenbank"></a>4. 
+  </font><font color="#FF00FF" face="Tahoma" size="2">Bearbeitungs-Datenbanken</font></b><font face="Tahoma" size="2"><br>
+  Bearbeitungsdaten - wie Vorschub, Zustellung, Spindeldrehzahl - k&ouml;nnen 
+  auch aus der mitgelieferten Bearbeitungs-Datenbank entnommen werden. <b>Dort 
+  hinterlegte Daten sind immer unter Vorbehalt zu übernehmen:</b> Sie wissen nicht 
+  immer exakt das Material (ist es z.B.: AlMg3 oder AlMgCuPb) und es kann eine 
+  falsche Datenbank verwendet werden (durch Fremde geänderte Dateien oder Einträge).&nbsp;</font></p>
+<p><font face="Tahoma" size="2">Um die Bearbeitungsdatenbank aufzurufen klicken Sie im Technologie-Hauptfenster auf das Feld
+<b>Bearbeitungsdatenbank</b>, w&auml;hlen das entsprechende Material, die Bearbeitungsart,
+den Werkzeugtyp und die Vorschläge in den Feldern 1 bis 4. Die gefundenen Werte werden automatisch in die Felder des Technologiefensters
+eingetragen, wenn sie auf <b>Daten übernehmen</b> klicken. Die Einträge k&ouml;nnen
+im Technologie-Fenster aber auch nachträglich editiert werden.</font></p>
+<p><font face="Tahoma" size="2"><b>Besonderen Technologien</b> für Ihre ganz
+individuellen Materialen ermitteln Sie in Grundlagenversuchen. Diese
+Einstellungen übernehmen Sie dadurch in eine persönliche Datenbank, indem Sie
+im Technologie-Fenster auf <b>Privatdaten bearbeiten</b> klicken.</font></p>
+<p><font face="Tahoma" size="2"><br>
+</font></p>
+
+</body>
+
+</html>

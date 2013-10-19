@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Drehbank</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Arial" size="1" color="#000000"><b><font face="Times New Roman" size="6" color="#FF00FF"><i><font size="3">Die 
+  &quot;Intelligente Drehbank&quot; <br>
+  </font> Gewindedrehen</i></font><br>
+  <font face="Tahoma">Stand: November 2003</font></b></font></p>
+<p align="left"><font face="Arial" size="2" color="#000000">Mit einer weiterentwickelten 
+  Version von <b><i>nccad </i></b>wird die altbekannte Drehbank sehr komfortabel 
+  unterst&uuml;tzt. Die Voraussetzungen f&uuml;r den vollen Funktionsumfang sind:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Drehbank</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">2 Achsen mit 
+        Schrittmotor-Antrieb.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen:</b> 
+        Encoder mit min. 1000 Imp/Umdrehung zur Synchronisierung.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left">Zum Konturdrehen: 
+        Spielfreie Spindelantriebe.</font></li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Elektronik</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">KOSY-Steuerung 
+        f&uuml;r 2 Achsen mit:</font>
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Microcontroller 
+            ab 3/2003, Version ab 2.20. Die Version ist kontrollierbar in <i><b>nccad</b></i> 
+            &uuml;ber <b>Hilfe/Datei-Informationen</b>. Der Text &quot;Variable 
+            Endschalter&quot; und &quot;externer Takt U-Achse&quot; mu&szlig; 
+            erscheinen.</font></li>
+        </ul>
+      </li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen</b> 
+        ist eine Anpassung des verwendeten Encoders erforderlich:<br>
+        Fragen Sie hierzu Ihren Lieferanten (bitte keine unerlabten Eingriffe 
+        in die Elektronik).</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Modifizierter 
+            Anschluss f&uuml;r U-Achse mit Encoder-Verbindung.</font></li>
+          <li><font color="#000000" size="2" face="Arial">Passende Interface-Platine 
+            mit Anpassung der Optokoppler an den verwendeten Encoder.</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Software</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b><i>nccad 
+        7</i></b> , ab Rev.0.0x., ab Dez. 2003</font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Arial">Fragen Sie im Zweifelsfall 
+  Ihren Lieferanten zu den Ausstattungsdetails, zum Stand der Entwicklung und 
+  zu den Einsatzm&ouml;glichkeiten.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Vorkenntnisse im 
+  Bereich CAD/CAM und CNC sind erforderlich.</b> Eine g&uuml;nstige Voraussetzung 
+  ist die vorangegangene Arbeit mit dem Koordinatentisch-System KOSY. Andernfalls 
+  empfehlen wir eine Schulung anl&auml;&szlig;lich der &Uuml;bergabe des Systems.</font></p>
+<p align="left"><font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma"> 
+  </font><font face="Tahoma" size="6"><br>
+  <font size="5"><img src="Bilder/Gewinde_PrinzipVersZust.gif" width="200" height="175"><br>
+  1.</font></font><font face="Tahoma"> Gewindedrehen<br>
+  </font></b></font><font face="Arial" size="2" color="#000000">Beim Gewindedrehen 
+  wird ein Drehmei&szlig;el mit einer passenden Form verwendet, also mit einer 
+  60&deg;-Spitze bei M-Gewinden. Der Ablauf beinhaltet folgenden Zyklus:</font></p>
+<ol>
+  <li><font face="Arial" size="2" color="#000000">Erstes Einstechen und Synchronbewegung 
+    von Drehspindel und Support bis zum Ende der Gewindezone.</font></li>
+  <li><font face="Arial" size="2" color="#000000">Ausfahren und Bewegung zur&uuml;ck 
+    (wegen dem m&ouml;glichen Umkehrspiel &uuml;ber das Einstechziel hinaus).</font></li>
+  <li><font face="Arial" size="2" color="#000000">Zustellen und wiederholen der 
+    Schritte bis zur geforderten Gesamttiefe (Gewindetiefe).</font></li>
+  <li><font face="Arial" size="2" color="#000000">2 mal &uuml;berdrehen ohne weitere 
+    Zustellung.</font></li>
+  <li><font face="Arial" size="2" color="#000000">Verstellen des Supports um den 
+    Versatz.</font></li>
+  <li><font face="Arial" size="2" color="#000000">2 mal &uuml;berdrehen in der 
+    geforderten Gesamttiefe.</font></li>
+</ol>
+<p><font color="#000000" size="2" face="Arial">Der <b>Versatz</b> kann bis zu 
+  einer Grenze von 10% der Steigung individuell eingestellt werden und dient der 
+  Leichtg&auml;ngigkeit des Gewindes.</font></p>
+<p><font color="#000000" size="2" face="Arial">F&uuml;r die Zustellung gilt zun&auml;chst 
+  der Wert der angegebenen Teilzustellung, bis zu einer Gewindetiefe von 0,5mm. 
+  Mit zunehmender Gewindetiefe (also bei Gewinden ab etwa M4) wird die Zustellung 
+  stetig reduziert, die folgende Tabelle zeigt den Zusammenhang:</font></p>
+<table width="283" border="1" cellspacing="2" cellpadding="2">
+  <tr bgcolor="#999999"> 
+    <td width="96"><p align="left"><font color="#000000" size="2" face="Arial">Erreichte 
+        Tiefe</font></p></td>
+    <td width="158"><p align="left"><font color="#000000" size="2" face="Arial">Tats&auml;chliche 
+        Teilzustellung</font></p></td>
+  </tr>
+  <tr> 
+    <td height="27"> <p align="left"><font color="#000000" size="1" face="Arial">bis 
+        0,5 mm</font></p></td>
+    <td><p align="left"><font color="#000000" size="1" face="Arial">angegebener 
+        Zustellwert</font></p></td>
+  </tr>
+  <tr> 
+    <td height="27"> <p align="left"><font color="#000000" size="1" face="Arial">0,5 
+        bis1 mm</font></p></td>
+    <td><p align="left"><font color="#000000" size="1" face="Arial">1/2 des angegebenen 
+        Zustellwertes</font></p></td>
+  </tr>
+  <tr> 
+    <td height="27"> <p align="left"><font color="#000000" size="1" face="Arial">1 
+        bis 2 mm</font></p></td>
+    <td><p align="left"><font color="#000000" size="1" face="Arial">1/4 des angegebenen 
+        Zustellwertes</font></p></td>
+  </tr>
+  <tr> 
+    <td height="27"> <p align="left"><font color="#000000" size="1" face="Arial">mehr 
+        als 2 mm</font></p></td>
+    <td><p align="left"><font color="#000000" size="1" face="Arial">1/8 des angegebenen 
+        Zustellwertes</font></p></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><img src="../1_Bilder/Drehen_MenueDrehen.gif" width="359" height="143"><br>
+  1.1 CAD-Programmierung, Funktionsaufruf</b><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Das 
+  Bild zeigt den Funktionsaufruf im Men&uuml; <b>Datei</b>. Danach erscheint ein 
+  Eingabefenster f&uuml;r den Rohteil-Durchmesser und anschlie&szlig;end die grafische 
+  Darstellung der Drehachse im Zeichenfeld.</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">Hier mu&szlig; die Programmierung 
+  zum Gewindeschneiden wie folgt vorgenommen werden:</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b><img src="../1_Bilder/Drehen_CadTechnol.gif" width="647" height="595"><br>
+  1.2 CAD/CAM-Programmierung zum Gewindedrehen</b><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Zeichnen 
+  Sie eine <b>Gerade auf der Drehachse</b> mit den Anfangs- und Enpositionen des 
+  gew&uuml;nschten Gewindes (die L&auml;nge der geraden bestimmt die Gewindel&auml;nge). 
+  Die <b>Technologie</b> wird <b>an dem Ende</b> des Gewindes angeordnet, <b>an 
+  dem der Schneidvorgang beginnen soll</b> (also am rechten Ende f&uuml;r ein 
+  Rechtsgewinde).</font></font></font></font></p>
+<p><font color="#000000" size="2" face="Tahoma">F&uuml;r das oben dargestellte 
+  <b>Technologie</b>-Fenster gilt: </font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left">W&auml;hlen Sie 
+    unter <b>Nummer</b> eine Zahl <b>2 und gr&ouml;&szlig;er</b>, wird unter <b>Bearbeitung</b> 
+    die Auswahl <b>Gewindedrehen</b> angeboten. Dies ist auszuw&auml;hlen.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left">Sobald Sie ein 
+    <b>Normgewinde</b> ausw&auml;hlen, werden die Werte f&uuml;r Steigung und 
+    Gesamttiefe automatisch eingetragen, k&ouml;nnen aber auch editiert werden. 
+    Auch die Nullpunkt-Verschiebung f&uuml;r die Zustellrichtung wird automatisch 
+    im Feld &quot;Z-Nullpunkt verschieben&quot; eingetragen.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Die Werte f&uuml;r <b>Vorschub 
+    und Teilzustellung</b> m&uuml;ssen <b>materialabh&auml;ngig</b> gew&auml;hlt 
+    werden (die Bearbeitungsdatenbank liefert derzeit keine Hinweise zum Gewindeschneiden). 
+    Die Angabe f&uuml;r den Vorschub hat nur beim Einfahren in das Material eine 
+    Bedeutung. Der Vorschub f&uuml;r das eigentliche Gewindedrehen wird durch 
+    die Drehzahl der Spindel bestimmt.</font></li>
+</ul>
+<p><font face="Arial" size="2" color="#FF00FF"><b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><b>1.3 
+  Einstellen der Werkst&uuml;ck-Nullpunktes und Start</b><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></b><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Sobald 
+  Sie den Drehmei&szlig;el zum Gewindeschneiden montiert haben, ist Folgendes 
+  zu tun:</font></font></font></font></p>
+<ol>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Tasten 
+    Sie die Angriffsspitze am linken Gewindeende auf der Werkst&uuml;ck-Oberfl&auml;che 
+    an</font></font></font></font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">W</font><font color="#000000">&auml;hlen 
+    die WNP-Speicherstelle aus und dr&uuml;cken die Tastenkombination <b>&lt;Strg&gt;+&lt;Ende&gt;</b> 
+    , die Positions-Anzeige wird Null</font></font></font></font></li>
+  <li><font color="#000000" size="2" face="Arial" align="left">Vorl&auml;ufiges 
+    Verfahren zur Erprobung: Beachten Sie den Versatz des Werkst&uuml;ck-Nullpunkt 
+    in Zustellrichtung. Gegebenenfalls mu&szlig; er um den Rohteil-Radius (r) 
+    mit <font color="#339966" face="Courier New, Courier, mono">G54 Z-r</font> 
+    . Der Werkst&uuml;ck-Nullpunkt mu&szlig; immer in der Mitte der Drehachse 
+    liegen.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Starten Sie die Bearbeitung</font></li>
+</ol>
+<p><font color="#000000" size="2" face="Tahoma">Zum sofortigen <b>Stop bei Gefahr</b> 
+  dr&uuml;cken Sie eine <b>beliebige Taste</b> auf der Tastatur.</font></p>
+<p><font face="Arial" size="2" color="#000000"> </font></p>
+</body>
+</html>

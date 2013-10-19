@@ -1,0 +1,357 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Drehbank/CNC-Drehen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Arial" size="1" color="#000000"><b><font face="Times New Roman" size="6" color="#FF00FF"><i><font size="3">Die 
+  &quot;Intelligente Drehbank&quot; </font><br>
+  CNC-Drehen</i></font><br>
+  <font face="Tahoma">Stand: Dezember 2003</font></b></font></p>
+<p align="left"><font face="Arial" size="2" color="#000000">Mit einer weiterentwickelten 
+  Version von <b><i>nccad </i></b>wird die altbekannte Drehbank sehr komfortabel 
+  unterst&uuml;tzt. Die Voraussetzungen f&uuml;r den vollen Funktionsumfang sind:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Drehbank</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">2 Achsen mit 
+        Schrittmotor-Antrieb.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen:</b> 
+        Encoder mit min. 1000 Imp/Umdrehung zur Synchronisierung.</font></li>
+      <li><font color="#000000" size="2" face="Arial" align="left">Zum Konturdrehen: 
+        Spielfreie Spindelantriebe.</font></li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Elektronik</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left">KOSY-Steuerung 
+        f&uuml;r 2 Achsen mit:</font>
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Microcontroller 
+            ab 3/2003, Version ab 2.20. Die Version ist kontrollierbar in <i><b>nccad</b></i> 
+            &uuml;ber <b>Hilfe/Datei-Informationen</b>. Der Text &quot;Variable 
+            Endschalter&quot; und &quot;externer Takt U-Achse&quot; mu&szlig; 
+            erscheinen.</font></li>
+        </ul>
+      </li>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b>Zum Gewindedrehen</b> 
+        ist eine Anpassung des verwendeten Encoders erforderlich:<br>
+        Fragen Sie hierzu Ihren Lieferanten (bitte keine unerlabten Eingriffe 
+        in die Elektronik).</font> 
+        <ul>
+          <li><font color="#000000" size="2" face="Arial" align="left">Modifizierter 
+            Anschluss f&uuml;r U-Achse mit Encoder-Verbindung.</font></li>
+          <li><font color="#000000" size="2" face="Arial">Passende Interface-Platine 
+            mit Anpassung der Optokoppler an den verwendeten Encoder.</font></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Arial" align="left"><b>Software</b></font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Arial" align="left"><b><i>nccad 
+        7</i></b> , ab Rev.0.0x. , ab Dez. 2003</font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Arial">Fragen Sie im Zweifelsfall 
+  Ihren Lieferanten zu den Ausstattungsdetails, zum Stand der Entwicklung und 
+  zu den Einsatzm&ouml;glichkeiten.</font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Voraussetzung ist 
+  die odnungsgem&auml;&szlig;e Inbetriebnahme der Drehbank - </b>Siehe: <a href="Drehbank_ErsteSchritte.htm">Erste 
+  Schritte</a></font></p>
+<p align="left"><font color="#000000" size="2" face="Arial"><b>Vorkenntnisse im 
+  Bereich CNC sind erforderlich.</b> Eine g&uuml;nstige Voraussetzung ist die 
+  vorangegangene Arbeit mit dem Koordinatentisch-System KOSY. Andernfalls empfehlen 
+  wir eine Schulung anl&auml;&szlig;lich der &Uuml;bergabe des Systems.</font></p>
+<p align="left"><font face="Arial" size="2" color="#808080"><b><font face="Arial, Helvetica, sans-serif" size="2"><br>
+  </font><font face="Tahoma" size="6" color="#FF00FF"><br>
+  <font size="5"><img src="1_Bilder/Drehen_ParameterEinst.gif" width="205" height="274"><br>
+  1.</font></font></b></font><font face="Tahoma" size="2" color="#FF00FF"> <b>Einstellung 
+  von <i>nccad</i></b></font> <br>
+  <font face="Arial, Helvetica, sans-serif" size="2">Im Men&uuml; von <i><b>nccad</b></i> 
+  werden unter <b>Parameter/Maschine/KOSY</b> die Funktionen <b>Drehbank</b> und 
+  evtl. <b>Werkzeug-Korrekturspeicher</b> aktiviert. </font></p>
+<p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Ihr Lieferant 
+  mu&szlig; hier&nbsp; ebenfalls unter <b>Parameter/Maschine/KOSY</b> alle &uuml;brigen 
+  Einstellungen f&uuml;r Ihre Drehbank vorgenommen haben (max. Vorsch&uuml;be, 
+  max. Wege der Achsen, Endschalter-Zuordnung , Weg/Schritt, Schnittstelle u.&Auml;.) 
+  bzw. die Einstellwerte bekannt geben.</font></p>
+<p align="left"><font size="2" face="Arial, Helvetica, sans-serif">Unter <a href="../KOSY_Steuerungen/Steuerung_IF4.htm">Steuerung 
+  fremder Maschinen</a> finden Sie Inbetriebnahme-Hinweise f&uuml;r die gesamte 
+  Steuerung, sie gelten prizipiell auch bei Drehb&auml;nken. Bez&uuml;glich der 
+  fehlenden 3. oder 4. Achse mu&szlig; allerdings etwas umgedacht werden.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#FF00FF"><b><font size="2"><br>
+  <br>
+  <font size="5"><img src="1_Bilder/Drehen_MenueAufruf.gif" width="278" height="120"><br>
+  2.</font></font> Die Drehbank in Betrieb nehmen<i><br>
+  </i></b></font><font face="Arial" size="2" color="#000000">Im Men&uuml; Maschine 
+  w&auml;hlen Sie <b>Drehbank</b>, es erscheint ein spezielles Handbedienfenster.</font></p>
+<p><br>
+  <font face="Arial" size="2" color="#FF00FF"><b><font face="Tahoma"><br>
+  <img src="1_Bilder/Drehen_Handsteuerung.gif" width="339" height="483"><br>
+  2.1 </font></b><font face="Tahoma">Handbetrieb<b><br>
+  </b></font></font><font color="#000000" size="2" face="Arial">Das Fenster <b>Handsteuerung</b> 
+  ist bei der Drehbank an die Bed&uuml;rfnisse angepasst, es gibt im Gegensatz 
+  zur CNC-Maschine nur 2 Achsen.</font></p>
+<p><font color="#000000" size="2" face="Arial">Die <b>Achsenbewegungen</b> k&ouml;nnen 
+  entweder durch Mausklick im Rahmen &quot;Handbedienung&quot; oder durch die 
+  Cursor-Tasten ausgef&uuml;hrt werden. Die Bedienung des Fensters ist identisch 
+  mit der bei der CNC-Maschine.</font></p>
+<p><font color="#000000" size="2" face="Arial"><b>Bitte beachten:</b><br>
+  Die <b>X-Anzeige/Eingabe bezieht sich auf den Durchmesser</b> des Drehteils. 
+  Der tats&auml;chliche X-Weg des Supports ist also immer nur halb so gro&szlig;, 
+  wie die Anzeige. <br>
+  Unabh&auml;ngig von der Drehbank-Konstruktion sollte auch gelten, da&szlig; 
+  die <b>negativen Achsen</b> in der Regel zum Werkst&uuml;ck zeigen, also zu 
+  einem <b>Eingriff</b> f&uuml;hren (eine Ausnahme kann beim Innendrehen entstehen).</font></p>
+<p>&nbsp;</p>
+<p><font face="Verdana" size="2"><font face="Tahoma">Auch wenn die CNC-Programmierung 
+  in vielen F&auml;llen durch Computer-Hilfsprogramme &uuml;berfl&uuml;ssig wird, 
+  hat sie weiterhin eine hohe Bedeutung:&nbsp;</font></font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Einzelne Codes&auml;tze werden w&auml;hrend 
+    der Handbedienung immer wieder gebraucht, ihre Verwendung erleichtert die 
+    Bedienung.&nbsp;</font></li>
+  <li><font face="Tahoma" size="2">Fertige, automatisch erstellte CNC-Programme 
+    m&uuml;ssen analysiert- und abge&auml;ndert werden k</font><font face="Tahoma" size="2">&ouml;nnen.&nbsp;</font></li>
+  <li><font face="Tahoma" size="2">Die CNC-Programmierung weckt das Verst&auml;ndnis 
+    f&uuml;r das gesamte System, sie hat deshalb eine hohe didaktische Bedeutung.&nbsp;</font></li>
+  <li><font face="Tahoma" size="2">Die CNC-Programmierung fordert mathematisch 
+    / physikalische Grundkenntnisse und bietet dazu &Uuml;bungsphasen.&nbsp;</font></li>
+</ul>
+<p><font face="Tahoma" size="2"> Die CNC-Programmierung ist in die Software <b><i> 
+  nc</i></b> und in <b><i> nccad </i></b> integriert. Die folgenden Informationen 
+  sollen den Zugang erleichtern.</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"><b><font color="#FF00FF"><font size="5">3.</font><font size="2"> 
+  CNC-Programmierung</font></font></b></font></p>
+<p><font face="Tahoma"><b><font color="#FF00FF"><font size="2">3.1 </font></font></b><font color="#FF00FF"><font size="2">Allgemeines</font></font><br>
+  <font size="2">Innerhalb von <i><b> nccad</b></i> k&ouml;nnen NC-Programme nach 
+  DIN/ISO 66025 erstellt, editiert und zur Bearbeitung genutzt werden. Die NC-Programme 
+  werden mit Hilfe des Texteditors geschrieben bzw. editiert, anschließend in 
+  der Regel grafisch simuliert (Men&uuml; "Simulation") und dann zur Bearbeitung 
+  an die CNC-Maschine &uuml;bergeben (Men&uuml; "Maschine").&nbsp;</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="1_Bilder/CNC_menue.gif" width="245" height="417"><br>
+  <font face="Tahoma"><b><font color="#FF00FF" size="2">3.2</font> </b><font size="2" color="#FF00FF">Start</font><br>
+  <font size="2">Im Menü wählen Sie <b>Datei/CNC - Neues Programm </b>oder <b>Datei/CNC-Programm 
+  &ouml;ffnen </b>, um ein bereits bestehendes CNC-Programm zu laden. Es erscheint 
+  ein Textfeld für die Bearbeitung der CNC-Befehlssätze.&nbsp;</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma"> <b><font color="#FF00FF" face="Tahoma" size="4"><a name="CNCfenster"></a></font></b><img border="0" src="1_Bilder/CNC_Programmierung.htm_txt_CNC_Pr4_cmp.gif" width="243" height="184"> 
+  <br>
+  </font><b><font color="#FF00FF" face="Tahoma" size="2">3.3</font><font size="2" face="Tahoma"> 
+  </font></b><font size="2" face="Tahoma"><font color="#FF00FF">Das Fenster &quot;CNC-Editor&quot;</font><b> 
+  </b></font><font face="Tahoma"><br>
+  </font><font face="Tahoma" size="2"> Der Texteditor entspricht den in Windows 
+  &uuml;blichen und dort mitgelieferten Texteditoren, seine Bedienung wird hier 
+  nicht speziell erl&auml;utert. Die M&ouml;glichkeiten der Textformatierung, 
+  wie fett, unterstrichen u.&Auml;., wurden absichtlich weggelassen, aber einige 
+  syntaxgerechte Module eingebaut.....<br>
+  ...klein geschriebene Buchstaben werden nach RETURN groß.&nbsp;<br>
+  ...als Schriftart wird Courier verwendet (jedes Zeichen gleicher Platzbedarf), 
+  um besser strukturieren zu k&ouml;nnen. </font></p>
+<p><font face="Tahoma" size="2">Die folgende Tabelle fasst die wichtigsten Elemente 
+  der Editor-Bedienung zusammen:</font></p>
+<table width="78%" border="1">
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><i><font face="Tahoma" size="2">Taste, Tastenkombination</font></i></td>
+    <td width="74%"><i><font face="Tahoma" size="2">Wirkung</font></i></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><font face="Tahoma" size="2">[Return]</font></td>
+    <td width="74%"><font face="Tahoma" size="2">F&uuml;gt eine Leerzeile nach 
+      der Cursorposition ein</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><font face="Tahoma" size="2">[Strg] + [X]</font></td>
+    <td width="74%"><font face="Tahoma" size="2">Schneidet die markierte/n Zeile/n 
+      aus und &uuml;bertr&auml;gt Sie in die Zwischenablage</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><font face="Tahoma" size="2">[Strg] + [C]</font></td>
+    <td width="74%"><font face="Tahoma" size="2">Kopiert die markierte/n Zeile/n 
+      in die Zwischenablage</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><font face="Tahoma" size="2">[Strg] + [V]</font></td>
+    <td width="74%"><font face="Tahoma" size="2">F&uuml;gt den Inhalt der Zwischenablage 
+      an der Cursorposition ein </font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%">&nbsp;</td>
+    <td width="74%">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%"><font face="Tahoma" size="2">[TAB]</font></td>
+    <td width="74%"><font face="Tahoma" size="2">F&uuml;gt eine feste Anzahl von 
+      Leerzeichen nach der Cursorposition ein</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" bordercolor="#666666"> 
+    <td width="26%">&nbsp;</td>
+    <td width="74%">&nbsp;</td>
+  </tr>
+</table>
+<p><font face="Tahoma" size="2"> </font><font face="Tahoma" size="2">Die zugelassenen 
+  NC-Befehle und deren Syntax werden im Anhang näher erklärt.<br>
+  </font><font face="Tahoma" size="2" color="#000000">Eine Erkl&auml;rung f&uuml;r 
+  die NC-Befehle erhalten Sie auch, wenn Sie im NC-Editor den Cursor auf einen 
+  bereits eingegebenen Befehlscode setzen, also in das Befehlswort selbst (z.B. 
+  G00 ) und dann die Funktionstaste [F1] dr&uuml;cken.</font><font face="Tahoma" size="2"> 
+  </font></p>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma" color="#FF00FF" size="5"><a name="CNCprinzip"></a>4.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Prinzip der CNC-Programmierung</font></b><font face="Tahoma" size="2"><br>
+  Von numerisch gesteuerten Werkzeugmaschinen ist eine genormte Programmiersprache 
+  bekannt (DIN 66025), nach deren Regeln auch das Koordinatentisch-System KOSY 
+  programmiert werden kann. Es ist sinnvoll, wenn man sich zun&auml;chst das Prinzip 
+  der Programmierung vor Augen f&uuml;hrt.&nbsp; </font></p>
+<p><font size="2" face="Tahoma" color="#FF00FF"><b>4.1</b> Grundsätze der </font><font face="Tahoma" size="2"><font color="#FF00FF">NC-Normung</font><br>
+  Zwei Dinge sind hier zu nennen:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2"> Nach welchen Regeln werden Programms&auml;tze 
+    gebildet ( Festlegung der Syntax)&nbsp; </font></li>
+  <li><font face="Tahoma" size="2">Welche Codierungen sind zul&auml;ssig</font></li>
+</ul>
+<p><font face="Tahoma" size="2"><br>
+  <font color="#FF00FF"><b>4.2</b> Regeln der NC-Programmierung</font><br>
+  Hier die wichtigsten Regeln, die dieser Programmiersprache zugrunde liegen:<b><br>
+  Programms&auml;tze<br>
+  </b>Sie werden aus mehreren Worten gebildet. (z.B.: </font><font face="Courier New" size="2"> 
+  <font face="Courier New, Courier, mono" color="#339966">G01 X123.23 Y54.00 Z123.45 
+  F10</font></font><font face="Tahoma" size="2">)<br>
+  Dabei ist immer ein Buchstabe kombiniert mit einer Zahl.</font><b><font face="Tahoma" size="2"><br>
+  Codebuchstaben</font></b><font face="Tahoma" size="2"><br>
+  Sie haben feste Bedeutungen. Die Buchstaben ergeben sich aus einer festgelegten 
+  Codierung. Beim KOSY werden folgende Buchstaben mit der angegebenen Bedeutung 
+  verwendet:</font><b><font size="1" face="Tahoma"><br>
+  G&nbsp;&nbsp;&nbsp;</font></b><font size="1" face="Tahoma"> Gehe zu ..... , 
+  Angabe einer Wegbedingung (Gerade, Kreis, Fahrweg u.&auml;.m.)&nbsp;<br>
+  <b> M&nbsp;&nbsp;&nbsp;</b> Maschinen-Funktion, beim KOSY f&uuml;r Steuer- und 
+  Echtzeitaufgaben verwendet&nbsp;<br>
+  <b> X&nbsp;&nbsp;&nbsp;</b> Bewegung in der X-Achse&nbsp;<br>
+  <b> Y&nbsp;&nbsp;&nbsp;</b> Bewegung in der Y-Achse&nbsp;<br>
+  <b> Z&nbsp;&nbsp;&nbsp;</b> Bewegung in der Z-Achse&nbsp;<br>
+  <b> U&nbsp;&nbsp;&nbsp;</b> Bewegung in der U-Achse (reserviert f&uuml;r 4.Schrittmotor, 
+  z.B. Drehteller)&nbsp;<br>
+  <b> F&nbsp;&nbsp;&nbsp;</b> Fahrgeschwindigkeit, beim KOSY Schrittgeschwindigkeit 
+  der Motoren&nbsp;<br>
+  <b> I&nbsp;&nbsp;&nbsp;</b> Kreis-Funktion, parallel zur X-Achse&nbsp;<br>
+  <b> J&nbsp;&nbsp;&nbsp;</b> Kreis-Funktion, parallel zur Y-Achse&nbsp;<br>
+  <b> K&nbsp;&nbsp;&nbsp;</b> Kreis-Funktion, parallel zur Z-Achse&nbsp;<br>
+  <b> P&nbsp;&nbsp;&nbsp;</b> Pause-Funktion beim KOSY&nbsp;<br>
+  <b> W&nbsp;&nbsp;&nbsp;</b> Wartezeit&nbsp;<br>
+  <b> D&nbsp;&nbsp;&nbsp;</b> Drehwinkel&nbsp;<br>
+  <b> B&nbsp;&nbsp;&nbsp;</b> R&uuml;ckzugsabstand bei Bohr- und Gravierarbeiten&nbsp;<br>
+  <b> H&nbsp;&nbsp;&nbsp;</b> H&ouml;henfaktor f&uuml;r Schriften&nbsp;<br>
+  <b> S&nbsp;&nbsp;&nbsp;</b> Schriftsatz bei Gravuren oder...&nbsp;<br>
+  <b> S&nbsp;&nbsp;&nbsp;</b> (Speed) Geschwindigkeit der Drehachse&nbsp;</font></p>
+<p><font face="Tahoma" size="2"> Die wichtigsten Buchstaben f&uuml;r die sog. 
+  Hauptfunktionen sind... G f&uuml;r Bewegungen und... M f&uuml;r Maschinen-Funktionen.</font></p>
+<p><b><font face="Tahoma" size="2">Wirksamkeit der Programmworte</font></b><font face="Tahoma" size="2"><br>
+  Ein NC-Programm ist eine Folge von Programms&auml;tzen mit verschiedenen, durch 
+  Leerzeichen voneinander getrennten Worten, wobei Folgendes gilt:&nbsp;</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Ein Programmwort bleibt solange wirksam, bis 
+    es ausdr&uuml;cklich durch eine neue Angabe ge&auml;ndert wird.<br>
+    Dazu ein Beispiel:&nbsp;<br>
+    </font><font face="Courier New" size="1"> <font face="Courier New, Courier, mono" size="2" color="#339966">G90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Einstellung auf Absolutmaße&nbsp;<br>
+    G01 X100 Y200&nbsp;&nbsp;&nbsp; Eine Position angefahren&nbsp;<br>
+    G01 Y300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Die X-Position 100 
+    bleibt<br>
+    G00 ......</font></font></li>
+</ul>
+<p><b><font face="Tahoma" size="2">Die Syntax von NC-Programmen</font></b><font face="Tahoma" size="2"><br>
+  Um eine saubere Programmstruktur zu erhalten, gelten bestimmte Grundregeln beim 
+  Schreiben eines NC-Programmes:&nbsp;</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Jeder Programmsatz steht in einer separaten 
+    Zeile, er kann mit einem LABEL (Einsprungbezeichnung) beginnen. Dieser Label 
+    kann auch eine normgerechte Zeilennummerierung sein, z.B:&nbsp;<br>
+    </font><font face="Courier New" size="2"> <font face="Courier New, Courier, mono" color="#339966">START 
+    G00 X100&nbsp;</font></font><font face="Courier New, Courier, mono" size="2" color="#339966"><br>
+    oder&nbsp;&nbsp;<br>
+    N001 G00 X100.23 Y40&nbsp;</font></li>
+  <li><font face="Tahoma" size="2">Am Anfang des eigentlichen Programmsatzes kommt 
+    die Angabe der Hauptfunktion, also G.. oder M.. zusammen mit einer 2-stelligen 
+    Zahl, z.B.:&nbsp;<br>
+    </font><font face="Courier New" size="2"> <font face="Courier New, Courier, mono" color="#339966">G90 
+    ....&nbsp;<br>
+    G01 ....&nbsp;<br>
+    M10 ...&nbsp;</font></font></li>
+  <li><font face="Tahoma" size="2">Nach der Wahl der Hauptfunktion folgen, je 
+    nach Bedarf, die Worte mit den Zusatzbedingungen, immer voneinander durch 
+    mindestens 1 Leerzeichen getrennt, z.B:<br>
+    </font><font face="Courier New, Courier, mono" size="2" color="#339966">G00 
+    X123.45 Y167.89 Z1.22 F100&nbsp;<br>
+    M10 O1.1</font></li>
+  <li><font face="Tahoma" size="2">Kommentare sind erlaubt, sie werden durch ein 
+    Semikolon ( ; ) eingeleitet, z.B.:&nbsp;<br>
+    </font><font face="Courier New" size="2"> <font face="Courier New, Courier, mono" color="#339966">;Programm 
+    zum ...........&nbsp;<br>
+    G00 X2 Y66 Z-8&nbsp; ;Anfahren der Startposition&nbsp;<br>
+    G01 Z-10&nbsp; ;Eintauchen&nbsp; </font></font></li>
+</ul>
+<p><font face="Tahoma" size="2">Zun&auml;chst muß in einem Programmsatz die Hauptfunktion 
+  (G .. oder M ..) geschrieben werden, die Zusatzfunktionen dienen lediglich der 
+  n&auml;heren Beschreibung der Hauptfunktion, sie werden deshalb auch immer zusammen 
+  mit der jeweiligen Hauptfunktion erkl&auml;rt.&nbsp; </font></p>
+<p><font face="Tahoma" size="2"> Soweit die Grundregeln, die bei der NC Programmierung 
+  immer zu beachten sind. Im Anhang finden Sie eine Erläuterung der einzelnen 
+  CNC-Befehle. </font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="1_Bilder/CNC_ProgrDreh.gif" width="484" height="599"><b><font face="Tahoma" color="#FF00FF" size="5"><br>
+  5.</font><font face="Tahoma" size="2" color="#FF00FF"> </font></b><b><font size="2" face="Tahoma" color="#FF00FF">Beispiel</font></b><font face="Tahoma" size="2"><br>
+  Im Bild wird ein einfaches Programmbeispiel gezeigt, das Sie jederzeit eingeben/(laden) 
+  können. Gehen Sie dazu in <b>Datei/CNC-Programm &ouml;ffnen</b> und in den Ordner 
+  <b>.........</b></font></p>
+<p><font size="2" face="Tahoma"><b>Übungsanleitung</b>: Versuchen Sie mit Hilfe 
+  der NC-Befehlsliste im Anhang dieses Programm zu analysieren. Wenn Sie im Menü 
+  <b>Maschine</b> die <b>Simulation/Tisch</b> wählen, läßt sich dieser zugehörige 
+  Programmlauf am Bildschirm darstellen.&nbsp; </font></p>
+
+<p><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial, Helvetica, sans-serif"><br>
+  </font><br>
+  </font><b><font face="Arial" size="2" color="#FF00FF"><b>5.1 </b></font></b><font face="Arial" size="2" color="#FF00FF">Einstellen 
+  der Werkst&uuml;ck-Nullpunktes und Start<font color="#000000"><font face="Arial, Helvetica, sans-serif"><b><br>
+  </b></font>Sobald Sie den Drehmei&szlig;el- aber vorerst noch kein Werkst&uuml;ck 
+  montiert haben, ist Folgendes zu tun:</font></font></font></font></p>
+<ol>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><font face="Arial, Helvetica, sans-serif">Durch 
+    Dr&uuml;cken der Taste <b>&lt;Pos1&gt;</b> machen Sie zun&auml;chst einen 
+    <b>Referenzlauf </b>(Support mu&szlig; Ihnen entgegen fahren und dann in Richtung 
+    Drehfutter).</font></font></font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Stellen Sie mit Hilfe der Cursortasten 
+    einen <b>Werkst&uuml;ck-Nullpunkt (WNP) rechts vom Drehfutter </b>(min. ca. 
+    60 mm)<b> auf der Drehachse</b> ein. Durch Dr&uuml;cken der Tastenkombination 
+    <b>&lt;Strg&gt; + &lt;Ende&gt;</b> wird der voreingestellte WNP Nr.2 Null.</font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000">Geben 
+    Sie zur Probe einige <b>CNC-Befehle</b> ein, z.B.:<br>
+    <font color="#339966" face="Courier New, Courier, mono">G00 X10</font> oder 
+    <font color="#339966" face="Courier New, Courier, mono">G00 Z20</font> und 
+    beobachten Sie die Bewegungen. <br>
+    <b>Bei Gefahr dr&uuml;cken Sie eine beliebige Taste</b> auf der Tastatur, 
+    um sofort anzuhalten.</font></font></font></li>
+  <li><font face="Arial" size="2" color="#FF00FF"><font face="Tahoma"><font color="#000000"><b>Schalten</b> 
+    Sie durch Mausklick das <b>Relais</b> ein und wieder aus, an dem die <b>Fernsteuerung 
+    der Drehspindel</b> angeschlossen ist (Rahmen &quot;Relais&quot;). Normalerweise 
+    ist das Relais Nr. 2, also einschalten mit der Tastenkombination <b>&lt;Strg&gt; 
+    + &lt;F2&gt;</b> und ebenso wieder ausschalten.</font></font></font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Starten Sie die Bearbeitung 
+    mit der Tastenkombination &lt;Strg&gt; + &lt;A&gt;<br>
+    </font><font color="#000000" size="2" face="Tahoma">Zum sofortigen <b>Stop 
+    bei Gefahr</b> dr&uuml;cken Sie eine <b>beliebige Taste</b> auf der Tastatur.<br>
+    Andernfalls beantworten Sie die Frage &quot;Programm wiederholen&quot; mit 
+    &quot;Nein&quot;, es wird beendet und Sie befinden sich in der Handsteuerung.</font></li>
+  <li><font color="#000000" size="2" face="Tahoma">Spannen Sie ein Werkst&uuml;ck 
+    ein und stellen Sie den WNP nochmals genauer an den rechten Rohteilrand mittig. 
+    Wiederholen Sie den Programmlauf.</font></li>
+</ol>
+<p><font face="Arial" size="2" color="#000000"> </font></p>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendung/Gravuren/Fortlaufende Zahlen</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Gravuren mit fortlaufenden 
+  Zahlen<br>
+  </font></b></i><font face="Tahoma" size="1" color="#000000"><b>Überarbeitet: 
+  August 2002</b></font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><img src="Bilder/GravurFortlZahlen_Nr.jpg" width="145" height="100"><br>
+  </font><font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5">1.</font></b> 
+  <font face="Tahoma" color="#FF00FF"><b>Die Aufgabe<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Wenn Sie beispielsweise 
+  eine Serie von Typenschildern oder Nummernschilder f&uuml;r einen Wegweiser 
+  machen wollen, m&uuml;ssen mit jedem, zu gravierenden Schild, die Zahlen automatisch 
+  ver&auml;ndert werden. Dazu verf&uuml;gt <i><b>nccad</b></i> &uuml;ber eine 
+  wirkungsvolle Funktion, deren Bedienung im Folgenden erkl&auml;rt werden soll:</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Arial" size="2" color="#000000"><img src="Bilder/FortlZahlen_Text.gif" width="355" height="237"><br>
+  <b><font color="#FF00FF" face="Tahoma" size="5">2.</font></b> <font face="Tahoma" color="#FF00FF"><b>Die 
+  Programmierung<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">&Ouml;ffnen Sie 
+  im Men&uuml; <b>Datei/CAD/CAM - Neue Zeichnung</b> eine Zeichenfl&auml;che und 
+  w&auml;hlen Sie eines der ICONs f&uuml;r <b>Gravurtexte</b>, z.B. GRAVURTEXT 
+  max/ez , wie im Bild dargestellt. Um einen fortlaufenden Z&auml;hler zu programmieren, 
+  mu&szlig; die Zahl von den <b>Zeichenkombinationen */ </b>und <b>/*</b> regelrecht 
+  &quot;eingerahmt&quot; werden. Dabei gibt es eine Reihe von <b>Formatierungs-M&ouml;glichkeiten</b>:</font></p>
+<table width="435" border="1" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><font face="Tahoma" size="2" color="#000000">*//*</font></td>
+    <td><font face="Tahoma" size="1" color="#000000">keine Formatierung der dazwischen 
+      zu gravierenden Zahl</font></td>
+  </tr>
+  <tr>
+    <td><font face="Tahoma" size="2" color="#000000">*/00/*</font></td>
+    <td><font face="Tahoma" size="1" color="#000000">2 Stellen werden graviert, 
+      mit f&uuml;hrender Null</font></td>
+  </tr>
+  <tr>
+    <td><font face="Tahoma" size="2" color="#000000">*/000/*</font></td>
+    <td><font face="Tahoma" size="1" color="#000000">3</font><font face="Tahoma" size="1" color="#000000"> 
+      Stellen werden graviert, mit f&uuml;hrenden Nullen</font></td>
+  </tr>
+  <tr>
+    <td><font face="Tahoma" size="2" color="#000000">*/000.00/*</font></td>
+    <td><font face="Tahoma" size="1" color="#000000">3 Stellen vor- 2 Stellen 
+      hinter dem Komma werden graviert, mit f&uuml;hrenden Nullen</font></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Wenn Sie mit <b>OK</b> 
+  die Eingabe abschlie&szlig;en und dem Gravurtext eine <b>Technologie</b> zuordnen, 
+  k&ouml;nnen Sie die Werkst&uuml;ck-Bearbeitung vorbereiten und die <b>Zahlenwerte</b> 
+  &uuml;bergeben, dazu der folgende Abschnitt:</font></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Tahoma"><b><font color="#FF00FF" size="4"><font face="Arial" size="5"><img src="Bilder/FortlZahlen_Einst.gif" width="289" height="127"><br>
+  <font face="Tahoma">3.</font></font> </font> <font color="#FF00FF" size="2"> 
+  Die Zahlenwerte &uuml;bergeben<font face="Arial"> <br>
+  </font></font></b></font><font face="Tahoma" size="2" color="#000000">&Uuml;ber 
+  das Men&uuml; Parameter/CNC-Maschine/Besonderes erreichen Sie das gezeigte Fenster, 
+  in dem Sie den Reiter Z&auml;hler aufrufen. Dabei bedeuten:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Aktuell</b><br>
+    Der momentan erreichte Z&auml;hlerstand (zu Beginn einer Serienproduktion 
+    ist der Wert 0).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Startwert</b><br>
+    Die erste zu gravierende Zahl, z.B. 1 bei Wegweisern oder 1000 als Anfangswert 
+    eines Typenschildes. &Uuml;ber diesen Anfangswert kann auch eine unterbrochene 
+    Produktion bei einem aktuellen Z&auml;hlerstand fortgesetzt werden.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Schrittweite</b><br>
+    Ist eine Zahl graviert wird die Schrittweite addiert, um die n&auml;chste 
+    Zahl zu gravieren, also z.B. 1 f&uuml;r eine fortlaufende l&uuml;ckenlose 
+    Schilderserie.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Eine <b>Schilderserie</b> 
+  kann besonders rationell mit der Funktion &quot;<b>Werkst&uuml;ck-Kopien</b>&quot; 
+  produziert werden, die im selben Fenster eingestellt werden.</font></p>
+</body>
+
+</html>

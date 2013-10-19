@@ -1,0 +1,106 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Sezialanwendungen/Leiterplatten/Bohrdaten</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p>&nbsp;</p>
+<p><font face="Times New Roman" size="6" color="#FF00FF"><b><i>Bohrdaten <font size="4">aus 
+  Layout-Programmen</font> mit KOSY verarbeiten</i></b></font><b><font face="Tahoma" size="1" color="#000000"><br>
+  &Uuml;berarbeitet: November 2002</font></b></p>
+<p></p>
+<p><font face="Tahoma" size="5" color="#FF00FF"><b>1.<font size="2"> </font></b></font><font face="Tahoma" size="2" color="#FF00FF"><b>Allgemeine 
+  Hinweise<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Bohrdaten k&ouml;nnen 
+  grunds&auml;tzlich in 2 verschiedenen Formen exportiert werden:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Als <b>Textfile</b> mit Korrdinaten- 
+    und Durchmesser-Informationen.<br>
+    &Uuml;blicherweise sind daf&uuml;r die Dateiformate Excellon, S&amp;M, DIN/ISO 
+    vorhanden.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Als <b>Zeichnungsdatei </b>mit 
+    grafischen Informationen &uuml;ber Lage und Durchmesser der verschiedenen 
+    Bohrungen.<br>
+    &Uuml;blicherweise sind daf&uuml;r die Dateiformate HPGL oder DXF vorhanden. 
+    </font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Die letztere Form 
+  mit einer grafischen Darstellung hat den entscheidenden Vorteil, da&szlig; man 
+  vor der Bearbeitung &quot;etwas sieht&quot;. Sie wird deshalb von uns empfohlen 
+  und in dieser Anleitung weiter behandelt. Zur Bearbeitung von Textfiles, wie 
+  Excellon u.&Auml;., ben&ouml;tigen Sie eine Konvertier-Software, die wir Ihnen 
+  auf Anfrage zur Verf&uuml;gung stellen. Sie ist abh&auml;ngig von der Layout-Software 
+  und deren Version, deshalb ben&ouml;tigen wir zur Beurteilung ein einfaches 
+  Beispiel als Datei.</font></p>
+<p><font face="Tahoma" size="5" color="#FF00FF"><b>2.<font size="2"> </font></b></font><font face="Tahoma" size="2" color="#FF00FF"><b>Vorbereitende 
+  Arbeiten </b></font><br>
+  <font face="Tahoma" size="2" color="#000000">Um Bohrdaten aus Layout-Programmen 
+  exportieren zu k&ouml;nnen, muss ein fertiges Projekt (bestehend aus Schaltplan 
+  mit Platinenteil) vorhanden- und abgespeichert sein.</font></p>
+<p>&nbsp; </p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b><font size="5"><img src="Bilder/TARG_Exp_Bohrd_DXF.gif" width="800" height="576"><br>
+  3.</font> Export in DXF<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Das Bild zeigt beispielhaft 
+  den Export-Aufruf aus Target. In anderen Layout-Programmen mag es klarer strukturiert 
+  und sortiert sein, das Prinzip beibt aber. Es ist nacheinander folgendes zu 
+  tun:</font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000"> Gew&uuml;nschtes <b>Projekt 
+    &ouml;ffnen</b> (hier z.B.: <font face="Courier New, Courier, mono">At9_Layout.T3001</font>)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">M</font><font face="Tahoma" size="2" color="#000000">it 
+    <b>&lt;F3&gt;</b> in Platinenteil schalten</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Export DXF</b> Ausgabe anklicken 
+    -&gt; Pfad siehe Bild oben</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Es &ouml;ffnet sich 
+  folgendes Fenster: </font></p>
+<p><br>
+  <b><font face="Tahoma" size="5" color="#FF00FF"><img src="Bilder/TARG_Exp_DXF_Ausgabe.gif" width="321" height="475"><br>
+  4.</font><font face="Tahoma" size="2" color="#FF00FF"> Einstellungen DXF Ausgabe<br>
+  </font></b><font face="Tahoma" size="2" color="#000000">Das Bild zeigt beispielhaft 
+  das entsprechende Target-Fenster. Es ist nacheinander folgendes zu tun:</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  </font></p>
+<ol>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Platinen-Ebenen</b> ausw&auml;hlen, 
+    die exportiert werden sollen, z.B. alle Bohrl&ouml;cher und, zur Orientierung, 
+    den Umri&szlig;.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Zielpfad </b> eingeben.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Ausgabe</b> best&auml;tigen.</font></li>
+</ol>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Die DXF-Datei wird 
+  nun im angegebenen Verzeichnis als <font face="Courier New, Courier, mono">***.dxf</font> 
+  gespeichert.</font></p>
+<p align="left"><img src="Bilder/TARG_Exp_nccad6_mit_Technol.gif" width="793" height="597"><br>
+  <b><font face="Tahoma" size="5" color="#FF00FF">5.</font><font face="Tahoma" size="2" color="#FF00FF"> 
+  Bearbeiten in <i>nccad6<br>
+  </i></font></b><font face="Tahoma" size="2" color="#000000">Datei-Beispiel: 
+  <font face="Courier New, Courier, mono">At9_Bohrdaten.dxf</font> in <i><b>nccad6</b></i> 
+  als <a href="../../../ImportExport/ImpExp_2Dimport.htm">DXF-Datei importieren</a>. 
+  In der importierten Datei werden die unterschiedlichen Bohrungen z.B. im Layer 
+  2 als Kreise mit verschiedenen Durchmessern (bestehend aus zwei 180&deg;-B&ouml;gen) 
+  dargestellt.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">F&uuml;r den Fall, 
+  da&szlig; Sie <b>keinen Werkzeugwechsel</b> vornehmen- und alle Bohrungen mit 
+  demselben Fr&auml;ser durch &quot;Ausr&auml;umen&quot; herstellen wollen, ist 
+  folgenderma&szlig;en zu verfahren:<br>
+  Eines der Bohrl&ouml;cher wird </font><font face="Tahoma" size="2" color="#000000"> 
+  mit der <a href="../../../Grundlagen_Anwendung/Technologien%20zum%20Bearbeiten.htm">Technologie</a>-Nummer 
+  &quot;0&quot; versehen. Bearbeitet wird als <b>Tasche konturparallel</b> mit 
+  einem Fr&auml;ser, der den verschiedenen Bohrdurchmessern angepasst ist, also 
+  kleiner ist, als der kleinste Bohrdurchmesser. Vorsicht: Ein Fr&auml;ser mit 
+  dem Durchmesser 0,2mm kann nicht in jeder Maschine verwendet werden und Sie 
+  m&uuml;ssen erfahrene Anwender sein!</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">F&uuml;r den Fall, 
+  da&szlig; Sie <b>Werkzeugwechsel</b> vornehmen wollen oder gar &uuml;ber einen 
+  <a href="../../../Optionen%20Anwendung/Werkzeugwechsel.htm">automatischen Werkzeugwechsel</a> 
+  verf&uuml;gen, ist folgenderma&szlig;en zu verfahren:<br>
+  Ersetzen Sie die Kreise durch Punkte (verschiedene Bohrdurchmesser in verschiedenen 
+  Layern) und geben Sie einem der Punkte jedes Layers eine entsprechende Technologie.</font></p>
+</body>
+
+</html>

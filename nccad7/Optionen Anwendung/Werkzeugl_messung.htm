@@ -1,0 +1,156 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Werkzeuglängenmessung</title>
+</head>
+
+<body>
+
+<p class="MsoNormal"><font face="Times New Roman" size="5" color="#FF00FF"><i><b style="mso-bidi-font-weight: normal; mso-bidi-font-size: 10.0pt"><span style="mso-bidi-font-size: 10.0pt; mso-bidi-font-weight: normal">Werkzeuglängenmessung 
+  für KOSY2</span></b></i></font><font face="Tahoma" size="1" color="#000000"><br>
+  <b>&Uuml;berarbeitet: Mai 2003</b></font></p>
+<p class="MsoNormal"><span style="font-size:18.0pt;mso-bidi-font-size:10.0pt"><b style="mso-bidi-font-weight:normal"><u><br>
+  </u></b></span><font face="Tahoma" size="2">Die Zubehöreinrichtung „Werkzeuglängenmessung“ 
+  (WLM) ermöglicht mit Hilfe eines Längenmeß-Sensors die automatische Z-Korrektur 
+  des Werkstücknullpunktes nach einem Werkzeugwechsel. Ein Werkzeugwechsel kann 
+  mit Hilfe der WLM wesentlich schneller und bequemer durchgeführt werden. Die 
+  WLM ist für die zum KOSY-Werkzeugsatz gehörenden Werkzeuge erprobt, kann aber 
+  auch für Fräser ab etwa 0,5 mm Durchmesser, für Stichel mit einer Schneidenbreite 
+  ab 0,2 mm sowie für Fräser bis 8 mm Durchmesser verwendet werden.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2">Die 
+  Werkzeuglängenmessung wird von <b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">nccad4</i></b> 
+  oder folgenden<i style="mso-bidi-font-style:normal"><b style="mso-bidi-font-weight:normal">nccad</b></i><b style="mso-bidi-font-weight: normal; mso-bidi-font-style: normal"><i style="mso-bidi-font-style: normal; mso-bidi-font-weight: normal"> 
+  </i></b>-Versionen unterstützt. Unter der DOS-Version von <b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">nccad</i></b> 
+  steht diese Funktion nicht zur Verfügung.</font></p>
+<p><font face="Tahoma" size="2"><b>Bitte beachten:<br>
+  </b></font><font face="Tahoma" size="2">Der <b>Anschlu&szlig;</b> und die <b>Art 
+  der Steckverbindung</b> ist <b>abh&auml;ngig</b> von der verwendeten <b>Maschine 
+  und deren Steuerelektronik</b>. Bitte vergewissern Sie sich, da&szlig; beides 
+  zusammen passt, also richtig bestellt- oder geliefert wurde.</font></p>
+<p><font size="2" face="Tahoma">Die in der Steuerelektronik <b>eingebaute Controller-Version</b> 
+  ist <b>entscheidend f&uuml;r den Funktionsumfang</b> und f&uuml;r die Komfortstufe 
+  bei der Anwendung. Es ist m&ouml;glich, da&szlig; die hier dargestellte Anwendung 
+  mit dem eingebauten Controller nicht realisiert werden kann, ein Controller-Tausch 
+  ist erforderlich.<br>
+  Die <b>Controller-Version</b> <b>kann</b> f&uuml;r R&uuml;ckfragen auf folgende 
+  Weise <b>&uuml;berpr&uuml;ft werden</b>:</font></p>
+<ol>
+  <li><font size="2" face="Tahoma">CNC-Maschine oder Steuerung <b>einschalten</b>.</font></li>
+  <li><font size="2" face="Tahoma">Die <b>Handsteuerung</b> aufrufen und wieder 
+    verlassen (Kommunikation mit der Maschine aufbauen und &uuml;berpr&uuml;fen).</font></li>
+  <li><font size="2" face="Tahoma">Im Men&uuml; <b>Hilfe/Datei-Informationen</b> 
+    w&auml;hlen.</font></li>
+  <li><font size="2" face="Tahoma">Controller-Version und R&uuml;ckmeldetext <b>ablesen</b>.</font></li>
+</ol>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2"><o:p>
+</o:p>
+</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2"><o:p>
+</o:p>
+</font></p>
+<p><font face="Tahoma" size="2"><img border="0" src="Bilder/WZL_gesamt.jpg" width="420" height="280"><br>
+</font>
+<font color="#FF00FF" face="Tahoma" size="5"><b style="mso-bidi-font-weight:
+normal">1.</b></font><font face="Tahoma" size="2"><font color="#FF00FF"><b style="mso-bidi-font-weight:
+normal"> Montage und Anschluss</b><b style="mso-bidi-font-weight:
+normal"> der Werkzeuglängenmessung<o:p>
+</o:p>
+</b></font><b style="mso-bidi-font-weight:
+normal"><br>
+</b>Das Gehäuse der WLM wird im allgemeinen am Y-Tisch der CNC-Maschine
+befestigt. Dazu stehen wahlweise zwei Bohrungen für Befestigungsschrauben M6
+zur Verfügung, so daß die WLM in einer T-Nut des Y-Tisches entweder von oben
+oder seitlich angeschraubt werden kann. Bei Y-Tischen ohne seitliche T-Nut muß
+gegebenenfalls eine Gewindebohrung M6 nachträglich angebracht werden. Auf jeden
+Fall ist vor dem Anbringen der WLM zu prüfen, daß die gewünschte Position der
+WLM mit dem Fräser auch angefahren werden kann, sie darf also nicht außerhalb
+des zulässigen Fahrweges der CNC-Maschine liegen.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2">Der 
+  Anschluß der WLM<span style="mso-spacerun: yes">&nbsp; </span>erfolgt bei der 
+  KOSY-Steuerung <i>KOSY IF Version 2.x und 3.x</i> (CNC-Maschinen Standard) an 
+  der 25-poligen SUB-D-Buchse für Zusatzfunktionen und bei der KOSY-Steuerung<i> 
+  KOSY IF Version 4.x</i> (CNC-Maschinen massiv- oder Portal) an einer speziell 
+  dafür vorgesehenen 5-poligen Diodenbuchse.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma"><font face="Tahoma" size="2" color="#FF00FF"><b>1.1</b> 
+  Test der Digitalen Eing&auml;nge in der Handsteuerung</font><font face="Tahoma" size="2"><br>
+  Dazu rufen Sie <b> Maschine/CNC-Maschine</b> die <b>Handsteuerung</b> auf und 
+  dr&uuml;cken die Funktionstaste <b>[F8]</b>. Es erscheint ein Fenster in dem 
+  alle Eingangszust&auml;nde dargestellt sind. Wenn Sie einen Eingangszustand 
+  &auml;ndern (Dr&uuml;cken auf den WLW-Sensor), mu&szlig; dies angezeigt werden. 
+  Zum Verlassen des Fensters klicken Sie auf den entsprechenden Ende-Button, m&ouml;glicherweise 
+  mu&szlig; dies wiederholt werden, sollte keine sofortige Reaktion erfolgen.</font></font></p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify"><font color="#FF00FF" size="5" face="Tahoma"><b><img border="0" src="Bilder/Werkze7.gif" width="215" height="181"><br>
+  2.</b></font><font face="Tahoma"><b><font color="#FF00FF" size="4"> </font> 
+  </b><font color="#FF00FF" size="2"><b>Aktivierung</b></font><font face="Tahoma" size="2"><br>
+  </font></font><font face="Tahoma" size="2">Ist die WLM montiert und angeschlossen 
+  wird die CNC-Maschine eingeschaltet und die Software <b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">nccad 
+  </i></b>gestartet, wechselt man in das Menü<b> Parameter/Maschine/KOSY</b> und 
+  klickt im Feld <b>Optionen</b> auf<span style="mso-spacerun:
+yes">&nbsp; </span>das Feld <b>Längenkorrektur montiert</b>, um die Längenmessung 
+  zu aktivieren. Das Menü wird mit <b>Speichern</b> verlassen, damit auch bei 
+  jedem künftigen Start der Software die WLM aktiv ist.</font></p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify"><font color="#FF00FF" size="5" face="Tahoma"><b><img border="0" src="Bilder/Werkze8.gif" width="331" height="195"><br>
+  3.</b></font><font color="#FF00FF" size="2"><b><font face="Tahoma"> Position 
+  der WLM einlernen</font></b></font><font face="Tahoma" size="2"><br>
+Dazu fährt man bei eingespanntem Werkzeug mit Hilfe der<b> Handsteuerung</b>
+(Menü Lauf/CNC-Maschine) die <b>Mitte der Membranfeder</b> der WLM an. In
+Z-Richtung können dabei zunächst noch einige Zehntel Millimeter Abstand
+bleiben. Man liest den angezeigten Wert der<span style="mso-spacerun: yes"> </span>Z-Koordinate
+ab und fährt danach um den Betrag des größten zu erwartenden Längenunterschiedes
+der verwendeten Fräser in Z-Richtung nach oben. Im allgemeinen dürften hier 25
+mm ausreichend sein, werden jedoch auch besonders lange Fräser verwendet, so muß
+gegebenenfalls eine noch höhere Z-Position eingelernt werden.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2" face="Tahoma">Das
+<b>Einlernen</b> der WLM-Position erfolgt durch Betätigen der Tastenkombination
+<b style="mso-bidi-font-weight:
+normal">[Strg</b><b style="mso-bidi-font-weight:
+normal">]+[#</b><b style="mso-bidi-font-weight: normal">]</b> oder<b style="mso-bidi-font-weight:normal">
+</b><b style="mso-bidi-font-weight:normal">[Strg</b><b style="mso-bidi-font-weight:normal">]+[F12].</b></font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2"><b>Achtung! 
+  </b>Die <b>Abfrage</b> des Sensors erfolgt <b>nur unterhalb der eingelernten 
+  Z-Position</b>. Ist das <b>Werkzeug</b> gegenüber der eingelernten Position 
+  <b>zu lang, kann der Sensor zerstört werden</b>!</font></p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify"></p>
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align:justify"><font color="#FF00FF" size="4" face="Tahoma"><b> 
+  <!--webbot
+bot="ImageMap" startspan
+text=" (41,134) (160, 160) {^ Längenmessung} {Tahoma} 8 B #ff0000 CT 0  "
+border="0" src="CNC_Handstrg.gif" u-originalsrc="CNC_Handstrg.gif"
+u-overlaysrc="Werkzeugl_messung.htm_txt_CNC_Handstrg.gif" width="166"
+height="215" -->
+  <img border="0" src="Bilder/Werkzeugl_messung.htm_txt_CNC_Handstrg_cmp.gif" width="166" height="215"> 
+  <!--webbot
+bot="ImageMap" I-CheckSum="45242" endspan -->
+  <br>
+  <font size="5">4.</font></b> <font color="#FF00FF" size="2"><b>Testen und Anwenden</b></font><font face="Tahoma" size="2"><br>
+  </font></font><font face="Tahoma" size="2">Ist die WLM-Position eingelernt, 
+  wird die Funktion WLM durch Drücken der Taste <b style="mso-bidi-font-weight:
+normal">[#] </b>oder <b style="mso-bidi-font-weight:normal">[F12</b><b style="mso-bidi-font-weight: normal">]</b> 
+  - oder durch Anklicken der Schaltfläche WLM im Handbedienmenü (siehe Bild) aufgerufen 
+  und ausgeführt. <br>
+  Es ist empfehlenswert, die Funktion <b>zun&auml;chst nicht mit einem Fr&auml;swerkzeug</b> 
+  zu <b>testen</b>. Statt dessen dr&uuml;cken Sie w&auml;hrend der Abw&auml;rtsfahrt 
+  den Sensor mit einem weichen Hilfsmittel (Pinselstiel oder Bleistift o.&Auml;.), 
+  danach mu&szlig; sofort die Z-Achse nach oben fahren.</font></p>
+<p class="MsoNormal" style="text-align:justify"><font size="2" face="Tahoma"><b>Bitte 
+  beachten:</b><br>
+  Bei der Erstbenutzung immer <b>zuerst die L&auml;ngenmessung</b> aufrufen, erst 
+  <b>danach </b>ist ein <b>Werkst&uuml;ck-Nullpunkt (WNP) einzulernen</b>. <br>
+  In der Folgezeit mu&szlig; die L&auml;ngenmessung konsequent benutzt werden. 
+  Wurde sie nicht benutzt, mu&szlig; erneut die L&auml;ngenmessung aufgerufen- 
+  und danach der WNP eingestellt werden. Siehe auch <a href="../Grundlagen_Fraesmaschine/Arbeitshinweise/WnpZachseVerschieben.htm">WNP-Z-Achse......</a></font></p>
+<p class="MsoNormal" style="text-align:justify"><font face="Tahoma" size="2">&nbsp;</font></p>
+
+</body>
+
+</html>

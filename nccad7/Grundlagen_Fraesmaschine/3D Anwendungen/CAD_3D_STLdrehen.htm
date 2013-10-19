@@ -1,0 +1,302 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/3D-Anwendungen/CAD-3D STL-Drehen</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">3D - Drehen, vom 
+  STL-Import zum Werkst&uuml;ck</font></b></i><font face="Tahoma" size="1" color="#000000"><b><br>
+  &Uuml;berarbeitet: Februar 2003</b></font></p>
+<p align="left"><font face="Tahoma" size="2"> </font><font face="Tahoma" size="2">Haben 
+  Sie einen K&ouml;rper &quot;rundum&quot; gestaltet und als STL-Datei abgespeichert, 
+  kann er mit der hier beschriebenen Funktion rundum gefr&auml;st werden. Sogenannte 
+  &quot;Hinterschneidungen&quot; sind kein Problem mehr.<br>
+  </font></p>
+<p align="JUSTIFY"><font face="Tahoma" size="2"><b>Voraussetzung</b> ist:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2">Ein <b>Drehzusatz</b> mu&szlig; an der CNC-Maschine 
+    installiert sein.</font></li>
+  <li><font face="Tahoma" size="2">Im Men&uuml; <b>Parameter/Maschine/KOSY</b> 
+    mu&szlig; die Option <b>U-Achse aktiviert</b> sein.</font></li>
+</ul>
+<p align="JUSTIFY"><font face="Tahoma" size="2">Bitte bearbeiten Sie die folgenden 
+  Abschnitte ausführlich.&nbsp;&nbsp;</font><i><b><font color="#FF00FF" face="Times New Roman" size="5"><br>
+  </font></b></i></p>
+<p ALIGN="JUSTIFY"><b> <i><font COLOR="#000000" face="Tahoma" size="2"><br>
+  </font></i><font color="#FF00FF"><font face="Tahoma" size="5"><img src="Bilder/CAD_3D_STLEditor.gif" width="227" height="260"><img src="Bilder/CAD_3D_STLDrehBottle.gif" width="293" height="182"><br>
+  1.</font><font face="Tahoma" size="2"> STL-Dateien&nbsp;</font></font><font COLOR="#000000" face="Tahoma" size="2"><i><br>
+  </i></font></b><font face="Tahoma" size="2">Alle 3D-f&auml;higen CAD-Programme 
+  k&ouml;nnen den gestalteten K&ouml;rper als sog. STL-Datei abspeichern. Dieses 
+  Beschreibungsformat f&uuml;r beliebige K&ouml;rper wurde im Zusammenhang mit 
+  der Stereolithographie erfunden und ist weltweit bekannt. Das Bild zeigt, da&szlig; 
+  STL-Dateien aus Texten bestehen, die in einem Programmiercode etwas beschreiben, 
+  das beim Import &quot;verstanden&quot; - und umgesetzt werden mu&szlig;.</font></p>
+<p ALIGN="JUSTIFY"><font face="Tahoma" size="2" color="#FF00FF"><b>1.1</b> Bei 
+  unbekannten K&ouml;rpern: Voruntersuchung<br>
+  </font><font face="Tahoma" size="2" color="#000000">Sie sollten sich zun&auml;chst 
+  ein Bild &uuml;ber Gr&ouml;&szlig;e und Bearbeitungslage beschaffen, bevor Sie 
+  die weiteren Schritte gehen, also:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Men&uuml; <b>Datei-CAD/CAM/Neue 
+    Zeichnung</b> dann Men&uuml; <b>Datei-Datei importieren</b> die STL-Datei 
+    &ouml;ffnen. Eine Plastische Zone wird auf der Zeichenfl&auml;che abgebildet.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">In der Icon-Gruppe <b>CAD 3D</b> 
+    das Icon <b>3D-ANSICHT</b> w&auml;hlen und das Bild betrachten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mit Hilfe der Buttons rechts 
+    neben dem Bild eine Bearbeitungslage festlegen und &uuml;ber das Men&uuml; 
+    <b>Bearbeitungslage</b> die Werte kontrollieren/editieren/pr&auml;zisieren. 
+    Falls erforderlich, den <b>Skalierungsfaktor</b> &auml;ndern.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">&Uuml;ber das Men&uuml; <b>Info</b> 
+    die Dimensionen kontrollieren und die <b>Werkst&uuml;ck-Rohma&szlig;e</b> 
+    festlegen. Gegebenfalls zur&uuml;ck zum Men&uuml; <b>Bearbeitungslage</b> 
+    und <b>Skalierungsfaktor</b> anpassen. Beachten Sie dabei immer die M&ouml;glichkeiten 
+    und <b>Grenzen des verwendeten Drehzusatzes</b>.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">&Uuml;ber das Men&uuml; <b>Speichern</b> 
+    halten Sie diese Einstellungen fest, d.h. die STL-Datei ist entsprechend ver&auml;ndert.</font></li>
+</ul>
+<p ALIGN="JUSTIFY"><font face="Tahoma" size="2" color="#000000">Vergleichen Sie 
+  diese T&auml;tigkeiten mit dem Abschnitt 3. ff weiter unten.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p><font face="Tahoma" size="2"><img src="Bilder/CAD_3D_STLDrehStart.gif" width="355" height="238"><br>
+  </font><b><font face="Tahoma"><font color="#FF00FF" size="5">2. </font><font color="#FF00FF" size="2"> 
+  Start</font></font> </b><font face="Tahoma" size="2"><br>
+  Im Menü wählen Sie <b>Datei-CAD/CAM - Neue Spezialzeichnung/Drehen</b>. </font></p>
+<p><font face="Tahoma" size="2">In einem Fenster werden Sie nach dem Rohteil-Durchmesser 
+  gefragt, der sich nat&uuml;rlich nach den M&ouml;glichkeiten des Drehzusatzes 
+  und nach dem herzustellenden Fr&auml;steil (Drehteil) richtet. Nach dem Abschluss 
+  dieser Eingabe erscheint die Zeichenfläche, darin stilisiert dargestellt das 
+  Drehfutter und das Rohteil. </font></p>
+<p><font face="Tahoma" size="2">Im Menü wählen Sie anschlie&szlig;end <b>Datei/Datei 
+  importieren </b>. Es erscheint ein weiteres Men&uuml;, in dem Sie <b>STL-Datei</b> 
+  w&auml;hlen. Im folgenden Explorer-Fenster w&auml;hlen Sie eine bereitgestellte 
+  STL-Datei. Auf dem Bildschirm erscheint innerhalb des Rohteils eine <b>Plastische 
+  Zone</b> mit den X-Z-Ausma&szlig;en des importierten Teils.<br>
+  </font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma"><font color="#FF00FF" size="5"><img src="Bilder/CAD_3D_STLDrehLage.gif" width="656" height="421"><br>
+  3. </font><font color="#FF00FF" size="2"> Die Plastische Zone darstellen und 
+  ausrichten </font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Wenn Sie in der ICON-Gruppe <b>CAD 3D</b> das ICON <b>3D-Ansicht</b> 
+  klicken, die <b>plastische Zone</b> mit dem Suchfenster <b>ausw&auml;hlen</b>, 
+  erscheint eine <b>perspektivische Darstellung</b> des K&ouml;rpers.</font></p>
+<p><font face="Tahoma" size="2" color="#FF00FF"><b> 3.1</b> Bearbeitungslage festlegen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Bei manchen STL-Dateien 
+  liegt der K&ouml;rper sehr schief im Raum, er mu&szlig; <b>zum Bearbeiten</b> 
+  in eine <b>brauchbare Lage</b> gebracht werden (siehe Bild 3). Benutzen Sie 
+  dazu das Fenster <b>3D-Ansicht</b>. <br>
+  Zun&auml;chst folgende<b> Festlegung</b>:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Der Betrachter &quot;sieht&quot; 
+    den K&ouml;rper aus der Sicht des Fr&auml;sers </b>(der Fr&auml;ser taucht 
+    in der Z-Achse von Ihnen ausgehend in das Bild ein).</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Links/Rechts ist die X-Achse.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Unten/Oben ist die Y-Achse. 
+    Sie wird bei der Drehbearbeitung nicht verfahren, statt dessen wird der K&ouml;rper 
+    um die X-Achse gedreht.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Der Werkst&uuml;ck-Nullpunkt 
+    liegt am Drehfutter auf der Mittelachse.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Mit den Buttons rechts 
+  neben dem Bild k&ouml;nnen bestimmte feste Lagen erreicht werden, auch Zwischenlagen 
+  lassen sich stufenlos eingestellen. Durch einen Klick auf das Men&uuml; <b>Bearbeitungslage</b> 
+  wird die momentane Einstellung in einem separaten Fenster angezeigt, sie kann 
+  auch editiert werden. Im Feld <b>Skalieren</b> kann das Fr&auml;sergebnis gegen&uuml;ber 
+  dem Original vergr&ouml;&szlig;ert werden (Faktor z.B.: 2.5) oder verkleinert 
+  werden (Faktor z.B.: 0.5 = Fr&auml;steil halb so gro&szlig;).<br>
+  Mit <b>OK</b> &uuml;bernehmen Sie diese Einstellungen, &uuml;ber <b>Speichern</b> 
+  wird der Zustand in eine STL-Datei geschrieben.</font></p>
+<p align="left"><img src="Bilder/CAD_3D_STLDrehInfo.gif" width="513" height="265"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>3.2</b> Informationen zu den 
+  Werkst&uuml;ck-Rohma&szlig;en<br>
+  </font><font face="Tahoma" size="2" color="#000000">Im Fenster <b>3D-Ansicht 
+  </b>w&auml;hlen Sie das Men&uuml; <b>Info</b>. Sie erhalten alle wichtigen Angaben 
+  zum dreidimensionalen K&ouml;rper, wie Sie ihn im Bild sehen. Besonders wichtig 
+  sind die Extremwerte, sie geben Auskunft &uuml;ber die Au&szlig;enma&szlig;e 
+  des Werkst&uuml;ck-Rohlings.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Bei <b>Drehbearbeitungen</b> 
+  ist f&uuml;r die Bestimmung des Rohteils die <b>Diagonale Y-Z-Ebene</b> von 
+  Bedeutung, sie entspricht dem Rohteil-Durchmesser. Sollte diese Diagonale gr&ouml;&szlig;er 
+  sein, als der Rohteil-Durchmesser des vorgesehenen Rohlings oder sollten die 
+  Grenzen des Drehzusatzes &uuml;berschritten werden, mu&szlig; im Fenster <b>Bearbeitungslage</b> 
+  ein <b>Skalierungsfaktor </b>kleiner 1 eingegeben werden (siehe Bild 3.).</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">&Uuml;</font><font face="Tahoma" size="2" color="#000000">ber 
+  <b>Speichern</b> wird der Zustand in eine STL-Datei geschrieben.</font></p>
+<p align="left">&nbsp;</p>
+<p><b><font face="Tahoma"><font color="#FF00FF" size="5">4. </font><font color="#FF00FF" size="2"> 
+  Die Plastische Zone zur Bearbeitung vorbereiten</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Wenn Sie in der ICON-Gruppe <b>CAM</b> das ICON <b>TECHNOLOGIE</b> w&auml;hlen, 
+  erscheint ein Fadenkreuz mit Suchfenster. Dies positionieren Sie an einer Ecke 
+  der Plastischen Zone, sie wird markiert. Nach einem Klick zur Best&auml;tigung 
+  entfernen Sie die Maus etwas und klicken erneut: Das Fenster <b>Technologie 
+  STL-Drehen</b> erscheint:</font></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="2"><font color="#FF00FF"><br>
+  </font></font><b><font color="#FF00FF" face="Tahoma" size="4"><img src="Bilder/CAD_3D_STLDrehTechnologie.gif" width="690" height="633"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"> 5. </font><font color="#FF00FF" size="2"> 
+  Die Technologie eingeben</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Hier mu&szlig; beschrieben werden, wie das Teil zu bearbeiten ist, im 
+  Einzelnen sind folgende Angaben besonders zu erl&auml;utern:</font></p>
+<p><font face="Arial" size="2" color="#FF00FF"><b>1. Bearbeitung<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Sie dient in der Regel 
+  dazu, das Werkst&uuml;ck grob zu bearbeiten (Schruppen). Besonders gilt:</font><font face="Arial" size="2" color="#FF00FF"><b> 
+  </b></font></p>
+<ul>
+  <li><font face="Tahoma" size="2"><b>Bearbeitung</b></font> 
+    <ul>
+      <li><font face="Tahoma" size="2"><b>Automatisch</b><br>
+        Der Bearbeitungs-Vorgang ist festgelegt und kann nicht beinflu&szlig; 
+        werden.</font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2"><b>Strategie</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">Sie kann nur entlang der X-Achse 
+    erfolgen</font></li>
+  <li><font face="Tahoma" size="2"><b>L&auml;nge der Verfahrschritte</b></font> 
+    <br>
+    <font face="Tahoma" size="2" color="#000000">Nachdem ein Werkzeugdurchmesser 
+    angegeben wurde, stehen hier verschiedene L&auml;ngen zur Auswahl, die alle 
+    ganzzahlige Teile des Fr&auml;serdurchmessers sind. Je gr&ouml;&szlig;er der 
+    gew&auml;hlte Wert ist (z.B. d/2), umso grober wird die Bearbeitung. Der gew&auml;hlte 
+    Wert sollte wesentlich geringer sein, als die Haut (siehe weiter unten).</font></li>
+  <li><font face="Tahoma" size="2"><b>Abstand Fr&auml;sbahnen<br>
+    </b></font><font face="Tahoma" size="2" color="#000000">Nachdem ein Werkzeugdurchmesser 
+    angegeben wurde, stehen hier verschiedene Abst&auml;nde zur Auswahl, die alle 
+    ganzzahlige Teile des Fr&auml;serdurchmessers sind. Je gr&ouml;&szlig;er der 
+    gew&auml;hlte Wert ist (z.B. d/2), umso gr&ouml;ber wird die Bearbeitung.</font><font face="Tahoma" size="2"><b> 
+    </b></font><font face="Tahoma" size="2" color="#000000">Der gew&auml;hlte 
+    Wert sollte wesentlich geringer sein, als die Haut (siehe weiter unten).</font><font face="Tahoma" size="2"><b> 
+    </b></font></li>
+  <li><font face="Tahoma" size="2"><b>Gesamttiefe<br>
+    </b></font><font face="Tahoma" size="2" color="#000000">Dieser Wert ergibt 
+    sich aus der Gesamth&ouml;he des K&ouml;rpers, er wird automatisch ermittelt, 
+    kann aber auch &uuml;berschrieben werden.</font></li>
+  <li><font face="Tahoma" size="2"><b>Teilzustellung</b></font> <br>
+    <font face="Tahoma" size="2" color="#000000">Der Wert mu&szlig; kleiner als 
+    die Gesamttiefe sein und umso kleiner, je h&auml;rter das Material ist.</font> 
+  </li>
+  <li><font face="Tahoma" size="2"><b>Haut</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">Beim Schruppen sch&uuml;tzt diese 
+    Haut vor einer Besch&auml;digung der endg&uuml;ltigen Oberfl&auml;che. Der 
+    Wert sollte so gro&szlig; sein, wie der Schlichtvorgang in einer Zustellung 
+    wegr&auml;umen kann.</font></li>
+  <li><font face="Tahoma" size="2"><b>Berechnungsgenauigkeit</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">Be</font></li>
+  <li><font face="Tahoma" size="2"><b>Zylinder</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">An Ihm &quot;h&auml;ngt&quot; 
+    letztlich das Drehteil: Links im Drehfutter und rechts am Reitstock.</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zylinderdurchmesser</b><br>
+        Auf jeden Fall mu&szlig; zumindest auf der Futterseite ein Restmaterial 
+        mit diesem Zylinderdurchmesser stehen bleiben, an dem der 3D-K&ouml;rper 
+        festgehalten ist. Bitte beachten: Wenn der Zylinder durch den gesamten 
+        3D-K&ouml;rper geht, wird auch dieser nur bis zum Zylinderdurchmesser 
+        gefr&auml;st. </font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Zylinderl&auml;nge</b><br>
+        Sie beginnt am Nullpunkt (unmittelbar am Futter) und mu&szlig; mindestens 
+        so lang sein, wie der Graben. Falls gew&uuml;nscht mu&szlig; er l&auml;nger 
+        sein, als der gesamte 3D-K&ouml;rper, wenn z.B. eine mitlaufende K&ouml;rnerspitze 
+        am Reitstock verwendet werden soll.</font></li>
+    </ul>
+  </li>
+  <li><font face="Tahoma" size="2"><b>Gr&auml;ben anlegen<br>
+    </b></font><font face="Tahoma" size="2" color="#000000">Damit wird ein Materialabtrag 
+    an den Enden des 3D-K&ouml;rper erzeugt. Dieser so entstandene &quot;Graben&quot; 
+    stellt den K&ouml;rper frei und erm&ouml;glicht den Einsatz von Fr&auml;sern, 
+    deren Schneidbereich d&uuml;nner ist als der Schaftdurchmesser. Die Gr&auml;ben 
+    werden immer vor dem 3D-K&ouml;rper gefr&auml;st.</font> 
+    <ul>
+      <li><font face="Tahoma" size="2"><b>Tiefe Futterseitig</b><br>
+        Der Wert wird von der Oberfl&auml;che bis zum Mittelpunkt des Rohteils 
+        ermittelt und kann maximal dem Radius entsprechen. Ist ein Zylinder f&uuml;r 
+        diesen Bereich vorhanden, wird der Graben an diesem automatisch begrenzt. 
+        Wenn kein Zylinder vorhanden ist, entspricht dies einem Abstechen.</font></li>
+      <li><font face="Tahoma" size="2"><b>Tiefe Reitstockseitig</b><br>
+        Der Wert wird von der Oberfl&auml;che bis zum Mittelpunkt des Rohteils 
+        ermittelt und kann maximal dem Radius entsprechen. Ist ein Zylinder f&uuml;r 
+        diesen Bereich vorhanden, wird der Graben an diesem automatisch begrenzt. 
+        Wenn kein Zylinder vorhanden ist, entspricht dies einem Abstechen. <br>
+        </font></li>
+    </ul>
+  </li>
+</ul>
+<p><font face="Arial" size="2" color="#FF00FF"><b>2. Bearbeitung<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Sie dient in der Regel 
+  dazu, das Werkst&uuml;ck fein zu bearbeiten (Schlichten). Sie tr&auml;gt die 
+  , in der 1. Bearbeitung festgelegte, Haut ab. Besonders gilt:</font><font face="Arial" size="2" color="#FF00FF"><b> 
+  </b></font></p>
+<ul>
+  <li><font face="Tahoma" size="2"><b>Strategie</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">Sie ist in Richtung der X-Achse 
+    festgelegt </font></li>
+  <li><font face="Tahoma" size="2"><b>L&auml;nge der Verfahrschritte</b></font> 
+    <br>
+    <font face="Tahoma" size="2" color="#000000">Nachdem ein Werkzeugdurchmesser 
+    angegeben wurde, stehen hier verschiedene L&auml;ngen zur Auswahl, die alle 
+    ganzzahlige Teile des Fr&auml;serdurchmessers sind. Je gr&ouml;&szlig;er der 
+    gew&auml;hlte Wert ist (z.B. d/2), umso grober wird die Bearbeitung.</font></li>
+  <li><font face="Tahoma" size="2"><b>Abstand Fr&auml;sbahnen<br>
+    </b></font><font face="Tahoma" size="2" color="#000000">Nachdem ein Werkzeugdurchmesser 
+    angegeben wurde, stehen hier verschiedene Abst&auml;nde zur Auswahl, die alle 
+    ganzzahlige Teile des Fr&auml;serdurchmessers sind. Je gr&ouml;&szlig;er der 
+    gew&auml;hlte Wert ist (z.B. d/2), umso grober wird die Bearbeitung.</font><font face="Tahoma" size="2"><b> 
+    </b></font></li>
+</ul>
+<p><font face="Arial" size="2" color="#FF00FF"><b>Steuerung<br>
+  </b></font><font face="Tahoma" size="2" color="#000000">Sie dient in der Regel 
+  dazu, Steuerbedingungen festzulegen. Besonders gilt:</font><font face="Arial" size="2" color="#FF00FF"><b> 
+  </b></font></p>
+<ul>
+  <li><font face="Tahoma" size="2"><b>Wegbedingung</b></font><br>
+    <font face="Tahoma" size="2" color="#000000">Sie legt die Fahrwege fest, es 
+    gibt:</font> 
+    <ul>
+      <li><font face="Tahoma" size="2" color="#000000"><b>M&auml;ander</b><br>
+        Hin und Her</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Gleichlauf</b><br>
+        Fr&auml;sen in Richtung Reitstock</font></li>
+      <li><font face="Tahoma" size="2" color="#000000"><b>Gegenlauf</b><br>
+        Fr&auml;sen in Richtung Drehfutter</font></li>
+    </ul>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><b><font face="Tahoma"><font color="#FF00FF" size="5">6. </font><font color="#FF00FF" size="2"> 
+  Simulieren und Speichern</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Starten Sie eine der Simulationen, dann wird der <b>&Uuml;bersetzungs-Vorgang</b> 
+  eingeleitet, der aus den Kontur- und Technologie-Daten eine <b>Steuerliste</b> 
+  erzeugt. Sie steht danach als sogenannte <b>&quot;KOSY-Liste&quot;</b> f&uuml;r 
+  die <a href="../../Menues/Simulation/Menue_Simulation.htm#Einzelschritt">Einzelschritt-Simulation</a> 
+  zur Verf&uuml;gung und wird bei der Bearbeitung mit der CNC-Maschine verwendet.</font></p>
+<p><font face="Tahoma" size="2">Da der <b>Vorgang des &Uuml;bersetzens sehr lange 
+  dauern kann</b>, empfiehlt sich die <b>Abspeicherung der KOSY-Liste zusammen 
+  mit den CAD/CAM-Daten</b> (siehe Men&uuml; <a href="../../Menues/Parameter/Menue_Parameter.htm#ImpExport">Parameter/Dateien/ImportExport/Export....</a>). 
+  Beim sp&auml;teren &Ouml;ffnen der Datei entf&auml;llt der zeitraubende &Uuml;bersetzungs-Vorgang, 
+  solange an Zeichnung- oder Technologie nichts ver&auml;ndert wird.</font></p>
+<p><b><font color="#FF00FF" face="Tahoma" size="4"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="5"> 7. </font><font color="#FF00FF" size="2"> 
+  Maschine aufrufen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Wählen Sie im Men&uuml; <b>Maschine/CNC-Maschine</b> . Des Fenster <b>Handsteuerung</b> 
+  erscheint. </font></p>
+<p><b><font color="#FF00FF" face="Tahoma" size="4"><br>
+  </font><font face="Tahoma"><font color="#FF00FF" size="4"> </font></font></b></p>
+<p ALIGN="JUSTIFY"><b><font face="Tahoma"><font color="#FF00FF" size="5"><img src="Bilder/CAD_3D_STLDrehBottle.jpg" width="200" height="150"><br>
+  8. </font><font color="#FF00FF" size="2"> Werkstück einspannen, Nullpunkt einstellen, 
+  Werkstück fräsen</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Von 2D-Fräsaufgaben wissen Sie, wie die CNC-Maschine bedient - und ein 
+  Programm gestartet wird.&nbsp; Auf gleiche Weise verfahren Sie hier.</font></p>
+<p ALIGN="JUSTIFY">&nbsp;</p>
+<p ALIGN="JUSTIFY"><b><font face="Tahoma"><font color="#FF00FF" size="5">9. </font><font color="#FF00FF" size="2"> 
+  Zusätzliche Möglichkeiten</font></font></b><font face="Tahoma" size="2"><b><i><br>
+  </i></b>Übrigens können innerhalb solcher Zonen ganz normale 2D-Teile angeordnet 
+  werden, für Bohrungen, Abplattungen, Trennschnitte u.A.m. Sie erhalten ihre 
+  eigene Technologie.</font></p>
+
+</body>
+
+</html>

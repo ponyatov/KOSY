@@ -1,0 +1,270 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>KOSY-Hilfe/Spezialanwendungen/Layout-Programme</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><i><b><font color="#FF00FF" face="Times New Roman" size="6">Layout-Programme 
+  <font size="2">und die Zusammenarbeit mit KOSY</font></font></b></i><b><font face="Tahoma" size="1" color="#000000"><br>
+  </font></b></p>
+<p><b><font face="Tahoma" size="1" color="#000000">Überarbeitet: August 2002</font></b></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Zur Konstruktion 
+  von Leiterplatten stehen in der Elektronik professionelle CAD/CAE-Programme 
+  zur Verf&uuml;gung. Sie werden auch Layout-Programme genannt. Mit ihnen wird 
+  der Weg vom Schaltbild bis zum Layout - mehr oder weniger - professionell und 
+  komfortabel unterst&uuml;tzt. Normalerweise ist das Ziel solcher Programme, 
+  die Daten f&uuml;r einen Leiterplatten-Hersteller zu erzeugen, der dann die 
+  sog. &quot;Gedruckten Schaltungen&quot; in Serie herstellt. Sowohl in der Testphase, 
+  als auch bei Kleinserien kann KOSY helfen, Leiterplatten zu fr&auml;sen, zu 
+  bohren, Konturen zu bearbeiten oder Kleber und Pasten zu dosieren.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Bitte sammeln Sie 
+  zun&auml;chst mit normalen Anwendungen KOSY-Erfahrung, bevor Sie sich an dieses 
+  Theme &quot;heranwagen&quot;. Siehe auch <a href="../../../Grundlagen_Anwendung/Einf%FChrungsbeispiel_Zeichnung%20zu%20Werkst%FCck.htm">Einf&uuml;hrungsbeispiel 
+  zu CAD/CAM</a> und <a href="../../../Grundlagen_CAD/CAD_Konstruktionsgrundlagen.htm">CAD-Konstruktionsgrundlagen</a>.</font></p>
+<p align="left"><font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5">1.</font></b> 
+  <font face="Tahoma" color="#FF00FF"><b>Ausgabeformate und deren Verarbeitung<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Layout-Programme 
+  haben verschiedene Schnittstellen zur Au&szlig;enwelt, die der Daten&uuml;bergabe 
+  an andere Systeme und Betriebe dienen. Vorweg sei gesagt, da&szlig; kein Format 
+  zur Daten&uuml;bergabe genormt ist, es mu&szlig; also immer mit Kompatibilit&auml;tsproblemen 
+  gerechnet werden, die zu unterschiedlichem Aufwand bei der Vorbereitung und 
+  Nacharbeit f&uuml;hren. Unsere Erfahrungen sind in <i><b>nccad</b></i> ber&uuml;cksichtigt 
+  und wenn es mal nicht geht, konnten wir bisher fast immer helfen. <br>
+  Zu den verschiednen Schnittstellen die folgende &Uuml;bersicht:</font></p>
+<table width="680" border="1" cellspacing="2" cellpadding="2">
+  <tr bgcolor="#CCCCCC"> 
+    <td height="19" width="72"> 
+      <p align="left"><b><font face="Tahoma" size="1" color="#000000">Schnittst. 
+        zum </font></b></p>
+    </td>
+    <td height="19" width="152"><b><font face="Tahoma" size="1" color="#000000">Datenformat</font></b></td>
+    <td height="19" width="385"><b><font face="Tahoma" size="1" color="#000000">KOSY-Verwendbarkeit 
+      und evtl. erforderliche Nacharbeit (NA) in <i>nccad</i></font></b></td>
+    <td height="19" width="35"><b><font face="Tahoma" size="1" color="#000000">Bem.</font></b></td>
+  </tr>
+  <tr>
+    <td width="72" height="67"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">Bohren</font></p>
+    </td>
+    <td width="152" height="67"> 
+      <p><font face="Tahoma" size="2" color="#000000">Excelon <font size="1">(Textdatei)</font><br>
+        S &amp; M <font size="1">(Textdatei)</font><br>
+        HPGL <font size="1">(Zeichnungsdatei f&uuml;r Plotter)</font><br>
+        CNC <font size="1">(Textdatei im DIN/ISO-Code)</font></font></p>
+      </td>
+    <td width="385" height="67"><font face="Tahoma" size="2" color="#000000">Indirekt 
+      <font size="1">&uuml;ber Konvertier-SW &quot;.....&quot;<br>
+      </font><font face="Tahoma" size="2" color="#000000">Indirekt <font size="1">&uuml;ber 
+      Konvertier-SW &quot;.....&quot;</font></font><br>
+      Direkt <font size="1">&uuml;ber <a href="../../../ImportExport/ImpExp_2Dimport.htm">HPGL-Import</a>. 
+      NA: Aufl&ouml;sen, Layer trennen, Technologie angeben</font> <br>
+      Direkt, <font size="1">wenn <a href="../../../ImportExport/PostprozessorAnpassung.htm">Postprozessor-Anpassung</a> 
+      f&uuml;r KOSY ok </font></font></td>
+    <td width="35" height="67"> 
+      <p align="left"><font face="Tahoma" size="2" color="#000000">.<br>
+        .<br>
+        *.PLT<br>
+        *.KNC</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="72"><font face="Tahoma" size="2" color="#000000">Fr&auml;sen<br>
+      <font size="1">von Konturen</font></font></td>
+    <td width="152"><font face="Tahoma" size="2" color="#000000">HPGL <font size="1">(Zeichnungsdatei 
+      f&uuml;r Plotter)<br>
+      </font><font face="Tahoma" size="2" color="#000000">DXF <font face="Tahoma" size="2" color="#000000"><font size="1">(Zeichnungsdatei 
+      f&uuml;r CAD)</font></font><font size="1"></font></font><font size="1"> 
+      </font></font></td>
+    <td width="385"><font face="Tahoma" size="2" color="#000000">Direkt <font size="1">&uuml;ber 
+      <a href="../../../ImportExport/ImpExp_2Dimport.htm">HPGL-Import</a>. NA: Aufl&ouml;sen, 
+      Layer trennen, Technologie angeben</font><br>
+      <font face="Tahoma" size="2" color="#000000">Direkt <font size="1">&uuml;ber 
+      <a href="../../../ImportExport/ImpExp_2Dimport.htm">DXF-Import</a>. NA: Layer 
+      trennen, Technologie angeben</font></font><font size="1"> </font> </font></td>
+    <td width="35"><font face="Tahoma" size="2" color="#000000">*.PLT<br>
+      *.DXF </font></td>
+  </tr>
+  <tr>
+    <td width="72" height="24"><font face="Tahoma" size="1" color="#000000">Isolier-</font><font face="Tahoma" size="2" color="#000000">Fr&auml;sen<br>
+      <font size="1">von Leiterbahnen</font></font></td>
+    <td width="152" height="24"><font face="Tahoma" size="2" color="#000000">Gerber 
+      <font face="Tahoma" size="2" color="#000000"><font face="Tahoma" size="2" color="#000000"><font size="1">(Textdatei 
+      f&uuml;r Fotoplotter)</font></font></font><br>
+      HPGL <font size="1">(Zeichnungsdatei f&uuml;r Plotter)<br>
+      </font>DXF <font face="Tahoma" size="2" color="#000000"><font size="1">(Zeichnungsdatei 
+      f&uuml;r CAD)</font></font><font size="1"> </font></font></td>
+    <td width="385" height="24"><font face="Tahoma" size="2" color="#000000">Indirekt 
+      <font size="1">&uuml;ber Konvertier-SW &quot;.....&quot;, nur auf Anfrage</font><br>
+      Direkt <font size="1">&uuml;ber <a href="../../../ImportExport/ImpExp_2Dimport.htm">HPGL-Import</a>. 
+      NA: Aufl&ouml;sen, Layer trennen, Technologie angeben<br>
+      </font><font face="Tahoma" size="2" color="#000000">Direkt <font size="1">&uuml;ber 
+      <a href="../../../ImportExport/ImpExp_2Dimport.htm">DXF-Import</a>. NA: Layer 
+      trennen, Technologie angeben</font></font><font size="1"> </font> </font></td>
+    <td width="35" height="24"><font face="Tahoma" size="2" color="#000000">*.xxx<br>
+      *.PLT<br>
+      *.DXF </font></td>
+  </tr>
+  <tr>
+    <td width="72"><font face="Tahoma" size="2" color="#000000">Dosieren<br>
+      <font size="1">vonKleber/Paste</font> </font></td>
+    <td width="152"><font face="Tahoma" size="2" color="#000000">HPGL <font size="1">(Zeichnungsdatei 
+      f&uuml;r Plotter)<br>
+      </font><font face="Tahoma" size="2" color="#000000">DXF <font face="Tahoma" size="2" color="#000000"><font size="1">(Zeichnungsdatei 
+      f&uuml;r CAD)</font></font><font size="1"> </font></font><font size="1"> 
+      </font></font></td>
+    <td width="385"><font face="Tahoma" size="2" color="#000000">Direkt <font size="1">&uuml;ber 
+      <a href="../../../ImportExport/ImpExp_2Dimport.htm">HPGL-Import</a>. NA: Aufl&ouml;sen, 
+      Layer trennen, Zeichnen, Technologie angeben<br>
+      </font><font face="Tahoma" size="2" color="#000000"><font face="Tahoma" size="2" color="#000000">Direkt 
+      <font size="1">&uuml;ber <a href="../../../ImportExport/ImpExp_2Dimport.htm">DXF-Import</a>. 
+      NA: Layer trennen, Zeichnen, Technologie angeben</font></font><font size="1"> 
+      </font> </font><font size="1"> </font> </font></td>
+    <td width="35"><font face="Tahoma" size="2" color="#000000">*.PLT<br>
+      *.DXF </font></td>
+  </tr>
+</table>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Grunds&auml;tzlich 
+  sind alle reinen Textformate/Textdateien nicht besonders praktisch: Sie liefern 
+  keine Bild-Darstellung in der CAD/CAM-Software <i><b>nccad</b></i>. Zeichnungsdateien 
+  w&auml;ren f&uuml;r alle Anwendungen mit KOSY w&uuml;nschenswert, denn KOSY 
+  bietet immer die M&ouml;glichkeit der Zeichnungsdarstellung und der transparenten 
+  Nachbearbeitung der Zeichnung mit dem CAD-Teil von <i><b>nccad</b></i>.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><b>Sollte der Hersteller 
+  Ihres Layout-Programms</b> keine Schnittstellen f&uuml;r das Isolierfr&auml;sen, 
+  CNC-Bohren, Dosieren usw. zur Verf&uuml;gung stellen oder dies nur sehr unvollst&auml;ndig 
+  und unkomfortabel tun, reden Sie mit Ihm und/oder zeigen Ihm diesen KOSY-Handbuchteil.</font></p>
+<p align="left">&nbsp; </p>
+<p align="left"><img src="Bilder/KOSYPCB_Schaltbild_150.gif" width="150" height="100"><img src="Bilder/KOSYPCB_Layout_150.gif" width="150" height="100"><img src="Bilder/LP_LayPro_DoldBeisp.jpg" width="122" height="99"><br>
+  <font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5">2.</font></b> 
+  <font face="Tahoma" color="#FF00FF"><b>Das Layout einer Leiterplatte<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Ausgehend vom 
+  Schaltbild werden kreuzungsfreie Leitungsverbindungen entworfen, das Bild zeigt 
+  das Prinzip. Zum Bohren und Isolierfr&auml;sen von Muster-Leiterplatten oder 
+  Kleinserien kann KOSY helfen.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><img src="Bilder/KOSYPCB_SfWW_150.jpg" width="150" height="100"><img src="Bilder/LP_LayPro_Vakuum.jpg" width="300" height="100"><br>
+  <font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5">3.</font></b> 
+  <font face="Tahoma" color="#FF00FF"><b>Vorteilhafte Hardware-Ausstattung<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Um Leiterplatten 
+  bearbeiten zu k&ouml;nnen, gen&uuml;gt nahezu jedes von uns angebotene System. 
+  <br>
+  Die obigen Bilder zeigen einige optionale CNC-Maschinen-Ausstattungen, die den 
+  Komfort, die Qualit&auml;t und die Bearbeitungszeit erheblich verbessern und 
+  professionelle M&ouml;glichkeiten er&ouml;ffnen. Dazu geh&ouml;ren:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Schnellfrequenz-Spindel</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Automatischer Werkzeugwechsel</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Vakuum-Spannmittel</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Mitlaufende Staubabsaugung 
+    und/oder Mindermengendosierung</font></li>
+</ul>
+<p align="left">&nbsp; </p>
+<p align="left"><font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5"><img src="Bilder/LP_LayPro_FraesPlatine.jpg" width="200" height="67"><br>
+  4.</font></b> <font face="Tahoma" color="#FF00FF"><b>Bohren und Fr&auml;sen, 
+  ausgehend von einer Zeichnungdatei<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Eine optimale 
+  Herstellung von Leiterplatten mit KOSY ist m&ouml;glich, wenn das Layout-Programm 
+  alle Bearbeitungsdaten in einer Zeichnungsdatei zur Verf&uuml;gung stellt. Die 
+  folgende Bilderreihe zeigt ein Beispiel:</font></p>
+<p align="left"><img src="Bilder/LP_LayPro_PltBeisp1.gif" width="200" height="100"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>4.1</b> Importierte Zeichnungsteile<br>
+  </font><font face="Tahoma" size="2" color="#000000">Das Bild zeigt beispielhaft 
+  den Ausschnitt einer Leiterplatte. Nach dem (HPGL- oder DXF-) Import stehen 
+  in verschiedenen Layern folgende Zeichnungsteile zur Verf&uuml;gung:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Au&szlig;enumfahrung der Leiterbahnen 
+    zum Isolierfr&auml;sen (hier: Layer 3, cyan)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Ausr&auml;umbahnen f&uuml;r 
+    die &uuml;berfl&uuml;ssigen Kupferfl&auml;chen (hier: Layer 4, gelb)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Schlichtbahnen f&uuml;r das 
+    Ausr&auml;umen (hier: Layer 5, magenta)</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Bohrungen in verschiedenen 
+    Durchmessern (hier: Layer 1 und 2, gr&uuml;n und blau)</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Zum <b>Nacharbeiten 
+  von HPGL-Dateien</b> mu&szlig; zun&auml;chst &uuml;ber das Icon <b>Symbole/SYMBOL 
+  AUFL&Ouml;SEN</b> die gesamte Zeichnung in die einzelnen Zeichnungsteile zerlegt 
+  werden. Danach k&ouml;nnen einzelne Layer nachbearbeitet, ausgeblendet und mit 
+  Technologie versorgt werden.</font></p>
+<p align="left"><img src="Bilder/LP_LayPro_PltBeisp2.gif" width="200" height="100"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>4.2</b> Bahnen zum Isolierfr&auml;sen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Nur der gezeigte Layer wird 
+  sichtbar gemacht und mit der Technologie-Nr. 0 die Bearbeitung beschrieben, 
+  damit alle Bahnen in gleicher Weise bearbeitet werden.</font> </p>
+<p align="left">&nbsp;</p>
+<p align="left"><img src="Bilder/LP_LayPro_PltBeisp3.gif" width="200" height="100"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>4.3</b> Ausr&auml;umen der Kupferfl&auml;chen<br>
+  </font><font face="Tahoma" size="2" color="#000000">Nur die gezeigten Layer 
+  werden sichtbar gemacht und jeweils mit der Technologie-Nr. 0 die Bearbeitung 
+  beschrieben, damit alle Bahnen in gleicher Weise bearbeitet werden.</font> </p>
+<p align="left"><img src="Bilder/LP_LayPro_PltBeisp4.gif" width="200" height="100"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>4.4</b> Importierte Zeichnungsteile<br>
+  </font><font face="Tahoma" size="2" color="#000000">Nur die gezeigten Layer 
+  werden sichtbar gemacht und jeweils einem Punkt jeder Farbe eine Technologie 
+  zugeordnet. Wenn kein automatischer Werkzeugwechsel zur Verf&uuml;gung steht, 
+  mu&szlig; <b>STOP f&uuml;r Handbedienung</b> im Technologie-Fenster aktiviert 
+  werden.</font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000">Werden <b>mehr unterschiedliche 
+  Bohrdurchmesser</b> ben&ouml;tigt, <b>als Layer</b> zur Verf&uuml;gung stehen, 
+  gibt es folgende <b>Abhilfen</b>:</font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Zeichnen von Kreisen</b> 
+    in den entsprechenden Durchmessern in einem einzigen, freien Layer. Anwendung 
+    der Technologie/Bearbeitung Sackloch. Alle Bohrungen k&ouml;nnen dann mit 
+    einem einzigen Fr&auml;ser gemacht werden.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000"><b>Auftrennen</b> der Bohrbearbeitung 
+    in verschiedene <i><b>nccad</b></i>-<b>Dateien.</b></font></li>
+</ul>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp; </p>
+<p align="left"><font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5"><img src="Bilder/LP_LayPro_NcProgrBohr.gif" width="200" height="300"><br>
+  5.</font></b> <font face="Tahoma" color="#FF00FF"><b>Bohren, ausgehend von einer 
+  CNC-Datei <br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Das Layout-Programm 
+  stellt die Bohrdaten in verschiedenen Formaten zur Verf&uuml;gung. Sie m&uuml;ssen 
+  in ein, f&uuml;r KOSY geeignetes, CNC-Programm umgewandelt werden, das &uuml;ber 
+  das Men&uuml; <b>Datei/CNC-Programm &ouml;ffnen</b> importiert wird.<br>
+  Im obigen Beispiel wird von einem manuellen Werkzeugwechsel ausgegangen, der 
+  mit &quot;STOP f&uuml;r Handbedienung&quot; (<font face="Courier New, Courier, mono" color="#339966">M05</font>) 
+  programmiert wird.</font></p>
+<p align="left"><font face="Arial" size="2" color="#000000"><b><font color="#FF00FF" face="Tahoma" size="5"><br>
+  <img src="Bilder/KOSYPCB_ImportTechn_200.gif" width="200" height="200"><img src="Bilder/LP_LayPro_DosLotPlatine.jpg" width="200" height="118"><br>
+  6.</font></b> <font face="Tahoma" color="#FF00FF"><b>Dosieren<br>
+  </b></font></font><font face="Tahoma" size="2" color="#000000">Das linke Bild 
+  zeigt die Leiterbahnen f&uuml;r eine SMD-best&uuml;ckte Leiterplatte, das rechte 
+  Bild zeigt das Ergebnis nach der Dosierung. </font></p>
+<ul>
+  <li><font face="Tahoma" size="2" color="#000000">Zum <b>Dosieren von L&ouml;tpaste</b> 
+    m&uuml;ssen in <i><b>nccad</b></i> zun&auml;chst, mittig in die SMD-Fl&auml;chen, 
+    <b>Punkte</b> gezeichnet werden, die dann eine Technologie zum <a href="../../../Grundlagen_Dosiersystem/Dosieren.htm">Dosieren</a> 
+    erhalten.</font></li>
+  <li><font face="Tahoma" size="2" color="#000000">Zum <b>Dosieren von Bahnen</b> 
+    m&uuml;ssen in <i><b>nccad</b></i> zun&auml;chst <b>Geraden, Polygonz&uuml;ge 
+    o.&Auml;. </b> gezeichnet werden, die dann eine Technologie zum <a href="../../../Grundlagen_Dosiersystem/Dosieren.htm">Dosieren</a> 
+    erhalten.</font></li>
+</ul>
+<p align="left"><font face="Tahoma" size="2" color="#000000"> In vielen F&auml;llen 
+  kann der <b>Import</b> einer <b>Zeichnungsdatei f&uuml;r die L&ouml;tstop-Maske</b> 
+  helfen, die SMD-Fl&auml;chen sind dort in unterschiedlicher Form ausgewiesen. 
+  Einige Layout-Programme stellen auch <b>Dateien f&uuml;r Pick &amp; Place </b>zur 
+  Verf&uuml;gung, die unter Umst&auml;nden ausgewertet werden k&ouml;nnen.</font></p>
+<p align="left"><img src="Bilder/LP_LayPro_DosSystem.jpg" width="200" height="184"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>6.1</b> Das KOSY-Dosiersystem<br>
+  </font><font face="Tahoma" size="2" color="#000000">Die Erweiterung <b>KSZDS1</b> 
+  zu unseren CNC-Maschinen stellt Pneumatik- und Elektronik-Elemente zur Verf&uuml;gung, 
+  um <b>direkt aus der Kartusche dosieren</b> zu k&ouml;nnen. Innerhalb von <i><b>nccad</b></i> 
+  sind intelligente <b>CAM-Funktionen</b> zur Unterst&uuml;tzung der <b>Punkt/Bahndosierung</b> 
+  vorhanden (siehe <a href="../../../Grundlagen_Dosiersystem/Dosieren.htm">Spezialanwendungen/Dosieren</a>).</font></p>
+<p align="left"><img src="Bilder/LP_LayPro_DosLot.jpg" width="200" height="77"><br>
+  <font face="Tahoma" size="2" color="#FF00FF"><b>6.2</b> Dosieren von L&ouml;tpaste<br>
+  </font><font face="Tahoma" size="2" color="#000000">Kriterium ist eine exakte 
+  Mengensteuerung und eine pr&auml;zise Positionierung, f&uuml;r KOSY kein Problem.</font> 
+</p>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>KOSY-Hilfe/Fr&auml;s-Simulation mit OpenGL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p align="left"><font face="Times New Roman" size="6" color="#FF00FF"><b><i>Fr&auml;s-Simulation 
+  <font size="4">mit OpenGL</font></i></b></font><font face="Tahoma" size="2" color="#000000"> 
+  <br>
+  <b><font size="1">Erstellt</font><font face="Tahoma" size="1" color="#000000">: 
+  Januar 2004<br>
+  </font><font face="Tahoma" size="2" color="#000000"><b><font face="Tahoma" size="2" color="#000000"><b><font size="1">&Uuml;berarbeitet</font><font face="Tahoma" size="1" color="#000000">: 
+  M&auml;rz 2004</font></b></font></b></font><font face="Tahoma" size="1" color="#000000"> 
+  </font></b></font></p>
+<p align="left"><font face="Tahoma" size="2" color="#000000"><br>
+  <b>Ab Version 7</b> von <i><b>nccad </b></i>wird eine besonders anschauliche 
+  und leistungsf&auml;hige <b>Simulation</b> integriert, die die grafischen M&ouml;glichkeiten 
+  von <b>OpenGL</b> ausnutzt. Dies <b>setzt</b> allerdings auch <b>voraus</b>, 
+  da&szlig; der verwendete <b>PC</b> entsprechend ausgebaut ist und &uuml;ber 
+  <b>folgende Eigenschaften</b> verf&uuml;gt:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Sehr schnelle 
+    CPU</b>, Taktfrequenz mindestens 1GHz</font></li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Sehr schnelle 
+    Grafik-Karte mit gro&szlig;em Speicher</b>, wie sie z.B. f&uuml;r Spiele ben&ouml;tigt 
+    wird, z.B. mindestens Gforce2</font></li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Andernfalls ist die 
+  Darstellung unbefriedigend, die simulierten Bewegungen wirken abgehackt, extrem 
+  langsam und unvollst&auml;ndig. Probieren Sie das aus und greifen Sie bei ungen&uuml;gendem 
+  Ergebnis auf die anderen Simulationsarten zur&uuml;ck.<br>
+  <b>Wir &uuml;bernehmen keine Gew&auml;hr daf&uuml;r, da&szlig; diese OpenGL-Simulation 
+  auf Ihrem Rechner funktioniert</b>. Treten beispielsweise Effekte, wie zu helle 
+  Darstellung, schwarze Randzonen, unsichtbare Bewegungsabl&auml;ufe u.&Auml;.m. 
+  auf, dann sind Grafikkarte und/oder PC nicht geeignet.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Wenn Ihr PC f&uuml;r 
+  diese Art der Simulation geeignet ist, dann haben Sie ein optimales Instrument 
+  zur Beurteilung des Fr&auml;svorganges im Vorfeld der eigentlichen Bearbeitung. 
+  Sie k&ouml;nnen.....</font></p>
+<blockquote>
+  <p align="left"><font color="#000000" size="2" face="Tahoma">... die Formtreue 
+    auch bei 2 1/2- und 3D-Fr&auml;sarbeiten beurteilen,</font></p>
+  <p align="left"><font color="#000000" size="2" face="Tahoma">... die Bearbeitungszeit 
+    absch&auml;tzen,</font></p>
+  <p align="left"><font color="#000000" size="2" face="Tahoma">... und Fehler 
+    in der Programmierung erkennen.</font></p>
+</blockquote>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4"><img src="1_Bilder/SimulationGL_Start.gif" width="256" height="201"><br>
+  1.</font> Start<br>
+  </b></font><font color="#000000" size="2" face="Tahoma">Rufen Sie entsprechend 
+  dem Bild im Men&uuml; <b>Simulation </b>die zugeh&ouml;rige <b>OpenGL....</b>-Simulation 
+  auf.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4"><img src="1_Bilder/SimulationGL_Prameter.gif" width="242" height="369"><br>
+  2.</font> Festlegung der Darstellungsfensters<br>
+  </b></font><font color="#000000" size="2" face="Tahoma">Das<b> Werkst&uuml;ck 
+  wird als rechteckiger Klotz</b> in einer dreidimensionalen Form <b>auf den Bildschirm 
+  projeziert</b>. Die<b> Parameter</b> f&uuml;r die Darstellung des Werkst&uuml;cks 
+  <b>k&ouml;nnen</b> in dem Fenster Werkst&uuml;ck-Parameter <b>modifiziert werden</b></font><font color="#000000" size="2" face="Tahoma">, 
+  es mu&szlig; jedoch zwischen <b>2 Betriebsarten</b> unterschieden werden:</font></p>
+<ul>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Simulation 
+    CNC-Programm</b><br>
+    Hier k&ouml;nnen die Daten des Rohlings nicht automatisch &uuml;bergeben werden, 
+    also gibt es keine echten Vorschlagswerte. Zudem gibt es F&auml;lle, bei denen 
+    eine Simulation scheitern kann (CNC-Programm zu Fr&auml;sen statt zum Drehen, 
+    kritische Wiederholschleifen, nicht unterst&uuml;tzte Zyklen, programmierter 
+    Referenzlauf <font color="#339966" face="Courier New, Courier, mono">G76</font> 
+    u.&Auml;.m.).<br>
+    Ein Werkzeugwechsel im Laufe des Programms ist vom NC-Befehl <font color="#339966" face="Courier New, Courier, mono">M05</font> 
+    (Unterbrechung) abgeleitet, der an den entsprechenden Stellen im Programm 
+    einzubauen ist.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Die Gr&ouml;&szlig;e 
+        des Werkst&uuml;cks mu&szlig; im Rahmen <b>Werkst&uuml;ck-Abmessungen</b>, 
+        entsprechend den im CNC-Programm vorgesehenen Wegen, eingegeben werden. 
+        </font></li>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Der <b>Werkst&uuml;ck-Nullpunkt</b> 
+        wird normalerweise mit den Werten 0 angegeben.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Die <b>Werkst&uuml;ck-(Eck)Position</b> 
+        bezogen auf den vorderen linken Anschlag des Y-Tisches (linke untere Ecke 
+        des Zeichenfeldes) kann gew&auml;hlt werden. Vorgeschlagen wird der Wert 
+        0.</font></li>
+    </ul>
+  </li>
+  <li><font color="#000000" size="2" face="Tahoma" align="left"><b>Simulation 
+    CAD/CAM</b><br>
+    Schon zu Beginn der Zeichnung m&uuml;ssen die Rohteil-Abmessungen abgesch&auml;tzt 
+    werden und zur verwendeten Maschine passen.</font> 
+    <ul>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Die Gr&ouml;&szlig;e 
+        des Werkst&uuml;cks kann im Rahmen <b>Werkst&uuml;ck-Abmessunge</b>n ver&auml;ndert 
+        werden. Vorgeschlagen werden die Abmessungen des Y-Tisches und etwa die 
+        halbe H&ouml;he des Z-Weges. Diese Daten sind unter Parameter/Maschine/KOSY 
+        festgelegt.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Der <b>Werkst&uuml;ck-Nullpunkt</b> 
+        kann in der X-Y-Ebene gegen&uuml;ber dem linken vorderen Anschlag des 
+        Y-Tisches (linke untere Ecke des Zeichenfeldes) verschoben werden. Vorgegeben 
+        wird der Wert, der sich aus der Zeichnung ergibt.</font></li>
+      <li><font color="#000000" size="2" face="Tahoma" align="left">Die <b>Werkst&uuml;ck-(Eck)Position</b> 
+        bezogen auf den vorderen linken Anschlag des Y-Tisches (linke untere Ecke 
+        des Zeichenfeldes) kann gew&auml;hlt werden. Vorgeschlagen wird der Wert 
+        0.</font></li>
+    </ul>
+  </li>
+</ul>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Die <b>Simulation 
+  braucht die Geometrie-Daten des Werkzeuges</b>, um dieses richtig darstellen 
+  zu k&ouml;nnen. Unter Umst&auml;nden wird <b>Erstes Werkzeug</b> verlangt, es 
+  mu&szlig; <b>aus dem Werkzeug-Magazin ausgew&auml;hlt</b> werden. N&auml;heres 
+  zum Beschreiben der Werkzeug-Geometrien und zum Werkzeug-Magazin erfahren Sie 
+  unter <a href="/Menues/Parameter/Menue_Parameter.htm#WerkzeugParameter">Parameter/CAM/Werkzeuge</a>.</font></p>
+<p align="left"><font color="#000000" size="2" face="Tahoma">Nach dem <b>OK</b> 
+  erscheint das folgende Bild:</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4"><img src="1_Bilder/SimulationGL_Ablauf.jpg" width="395" height="322"><br>
+  3.</font> Der Simulations-Ablauf<br>
+  </b></font><font color="#000000" size="2" face="Tahoma"><b>Wird die Simulation 
+  ausgef&uuml;hrt</b>, erkennen Sie die Spindel mit dem Werkzeug und den Materialabtrag 
+  im Werkst&uuml;ck. W&auml;hrend des Simulationsvorgangs <b>k&ouml;nnen Sie folgende 
+  Ver&auml;nderungen in der Darstellung vornehmen</b>:</font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b>3.1</b> Drehen 
+  der Ansicht<br>
+  </font><font color="#000000" size="2" face="Tahoma"><b>Positionieren Sie die 
+  Maus vor dem Werkst&uuml;ck</b>. <b>Dr&uuml;cken und bewegen</b> Sie die Maus, 
+  das Werkst&uuml;ck &quot;folgt&quot; der Mausposition, die Winkellage des Werkst&uuml;cks 
+  kann auf diese Weise ver&auml;ndert werden. </font></p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b>3.2</b> Ein/Ausblenden<br>
+  </font><font color="#000000" size="2" face="Tahoma">Verschiedene Darstellungselemente 
+  k&ouml;nnen durch einen Tastendruck beeinflu&szlig;t werden, dazu die folgende 
+  Liste:</font></p>
+<table width="686" border="1" cellspacing="2" cellpadding="2">
+  <tr align="center" valign="middle" bgcolor="#999999"> 
+    <td width="32"> <p align="left"><font color="#000000" size="2" face="Tahoma"> 
+        Taste</font></p></td>
+    <td width="217"> <p align="left"><font color="#000000" size="2" face="Tahoma">Bedeutung</font></p></td>
+    <td width="409"> <p align="left"><font color="#000000" size="2" face="Tahoma">Bemerkung</font></p></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">A</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Achsenkreuz Ein/Aus </font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(axis) Die rot dargestellten 
+      Achsen f&uuml;r X,Y und Z werden ein/ausgeblendet.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">B</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Werkst&uuml;ck als Gitterlinie 
+      Ein/Aus </font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(box) Einstellung f&uuml;r 
+      langsame Rechner. Die OpenGL-Darstellung des Werkst&uuml;cks mu&szlig; nicht 
+      immer vollst&auml;ndig aufgebaut werden.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">N</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Alle Darstellungselemente 
+      Ein</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(normal) Die vollst&auml;ndige 
+      Darstellung aller Elemente kann wieder hergestellt werden.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">P</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Verschieben-Modus Ein</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(position) Bewegt man die 
+      Maus bei gedr&uuml;ckter linker Maustaste, wird der Darstellungsbereich 
+      verschoben. Dies hat besondere Bedeutung in einer Zoom-Darstellung.<br>
+      Bei zu starker Verschiebung kann das Bild verschwinden, mit der Taste <b>N</b> 
+      wird der Normalzustand wieder hergestellt. </font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">R</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Drehen-Modus Ein</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(rotate) Bewegt man die Maus 
+      bei gedr&uuml;ckter linker Maustaste, wird der Darstellungsbereichgedreht. 
+      Das Werkst&uuml;ck folgt der Maus.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">T</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Fr&auml;sbahnen Ein/Aus</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(trace) Die Fr&auml;sbahnen 
+      als farbige Linien k&ouml;nnen die Betrachtung des bearbeiteten Werkst&uuml;cks 
+      st&ouml;ren.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">Z</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Zoom-Modus Ein/Aus</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(zoom) Bei eingeschaltetem 
+      Zoom kann mit einem Mausklick die Darstellung vergr&ouml;&szlig;ert werden. 
+      Alt + Mausklick verkleinert die Darstellung.<br>
+      Bei zu starker Vergr&ouml;&szlig;erung kann das Bild verschwinden, mit der 
+      Taste <b>N</b> wird der Normalzustand wieder hergestellt.</font></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle"><b><font color="#000000" size="2" face="Tahoma">ESC</font></b></td>
+    <td><font color="#000000" size="2" face="Tahoma">Abbrechen</font></td>
+    <td><font color="#000000" size="1" face="Tahoma">(escape)Mit dem n&auml;chstfolgenden 
+      Bearbeitungszyklus wird die Simulation beendet. Gleiche Wirkung hat die 
+      <b>rechte Maustaste</b>.</font></td>
+  </tr>
+</table>
+<p><font color="#FF00FF" size="2" face="Tahoma"><b>3.3</b> Werkzeudarstellung<br>
+  </font><font color="#000000" size="2" face="Tahoma">Selbst das, im Technologie-Fenster 
+  angegebene, <b>Werkzeug</b> wird <b>m&ouml;glichst naturgetreu</b> in der Simulation 
+  <b>dargestellt</b>. Damit lassen sich Effekte, wie Fr&auml;sdauer, Restmaterial, 
+  Wegoptimierung schon in der Simulation hervorragend beurteilen.</font></p>
+<p><font color="#000000" size="2" face="Tahoma"><b>Um das aktuelle Werkzeug richtig 
+  darstellen zu k&ouml;nnen</b>, mu&szlig; dessen <b>Geometrie</b> bekannt sein. 
+  Deshalb sind die <b>Werkzeug Daten</b> im System hinterlegt und k&ouml;nnen 
+  &uuml;ber das Men&uuml; <a href="/Menues/Parameter/Menue_Parameter.htm#WerkzeugParameter">Parameter/CAM/Werkzeug 
+  .......</a> unter <b>Werkzeug-Bearbeitung</b> editiert werden. </font></p>
+<p><font color="#000000" size="2" face="Tahoma">Die in Ihrem System <b>st&auml;ndig 
+  verwendeten Werkzeuge</b> sind in einem <b>Werkzeug-Magazin</b> zusammengefa&szlig;t. 
+  Werkzeugwechsel m&uuml;ssen bei der Programmierung in CNC oder CAD/CAM vorgesehen- 
+  und an den entsprechneden Stellen eingef&uuml;gt werden. Sobald <b>innerhalb 
+  der Simulation</b> ein Werkzeugwechsel erforderlich ist, <b>mu&szlig; das Werkzeug 
+  im Magazin ausgew&auml;hlt werden</b> (Ausnahme: Automatischer Werkzeugwechsel). 
+  Die Verwaltung des Magazins findet ebenfalls &uuml;ber das Men&uuml; <a href="/Menues/Parameter/Menue_Parameter.htm#WerkzeugParameter">Parameter/CAM/Werkzeug 
+  .......</a> statt.</font></p>
+<p>&nbsp;</p>
+<p align="left"><font color="#FF00FF" size="2" face="Tahoma"><b><font size="4"><img src="1_Bilder/SimulationGL_Geschwindigkei.gif" width="389" height="304"><br>
+  4.</font> Geschwindigkeits-Optimierung<br>
+  </b></font><font color="#000000" size="2" face="Tahoma">&Uuml;ber das Men&uuml;<b> 
+  Parameter/Simulation/Geschwindigkeit</b> erreichen Sie das oben dargestellte 
+  Fenster. Innerhalb des Rahmens <b>OpenGL-Simulation </b>k&ouml;nnen Sie den 
+  Schieber <b>Relativer Geschwindigkeitsfaktor</b> ver&auml;nderen. Auf empirische 
+  Weise l&auml;sst sich f&uuml;r den PC diejenige Einstellung finden, bei der 
+  Simulation und tats&auml;chliche Bearbeitung n&auml;herungsweise &uuml;bereinstimmen.</font></p>
+</body>
+</html>
