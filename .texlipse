@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Oct 22 02:04:13 GMT+04:00 2013
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=KOSY.tex
+outputFile=KOSY.pdf
+langSpell=
+markDer=true
+srcDir=
