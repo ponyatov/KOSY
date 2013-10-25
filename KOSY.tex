@@ -1,23 +1,29 @@
-\documentclass[a4paper]{book}
+\documentclass[14pt,a4paper]{book}
 
 \usepackage[utf8]{inputenc}
 \usepackage[german,english,russian]{babel}
-\usepackage{hyperref}
-\hypersetup{unicode=true}
+\usepackage[unicode]{hyperref}
+% \hypersetup{unicode=true}
 
 \usepackage{graphicx}
+\usepackage{xcolor}
 
-\title{Стойка ЧПУ KOSY}
+\newcommand{\DE}[1]{\textcolor{green}{#1}}
+\newcommand{\RU}[1]{\textcolor{red}{#1}}
+
+\newcommand{\file}[1]{\textbf{#1}}
+
+\title{Стойка ЧПУ KOSY и NCCAD7}
 \author{перевод Dmitry Ponyatov <dponyatov@gmail.com>}
 
 \begin{document}
 
 \maketitle
 
-Кривой перевод оригинальной документации из поставки учебного комплекта станков
-WABECO~--- файлы \verb@nccad7.chm@ и \verb@ZSE3Help.chm@ с немецкого.
+\RU{Кривой перевод оригинальной документации из поставки учебного комплекта станков
+WABECO~--- файлы \file{nccad7.chm} и \file{ZSE3Help.chm} с немецкого.
 Комплектность поставки документации от ecoinvent хромает, могли бы хотя бы
-английский вариант положить как опцию.
+английский вариант положить как опцию.}
 
 \tableofcontents
 
@@ -27,16 +33,26 @@ WABECO~--- файлы \verb@nccad7.chm@ и \verb@ZSE3Help.chm@ с немецко
 % Hilfethemen für nccad7 - 18. 02. 2005
 
 % \chapter{Inhaltsverzeichnis} 
-\chapter{Suchen von Worten} 
+\DE{\chapter{Suchen von Worten}}
+\RU{\chapter{Поиск слов}}
 
-Überarbeitet: August 2002
+\DE{Überarbeitet: August 2002}
+\RU{Редакция: Август 2002}
 
 \bigskip 
 
-Angenommen Sie möchten eine nähere Erklärung zum Begriff "Nullpunkt". Innerhalb aller 
-Hilfethemen kommt dieser Begriff auf mehreren Seiten vor. Um diese Seiten - und die 
-zugehörigen Textstellen zu finden gibt es die Funktion "Suchen". Sie gehen folgendermaßen 
-vor:
+\DE{Angenommen Sie möchten eine nähere Erklärung zum Begriff "Nullpunkt".}
+\RU{Вероятно Вы хотели бы более точное определение термина
+"нулевая точка".}
+\DE{Innerhalb aller Hilfethemen kommt dieser Begriff auf mehreren Seiten vor.}
+\RU{Кажется что этот термин используется на каждой странице этого
+документа.}
+\DE{Um diese Seiten - und die zugehörigen Textstellen zu finden gibt es die
+Funktion "Suchen".}
+\RU{Чтобы найти такие страницы и соответствующие места в тексте,
+существует функция ``Поиск''}
+\DE{Sie gehen folgendermaßen vor:}
+\RU{Он используется следующим образом:}
 \begin{enumerate}
   \item Öffnen Sie die Karteikarte \textbf{Suchen} durch Klick auf den Reiter
   "Suchen".
@@ -63,15 +79,23 @@ Das folgende Bild gibt einen Überblick über die verschiedenen Phasen des Suche
 
 \includegraphics{pic/Suche1.png}
 
-\chapter{Das Indexregister} 
 
-Überarbeitet: August 2002
+\DE{\chapter{Das Indexregister}}
+\RU{\chapter{Индекс}}
+
+\DE{Überarbeitet: August 2002}
+\RU{Редакция: Август 2002}
 
 \bigskip
 
-Falls Sie mehr Informationen über einen bestimmten Themenbereich oder über eine bestimmte 
-Anwendung haben möchten, finden Sie im Indexregister alle erdenklichen Stichworte. Diese 
-Stichworte sind nach Themenbereichen gegliedert.
+\DE{Falls Sie mehr Informationen über einen bestimmten Themenbereich oder über
+eine bestimmte Anwendung haben möchten, finden Sie im Indexregister alle
+erdenklichen Stichworte.}
+\RU{Если бы Вы хотели иметь большую информацию об определенной теме или
+применении, вы можете найти в разделе ``Индекс'' возможные ключевые слова.}
+\DE{Diese Stichworte sind nach Themenbereichen
+gegliedert.}
+\RU{Ключевые слова разделены на тематические области.}
 
 \bigskip
 
