@@ -1,5 +1,7 @@
+
 CAD-Konstruktionsgrundlagen
-Überarbeitet: August 2002
+
+berarbeitet: August 2002
 
 Allgemeines
 Um ein CAD-Programm zu verstehen, muß man sich zunächst mit dem Bedienprinzip auseinandersetzen. Es gibt beim Vergleich der verschiedenen CAD-Programme zwangsläufig Gemeinsamkeiten, wie beispielsweise die Tatsache, daß geometrische Grundfiguren ausgewählt werden müssen. Es gibt aber auch Unterschiede, wie beispielsweise die Belegung der rechten Maustaste. 
@@ -222,8 +224,4 @@ Der Layer9 d.h. die Farbe Schwarz wird automatisch aufgerufen, wenn die Funktion
 Der Layer10 d.h. die Farbe Rot wird automatisch aufgerufen, wenn die Funktionen "Zuordnungslinie", "Ausspannposition" oder "Werkstuckbefestigung" angewahlt wurden.
 
 [Zurück]
-
- 
-
- 
 
