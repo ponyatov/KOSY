@@ -1,0 +1,59 @@
+Kurzanleitung fur den CAD-Teil von nccad
+Uberarbeitet: Oktober 2004
+
+Start der Anwendung uber das Menu <Datei>
+ Der CAD-Teil von nccad ist als vollwertiges Konstruktionsprogramm zu verstehen. Die einzelnen Zeichnungsteile werden nach mathematischen Gesichtspunkten und vektororientiert konstruiert.
+
+Nachdem Sie nccad uber Windows gestartet haben (Installationsanweisungen finden Sie im gedruckten Handbuch), rufen Sie im Menu <Datei> <CAD/CAM.... Neue Zeichnung> auf.
+
+Es erscheint das nebenstehende Fenster mit einer Zeichenflache etwas gro?er als ein DIN A4-Blatt (entspricht dem Y-Tisch der CNC-Maschine Standard A4).
+Die verschiedenen Fensterelemente sind in der nebenstehenden Darstellung rot beschrieben.
+  
+Statuszeile
+und
+Icon-Leiste
+ Beachten Sie immer die ganz unten liegende Statuszeile. Sie "sagt" Ihnen, was gewahlt ist und was nccad von Ihnen will, z. B. nach dem Start: "Bitte wahlem Sie im Menu <Datei> eine Funktion" und nachdem <CAD/CAM Neue Zeichnung> gewahlt wurde: "Bitte wahlen Sie eine Zeichenfunktion".
+Die Icons sind in Gruppen eingeteilt. Ein Klick auf eine Gruppenuberschrift offnet- bzw. schlie?t die Gruppe. Auf diese Weise werden Icons in momentan nicht benotigten Gruppen ausgeblendet, der Uberblick ist besser.
+ 
+Koordinateneingabe mit dem 
+Fadenkreuz Wahlen Sie innerhalb der Icon-Leiste unter <CAD Standard> das Icon GERADE. In der Statuszeile erscheint die Aufforderung "Startpunkt wahlen". Bewegen Sie die Maus in der Zeichenflache und beobachten Sie dabei die Koordinaten-Anzeige unterhalb. Drucken Sie in der gewunschten Position die linke Maustaste (Klick).
+In der Statuszeile erscheint nun die Aufforderug "Endpunkt wahlen". Bewegen Sie die Maus und beobachten Sie dabei wiederum die Koordinatenanzeige, insbesonders das Feld KA. Es zeigt den Abstand zum Startpunkt. Klicken Sie an einer sinnvollen Position erneut - die Gerade ist konstruiert. Sie konnen entweder eine weitere Gerade zeichnen oder in der Icon-Leiste ein anderes Icon der Gruppe <CAD Standard> wahlen und dann prinzipiell gleich verfahren. 
+Koordinateneingabe
+mit der 
+Tastatur Um eine Koordinateneingabe (kartesische Koordinaten) mit Hilfe der Tastatur zu machen, mussen Sie eines der Eingabefelder unterhalb der Zeichenflache aktivieren. Es gibt zwei Moglichkeiten:
+- Absolut (KA = Abstand zum Zeichnungs- bzw. Werkstuck-Nullpunkt): Taste <K> oder Klick in Feld KA.
+- Relativ (KR = Abstand zum zuletzt eingegeben Koordinatenpunkt): Taste <K> oder Klick in Feld KR.
+Die Koordinaten werden dann so eingegeben: Wert fur X, z.B.: 123.45-> Komma-> Wert fur Y, z.B.: 33.9-> Return.
+Mathematische Ausdrucke mit Grundrechenarten und Klammern sind zulassig, z.B.: 5*22.3,2*(28+47.9/2)
+ 
+Koordinateneingabe
+mit 
+Polarkoordinaten Aktivieren Sie eines der Eingabefelder fur Polarkoordinaten unterhalb der Zeichenflache. Es gibt zwei Moglichkeiten:
+- Absolut (PA = Abstand zum Zeichnungs- bzw. Werkstuck-Nullpunkt): Zweimal Taste <P> oder Klick in Feld PA.
+- Relativ (PR = Abstand zum zuletzt eingegeben Koordinatenpunkt): Einmal Taste <P> oder Klick in Feld PR.
+Die Koordinaten werden dann so eingegeben: Winkellage, z.B.: 45-> Komma-> Lange, z.B.: 33.9-> Return.
+ 
+Winkeleingabe Immer wenn in der Statuszeile die Eingabe eines Winkels gefordert wird (z.B. bei Bearbeitung/DREHEN), kann die Taste <W> gedruckt werden. Dann ist eine exakte Winkelangabe mit der Tastatur moglich. 
+Zeichentricks Ortogonales Zeichnen (Einschrankung der Mausbewegung):
+Gleichzeitig die Umschalttaste drucken >> Maus kann nur senkrecht bewegt werden.
+Gleichzeitig die Steuerungstaste drucken >> Maus kann nur waagrecht bewegt werden.
+Gleichzeitig die Umschalttaste und die Steuerungstaste drucken >> Maus "verwackelt" nicht.
+Konstruktionsfang (Einrasten des Suchfensters auf einen abseits liegenden Konstuktionspunkt):
+Durch die Tastenkombination <Strg> + <F9> - oder durch das Symbol ganz rechts in der Statuszeile wird er ein/ausgeschaltet.
+Tastaturbelegung (Weitere HotKeys fur die schnelle Bedienung):
+Mehr dazu finden Sie unter Anhang/Tastaturbedienung.
+ 
+Rechte Maustaste  Drucken der rechten Maustaste im Zeichenfeld fuhrt zu einem PopUp-Menu mit den wichtigsten Einstell-Funktionen.
+ 
+Layer
+(Zeichnungslagen
+und deren Bedeutung) Die Wahl des Layers kann unterhalb des Zeichenfeldes (rechts neben der Koordinatenanzeige) durch Weiterschalten- oder durch die Tastenkombination <Umschalt>+<Nummer>- oder uber die Icon-Leiste unter Einstellungen/LAYER vorgenommen werden. Dort lassen sich auch die Sichtbarkeit und der Schutz vor ungewollten Bearbeitungen einstellen. Letzteres alternativ auch mit einem Doppelklick auf das Schlo?-Symbol in der Statuszeile.
+Zeichnungsteile im Layer 1 bis 8 konnen in festgelegten Farben gezeichnet- und auch mit der CNC-Maschine bearbeitet werden. Mit dem Wechsel des Layers wird automatisch auch die Farbe umgeschaltet. Die Farbzuordnung kann im Menu Ansicht/Farbe geandert werden.
+Zeichnungsteile im Layer 9 dienen ausschlie?lich der Dokumentation (Beschriftung, Bema?ung, Hilfslinien usw.). Sie konnen nicht mit der CNC-Maschine bearbeitet werden. Wahlt man eines der Icons der Gruppe Dokumentation, wird automatisch der Layer 9 und die Farbe schwarz vorgegben.
+Hilfslinien nur im Layer 9 zeichenbar (Mittellinien, Punktlinien usw). Wenn Sie in der Icon-Leiste Einstellungen/LINIEN wahlen sind also unterbrochene Linienarten nur im Layer 9 wirksam.
+Der Layer 10 mit der fest eingestellten Farbe rot ist fur CAM-Funktionen und CAM-Darstellungen reserviert. 
+
+ 
+
+ 
+
