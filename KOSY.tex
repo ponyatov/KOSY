@@ -10,6 +10,10 @@
 
 \newcommand{\DE}[1]{\textcolor{green}{#1}}
 \newcommand{\RU}[1]{\textcolor{red}{#1}}
+\newcommand{\TRpart}[2]{\chapter{#2 /#1/}}
+\newcommand{\TRchapter}[2]{\chapter{#2 /#1/}}
+\newcommand{\TRsection}[2]{\chapter{#2 /#1/}}
+\newcommand{\TRsubsection}[2]{\chapter{#2 /#1/}}
 
 \newcommand{\file}[1]{\textbf{#1}}
 
@@ -27,17 +31,14 @@ WABECO~--- файлы \file{nccad7.chm} и \file{ZSE3Help.chm} с немецко
 
 \tableofcontents
 
-\part{NCCAD7}
+\TRpart{NCCAD7}{NCCAD7}
 
-% Inhaltsverzeichnis
-% Hilfethemen für nccad7 - 18. 02. 2005
-
-% \chapter{Inhaltsverzeichnis} 
-\DE{\chapter{Suchen von Worten}}
-\RU{\chapter{Поиск слов}}
-
+\DE{Hilfethemen für nccad7 - 18. 02. 2005}
+\RU{Справка для nccad7 - 18 02, 2005}
 \DE{Überarbeitet: August 2002}
 \RU{Редакция: Август 2002}
+
+\TRchapter{Suchen von Worten}{Поиск по словам}
 
 \bigskip 
 
@@ -79,14 +80,7 @@ Das folgende Bild gibt einen Überblick über die verschiedenen Phasen des Suche
 
 \includegraphics{pic/Suche1.png}
 
-
-\DE{\chapter{Das Indexregister}}
-\RU{\chapter{Индекс}}
-
-\DE{Überarbeitet: August 2002}
-\RU{Редакция: Август 2002}
-
-\bigskip
+\TRchapter{Das Indexregister}{Индексный регистр}
 
 \DE{Falls Sie mehr Informationen über einen bestimmten Themenbereich oder über
 eine bestimmte Anwendung haben möchten, finden Sie im Indexregister alle
@@ -114,71 +108,62 @@ erscheint die Hilfsseite, die das Thema erläutert.
 
 \includegraphics{pic/Suche3.png}
 
-
-\DE{\chapter{Grundlagen der Bedienung}}
-\RU{\chapter{Основы обслуживания}}
-	\DE{\section{Kurzanleitung}}
-	\RU{\section{Краткое руководство}}
-	\DE{\section{Bedienprinzip}}
-	\RU{\section{Принципы обслуживания}}
-	\DE{\section{Drucken}}
-	\RU{\section{Печать}}
-	\DE{\section{Konfiguration von nccad7}}
-	\RU{\section{Конфигурирование nccad7}}
-	\DE{\section{Vorlagen}}
-	\DE{\section{Das Menü}}
-	\RU{\section{Меню}}
-		\subsection{Ansicht}
-		\subsection{Datei}
-		\subsection{Hilfe}
-		\subsection{Maschine}
-		\subsection{Parameter}
-		\subsection{Simulation}
-	\DE{\section{Die Icons}}
-	\RU{\section{Иконки}}
-		\DE{\subsection{Bearbeitung}}
-		\RU{\subsection{Обработка}}
-			\subsubsection{Drehen}
-			\subsubsection{Eigenschaften ändern}
-			\subsubsection{Konstruktionspunkt verschieben}
-			\subsubsection{Kopieren}
-			\subsubsection{Korrektur Texte}
-			\subsubsection{Kreisförmig anordnen}
-			\subsubsection{Löschen}
-			\subsubsection{Löschen Letztes}
-			\subsubsection{Rückgängig Letztes}
-			\subsubsection{Skalieren}
-			\subsubsection{Spiegeln horizontal}
-			\subsubsection{Spiegeln horizontal mit Kopie}
-			\subsubsection{Spiegeln vertikal}
-			\subsubsection{Spiegeln vertikal mit Kopie}
-			\subsubsection{Verschieben}
-			\subsubsection{Zoom Maßstab}
+\TRchapter{Grundlagen der Bedienung}{Основные принципы работы}
+	\TRsection{Kurzanleitung}{Краткое руководство}
+	\TRsection{Bedienprinzip}{Принцип действия}
+	\TRsection{Drucken}{Печать}
+	\TRsection{Konfiguration von nccad7}{Конфигурирование nccad7}
+	\TRsection{Vorlagen}{Шаблоны}
+	\TRsection{Das Menü}{Меню}
+		\subsection{Ansicht}{Вид}
+		\subsection{Datei}{Файл}
+		\subsection{Hilfe}{Помощь}
+		\subsection{Maschine}{Станок}
+		\subsection{Parameter}{Параметры}
+		\subsection{Simulation}{Симуляция}
+	\TRsection{Die Icons}{Иконки}
+		\TRsubsection{Bearbeitung}{Обработка}
+			\subsubsection{Drehen}{Стрелять}
+			\subsubsection{Eigenschaften ändern}{Изменение свойств}
+			\subsubsection{Konstruktionspunkt verschieben}{Перемещение конструкционных
+			точек}
+			\subsubsection{Kopieren}{Копировать}
+			\subsubsection{Korrektur Texte}{Исправление текста}
+			\subsubsection{Kreisförmig anordnen}{Круговое выравнивание}
+			\subsubsection{Löschen}{Удалить}
+			\subsubsection{Löschen Letztes}{Удалить последнюю}
+			\subsubsection{Rückgängig Letztes}{Отменить последнее}
+			\subsubsection{Skalieren}{Масштабирование}
+			\subsubsection{Spiegeln horizontal}{Отразить горизонтально}
+			\subsubsection{Spiegeln horizontal mit Kopie}{Отразить горизонтально с
+			копией}
+			\subsubsection{Spiegeln vertikal}{Зеркалить вертикально}
+			\subsubsection{Spiegeln vertikal mit Kopie}{Зеркалить вертикально с копией}
+			\subsubsection{Verschieben}{Сдвинуть}
+			\subsubsection{Zoom Maßstab}{Зум}
 		\subsection{CAD - 3D}
-			\subsubsection{Ansicht dreidimensional}
-			\subsubsection{Plastische Zone Kreis}
-			\subsubsection{Plastische Zone Rechteck}
-			\subsubsection{Plastische Zone in STL wandeln}
-			\subsubsection{Schnitt bearbeiten}
-			\subsubsection{Schnitt neu}
-		\DE{\subsection{CAD - Besonderes}}
-		\RU{\subsection{CAD - Фичи}}
-			\subsubsection{Ellipse}
-			\subsubsection{Freihand}
-			\subsubsection{Kurve Approximation}
-			\subsubsection{Kurve Interpolation}
-			\subsubsection{Mathematische Funktion}
-			\subsubsection{Outline - Generierung}
-			\subsubsection{Pad/Bahn - Generierung}
-			\subsubsection{Schraffieren}
-			\subsubsection{Tangente}
-			\subsubsection{Tangente außen}
-			\subsubsection{Tangente innen}
-			\subsubsection{Zahnrad außenverzahnt}
-			\subsubsection{Zahnrad innenverzahnt}
-			\subsubsection{Zahnstange}
-		\DE{\subsection{CAD - Standard}}
-		\RU{\subsection{CAD - Стандартные}}
+			\TRsubsubsection{Ansicht dreidimensional}{Трехмерное изображение}
+			\subsubsection{Plastische Zone Kreis}{Пластичная зона Круг}
+			\subsubsection{Plastische Zone Rechteck}{Пластичная зона Прямоугольник}
+			\subsubsection{Plastische Zone in STL wandeln}{Пластичная зона Прямоугольник}
+			\subsubsection{Schnitt bearbeiten}{Править секцию}
+			\subsubsection{Schnitt neu}{Новая секция}
+		\TRsubsection{CAD - Besonderes}{CAD - Фичи}
+			\subsubsection{Ellipse}{Эллипс}
+			\subsubsection{Freihand}{От руки}
+			\subsubsection{Kurve Approximation}{Аппроксимация кривых}
+			\subsubsection{Kurve Interpolation}{Интерполяция кривых}
+			\subsubsection{Mathematische Funktion}{Математические функции}
+			\subsubsection{Outline - Generierung}{Outline - генерация}
+			\subsubsection{Pad/Bahn - Generierung}{Pad/Bahn - генерация}
+			\subsubsection{Schraffieren}{Колодец}
+			\subsubsection{Tangente}{Касание}
+			\subsubsection{Tangente außen}{Внешнее касание}
+			\subsubsection{Tangente innen}{Внутреннее касание}
+			\subsubsection{Zahnrad außenverzahnt}{Внешнее зубчатое колесо}
+			\subsubsection{Zahnrad innenverzahnt}{Внутреннее зубчатое колесо}
+			\subsubsection{Zahnstange}{Зубчатая рейка}
+		\TRsubsection{CAD - Standard}{CAD - Стандартный}
 			\subsubsection{Bogen} 
 			\subsubsection{Gerade}
 			\subsubsection{Gravurtext MAX/einzeilig} 
@@ -288,26 +273,25 @@ erscheint die Hilfsseite, die das Thema erläutert.
 			\subsubsection{Fasen} 
 			\subsubsection{Fasen selektiv} 
 						
-\DE{\chapter{Grundlagen CAD}}
-\RU{\chapter{Основы CAD}}
-	\DE{\section{CAD - Konstruktionsgrundlagen}}
-	\RU{\section{CAD - конструктивные основы}}
-	\DE{\section{CAD - Kurzanleitung}}
-	\RU{\section{CAD - короткое руководство}}
-	\DE{\section{CAD - 3D Funktionen}}
-	\RU{\section{CAD - 3D функции}}
-	\DE{\section{CAD - Technisches Zeichnen}}
-	\RU{\section{CAD - Техническое рисование}}
+\TRchapter{Grundlagen CAD}}
+{Основы CAD}}
+	\TRsection{CAD - Konstruktionsgrundlagen}}
+	{CAD - конструктивные основы}}
+	\TRsection{CAD - Kurzanleitung}}
+	{CAD - короткое руководство}}
+	\TRsection{CAD - 3D Funktionen}}
+	{CAD - 3D функции}}
+	\TRsection{CAD - Technisches Zeichnen}}
+	{CAD - Техническое рисование}}
 		\subsection{Dreiseiten-Darstellung}
 		\subsection{Räumliche Darstellung}
 		\subsection{Arbeiten mit Symbolen}
-	\DE{\section{Grafik}}
-	\RU{\section{Графика}}
+	\TRsection{Grafik}}
+	{Графика}}
 		\subsection{Bilder importieren}
 		\subsection{Formulare}
 	 
-\DE{\chapter{CNC-Fräsmaschinen}} 
-\RU{\chapter{ЧПУ-Фрезерный станок}} 
+\TRchapter{CNC-Fräsmaschinen}{ЧПУ-Фрезерный станок} 
 	\section{Inbetriebnahme, Erste Schritte}
 	\section{Handsteuerung}
 	\section{CNC-Fräsen}
