@@ -10,10 +10,11 @@
 
 \newcommand{\DE}[1]{\textcolor{green}{#1}}
 \newcommand{\RU}[1]{\textcolor{red}{#1}}
-\newcommand{\TRpart}[2]{\chapter{#2 /#1/}}
+\newcommand{\TRpart}[2]{\part{#2 /#1/}}
 \newcommand{\TRchapter}[2]{\chapter{#2 /#1/}}
-\newcommand{\TRsection}[2]{\chapter{#2 /#1/}}
-\newcommand{\TRsubsection}[2]{\chapter{#2 /#1/}}
+\newcommand{\TRsection}[2]{\section{#2 /#1/}}
+\newcommand{\TRsubsection}[2]{\subsection{#2 /#1/}}
+\newcommand{\TRsubsubsection}[2]{\subsubsection{#2 /#1/}}
 
 \newcommand{\file}[1]{\textbf{#1}}
 
@@ -31,12 +32,12 @@ WABECO~--- файлы \file{nccad7.chm} и \file{ZSE3Help.chm} с немецко
 
 \tableofcontents
 
-\TRpart{NCCAD7}{NCCAD7}
-
 \DE{Hilfethemen für nccad7 - 18. 02. 2005}
 \RU{Справка для nccad7 - 18 02, 2005}
 \DE{Überarbeitet: August 2002}
 \RU{Редакция: Август 2002}
+
+\TRpart{NCCAD7}{NCCAD7}
 
 \TRchapter{Suchen von Worten}{Поиск по словам}
 
@@ -115,307 +116,283 @@ erscheint die Hilfsseite, die das Thema erläutert.
 	\TRsection{Konfiguration von nccad7}{Конфигурирование nccad7}
 	\TRsection{Vorlagen}{Шаблоны}
 	\TRsection{Das Menü}{Меню}
-		\subsection{Ansicht}{Вид}
-		\subsection{Datei}{Файл}
-		\subsection{Hilfe}{Помощь}
-		\subsection{Maschine}{Станок}
-		\subsection{Parameter}{Параметры}
-		\subsection{Simulation}{Симуляция}
+		\TRsubsection{Ansicht}{Вид}
+		\TRsubsection{Datei}{Файл}
+		\TRsubsection{Hilfe}{Помощь}
+		\TRsubsection{Maschine}{Станок}
+		\TRsubsection{Parameter}{Параметры}
+		\TRsubsection{Simulation}{Симуляция}
+		
 	\TRsection{Die Icons}{Иконки}
 		\TRsubsection{Bearbeitung}{Обработка}
-			\subsubsection{Drehen}{Стрелять}
-			\subsubsection{Eigenschaften ändern}{Изменение свойств}
-			\subsubsection{Konstruktionspunkt verschieben}{Перемещение конструкционных
-			точек}
-			\subsubsection{Kopieren}{Копировать}
-			\subsubsection{Korrektur Texte}{Исправление текста}
-			\subsubsection{Kreisförmig anordnen}{Круговое выравнивание}
-			\subsubsection{Löschen}{Удалить}
-			\subsubsection{Löschen Letztes}{Удалить последнюю}
-			\subsubsection{Rückgängig Letztes}{Отменить последнее}
-			\subsubsection{Skalieren}{Масштабирование}
-			\subsubsection{Spiegeln horizontal}{Отразить горизонтально}
-			\subsubsection{Spiegeln horizontal mit Kopie}{Отразить горизонтально с
+			\TRsubsubsection{Drehen}{Стрелять}
+			\TRsubsubsection{Eigenschaften ändern}{Изменение свойств}
+			\TRsubsubsection{Konstruktionspunkt verschieben}{Перемещение узлов}
+			\TRsubsubsection{Kopieren}{Копировать}
+			\TRsubsubsection{Korrektur Texte}{Исправление текста}
+			\TRsubsubsection{Kreisförmig anordnen}{Круговое выравнивание}
+			\TRsubsubsection{Löschen}{Удалить}
+			\TRsubsubsection{Löschen Letztes}{Удалить последнюю}
+			\TRsubsubsection{Rückgängig Letztes}{Отменить последнее}
+			\TRsubsubsection{Skalieren}{Масштабирование}
+			\TRsubsubsection{Spiegeln horizontal}{Отразить горизонтально}
+			\TRsubsubsection{Spiegeln horizontal mit Kopie}{Отразить горизонтально с
 			копией}
-			\subsubsection{Spiegeln vertikal}{Зеркалить вертикально}
-			\subsubsection{Spiegeln vertikal mit Kopie}{Зеркалить вертикально с копией}
-			\subsubsection{Verschieben}{Сдвинуть}
-			\subsubsection{Zoom Maßstab}{Зум}
-		\subsection{CAD - 3D}
+			\TRsubsubsection{Spiegeln vertikal}{Зеркалить вертикально}
+			\TRsubsubsection{Spiegeln vertikal mit Kopie}{Зеркалить вертикально с копией}
+			\TRsubsubsection{Verschieben}{Сдвинуть}
+			\TRsubsubsection{Zoom Maßstab}{Зум}
+			
+		\TRsubsection{CAD - 3D}{}
 			\TRsubsubsection{Ansicht dreidimensional}{Трехмерное изображение}
-			\subsubsection{Plastische Zone Kreis}{Пластичная зона Круг}
-			\subsubsection{Plastische Zone Rechteck}{Пластичная зона Прямоугольник}
-			\subsubsection{Plastische Zone in STL wandeln}{Пластичная зона Прямоугольник}
-			\subsubsection{Schnitt bearbeiten}{Править секцию}
-			\subsubsection{Schnitt neu}{Новая секция}
+			\TRsubsubsection{Plastische Zone Kreis}{Пластичная зона Круг}
+			\TRsubsubsection{Plastische Zone Rechteck}{Пластичная зона Прямоугольник}
+			\TRsubsubsection{Plastische Zone in STL wandeln}{Пластичная зона Прямоугольник}
+			\TRsubsubsection{Schnitt bearbeiten}{Править секцию}
+			\TRsubsubsection{Schnitt neu}{Новая секция}
+			
 		\TRsubsection{CAD - Besonderes}{CAD - Фичи}
-			\subsubsection{Ellipse}{Эллипс}
-			\subsubsection{Freihand}{От руки}
-			\subsubsection{Kurve Approximation}{Аппроксимация кривых}
-			\subsubsection{Kurve Interpolation}{Интерполяция кривых}
-			\subsubsection{Mathematische Funktion}{Математические функции}
-			\subsubsection{Outline - Generierung}{Outline - генерация}
-			\subsubsection{Pad/Bahn - Generierung}{Pad/Bahn - генерация}
-			\subsubsection{Schraffieren}{Колодец}
-			\subsubsection{Tangente}{Касание}
-			\subsubsection{Tangente außen}{Внешнее касание}
-			\subsubsection{Tangente innen}{Внутреннее касание}
-			\subsubsection{Zahnrad außenverzahnt}{Внешнее зубчатое колесо}
-			\subsubsection{Zahnrad innenverzahnt}{Внутреннее зубчатое колесо}
-			\subsubsection{Zahnstange}{Зубчатая рейка}
+			\TRsubsubsection{Ellipse}{Эллипс}
+			\TRsubsubsection{Freihand}{От руки}
+			\TRsubsubsection{Kurve Approximation}{Аппроксимация кривых}
+			\TRsubsubsection{Kurve Interpolation}{Интерполяция кривых}
+			\TRsubsubsection{Mathematische Funktion}{Математические функции}
+			\TRsubsubsection{Outline - Generierung}{Outline - генерация}
+			\TRsubsubsection{Pad/Bahn - Generierung}{Pad/Bahn - генерация}
+			\TRsubsubsection{Schraffieren}{Колодец}
+			\TRsubsubsection{Tangente}{Касание}
+			\TRsubsubsection{Tangente außen}{Внешнее касание}
+			\TRsubsubsection{Tangente innen}{Внутреннее касание}
+			\TRsubsubsection{Zahnrad außenverzahnt}{Внешнее зубчатое колесо}
+			\TRsubsubsection{Zahnrad innenverzahnt}{Внутреннее зубчатое колесо}
+			\TRsubsubsection{Zahnstange}{Зубчатая рейка}
+			
 		\TRsubsection{CAD - Standard}{CAD - Стандартный}
-			\subsubsection{Bogen} 
-			\subsubsection{Gerade}
-			\subsubsection{Gravurtext MAX/einzeilig} 
-			\subsubsection{Gravurtext MAX/mehrzeilig}
-			\subsubsection{Gravurtext TrueType} 
-			\subsubsection{Kreis} 
-			\subsubsection{Langloch} 
-			\subsubsection{Polygon} 
-			\subsubsection{Polygon-Generierung} 
-			\subsubsection{Punkt} 
-			\subsubsection{Rechteck} 
-		\DE{\subsection{CAM - Standard}}
-		\RU{\subsection{CAM - Стандартные}}
-			\subsubsection{Ausspannposition} 
-			\subsubsection{Bahnkorrektur} 
-			\subsubsection{Insel auflösen}
-			\subsubsection{Insel zuweisen} 
-			\subsubsection{Kontur auflösen}
-			\subsubsection{Kontur generieren}
-			\subsubsection{Leitkontur} 
-			\subsubsection{Tasche fräsen} 
-			\subsubsection{Technologie} 
-			\subsubsection{Werkstück - Befestigung} 
-			\subsubsection{Werkstück - Nullpunkt} 
-		\DE{\subsection{Darstellung}}
-		\DE{\subsection{Представление}}
-			\DE{\subsubsection{Ansicht Letzte}} 
-			\RU{\subsubsection{Последний вид}} 
-			\subsubsection{Ausschnitt verschieben} 
-			\subsubsection{Ausschnitt wählen} 
-			\DE{\subsubsection{Neu darstellen}} 
-			\RU{\subsubsection{Новый вид}} 
-			\DE{\subsubsection{Tischdarstellung}}
-			\DE{\subsubsection{Изображение стола}}
-		\DE{\subsection{Dokumentation}}
-		\RU{\subsection{Документация}}
-			\DE{\subsubsection{Bemaßung horizontal}}
-			\RU{\subsubsection{Размер горизонтальный}}
-			\DE{\subsubsection{Bemaßung Radius}}
-			\RU{\subsubsection{Размер радиус}}
-			\DE{\subsubsection{Bemaßung schräg}}
-			\RU{\subsubsection{Размер косой}}
-			\DE{\subsubsection{Bemaßung vertikal}}
-			\RU{\subsubsection{Размер вертикальный}}
-			\DE{\subsubsection{Bemaßung Winkel}}
-			\RU{\subsubsection{Размер угловой}}
-			\DE{\subsubsection{Beschriftung TrueType}} 
-			\RU{\subsubsection{Надпись TrueType}} 
-			\DE{\subsubsection{Beschriftung MAX/einzeilig}} 
-			\RU{\subsubsection{Надпись MAX/однострочный}} 
-			\DE{\subsubsection{Beschriftung MAX/mehrzeilig}}
-			\RU{\subsubsection{Надпись MAX/многострочный}}
-			\DE{\subsubsection{Bearbeiter}}
-			\RU{\subsubsection{Редактирование}}
-			\DE{\subsubsection{Bearbeiter letzte Änderung}}
-			\RU{\subsubsection{Редактирование последней операции}}
-			\DE{\subsubsection{Dateiname}}
-			\RU{\subsubsection{Имя файла}}
-			\DE{\subsubsection{Datum letzte Änderung}}
-			\RU{\subsubsection{Datum последней операции}}
-			\DE{\subsubsection{Datum aktuell}}
-			\RU{\subsubsection{Datum текущей операции}}
-			\DE{\subsubsection{Datum Ausdruck}}
-% 			\RU{\subsubsection{Datum Ausdruck}}
-			\DE{\subsubsection{Datum erstellt}}
-			\RU{\subsubsection{Datum создание}}
-		\subsection{Einstellungen}
-			\DE{\subsubsection{Bezugspunkt}} 
-			\RU{\subsubsection{Контрольная точка}} 
-			\DE{\subsubsection{Fang}}
-			\RU{\subsubsection{Привязка}}
- 			\DE{\subsubsection{Layer (Zeichnungslage)}}
- 			\RU{\subsubsection{Слой (положение рисунка)}} 
-			\DE{\subsubsection{Lineal}}
-			\RU{\subsubsection{Линейка}}
-			\DE{\subsubsection{Linien}}
-			\RU{\subsubsection{Вектор}}
-			\DE{\subsubsection{Raster}}
-			\RU{\subsubsection{Растр}}
-		\DE{\subsection{Information}}
-		\RU{\subsection{Информация}}
-			\subsubsection{Messen} 
-			\subsubsection{Zeichnungsteil-Informationen} 
-		\DE{\subsection{Symbole}}
-		\RU{\subsection{Символы}}
-			\DE{\subsubsection{Symbol auflösen}}
-			\RU{\subsubsection{Символ разрешенные}}
-			\DE{\subsubsection{Symbol laden}} 
-			\RU{\subsubsection{Символ загрузка}} 
-			\DE{\subsubsection{Symbol speichern}} 
-			\RU{\subsubsection{Символ сохранение}} 
-		\DE{\subsection{Umwandlung}}		
-		\RU{\subsection{Преобразование}}		
-			\subsubsection{Trimmen} 
-			\subsubsection{Verlängern} 
-			\subsubsection{Trimmen-Verlängern} 
-			\subsubsection{Trimmen 2 Teile} 
-			\subsubsection{Verlängern 2 Teile} 
-			\subsubsection{Auftrennen} 
-			\subsubsection{Autom. Trimmen-Verl. (Kontur verfolgen)} 
-			\subsubsection{Verdünnen} 
-			\subsubsection{Polygon-Generierung} 
-			\subsubsection{Konvertieren in Gerade} 
-			\subsubsection{Konvertieren in Polygon}
-			\subsubsection{Runden} 
-			\subsubsection{Runden selektiv} 
-			\subsubsection{Fasen} 
-			\subsubsection{Fasen selektiv} 
-						
-\TRchapter{Grundlagen CAD}}
-{Основы CAD}}
-	\TRsection{CAD - Konstruktionsgrundlagen}}
-	{CAD - конструктивные основы}}
-	\TRsection{CAD - Kurzanleitung}}
-	{CAD - короткое руководство}}
-	\TRsection{CAD - 3D Funktionen}}
-	{CAD - 3D функции}}
-	\TRsection{CAD - Technisches Zeichnen}}
-	{CAD - Техническое рисование}}
-		\subsection{Dreiseiten-Darstellung}
-		\subsection{Räumliche Darstellung}
-		\subsection{Arbeiten mit Symbolen}
-	\TRsection{Grafik}}
-	{Графика}}
-		\subsection{Bilder importieren}
-		\subsection{Formulare}
-	 
-\TRchapter{CNC-Fräsmaschinen}{ЧПУ-Фрезерный станок} 
-	\section{Inbetriebnahme, Erste Schritte}
-	\section{Handsteuerung}
-	\section{CNC-Fräsen}
-	\section{Teach In - Programmierung} 
-	\section{Simulation mit OpenGL} 
-	\section{Werkzeug-Korrektur} 
-	\section{CAD/CAM-Fräsen} 
-		\subsection{Einführungsbeispiel, Prinzip} 
-		\subsection{Technologie-Angaben} 
-	\section{3D-Fräsen}
-		\subsection{Körper aus Rippen und Spanten} 
-		\subsection{Plastische Zonen} 
-		\subsection{Randzonen} 
-		\subsection{STL Grundlagen} 
-		\subsection{STL Ebenenbearbeitung} 
-		\subsection{STL 4-Achs-Bearbeitung}
-	\section{Bearbeitungseinheiten} 
-		\subsection{Universal (Metabo)} 
-		\subsection{Schnellfrequenz} 
-		\subsection{Drehstrom} 	 
-	\section{Arbeitshinweise}
-		\subsection{WNP verschieben} 
-		\subsection{Maschine aufrüsten}
-	\section{Hilfsmittel} 
-		\subsection{Pratze, Treppenbock} 
-		\subsection{Anschlagwinkel} 		 
-	\section{Spezialanwendungen} 
-		\subsection{Mit Sonderwerkzeugen}
-			\subsubsection{Gewindefräser ZBGF} 
-		\subsection{Gravuren} 
-			\subsubsection{MAX-Schriften} 
-			\subsubsection{TrueType-Schriften} 
-			\subsubsection{Fortlaufende Zahlen}
-			\subsubsection{am Bogen}
-		\subsection{Leiterplatten} 
-			\subsubsection{Mit nccad entwerfen und fräsen} 
-			\subsubsection{Von Layout-Programmen bearbeiten} 
-			\subsubsection{Von Layout-Programmen bohren} 
-		\subsection{Zahnräder} 
-			\subsubsection{Grundlagen} 
-			\subsubsection{Bearbeiten} 
-			\subsubsection{Praxis} 			
-		\subsection{Schneiden} 
-			\subsubsection{Schleppmesser} 
-		 
-\chapter{CNC-Bohrmaschinen} 
-\chapter{ЧПУ-Сверлильный станок} 
-	\section{Bediengrundlagen}
+			\TRsubsubsection{Bogen}{Дуга}
+			\TRsubsubsection{Gerade}{Прямая}
+			\TRsubsubsection{Gravurtext MAX/einzeilig}{Гравировка MAX/однострочная}
+			\TRsubsubsection{Gravurtext MAX/mehrzeilig}{Гравировка MAX/многострочная}
+			\TRsubsubsection{Gravurtext TrueType}{Гравировка TrueType}
+			\TRsubsubsection{Kreis}{Круг}
+			\TRsubsubsection{Langloch}{Паз}
+			\TRsubsubsection{Polygon}{Многоугольник}
+			\TRsubsubsection{Polygon-Generierung}{Полигон генерация}
+			\TRsubsubsection{Punkt}{Точка}
+			\TRsubsubsection{Rechteck}{Прямоугольник}
+			
+ 		\TRsubsection{CAM - Standard}{CAM - Стандарт}
+ 			\TRsubsubsection{Ausspannposition}{Позиция зажима}
+ 			\TRsubsubsection{Bahnkorrektur}{Коррекция трассы}
+ 			\TRsubsubsection{Insel auflösen}{Растворение острова}
+ 			\TRsubsubsection{Insel zuweisen}{Назначить Остров}
+ 			\TRsubsubsection{Kontur auflösen}{Растворить контур}
+ 			\TRsubsubsection{Kontur generieren}{Создание контура}
+ 			\TRsubsubsection{Leitkontur}{Ограничивающий контур}
+ 			\TRsubsubsection{Tasche fräsen}{Фрезерование кармана}
+ 			\TRsubsubsection{Technologie}{Технология}
+ 			\TRsubsubsection{Werkstück - Befestigung}{Заготовка - фиксация}
+ 			\TRsubsubsection{Werkstück - Nullpunkt}{Заготовка - Нулевая точка}
+ 			
+ 		\TRsubsection{Darstellung}{Представление}
+			\TRsubsubsection{Ansicht Letzte}{Последний вид}
+			\TRsubsubsection{Ausschnitt verschieben}{Переместить раздел}
+			\TRsubsubsection{Ausschnitt wählen}{Выбрать раздел}
+			\TRsubsubsection{Neu darstellen}{Новый вид}
+			\TRsubsubsection{Tischdarstellung}{Изображение стола}
+			
+		\TRsubsection{Dokumentation}{Документация}
+			\TRsubsubsection{Bemaßung horizontal}{Горизонтальный размер}
+			\TRsubsubsection{Bemaßung Radius}{Радиусный размер}
+			\TRsubsubsection{Bemaßung schräg}{Косой размер}
+			\TRsubsubsection{Bemaßung vertikal}{Вертикальный размер}
+			\TRsubsubsection{Bemaßung Winkel}{Угловой размер}
+			\TRsubsubsection{Beschriftung TrueType}{Надпись TrueType}
+			\TRsubsubsection{Beschriftung MAX/einzeilig}{Надпись MAX/однострочный}
+			\TRsubsubsection{Beschriftung MAX/mehrzeilig}{Надпись MAX/многострочный}
+			\TRsubsubsection{Bearbeiter}{Редактор}
+			\TRsubsubsection{Bearbeiter letzte Änderung}{Редактор последнего изменения}
+			\TRsubsubsection{Dateiname}{Имя файла}
+			\TRsubsubsection{Datum letzte Änderung}{Дата последнего изменения}
+			\TRsubsubsection{Datum aktuell}{Текущая дата}
+			\TRsubsubsection{Datum Ausdruck}{Дата выражение}
+			\TRsubsubsection{Datum erstellt}{Дата создания}
+		\TRsubsection{Einstellungen}{Настройки}
+			\TRsubsubsection{Bezugspunkt}{Контрольная точка}
+			\TRsubsubsection{Fang}{Привязка}
+ 			\TRsubsubsection{Layer (Zeichnungslage)}{Слой (рисунок расположения)}
+			\TRsubsubsection{Lineal}{Линейка}
+			\TRsubsubsection{Linien}{Вектор}
+			\TRsubsubsection{Raster}{Растр}
+			
+		\TRsubsection{Information}{Информация}
+			\TRsubsubsection{Messen}{Измерение} 
+			\TRsubsubsection{Zeichnungsteil-Informationen}{Рисование часть информации} 
+			
+ 		\TRsubsection{Symbole}{Символы}
+			\TRsubsubsection{Symbol auflösen}{Разрешенные символы}
+			\TRsubsubsection{Symbol laden}{Загрузка символа}
+			\TRsubsubsection{Symbol speichern}{Сохранение символа}
+			
+ 		\TRsubsection{Umwandlung}{Преобразование}		
+ 			\TRsubsubsection{Trimmen}{Обрезка} 
+			\TRsubsubsection{Verlängern}{Удлинение}
+			\TRsubsubsection{Trimmen-Verlängern}{Обрезка-Удлинение}
+			\TRsubsubsection{Trimmen 2 Teile}{Обрезка 2 детали}
+			\TRsubsubsection{Verlängern 2 Teile}{Удлинение 2 детали}
+			\TRsubsubsection{Auftrennen}{Разделение}
+			\TRsubsubsection{Autom. Trimmen-Verl. (Kontur verfolgen)}{Автоматическая
+			обрезка-удлинение (verfolgen трека)}
+			\TRsubsubsection{Verdünnen}{Разбавление}
+			\TRsubsubsection{Polygon-Generierung}{Полигон генерация}
+			\TRsubsubsection{Konvertieren in Gerade}{Преобразовать в отрезки}
+			\TRsubsubsection{Konvertieren in Polygon}{Преобразовать в многоугольник}
+			\TRsubsubsection{Runden}{Скругление}
+			\TRsubsubsection{Runden selektiv}{Селективное скругление}
+			\TRsubsubsection{Fasen}{Фаска}
+			\TRsubsubsection{Fasen selektiv}{Селективная фаска}
 
-\chapter{CNC-Drehmaschinen}
-	\section{Daten und Fakten} 
-	\section{Inbetriebnahme, Erste Schritte} 
-	\section{CNC-Drehen} 
-	\section{Simulation mit OpenGL} 
-	\section{Werkzeugverwaltung} 
-	\section{Testhilfen} 
-	\section{CAD/CAM-Drehen} 
-		\subsection{Prinzip} 
-		\subsection{Mehrfachzyklen} 
-	\section{Spezialanwendungen} 
-		\subsection{Gewinde-Drehen} 
-		\subsection{CNC-Zyklen} 
- 
-\chapter{Dosier-Systeme}
-	\section{Grundlagen} 
-	\section{Schubdosierung} 
- 
-\chapter{Automatisierungs-Systeme}
-	\section{Grundlagen} 
-	\section{Schaltfunktionen während Bewegung} 
- 
-\chapter{KOSY-Steuerungen} 
-	\section{Standard-Ausführung} 
-	\section{Wabeco-Ausführung} 
+\TRchapter{Grundlagen CAD}{Основы CAD}
+	\TRsection{CAD - Konstruktionsgrundlagen}{CAD - Основы дизайна}
+	\TRsection{CAD - Kurzanleitung}{CAD - краткое руководство}
+	\TRsection{CAD - 3D Funktionen}{CAD - 3D-функции}
+	\TRsection{CAD - Technisches Zeichnen}{CAD - Технический рисунок}
+		\TRsubsection{Dreiseiten-Darstellung}{Три-представление}
+		\TRsubsection{Räumliche Darstellung}{Пространственное представление}
+		\TRsubsection{Arbeiten mit Symbolen}{Работа с символами}
+	\TRsection{Grafik}{Графика}
+		\TRsubsection{Bilder importieren}{Импорт изображений}
+		\TRsubsection{Formulare}{Формы}
 
-\chapter{Spezial-Funktionen/Programme} 
-	\section{Hilfsprogramme} 
-		\subsection{Zeichensatz-Editor} 
+\TRchapter{CNC-Fräsmaschinen}{Фрезерные станки с ЧПУ}
+	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+работе}
+ 	\TRsection{Handsteuerung}{Ручное управление}
+	\TRsection{CNC-Fräsen}{ЧПУ Фрезеровка}
+	\TRsection{Teach In - Programmierung}{Teach In - Программирование}
+	\TRsection{Simulation mit OpenGL}{Моделирование в OpenGL}
+	\TRsection{Werkzeug-Korrektur}{Коррекция инструмента}
+	\TRsection{CAD/CAM-Fräsen}{CAD / CAM фрезерные}
+		\TRsubsection{Einführungsbeispiel, Prinzip}{Введение, принцип}
+		\TRsubsection{Technologie-Angaben}{Информационные технологии}
+	\TRsection{3D-Fräsen}{3D фрезеровка}
+		\TRsubsection{Körper aus Rippen und Spanten}{Körper aus Rippen und Spanten}
+		\TRsubsection{Plastische Zonen}{Пластические зоны}
+		\TRsubsection{Randzonen}{Краевые зоны}
+		\TRsubsection{STL Grundlagen}{STL основы}
+		\TRsubsection{STL Ebenenbearbeitung}{STL Редактирование слоев}
+		\TRsubsection{STL 4-Achs-Bearbeitung}{STL 4-осевая обработка}
+	\TRsection{Bearbeitungseinheiten}{Блоки обработки}
+		\TRsubsection{Universal (Metabo)}{Universal (Metabo)}
+		\TRsubsection{Schnellfrequenz}{Высокая частота}
+		\TRsubsection{Drehstrom}{Фаза}
+	\TRsection{Arbeitshinweise}{Рабочие инструкции}
+		\TRsubsection{WNP verschieben}{Переместить WNP}
+		\TRsubsection{Maschine aufrüsten}{Обновление машины}
+	\TRsection{Hilfsmittel}{СПИД}
+		\TRsubsection{Pratze, Treppenbock}{Прижим, лестничный блок}
+		\TRsubsection{Anschlagwinkel}{Параллельки}
+	\TRsection{Spezialanwendungen}{Специальные применения}
+		\TRsubsection{Mit Sonderwerkzeugen}{Использование специальных инструментов}
+			\TRsubsubsection{Gewindefräser ZBGF}{Gewindefräser ZBGF}
+		\TRsubsection{Gravuren}{Гравировка}
+			\TRsubsubsection{MAX-Schriften}{MAX-шрифты}
+			\TRsubsubsection{TrueType-Schriften}{TrueType шрифты}
+			\TRsubsubsection{Fortlaufende Zahlen}{Нумерация}
+			\TRsubsubsection{am Bogen}{на носу}
+		\TRsubsection{Leiterplatten}{Печатная плата}
+			\TRsubsubsection{Mit nccad entwerfen und fräsen}{сверление и фрезеровка с
+			nccad}
+			\TRsubsubsection{Von Layout-Programmen bearbeiten}{Импорт из программы
+			разводки}
+			\TRsubsubsection{Von Layout-Programmen bohren}{Сверление из программы
+			разводки}
+		\TRsubsection{Zahnräder}{Шестеренки}
+			\TRsubsubsection{Grundlagen}{Основы}
+			\TRsubsubsection{Bearbeiten}{Изготовление}
+			\TRsubsubsection{Praxis}{Практика}
+		\TRsubsection{Schneiden}{Резка}
+			\TRsubsubsection{Schleppmesser}{Поворотный нож}
 
-\chapter{Import/Export} 
-	\section{CNC-Programmexport} 
-	\section{Postprozessoranpassung} 
-	\section{Schnittstellen} 
-	\section{2D-Import} 
-		\subsection{DXF}
-		\subsection{HPGL} 
-		\subsection{Nachbearbeitung} 
-		\subsection{Scannen und Vektorisieren} 
-	\section{3D-Import} 
-		\subsection{STL}
-	\section{3D-Export} 
-		\subsection{STL}
+\TRchapter{CNC-Bohrmaschinen}{Расточной станок с ЧПУ}
+	\TRsection{Bediengrundlagen}{Основная операция}
 
-\chapter{Optionen und deren Bedienung} 
-	\section{Abtasten}
-	\section{Drehen} 
-	\section{KOSY Wagen} 
-	\section{Mindermengendosierung} 
-	\section{Schubdosierung} 
-	\section{Spooler} 
-	\section{Tiefenregelung} 
-	\section{Werkzeuglängenmessung} 
-	\section{Werkzeugwechsel} 
+\TRchapter{CNC-Drehmaschinen}{Токарный станок с ЧПУ}
+	\TRsection{Daten und Fakten}{Цифры и факты}
+	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+	работе}
+	\TRsection{CNC-Drehen}{ЧПУ точение}
+	\TRsection{Simulation mit OpenGL}{Симуляция в OpenGL}
+	\TRsection{Werkzeugverwaltung}{Управление инструментами}
+	\TRsection{Testhilfen}{Средства тестирования}
+	\TRsection{CAD/CAM-Drehen}{Токарный CAD/CAM}
+		\TRsubsection{Prinzip}{Принцип}
+		\TRsubsection{Mehrfachzyklen}{Несколько циклов}
+	\TRsection{Spezialanwendungen}{Специальные применения}
+		\TRsubsection{Gewinde-Drehen}{Нарезание резьбы}
+		\TRsubsection{CNC-Zyklen}{CNC-Zyklen}
 
-\chapter{Umgang mit dem System}
-	\section{Service und Wartung} 
-		\subsection{Fehlerliste} 
-		\subsection{Hotline} 
-		\subsection{Massiv-Körper reparieren} 
-	\section{Transport} 
-		\subsection{Massive Maschinen} 
-		\subsection{Paketversand} 
- 
-\chapter{Anhang}
-	\section{Liesmich/Installation} 
-	\section{Anschlussbelegung} 
-	\section{CAM-Technologien} 
-	\section{Dreh-Zyklen} 
-	\section{NC-Befehle} 
-	\section{NC-Kurzbefehlsliste} 
-	\section{Netzwerk-Installation} 
-	\section{Tastenbelegung (HotKeys)} 
- 
- 
-\part{ZSE3}
+\TRchapter{Dosier-Systeme}{Системы дозирования}
+	\TRsection{Grundlagen}{Основы}
+	\TRsection{Schubdosierung}{Повысить дозу}
+
+\TRchapter{Automatisierungs-Systeme}{Системы автоматизации}
+	\TRsection{Grundlagen}{Основы}
+	\TRsection{Schaltfunktionen während Bewegung}{Функции переключения во время
+	тренировки}
+
+\TRchapter{KOSY-Steuerungen}{Стойка KOSY}
+	\TRsection{Standard-Ausführung}{Стандартная версия}
+	\TRsection{Wabeco-Ausführung}{Wabeco версия}
+
+\TRchapter{Spezial-Funktionen/Programme}{Спецфункции/программы}
+	\TRsection{Hilfsprogramme}{Программа помощи}
+		\TRsubsection{Zeichensatz-Editor}{Редактор шрифтов}
+
+\TRchapter{Import/Export}{Импорт / экспорт}
+	\TRsection{CNC-Programmexport}{Экспорт Программы ЧПУ}
+	\TRsection{Postprozessoranpassung}{Постпроцессор}
+	\TRsection{Schnittstellen}{Интерфейсы}
+	\TRsection{2D-Import}{Импорт 2D}
+		\TRsubsection{DXF}{DXF}
+		\TRsubsection{HPGL}{HPGL}
+		\TRsubsection{Nachbearbeitung}{Пост}
+		\TRsubsection{Scannen und Vektorisieren}{Сканирование и векторизация}
+	\TRsection{3D-Import}{Импорт 3D}
+		\TRsubsection{STL}{STL}
+	\TRsection{3D-Export}{3D экспорт}
+		\TRsubsection{STL}{STL}
+
+% \chapter{Optionen und deren Bedienung} 
+% 	\section{Abtasten}
+% 	\section{Drehen} 
+% 	\section{KOSY Wagen} 
+% 	\section{Mindermengendosierung} 
+% 	\section{Schubdosierung} 
+% 	\section{Spooler} 
+% 	\section{Tiefenregelung} 
+% 	\section{Werkzeuglängenmessung} 
+% 	\section{Werkzeugwechsel} 
+% 
+% \chapter{Umgang mit dem System}
+% 	\section{Service und Wartung} 
+% 		\TRsubsection{Fehlerliste} 
+% 		\TRsubsection{Hotline} 
+% 		\TRsubsection{Massiv-Körper reparieren} 
+% 	\section{Transport} 
+% 		\TRsubsection{Massive Maschinen} 
+% 		\TRsubsection{Paketversand} 
+%  
+% \chapter{Anhang}
+% 	\section{Liesmich/Installation} 
+% 	\section{Anschlussbelegung} 
+% 	\section{CAM-Technologien} 
+% 	\section{Dreh-Zyklen} 
+% 	\section{NC-Befehle} 
+% 	\section{NC-Kurzbefehlsliste} 
+% 	\section{Netzwerk-Installation} 
+% 	\section{Tastenbelegung (HotKeys)} 
+%  
+%  
+% \part{ZSE3}
 
 \end{document}
