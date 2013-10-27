@@ -2,52 +2,6 @@
 \DE{CAD-Konstruktionsgrundlagen}
 \RU{CAD Основы конструирования}
 
-\DE{berarbeitet: August 2002
-\RU{Редакция: Август 2002
-
-\DE{Allgemeines}
-\RU{Введение}
-
-\DE{Um ein CAD-Programm zu verstehen, muß man sich zunächst mit dem Bedienprinzip auseinandersetzen.}
-\RU{Прежде чем освоить любую CAD-программу, прежде всего необходимо понять принцип ее эксплуатации}
-\DE{Es gibt beim Vergleich der verschiedenen CAD-Programme zwangsläufig Gemeinsamkeiten, wie 
-beispielsweise die Tatsache, daß geometrische Grundfiguren ausgewählt werden müssen. }
-\RU{Сравнивая различные CAD-программы, неизбежно найдем общие черты, например факт, что 
-всегда есть выбор геометрических фигур.}
-\DE{Es gibt aber auch Unterschiede, wie beispielsweise die Belegung der rechten Maustaste.}
-\RU{Но существуют также и различия, например привязка команды на правую кнопку мыши.} 
-\DE{Sie sollten deshalb die folgenden Punkte durcharbeiten und in der praktischen Arbeit dieses Wissen anwenden.}
-\RU{Ниже подробно описаны элементы практической работы.}
-
-\DE{Entweder Sie gehen in der Reihenfolge der Nummerierung alle Punkte durch oder Sie klicken auf eines der Themen 
-im folgenden Inhaltsverzeichnis, um zur gewünschten Erklärung zu kommen.} 
-\RU{Сейчас мы последовательно пройдем по темам оглавления,, желая пояснить методы испаользования.} 
-\DE{Zum Inhaltsverzeichnis kehren Sie immer wieder zurück, wenn Sie in eines der Felder [Zurück] - oder im 
-Browser-Menü den Button "Zurück" klicken.}
-\RU{Вернитесь к оглавлению, когда вы в поле [Назад] -- или используйте меню браузера нажав кнопку "Назад"}  
-
-Список тем
-
-\tableofcontents
-
-
-\DEsection[1]{Start}
-\RUsection[1]{Начало}
-
-\DE{Zunächst müssen Sie im Menü Datei entscheiden, ob Sie mit CNC oder CAD arbeiten wollen, eine neue Datei 
-erstellen- oder eine vorhandene laden wollen. Bei CNC gelangen Sie in den Texteditor, um CNC-Programme 
-erstellen, bearbeiten oder ausführen zu können. Bei CAD starten Sie ein spezielles Konstruktionsprogramm 
-mit optimaler Verbindung zur CNC-Maschine.
-Um eine neue Zeichnung konstruieren zu können klicken Sie auf CAD/CAM - Neue Zeichnung.}
-
-\RU{
-Сначала нужно выбрать в пунктах меню \menu{Файл}, желаем ли мы работать в режиме ЧПУ или САПР,
-и выбрать создать новый файл или загрузить существующий. Если выбран режим ЧПУ, запускается редактор текста,
-в котором пишется ЧПУ-программа, для обработки детали или отладки. При выборе режима САПР запускается
-специальная программа графического ввода детали, более удобная для работы с ЧПУ-станком.   
-
-}
-
  
 2. Der CAD-Bildschirm
 Sobald Sie im Menu Datei/CAD/CAM - Neue Zeichnung gewahlt haben, konnen Sie im Zeichenfeld konstruieren. Im Bild oben wird Ihnen die Bedeutung der einzelnen Bereiche des CAD-Bildschirms erklдrt. Links neben dem Zeichenfeld ist das ICON-Menu. In ihm kцnnen die wichtigsten Funktionen direkt gewдhlt werden. 
