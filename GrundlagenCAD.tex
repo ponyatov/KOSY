@@ -1,0 +1,207 @@
+\input{header}
+
+\title{NCCAD7: Основы САПР}
+\author{перевод Dmitry Ponyatov <dponyatov@gmail.com>}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\bigskip
+
+\TRparagraph{Grundlagen CAD}{Основы САПР}
+\TRparagraph{CAD - Konstruktionsgrundlagen}{САПР - Основы дизайна}
+\TRparagraph{Allgemeines}{Общая информация}
+
+\DE{Um ein CAD-Programm zu verstehen, muß man sich zunächst mit dem
+Bedienprinzip auseinandersetzen.}
+\RU{Чтобы понять САПР-программу, нужно сначала разобраться с принципами работы.}
+\DE{Es gibt beim Vergleich der verschiedenen
+CAD-Programme zwangsläufig Gemeinsamkeiten, wie beispielsweise die Tatsache,
+daß geometrische
+Grundfiguren ausgewählt werden müssen.}
+\RU{Сравнивая различные САПР, многие черты должны быть общими, например, тот
+факт, что геометрические примитивы должны быть выбраны.}
+\DE{Es gibt aber auch Unterschiede, wie
+beispielsweise die Belegung der rechten Maustaste.}
+\RU{Но есть и отличия, например, назначение правой кнопки мыши.}
+\DE{Sie sollten deshalb die folgenden Punkte durcharbeiten und in der praktischen
+Arbeit dieses Wissen anwenden.}
+\RU{Таким образом, вы должны работать используя описанные далее приемы, и
+применять эти знания в практической работе.}
+\DE{Entweder Sie gehen in der Reihenfolge der Nummerierung alle Punkte durch
+oder Sie klicken auf eines der Themen im folgenden Inhaltsverzeichnis, um zur
+gewünschten Erklärung zu kommen.}
+\RU{Либо вы идете в порядке нумерации всех терминов или нажмите на одну из тем в
+следующей таблице содержания, чтобы получить требуемое.}
+\DE{Zum Inhaltsverzeichnis kehren Sie immer wieder zurück, wenn Sie in eines der
+Felder [Zurück] - oder im Browser-Menü den Button "Zurück" klicken.}
+\RU{Чтобы вернуться к содержанию, если вы находитесь в одном из полей
+\keys{назад} - кнопка \keys{Назад} или нажмите в меню обозревателя.}
+
+% \TRsubsection{Inhaltsverzeichnis der Themen}{Индекс темы}
+
+\TRchapter{Start}{Начало}
+
+\includegraphics{pic/Kons1.png}\bigskip
+
+\DE{Zunächst müssen Sie im Menü Datei entscheiden, ob Sie mit CNC oder CAD arbeiten
+wollen, eine neue Datei erstellen- oder eine vorhandene laden wollen.}
+\RU{Во-первых, вы должны решить выбрав в меню Файл, хотите ли вы работать с ЧПУ
+или САПР, создать новый файл или загрузить существующий.}
+\DE{Bei CNC
+gelangen Sie in den Texteditor, um CNC-Programme erstellen, bearbeiten oder
+ausführen zu können.}
+\RU{В режиме ЧПУ откроется текстовый редактор для создания программы ЧПУ, чтобы
+редактировать ее, с возможностью выполнения.}
+\DE{Bei CAD starten Sie ein spezielles Konstruktionsprogramm
+mit optimaler Verbindung zur CNC-Maschine.}
+\RU{При выборе режима САПР запускается программа конструирования, с оптимальной
+адаптацией для использования совместно со ЧПУ-станком.}
+\DE{Um eine neue Zeichnung konstruieren zu können klicken Sie auf \keys{CAD/CAM
+- Neue Zeichnung}.}
+\RU{Для того чтобы построить новый чертеж, нажмите на \keys{CAD / CAM - новый
+рисунок}.}
+
+\TRchapter{Der CAD-Bildschirm}{Экран САПР}
+
+\includegraphics{pic/Kons2.png}\bigskip
+
+\DE{Sobald Sie im Menü \keys{Datei}/\keys{CAD/CAM - Neue Zeichnung} gewählt
+haben, können Sie im Zeichenfeld konstruieren.}
+\RU{После того как вы выбрали в меню \keys{Файл}/\keys{CAD/CAM Новый рисунок},
+можно построить характер поля.}
+\DE{Im Bild oben wird Ihnen die Bedeutung der
+einzelnen Bereiche des CAD-Bildschirms erklärt.}
+\RU{На картинке выше вы видите несколько важных областей экрана САПР.}
+\DE{Links neben dem Zeichenfeld ist das ICON-Menü.}
+\RU{В левой части области рисования расположено иконное меню.}
+\DE{In ihm können die wichtigsten Funktionen direkt gewählt werden.}
+\RU{Наиболее важные функции могут быть выбраны непосредственно в нем.}
+
+\TRsection{Bereiche der ICON-Hauptleiste}{Области основной
+    панели инструментов}
+
+Иконное меню разделено сверху вниз на разные группы:
+
+\begin{itemize}
+  \item
+\DE{Der Technologie-Bereich, der den Zugang zu den CAM- (Bearbeitungs-)
+Funktionen eröffnet.}\\
+\RU{Область технологий, открываеющая доступ к CAM-функциям обработки.}
+  \item
+\DE{Der Einstell- und Darstellungsbereich für die die Auswahl der Layer, Linien
+usw. - und für die Behandlung des Zeichnungs-Ausschnittes.}\\
+\RU{Область установки и отображения для выбора слоя, линии, и т.д. - а также для
+лечения подписки вырез.}
+  \item
+\DE{Der Korrekturbereich zum Bearbeiten (editieren) von Zeichnungsteilen. }\\
+\RU{Редактирование областей компенсации для обработки деталей согласно чертежа.}
+  \item
+\DE{Der 2D-Bereich für die Konstruktion von Zeichnungsteilen in der 
+X-Y-Ebene.}\\
+\RU{2D области для проектирования элементов чертежа в плоскости XY.}
+  \item
+\DE{Der 3D-Bereich für die Konstruktion von "Plastischen Zonen". }\\
+\RU{3D область для задания "пластических зон".}
+  \item
+\DE{Der Dokumentations- und Informationsbereich }\\
+\RU{Область документирования и информации}
+\end{itemize}
+
+\DE{Bewegen Sie zum Kennenlernen der Funktionen die Maus vom Zeichenfeld zum
+ICON-Menü und dort zu einem beliebigen ICON (beispielsweise zu Gerade im 2D-Bereich),
+warten Sie einen Augenblick.}
+\RU{Переместите указатель мыши на любой значок в иконном меню, чтобы узнать
+о его функции (например в 2D области), подождите пару секунд.}
+\DE{Es erscheint ein Erklärungsfeld (ToolTip) mit der
+Bedeutung dieses ICONs.}
+\RU{Вы увидите всплывающее поле подсказки с функцией этой иконки.}
+
+\TRsection{Die Status-Zeile}{Строка состояния}
+
+\includegraphics{pic/Kons3.png}\bigskip
+
+\DE{Sie hat eine besondere Aufgabe:}
+\RU{Она имеет конкретную задачу:}
+\DE{Dort "sagt" Ihnen nccad, welche Bedienschritte erwartet werden (z.B.:
+Startpunkt einer Geraden wählen). }
+\RU{В ней NCCAD "говорит" Вам какая операция будет выполнена (например,
+выбор начальной точки линии).}
+\DE{Alle zu konstruierenden Zeichnungsteile basieren auf mathematischer
+Grundlage, d.h.
+es müssen Koordinatenpunkte angegeben werden, mit deren Hilfe die geometrischen
+Figuren berechnet - und dargestellt werden können.}
+\RU{Все элементы строятся на математической основе, то есть должны быть указаны
+координаты, с помощью которых рассчитываются геометрические фигуры - и могут быть отображены.}
+\DE{Zunächst ist kein Zeichnungsteil vorgeschlagen, wählen Sie z.B in der}
+\RU{Во-первых, ни одна часть чертежа не предлагается выбрать для}
+\DE{ICON-Gruppe}
+\RU{в группе иконок}
+\DE{\keys{CAD Standard}}
+\DE{das ICON GERADE.}
+\RU{в панели иконок.} 
+\DE{Sie benötigt zwei Punkte (Startpunkt und Endpunkt), die durch 2 Mausklicks (kurzes
+Drücken der linken Maustaste) an 2 verschiedenen Stellen des Zeichenfeldes mit dem
+ Fadenkreuz positioniert werden.}
+\RU{Вам нужно указать две точки (начальная точка и конечная точка) сделав 2
+щелчка (нажатием левой кнопки мыши), которые будут проставлены в двух разных 
+местах рабочей области, указанных символом перекрестия.} 
+\DE{Grundsätzlich wird in der Statuszeile angezeigt,
+ welcher Konstruktionspunkt momentan eingegeben werden muß.}
+\RU{Принцип указывается в строке состояния, в момент ввода конструкционной
+точки.}
+
+\TRchapter{CAD-Funktionswahl}{Функции выбора САПР}
+
+\includegraphics{pic/Kons4.png}\bigskip
+
+\TRchapter{Koordinaten beim Konstruieren}{Координаты в конструировании}
+
+\includegraphics{pic/Kons5.png}\bigskip
+
+    \TRsection{Möglichkeiten der Koordinaten-Angabe}{Cпособы
+    задания координат}
+    \TRsection{Konstruktionsbeispiel}{Пример расчета}
+    \TRsection{Die Möglichkeiten der Koordinaten-Eingabe}{Возможности 
+    входных координат}
+
+\TRchapter{Ausschnitte und Darstellungsformen}{Разделы и формы}
+
+\includegraphics{pic/Kons6.png}\bigskip
+
+    \TRsection{Unmittelbar Veränderung der Darstellung}{Немедленно
+    смените представление}
+    \TRsection{ICONS für die Wahl der Darstellungsformen}{Иконки
+    для выбора форматов отображения}
+    \TRsection{Fang}{Привязка}
+
+\TRchapter{Besondere Konstruktionshilfen}{Особый дизайн СПИДом}
+
+    \TRsection{Maus fixieren (Orthogonales Zeichnen)}{Мышь Fix
+    (ортогонального рисования)}
+    \TRsection{Fang von Konstruktionspunkten mit dem Suchfenster}{Строительство
+    ловить точки с окном поиска}
+    \TRsection{Fang von deckungsgleichen Konstruktionspunkten}{привлекательным
+    дизайном конгруэнтным пунктов}
+    \TRsection{Gruppenbildung}{Группировка}
+    \TRsection{Tastaturbelegung}{Макет}
+
+\TRchapter{Layer (Zeichnungslagen)}{Слой (материалы для рисования)}
+
+    \TRsection{Layer für Zeichnungs- und Frästeile}{Слои для рисования и
+    фрезерной частей}
+    \TRsection{Besondere Layer}{Специальный слой}
+
+% 	\TRsection{CAD - Kurzanleitung}{CAD - краткое руководство}
+% 	\TRsection{CAD - 3D Funktionen}{CAD - 3D-функции}
+% 	\TRsection{CAD - Technisches Zeichnen}{CAD - Технический рисунок}
+% 		\TRsubsection{Dreiseiten-Darstellung}{Три-представление}
+% 		\TRsubsection{Räumliche Darstellung}{Пространственное представление}
+% 		\TRsubsection{Arbeiten mit Symbolen}{Работа с символами}
+% 	\TRsection{Grafik}{Графика}
+% 		\TRsubsection{Bilder importieren}{Импорт изображений}
+% 		\TRsubsection{Formulare}{Формы}
+
+\end{document}
+

@@ -1,25 +1,4 @@
-\documentclass[14pt,a4paper]{book}
-
-\usepackage[utf8]{inputenc}
-\usepackage[german,english,russian]{babel}
-\usepackage[unicode]{hyperref}
-% \hypersetup{unicode=true}
-
-\usepackage{graphicx}
-\usepackage{xcolor}
-%\usepackage{menukeys}
-\newcommand{\keys}[1]{[#1]}
-
-\newcommand{\DE}[1]{\textcolor{green}{#1}} 
-\newcommand{\RU}[1]{\textcolor{red}{#1}}
-\newcommand{\TRpart}[2]{\part{#2 /#1/}}
-\newcommand{\TRchapter}[2]{\chapter{#2 /#1/}}
-\newcommand{\TRsection}[2]{\section{#2 /#1/}}
-\newcommand{\TRsubsection}[2]{\subsection{#2 /#1/}}
-\newcommand{\TRsubsubsection}[2]{\subsubsection{#2 /#1/}}
-\newcommand{\TRparagraph}[2]{\paragraph{#2 /#1/}}
-
-\newcommand{\file}[1]{\textbf{#1}}
+\input{header}
 
 \title{Стойка ЧПУ KOSY и NCCAD7}
 \author{перевод Dmitry Ponyatov <dponyatov@gmail.com>}
@@ -254,299 +233,138 @@ erscheint die Hilfsseite, die das Thema erläutert.
 			\TRsubsubsection{Fasen}{Фаска}
 			\TRsubsubsection{Fasen selektiv}{Селективная фаска}
 
-\TRchapter{Grundlagen CAD}{Основы CAD}
-	\TRsection{CAD - Konstruktionsgrundlagen}{CAD - Основы дизайна}
+\input{GrundlagenCAD}
 
-\TRsubsection{Allgemeines}{Общая информация}
-
-\DE{Um ein CAD-Programm zu verstehen, muß man sich zunächst mit dem
-Bedienprinzip auseinandersetzen.}
-\RU{Чтобы понять САПР-программу, нужно сначала разобраться с принципами работы.}
-\DE{Es gibt beim Vergleich der verschiedenen
-CAD-Programme zwangsläufig Gemeinsamkeiten, wie beispielsweise die Tatsache, 
-daß geometrische 
-Grundfiguren ausgewählt werden müssen.}
-\RU{Сравнивая различные САПР, многие черты должны быть общими, например, тот
-факт, что геометрические примитивы должны быть выбраны.}
-\DE{Es gibt aber auch Unterschiede, wie 
-beispielsweise die Belegung der rechten Maustaste.}
-\RU{Но есть и отличия, например, назначение правой кнопки мыши.}
-\DE{Sie sollten deshalb die folgenden Punkte durcharbeiten und in der praktischen 
-Arbeit dieses Wissen anwenden.} 
-\RU{Таким образом, вы должны работать используя описанные далее приемы, и
-применять эти знания в практической работе.}
-\DE{Entweder Sie gehen in der Reihenfolge der Nummerierung alle Punkte durch
-oder Sie klicken auf eines der Themen im folgenden Inhaltsverzeichnis, um zur 
-gewünschten Erklärung zu kommen.}
-\RU{Либо вы идете в порядке нумерации всех терминов или нажмите на одну из тем в
-следующей таблице содержания, чтобы получить требуемое.}
-\DE{Zum Inhaltsverzeichnis kehren Sie immer wieder zurück, wenn Sie in eines der 
-Felder [Zurück] - oder im Browser-Menü den Button "Zurück" klicken.}
-\RU{Чтобы вернуться к содержанию, если вы находитесь в одном из полей
-\keys{назад} - кнопка \keys{Назад} или нажмите в меню обозревателя.}
-
-\TRsubsection{Inhaltsverzeichnis der Themen}{Индекс темы}
-
-\includegraphics{pic/Kons1.png}
-\TRsubsection{1. Start}{1 Начало}
-
-\DE{Zunächst müssen Sie im Menü Datei entscheiden, ob Sie mit CNC oder CAD arbeiten 
-wollen, eine neue Datei erstellen- oder eine vorhandene laden wollen.}
-\RU{Во-первых, вы должны решить выбрав в меню Файл, хотите ли вы работать с ЧПУ
-или САПР, создать новый файл и загружзить существующий.}
-\DE{Bei CNC 
-gelangen Sie in den Texteditor, um CNC-Programme erstellen, bearbeiten oder 
-ausführen zu können.}
-\RU{В режиме ЧПУ откроется текстовый редактор для создания программы ЧПУ, чтобы
-редактировать ее, с возможностью выполнения.}
-\DE{Bei CAD starten Sie ein spezielles Konstruktionsprogramm 
-mit optimaler Verbindung zur CNC-Maschine.}
-\RU{При выборе режима САПР запускается программа конструирования, с оптимальной
-адаптацией для использования совместно со ЧПУ-станком.} 
-\DE{Um eine neue Zeichnung konstruieren zu können klicken Sie auf CAD/CAM - Neue 
-Zeichnung.}
-\RU{Для того чтобы построить новый чертеж, нажмите на \keys{CAD / CAM - новый
-рисунок}.}
-
-\includegraphics{pic/Kons2.png}
-\TRsubsection{2. Der CAD-Bildschirm}{2 Экран CAD}
-
-\DE{Sobald Sie im Menü Datei/CAD/CAM - Neue Zeichnung gewählt haben, können Sie
-im Zeichenfeld konstruieren.}
-\RU{После того как вы выбрали в меню Файл/CAD/CAM Новый рисунок, можно построить
-характер поля.}
-\DE{Im Bild oben wird Ihnen die Bedeutung der
-einzelnen Bereiche des CAD-Bildschirms erklärt.}
-\RU{На картинке выше вы видите несколько важных областей экрана САПР.}
-\DE{Links neben dem Zeichenfeld ist
-das ICON-Menü.}
-\RU{В левой части области рисования расположено иконное меню.}
-\DE{In ihm können die wichtigsten Funktionen direkt gewählt werden.}
-\RU{Наиболее важные функции могут быть выбраны непосредственно в нем.} 
-
-    \TRsubsubsection{2.1 Bereiche der ICON-Hauptleiste}{2.1 Области основной
-    панели инструментов}
-    
-Иконное меню разделено сверху вниз на разные группы:
-
-\begin{itemize}
-  \item
-\DE{Der Technologie-Bereich, der den Zugang zu den CAM- (Bearbeitungs-)
-Funktionen eröffnet.}
-\RU{Область технологий, открываеющая доступ к CAM-функциям обработки.}
-  \item
-\DE{Der Einstell- und Darstellungsbereich für die die Auswahl der Layer, Linien
-usw. - und für die Behandlung des Zeichnungs-Ausschnittes.}
-\RU{Область установки и отображения для выбора слоя, линии, и т.д. - а также для
-лечения подписки вырез.}
-  \item
-\DE{Der Korrekturbereich zum Bearbeiten (editieren) von Zeichnungsteilen. }
-\RU{Редактирование областей компенсации для обработки деталей согласно чертежа.}
-  \item
-\DE{Der 2D-Bereich für die Konstruktion von Zeichnungsteilen in der X-Y-Ebene. }
-\RU{2D области для проектирования элементов чертежа в плоскости XY.}
-  \item
-\DE{Der 3D-Bereich für die Konstruktion von "Plastischen Zonen". }
-\RU{3D область для задания "пластических зон".}
-  \item
-\DE{Der Dokumentations- und Informationsbereich }
-\RU{Область документирования и информации}
-\end{itemize}
-
-\DE{Bewegen Sie zum Kennenlernen der Funktionen die Maus vom Zeichenfeld zum
-ICON-Menü und dort zu einem beliebigen ICON (beispielsweise zu Gerade im 2D-Bereich), 
-warten Sie einen Augenblick.}
-\RU{Переместите указатель мыши на любой значок в иконном меню, чтобы узнать
-о его функции (например в 2D области), подождите пару секунд.}
-\DE{Es erscheint ein Erklärungsfeld (ToolTip) mit der
-Bedeutung dieses ICONs.}
-\RU{Вы увидите объявление поле подсказки с функцией этой иконки.}
-    
-\includegraphics{pic/Kons3.png}
-    \TRsubsubsection{2.2 Die Status-Zeile}{2.2 Строка состояния}
-
-\DE{Sie hat eine besondere Aufgabe:}
-\DE{Dort "sagt" Ihnen nccad, welche Bedienschritte erwartet werden (z.B.:
-Startpunkt einer Geraden wählen). }
-\DE{Alle zu konstruierenden Zeichnungsteile basieren auf mathematischer
-Grundlage, d.h.
-es müssen Koordinatenpunkte angegeben werden, mit deren Hilfe die geometrischen 
-Figuren berechnet - und dargestellt werden können.}
-\DE{Zunächst ist kein Zeichnungsteil 
-vorgeschlagen, wählen Sie z.B in der ICON-Gruppe CAD Standard das ICON GERADE.}
-\DE{Sie benötigt zwei Punkte (Startpunkt und Endpunkt), die durch 2 Mausklicks (kurzes 
-Drücken der linken Maustaste) an 2 verschiedenen Stellen des Zeichenfeldes mit dem
- Fadenkreuz positioniert werden.}
- \DE{Grundsätzlich wird in der Statuszeile angezeigt, 
- welcher Konstruktionspunkt momentan eingegeben werden muß.}
-    
-
-\TRsubsection{3. CAD-Funktionswahl}{3 CAD функции выбора}
-
-\TRsubsection{4. Koordinaten beim Konstruieren}{4 Координаты в конструировании}
-    \TRsubsubsection{4.1 Möglichkeiten der Koordinaten-Angabe}{4.1 Cпособы
-    задания координат}
-    \TRsubsubsection{4.2 Konstruktionsbeispiel}{4.2 Пример расчета}
-    \TRsubsubsection{4.3 Die Möglichkeiten der Koordinaten-Eingabe}{4.3
-    Возможности входных координат}
-
-\TRsubsection{5. Ausschnitte und Darstellungsformen}{5 Разделы и формы}
-    \TRsubsubsection{5.1 Unmittelbar Veränderung der Darstellung}{5.1 Немедленно
-    смените представление}
-    \TRsubsubsection{5.2 ICONS für die Wahl der Darstellungsformen}{5.2 Иконки
-    для выбора форматов отображения}
-    \TRsubsubsection{5.3 Fang}{5.3 Привязка}
-
-\TRsubsection{6. Besondere Konstruktionshilfen}{6 Особый дизайн СПИДом}
-    \TRsubsubsection{6.1 Maus fixieren (Orthogonales Zeichnen)}{6.1 Мышь Fix
-    (ортогонального рисования)}
-    \TRsubsubsection{6.2 Fang von Konstruktionspunkten mit dem Suchfenster}{}
-    \TRsubsubsection{6.3 Fang von deckungsgleichen Konstruktionspunkten}{}
-    \TRsubsubsection{6.4 Gruppenbildung}{}
-    \TRsubsubsection{6.5 Tastaturbelegung}{}
-
-\TRsubsection{7. Layer (Zeichnungslagen)}{}
-    \TRsubsubsection{7.1 Layer für Zeichnungs- und Frästeile}{}
-    \TRsubsubsection{7.2 Besondere Layer}{}
-	
-	\TRsection{CAD - Kurzanleitung}{CAD - краткое руководство}
-	\TRsection{CAD - 3D Funktionen}{CAD - 3D-функции}
-	\TRsection{CAD - Technisches Zeichnen}{CAD - Технический рисунок}
-		\TRsubsection{Dreiseiten-Darstellung}{Три-представление}
-		\TRsubsection{Räumliche Darstellung}{Пространственное представление}
-		\TRsubsection{Arbeiten mit Symbolen}{Работа с символами}
-	\TRsection{Grafik}{Графика}
-		\TRsubsection{Bilder importieren}{Импорт изображений}
-		\TRsubsection{Formulare}{Формы}
-
-\TRchapter{CNC-Fräsmaschinen}{Фрезерные станки с ЧПУ}
-	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
-работе}
- 	\TRsection{Handsteuerung}{Ручное управление}
-	\TRsection{CNC-Fräsen}{ЧПУ Фрезеровка}
-	\TRsection{Teach In - Programmierung}{Teach In - Программирование}
-	\TRsection{Simulation mit OpenGL}{Моделирование в OpenGL}
-	\TRsection{Werkzeug-Korrektur}{Коррекция инструмента}
-	\TRsection{CAD/CAM-Fräsen}{CAD / CAM фрезерные}
-		\TRsubsection{Einführungsbeispiel, Prinzip}{Введение, принцип}
-		\TRsubsection{Technologie-Angaben}{Информационные технологии}
-	\TRsection{3D-Fräsen}{3D фрезеровка}
-		\TRsubsection{Körper aus Rippen und Spanten}{Körper aus Rippen und Spanten}
-		\TRsubsection{Plastische Zonen}{Пластические зоны}
-		\TRsubsection{Randzonen}{Краевые зоны}
-		\TRsubsection{STL Grundlagen}{STL основы}
-		\TRsubsection{STL Ebenenbearbeitung}{STL Редактирование слоев}
-		\TRsubsection{STL 4-Achs-Bearbeitung}{STL 4-осевая обработка}
-	\TRsection{Bearbeitungseinheiten}{Блоки обработки}
-		\TRsubsection{Universal (Metabo)}{Universal (Metabo)}
-		\TRsubsection{Schnellfrequenz}{Высокая частота}
-		\TRsubsection{Drehstrom}{Фаза}
-	\TRsection{Arbeitshinweise}{Рабочие инструкции}
-		\TRsubsection{WNP verschieben}{Переместить WNP}
-		\TRsubsection{Maschine aufrüsten}{Обновление машины}
-	\TRsection{Hilfsmittel}{СПИД}
-		\TRsubsection{Pratze, Treppenbock}{Прижим, лестничный блок}
-		\TRsubsection{Anschlagwinkel}{Параллельки}
-	\TRsection{Spezialanwendungen}{Специальные применения}
-		\TRsubsection{Mit Sonderwerkzeugen}{Использование специальных инструментов}
-			\TRsubsubsection{Gewindefräser ZBGF}{Gewindefräser ZBGF}
-		\TRsubsection{Gravuren}{Гравировка}
-			\TRsubsubsection{MAX-Schriften}{MAX-шрифты}
-			\TRsubsubsection{TrueType-Schriften}{TrueType шрифты}
-			\TRsubsubsection{Fortlaufende Zahlen}{Нумерация}
-			\TRsubsubsection{am Bogen}{на носу}
-		\TRsubsection{Leiterplatten}{Печатная плата}
-			\TRsubsubsection{Mit nccad entwerfen und fräsen}{сверление и фрезеровка с
-			nccad}
-			\TRsubsubsection{Von Layout-Programmen bearbeiten}{Импорт из программы
-			разводки}
-			\TRsubsubsection{Von Layout-Programmen bohren}{Сверление из программы
-			разводки}
-		\TRsubsection{Zahnräder}{Шестеренки}
-			\TRsubsubsection{Grundlagen}{Основы}
-			\TRsubsubsection{Bearbeiten}{Изготовление}
-			\TRsubsubsection{Praxis}{Практика}
-		\TRsubsection{Schneiden}{Резка}
-			\TRsubsubsection{Schleppmesser}{Поворотный нож}
-
-\TRchapter{CNC-Bohrmaschinen}{Расточной станок с ЧПУ}
-	\TRsection{Bediengrundlagen}{Основная операция}
-
-\TRchapter{CNC-Drehmaschinen}{Токарный станок с ЧПУ}
-	\TRsection{Daten und Fakten}{Цифры и факты}
-	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
-	работе}
-	\TRsection{CNC-Drehen}{ЧПУ точение}
-	\TRsection{Simulation mit OpenGL}{Симуляция в OpenGL}
-	\TRsection{Werkzeugverwaltung}{Управление инструментами}
-	\TRsection{Testhilfen}{Средства тестирования}
-	\TRsection{CAD/CAM-Drehen}{Токарный CAD/CAM}
-		\TRsubsection{Prinzip}{Принцип}
-		\TRsubsection{Mehrfachzyklen}{Несколько циклов}
-	\TRsection{Spezialanwendungen}{Специальные применения}
-		\TRsubsection{Gewinde-Drehen}{Нарезание резьбы}
-		\TRsubsection{CNC-Zyklen}{CNC-Zyklen}
-
-\TRchapter{Dosier-Systeme}{Системы дозирования}
-	\TRsection{Grundlagen}{Основы}
-	\TRsection{Schubdosierung}{Повысить дозу}
-
-\TRchapter{Automatisierungs-Systeme}{Системы автоматизации}
-	\TRsection{Grundlagen}{Основы}
-	\TRsection{Schaltfunktionen während Bewegung}{Функции переключения во время
-	тренировки}
-
-\TRchapter{KOSY-Steuerungen}{Стойка KOSY}
-	\TRsection{Standard-Ausführung}{Стандартная версия}
-	\TRsection{Wabeco-Ausführung}{Wabeco версия}
-
-\TRchapter{Spezial-Funktionen/Programme}{Спецфункции/программы}
-	\TRsection{Hilfsprogramme}{Программа помощи}
-		\TRsubsection{Zeichensatz-Editor}{Редактор шрифтов}
-
-\TRchapter{Import/Export}{Импорт / экспорт}
-	\TRsection{CNC-Programmexport}{Экспорт Программы ЧПУ}
-	\TRsection{Postprozessoranpassung}{Постпроцессор}
-	\TRsection{Schnittstellen}{Интерфейсы}
-	\TRsection{2D-Import}{Импорт 2D}
-		\TRsubsection{DXF}{DXF}
-		\TRsubsection{HPGL}{HPGL}
-		\TRsubsection{Nachbearbeitung}{Пост}
-		\TRsubsection{Scannen und Vektorisieren}{Сканирование и векторизация}
-	\TRsection{3D-Import}{Импорт 3D}
-		\TRsubsection{STL}{STL}
-	\TRsection{3D-Export}{3D экспорт}
-		\TRsubsection{STL}{STL}
-
-\TRchapter{Optionen und deren Bedienung}{Функции и их использование}
-	\TRsection{Abtasten}{Отбор проб}
-	\TRsection{Drehen}{Drehen}
-	\TRsection{KOSY Wagen}{Корзина KOSY}
-	\TRsection{Mindermengendosierung}{Микродозирование}
-	\TRsection{Schubdosierung}{Повысить дозу}
-	\TRsection{Spooler}{Диспетчер очереди}
-	\TRsection{Tiefenregelung}{Контроль глубины}
-	\TRsection{Werkzeuglängenmessung}{Измерение длины инструмента}
-	\TRsection{Werkzeugwechsel}{Смена инструмента}
-
-\TRchapter{Umgang mit dem System}{Работа с системой}
-	\TRsection{Service und Wartung}{Сервисное и техническое обслуживание}
-		\TRsubsection{Fehlerliste}{Список ошибок}
-		\TRsubsection{Hotline}{Горячая линия}
-		\TRsubsection{Massiv-Körper reparieren}{Крупногабаритный ремонт}
-	\TRsection{Transport}{Транспортировка}
-		\TRsubsection{Massive Maschinen}{Массивные машины}
-		\TRsubsection{Paketversand}{Комплектность поставки}
-
-\chapter{Anhang}{Приложение}
-	\section{Liesmich/Installation}{Readme / установка}
-	\section{Anschlussbelegung}{Проводка}
-	\section{CAM-Technologien}{CAM технологии}
-	\section{Dreh-Zyklen}{Вращение циклов}
-	\section{NC-Befehle}{NC команды}
-	\section{NC-Kurzbefehlsliste}{NC список быстрого доступа}
-	\section{Netzwerk-Installation}{Сетевая установка}
-	\section{Tastenbelegung (HotKeys)}{Горячие клавиши}
+% 
+% \TRchapter{CNC-Fräsmaschinen}{Фрезерные станки с ЧПУ}
+% 	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+% работе}
+%  	\TRsection{Handsteuerung}{Ручное управление}
+% 	\TRsection{CNC-Fräsen}{ЧПУ Фрезеровка}
+% 	\TRsection{Teach In - Programmierung}{Teach In - Программирование}
+% 	\TRsection{Simulation mit OpenGL}{Моделирование в OpenGL}
+% 	\TRsection{Werkzeug-Korrektur}{Коррекция инструмента}
+% 	\TRsection{CAD/CAM-Fräsen}{CAD / CAM фрезерные}
+% 		\TRsubsection{Einführungsbeispiel, Prinzip}{Введение, принцип}
+% 		\TRsubsection{Technologie-Angaben}{Информационные технологии}
+% 	\TRsection{3D-Fräsen}{3D фрезеровка}
+% 		\TRsubsection{Körper aus Rippen und Spanten}{Körper aus Rippen und Spanten}
+% 		\TRsubsection{Plastische Zonen}{Пластические зоны}
+% 		\TRsubsection{Randzonen}{Краевые зоны}
+% 		\TRsubsection{STL Grundlagen}{STL основы}
+% 		\TRsubsection{STL Ebenenbearbeitung}{STL Редактирование слоев}
+% 		\TRsubsection{STL 4-Achs-Bearbeitung}{STL 4-осевая обработка}
+% 	\TRsection{Bearbeitungseinheiten}{Блоки обработки}
+% 		\TRsubsection{Universal (Metabo)}{Universal (Metabo)}
+% 		\TRsubsection{Schnellfrequenz}{Высокая частота}
+% 		\TRsubsection{Drehstrom}{Фаза}
+% 	\TRsection{Arbeitshinweise}{Рабочие инструкции}
+% 		\TRsubsection{WNP verschieben}{Переместить WNP}
+% 		\TRsubsection{Maschine aufrüsten}{Обновление машины}
+% 	\TRsection{Hilfsmittel}{СПИД}
+% 		\TRsubsection{Pratze, Treppenbock}{Прижим, лестничный блок}
+% 		\TRsubsection{Anschlagwinkel}{Параллельки}
+% 	\TRsection{Spezialanwendungen}{Специальные применения}
+% 		\TRsubsection{Mit Sonderwerkzeugen}{Использование специальных инструментов}
+% 			\TRsubsubsection{Gewindefräser ZBGF}{Gewindefräser ZBGF}
+% 		\TRsubsection{Gravuren}{Гравировка}
+% 			\TRsubsubsection{MAX-Schriften}{MAX-шрифты}
+% 			\TRsubsubsection{TrueType-Schriften}{TrueType шрифты}
+% 			\TRsubsubsection{Fortlaufende Zahlen}{Нумерация}
+% 			\TRsubsubsection{am Bogen}{на носу}
+% 		\TRsubsection{Leiterplatten}{Печатная плата}
+% 			\TRsubsubsection{Mit nccad entwerfen und fräsen}{сверление и фрезеровка с
+% 			nccad}
+% 			\TRsubsubsection{Von Layout-Programmen bearbeiten}{Импорт из программы
+% 			разводки}
+% 			\TRsubsubsection{Von Layout-Programmen bohren}{Сверление из программы
+% 			разводки}
+% 		\TRsubsection{Zahnräder}{Шестеренки}
+% 			\TRsubsubsection{Grundlagen}{Основы}
+% 			\TRsubsubsection{Bearbeiten}{Изготовление}
+% 			\TRsubsubsection{Praxis}{Практика}
+% 		\TRsubsection{Schneiden}{Резка}
+% 			\TRsubsubsection{Schleppmesser}{Поворотный нож}
+% 
+% \TRchapter{CNC-Bohrmaschinen}{Расточной станок с ЧПУ}
+% 	\TRsection{Bediengrundlagen}{Основная операция}
+% 
+% \TRchapter{CNC-Drehmaschinen}{Токарный станок с ЧПУ}
+% 	\TRsection{Daten und Fakten}{Цифры и факты}
+% 	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+% 	работе}
+% 	\TRsection{CNC-Drehen}{ЧПУ точение}
+% 	\TRsection{Simulation mit OpenGL}{Симуляция в OpenGL}
+% 	\TRsection{Werkzeugverwaltung}{Управление инструментами}
+% 	\TRsection{Testhilfen}{Средства тестирования}
+% 	\TRsection{CAD/CAM-Drehen}{Токарный CAD/CAM}
+% 		\TRsubsection{Prinzip}{Принцип}
+% 		\TRsubsection{Mehrfachzyklen}{Несколько циклов}
+% 	\TRsection{Spezialanwendungen}{Специальные применения}
+% 		\TRsubsection{Gewinde-Drehen}{Нарезание резьбы}
+% 		\TRsubsection{CNC-Zyklen}{CNC-Zyklen}
+% 
+% \TRchapter{Dosier-Systeme}{Системы дозирования}
+% 	\TRsection{Grundlagen}{Основы}
+% 	\TRsection{Schubdosierung}{Повысить дозу}
+% 
+% \TRchapter{Automatisierungs-Systeme}{Системы автоматизации}
+% 	\TRsection{Grundlagen}{Основы}
+% 	\TRsection{Schaltfunktionen während Bewegung}{Функции переключения во время
+% 	тренировки}
+% 
+% \TRchapter{KOSY-Steuerungen}{Стойка KOSY}
+% 	\TRsection{Standard-Ausführung}{Стандартная версия}
+% 	\TRsection{Wabeco-Ausführung}{Wabeco версия}
+% 
+% \TRchapter{Spezial-Funktionen/Programme}{Спецфункции/программы}
+% 	\TRsection{Hilfsprogramme}{Программа помощи}
+% 		\TRsubsection{Zeichensatz-Editor}{Редактор шрифтов}
+% 
+% \TRchapter{Import/Export}{Импорт / экспорт}
+% 	\TRsection{CNC-Programmexport}{Экспорт Программы ЧПУ}
+% 	\TRsection{Postprozessoranpassung}{Постпроцессор}
+% 	\TRsection{Schnittstellen}{Интерфейсы}
+% 	\TRsection{2D-Import}{Импорт 2D}
+% 		\TRsubsection{DXF}{DXF}
+% 		\TRsubsection{HPGL}{HPGL}
+% 		\TRsubsection{Nachbearbeitung}{Пост}
+% 		\TRsubsection{Scannen und Vektorisieren}{Сканирование и векторизация}
+% 	\TRsection{3D-Import}{Импорт 3D}
+% 		\TRsubsection{STL}{STL}
+% 	\TRsection{3D-Export}{3D экспорт}
+% 		\TRsubsection{STL}{STL}
+% 
+% \TRchapter{Optionen und deren Bedienung}{Функции и их использование}
+% 	\TRsection{Abtasten}{Отбор проб}
+% 	\TRsection{Drehen}{Drehen}
+% 	\TRsection{KOSY Wagen}{Корзина KOSY}
+% 	\TRsection{Mindermengendosierung}{Микродозирование}
+% 	\TRsection{Schubdosierung}{Повысить дозу}
+% 	\TRsection{Spooler}{Диспетчер очереди}
+% 	\TRsection{Tiefenregelung}{Контроль глубины}
+% 	\TRsection{Werkzeuglängenmessung}{Измерение длины инструмента}
+% 	\TRsection{Werkzeugwechsel}{Смена инструмента}
+% 
+% \TRchapter{Umgang mit dem System}{Работа с системой}
+% 	\TRsection{Service und Wartung}{Сервисное и техническое обслуживание}
+% 		\TRsubsection{Fehlerliste}{Список ошибок}
+% 		\TRsubsection{Hotline}{Горячая линия}
+% 		\TRsubsection{Massiv-Körper reparieren}{Крупногабаритный ремонт}
+% 	\TRsection{Transport}{Транспортировка}
+% 		\TRsubsection{Massive Maschinen}{Массивные машины}
+% 		\TRsubsection{Paketversand}{Комплектность поставки}
+% 
+% \chapter{Anhang}{Приложение}
+% 	\section{Liesmich/Installation}{Readme / установка}
+% 	\section{Anschlussbelegung}{Проводка}
+% 	\section{CAM-Technologien}{CAM технологии}
+% 	\section{Dreh-Zyklen}{Вращение циклов}
+% 	\section{NC-Befehle}{NC команды}
+% 	\section{NC-Kurzbefehlsliste}{NC список быстрого доступа}
+% 	\section{Netzwerk-Installation}{Сетевая установка}
+% 	\section{Tastenbelegung (HotKeys)}{Горячие клавиши}
+% 
 
 
 \part{ZSE3}
