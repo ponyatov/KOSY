@@ -1,5 +1,5 @@
 #TeXlipse project settings
-#Sat Oct 26 14:43:26 AMT 2013
+#Mon Nov 04 20:36:22 GMT+04:00 2013
 markTmpDer=true
 builderNum=2
 outputDir=
@@ -7,8 +7,8 @@ makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=
-mainTexFile=KOSY.tex
-outputFile=KOSY.pdf
+mainTexFile=GrundlagenCAD.tex
+outputFile=GrundlagenCAD.pdf
 langSpell=
 markDer=true
 srcDir=
