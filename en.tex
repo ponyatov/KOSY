@@ -1,0 +1,1002 @@
+\documentclass{book}
+
+\usepackage{graphicx}
+
+\newcommand{\email}[1]{$<$#1$>$}
+
+\newcommand{\fig}[2]{
+\bigskip
+\includegraphics{#1}\\#2
+\bigskip
+}
+
+\title{NCCAD7: Help KOSY3 21-11-2006}
+\author{Dmitry Ponyatov \email{dponyatov@gmail.com}}
+
+\begin{document}
+
+\maketitle
+
+\part{Contents}
+
+\tableofcontents
+
+\part{Search words}
+
+Search words
+Revised: August 2002
+
+
+Supposing you want to know more about the term "Zeropoint": In our helppages the term appears on several pages. Use the function "Search" in order to find them and the relating texts. Take the following steps:
+
+Open the index card "Suchen" ("search") by clicking on its tab. 
+Enter the word you are looking for into the field "Suchbegriff(e) eingeben" ("enter the searchword/s"). 
+Mind the spelling. 
+Small/capital letters make no difference in the search function, e.g. you can enter "Manual operation" or "manual operation". 
+Search words you have already entered can be called up again in a pull-down-menu (arrow downwards). 
+You can add logical connections to the searchword via the button "Arrow to the right", beside the entering field. 
+Click at "Themen auflisten" ("list of topics "). It appears a list of all pages where the search word is found at least once. 
+Select one of the pages by double clicking. The found words are marked. You can find them by scrolling. 
+The following picture gives you an example of the different stages of the search:
+
+\part{Index register}
+
+The index register
+Revised: August 2002
+
+
+
+If you want to know more about a certain topic or application, you can find all kinds of keywords in the index register. They are sorted according to the topics.
+
+
+How to use the index register
+
+Enter the word into the field "Look for keyword". Each letter you enter leads you to a corresponding subject in the index window:
+
+
+
+When you have found the wanted term, click at it twice. The corresponding helppage appears in the window on the right. 
+
+
+\part{Basics of nccad}
+
+nccad is a CAD/CAM-Software, 
+with direct machine control
+
+Menu of the CAD/CAM-Software nccad 
+ 
+
+Open the branch and select your topic! 
+
+\chapter{User surface}
+
+The user surface of nccad
+Revised: October 2005
+
+nccad is a CAD/CAM-software, leading to automation and machining through a relating mechanics (e.g. CNC-machine).
+
+
+1. The menu of our CAD/CAM-software nccad 
+
+
+
+2. Make your choice in the menu File 
+In most cases of nccad, a controlling program for some sort of automation is loaded or generated which is later executed by the machine. Before starting to work, you have to decide in the menu File...:
+
+...if you want to generate a new program, 
+...if you want to open an existing CAD/CAM-drawing or
+...if you want to open one of the last programs you worked on.
+
+There a always two ways of programming:
+
+CNC-programming with codesentences after DIN/ISO 66025. 
+CAD/CAM-programming, starting from a drawing, differenciated according to the type of machine: 
+for CNC-milling machines and Coordinate Systems (KOSY = Coordinate System) 
+for CNC-Lathes 
+for special applications. 
+ 
+
+Therefore you have to decide in the menu File:
+
+if an existing CNC-program shall be opened or newly generated; 
+if an existing CAD/CAM-drawing shall be opened or newly generated and which type of machine it is for. 
+For CNC-Programming to mill and for Coordinate table applications please get more information about the steps to take under Basics Milling machine/CNC-Programming...
+
+For CAD/CAM-Programming click at CAD/CAM milling -new drawing in the menu File (see picture above) and 
+go on reading under 3. to learn about the user surface. 
+
+You will find more details for CNC-miling machines and Coordinate Systems under Basics CAD/Basics of construction, under CNC-milling machine/CAD/CAM milling/Beginner's example, as well as in CAM-Technologies for machining.
+
+You will find more details for CNC-Lathes in Basics CAD/Basics of construction, and under CNC-Lathe/CAD/CAM turning.
+
+ 
+
+ 
+3. The CAD/CAM screen for applications of the coordinate table (Milling, dispensing, automating, etc.)
+After having clicked CAD/CAM Millilng-new drawing in the menu File, the CAD/CAM-start screen opens. It shows different areas. 
+The status bar at the bottom is of special importance: There the Software tells you what you are supposed to do, which information you have to give, what you have to enter next, which function is activated etc. 
+For going on the Icon-Bar on the left is important. 
+
+ 
+
+  
+
+4. The Icon-Groups 
+For a better clarity the icons and with them the different CAD/CAM-functions of nccad are divided into groups. Each group has a button with a heading. If you click at such a button, the relating icons show up and you can use them. Another click closes the group again.
+This method has the advantage that you can limit the space for the icons: You just open the groups you need.
+At the beginning, none of the icons is activated, therefore the status bar tells you: No function activated. Please choose.......(see picture above).
+
+ 
+
+
+5. Choose the position of the icon bar freely
+At the top of the icon bar there is a blue caption. You can take the bar and drag it into a new position by setting the mousepointer in the caption, pressing the left mouse button and moving the mouse. Let go the left mouse button at the position you want.
+
+
+ 
+
+
+6. Dock the icon bar at the outer edge 
+You can dock the icon bar to the left or right side of the nccad-window frame: Move the mousepointer into the blue caption, press the left mouse button, keep it pressed and drag it to the frame until a small dotted line appears (middle of the icon bar has reached the frame). Let the mouse button go.
+
+ 
+
+
+7. Display of the coordinates and layers
+The coordinates are displayed at the bottom of the drawing area. Move the mouse to one of the fields, wait a moment and you are explained the meaning by a tooltip text. You will find details about entering coordinates under Basics CAD/Basics of construction/ Entering coordinates.
+Beside the display of the coordinates you will find information about the layers: Layer-N°, colour of layer and the symbol for the layer protection (is this layer protected against unintentional editing yes/no). You will find details under Basics CAD/Basics of Construction/Layer.
+
+ 
+
+
+8. Choose a function in the icon bar
+At the beginning, none of the icons is activated, therefore the status bar tells you: No function activated. Please choose.......(see bottom of the picture). Therefore moving the mouse within the drawing field has no effects. Only after clicking one of the icons of e.g. the group CAD-Standard, the status bar gives you the corresponding information and you can start constructing. 
+You will find more details under Basics CAD/Basics of Construction and in all other help topics .
+
+You will find a training exercise "From drawing to machining a workpiece" under Teachprogramm CAD/CAM.
+
+\chapter{CAD -- Short instruction}
+
+Short instruction for the CAD-part of nccad
+Revised: April 2006
+
+Status bar and Icon bar
+Input of Coordinates
+Tricks to help drawing
+Right Mouse button 
+Layer 
+
+
+Starting via the Menu<File><CAD/CAM New drawing>
+It appears the window you see above, with a drawing field which is slightly bigger than a DIN A4-paper (corresponds to the Y-table of the CNC-machine Standard A4).
+The different window elements are marked in red on the illustration .
+
+
+Status bar
+Always pay attention to the status bar right on the bottom. It tells you, which nccad function is active and which step you are supposed to take next, e.g. after starting: "Choose a function in the menu <File>, please " and after you have chosen <CAD/CAM New Drawing>: "Please choose a drawing function".
+Icon bar
+The icons are combined in groups. Clicking a group heading opens or closes the group.
+
+Input of Coordinates with the crosshairs
+Example: Open<CAD Standard>and choose the icon LINE. The status bar tells you to "Choose starting point". Move the mouse on the drawing field and watch the coordinate display below. Confirm the wanted position by pressing the left mouse key (click).
+Now the status bar tells you to "Choose final point". Move the mouse and again watch the coordinate display, especially the field CA. It shows the distance to the starting point. Click at a wanted position, the line is constructed.
+Input of Coordinates by keyboard
+- Absolute Coordinates (CA = Distance to the zeropoint of the drawing resp. workpiece): Key <K> or click into the field CA.
+- Relative Coordinates (CR = Distance to the last coordinate point): Key <K> or click into field CR.
+Then the position of the coordinates are entered: Value X, e.g.: 123.45> comma> Value Y, e.g.: 33.9> Enter.
+The display shows then: 123.45,33.9
+The decimals are separated by point. X- and Y-values are separated by comma.
+Advantage of this sort of input: Positions can be defined in 1/100mm.
+
+Mathematical signs for basic calculation and brackets are allowed, e.g.: 5*22.3,2*(28+47.9/2)
+Input of polar coordinates
+Activate one of the entering fields for polar coordinates below the drawing area:
+- Polar Absolute (PA = Distance to the zeropoint of the drawing resp. workpiece): Click twice key<P> or click field PA.
+- Polar Relative (PR = Distance to the last coordinate point): Click once key<P> or click field PR.
+The coordinates are entered: angle, e.g.: 45> comma> length, e.g.: 33.9> Enter. 
+Input of angles
+Whenever the status bar asks you to enter an angle (e.g. with edit /ROTATE), the key <W> can be pressed which allows you to enter the exact value by keyboard.
+
+Tricks to help drawing
+Orthogonal drawing (Mouse movements are restricted):
+- Press the shift key while drawing>> mouse can be moved vertically only.
+- Press the ctrl key >> mouse can be moved horizontally only.
+- Press both, shift and ctrl keys>> mouse is fixed, does not "wobble".
+Construction catch (the search window engages in a construction point nearby):
+The catch is turned on/off by pressing the shortcut <Ctrl> + <F9> or by clicking at the symbol on the extreme right of the status bar.
+Shortcuts /Hotkeys (for rapid operation):
+You will find a list under Appendix/ Use of keys
+
+Right Mouse button
+Pressing the right mouse button in the drawingfield will show a PopUp-Menu with some important settings.
+
+Layers (layers of the drawing and their meaning)
+The choice of the layer can be done below the drawing field (on the right beside the coordinate display) by clicking on it or by <shift>+<Number>- or via the Icon-bar under settings/LAYER. There you can also decide about visibility and protection against unintentional editing. This last function is also achieved by doubleclicking the symbol of the lock in the status bar.
+Drawing elements in layer 1 to 8 can be drawn in certain colours - and also be machined by the CNC-machine. Changing the layer means automatically changing the colour. The colours can be chosen in the menu View/Colour.
+Drawing elements in layer 9 are for documenting only (legend, measures, auxiliary lines etc.). They are not machined by the CNC-machine. Calling up one of the icons in the group Documentation means automatically layer 9 with its colour 'black'.
+Auxiliary lines, only to be drawn in layer 9 (Centre lines, construction lines etc). If you choose LINES from the icon group Settings you can also take different dotted lines which are also represented in layer 9 only.
+Layer 10 with its colour 'red' is reserved for CAM-functions and CAM-representations. 
+
+ 
+
+\chapter{Configuration of nccad}
+
+Configuration of nccad
+Revised: April 2006
+
+
+Make yourself an individual version of nccad. You can:
+
+generate new ICON-bars 
+modify existing Icon-bars 
+modify the numbers of functions 
+reduce the menues 
+influence the start features 
+Please have in mind: The configuration must be made with the present version - and used with the same version. If you use it with other versions you will get error messages.
+
+More information:
+
+
+1. Generate a new ICON-bar and modify it
+
+Take the mouse cursor into the Menu bar 
+press the right mouse key, 
+a PopUp-Menu, as in the picture above will appear where you can, either, hide the ICON-Menu, or 
+Customize it. 
+See the following information: 
+
+1.1 Call up a new bar
+After having chosen Customize,
+
+click at New and enter a name for the new ICON-bar (see picture). 
+After clicking at OK an empty ICON-bar appears which you can drag to any position. 
+
+1.2 Fill your new bar
+
+In the window Customize click at the tab Commands, 
+in the field Categories select the ICON-Group or the menu from which you want to take the ICON to be placed into the new bar. 
+Select the wanted ICON by the left mouse key and drag it into the new ICON-bar with the mousekey pressed. At the inserting place there is first a black bar (see picture), which disappears when you let go the mousekey and the new ICON is inserted. 
+ 
+
+
+1.3 Put the new bar into its position
+You can take the ICON-bar and move it to any positions. When you take it to certain places the new bar gets dotted lines (see picture) and it is "docked" there.
+
+
+1.4 The new bar is at its position
+The picture shows the docked at ICON-bar below the menu bar, an ideal position for private ICONs. 
+
+1.5 Remove ICONs
+
+The window "Adapt" has to be opened (see picture 1.). 
+Then you can click at one of the ICONS (out of each Icon-bar visible on the screen) by the left mouse key and drag it into the free nccad-drawing area, it will be deleted. 
+ 
+
+
+2. Configurate the menu
+As described under 1. you first have to
+
+press the right mousekey in the menu line - and select Customize, in order to be able to make modifications. 
+As soon as the window "Customize" is visible, you can click at one of the menus in the Menu bar (see picture, example:View). When you click at one of the lines in the menu window (e.g.Colour) by the left mousekey and drag it into the free area it will be gone in the menu window. 
+The button "Reset" in the window "Customize" can restore the original state.
+
+ 
+
+3. Save your configuration, open and start it
+As described under 1. and 2., you have set up your proper ICON-bars and menus. You want to have this state saved to be available next time? The following information will help you:
+
+
+3.1 Save the configuration or open it
+The present configuration state on the screen is saved in a file with the ending *.ncc via the menu File under Save configuration.
+
+You can call up and use a saved configuration via Open configuration at any time.
+
+3.2 Start your configuration automatically
+You can call up a configuration together with starting nccad , e.g. through the following Windows-Command line under Start/Execute or via a desktop link:
+
+c:\kosyx\nccadx.exe /ul=0/men:c:\kosyx\beginner.ncc
+
+x =version number, this is normally 7
+
+First nccad itself is called up, then follows after ...exe a blank, then the information about the configuration 
+ul=0 means that the configuration can any time be modified after starting nccad .
+ul=1 means that the configuration cannot be modified after starting nccad .
+ul... may also be left out. 
+
+
+3.3 Start your configuration and machining file automatically
+You can call up a configuration together with a machining file when starting nccad, e.g. through the following Windows-command line under Start/Execute or via a desktop-link:
+
+c:\kosyx\nccadx.exe /ul=1/men:c:\kosyx\beginner.ncc c:\Fertigung\Triangle.knc
+
+x =version number, 
+
+First nccad is called up, followed afetr ...exe by a blank, then follows the path and file name for the configuration and another blank, followed by path and file name for the machining file, here a CNC-program.
+ul=0 means that the configuration can any time be modified after starting nccad .
+ul=1 means that the configuration cannot be modified after starting nccad .
+ul... may also be left out.
+
+
+4. Configuration files and Start Buttons
+In the main directory of nccad (see picture above) different configuration files are laid down, examples:
+
+
+110_Einsteiger.ncc
+(pure beginners)  This version is a very first version for pure beginners. Drawing can be compared to the conventional method. For editing functions, only DELETE and CORRECTION TEXTS are available. This configuration has a smaller range of commands than 120_Anfaenger.ncc! 
+120_Anfaenger.ncc
+(beginners)  Beginners need only few commands for simple drawing- and editing functions. Suitable for basic training! 
+210_Fortgeschrittener.ncc
+(advanced)  Advanced applicants work with functions which are used in an educational context. Machine control is possible. 
+300_Alles.ncc
+(all)  In this full version, all functions can be used. 
+    
+310_Platinenfraesen.ncc  
+(Milling PCBs) The necessary functions for milling PCBs (GENERATE PAD/PATH – GENERATE OUTLINE – GENERATE POLYGON) are integrated into the Iconbar for direct selection. The range of commands is the same as in the advanced configuration 210_Fortgeschrittener.ncc. 
+    
+\chapter{Printing}
+
+Printing within nccad
+Revised: April 2006 
+
+Whenever you want to print something, the following pages will help you. Please, distinguish between: 
+
+Printing help subjects for the manual 
+Printing copies of the screen 
+Printing CAD/CAM-drawings and CNC-listings  
+Set page for printing 
+Printing is always done by the currently installed and activated printer, the control of the process of printing itself is done by Windows. 
+
+
+
+
+
+1. Printing help topics
+The help topics are basically HTML-pages. The Internet-Explorer is used to represent and manage them in the background and is also responsible for printing the individual help subjects. 
+
+The only thing you have to do is to choose the subjects from the overview (left) and to click at "print" in the active window. The rest will be done by Windows and the current printer driver.
+
+ 
+
+
+
+2. Printing copies of the screen 
+Pictures and details of pictures that are shown on the screen cannot be sent to the printer directly. But you may want to print out certain presentations and windows, such as: 
+
+Explanations to CAD-ICONs (F1-Help pages) 
+Perspective presentations of plastic zones. There we installed an extra shift for getting economical black/white prints of the presentation. 
+So, how to proceed? You use a method called "ScreenShot" and the transmission to a picture processing program, where the picture can be edited and printed. The "clipboard" of Windows, which is easy to handle, has to be used for it:
+
+To copy the whole screen into the clipboard you press the key [print] (on the right beside the functions-keys). You can see the picture you have taken above. 
+To copy the activated window into the clipboard you press the combination of keys [Alt]+[print]. On the picture above only the window with the blue top bar would be copied into the clipboard. 
+To insert the copied picture into a previously started picture processing program the key combination [Ctrl]+[V] (insert) will do in general. 
+Then the picture can be modified- (sized down, cut, commented, changed...) and, of course, printed, too.
+
+ 
+
+
+3. Set the page for printing
+The picture shows the window Set page for printing. It serves to set the printing parameters. The fields "Acticve printer" and "Page borders" are generally known. There are however special nccad-options:
+
+3.1 Options
+When the fields are activated:
+
+Header
+the name of the person dealing with the file and the date of the last modification are printed on top of the page 
+Footer
+the name of the file, the printing scale and the page number are printed at the bottom of the page 
+Punch mark
+A marking where to punch is printed 
+Only black/white
+The format is suitable for a black/white printer 
+3.2 Printing scale CAD
+There are 3 options of how to print the contents of the drawing:
+
+ 
+3.2.1. Variable scale, variable detail: 
+This corresponds to the only printing option which was available in the older versions.
+After clicking at "Print" the first corner of the plotting window must be marked.
+Then you are asked to mark the second corner of the plotting window (blue frame). At the same time you see in the status bar the scale in which the drawing is printed onto a DINA4 piece of paper. 
+3.2.2. Fixed scale, fixed detail: 
+
+After clicking at "Print" the left front corner of the plotting window must be marked. 
+The plotting window (bleu frame) has the size of a DINA4 piece of paper, so only the details which are within that window can be printed.
+The scale can be changed in the fields "Enter scale".
+
+
+3.2.3. Fixed scale, variable detail: 
+After clicking at "Print" the first corner of the plotting window must be marked.
+Then you are asked to mark the second corner of the plotting window (blue frame). When printing on a DINA4 piece of paper, the marked detail is printed in the set scale. 
+The scale can be changed in the fields "Enter scale". 
+
+Please notice when printing in scale 1:1 that the represented drawing area A4 (or others) is in fact the Y-table, which is bigger than the piece of paper ( the Y-table must have room for fixing it). Leave therefore a wide margin when you know that you want to print it out 1:1 later. By the way, you will find Z-frames for DIN A4 in all symbol-libraries. So, if you load the symbol when starting  and draw within this Z-frame you can print 1:1 later.
+
+
+3.3 Printing the technology-data additionally
+For that, you have to activate the function drawing and technology (see picture 3). Then, automatically, the technology-data is printed out on separate sheets after the drawing has been printed. 
+
+
+
+ 
+
+
+
+4. Print the files
+There are 2 possibilities:
+
+4.1 Print CAD/CAM 
+As soon as you have made - or opened a drawing in nccad, the current state can be printed. The printer is set via File/Set page. The printing itself is started via "Print" (see picture) and is done by the printer installed in Windows.
+
+4.2 Print CNC-programs
+As soon as you have made - or opened a CNC-progam in nccad, the current state can be printed. The printer is set via File/Set page. The printing itself is started via "Print" (see picture) and is done by the printer installed in Windows.
+
+\chapter{Templates}
+
+How to use templates
+Date: Sept. 2004
+
+Templates are nccad-file serving as work base. The elements contained in them (like drawing parts, fonts, technologies, etc.) cannot be deleted, shifted, copied, or others. It saves time and enables you to work and edit freely.
+
+1. Principle
+If you want to save frequently needed CAD/CAM-drawings as working base, take the following actions:
+
+Make the CAD/CAM-drawing with basic elements 
+Save as Template (its extension being *.cdt)
+The elements are marked and protected for future use 
+Open the template at any time 
+Add new elements (the template-elements are unchangeable) 
+Save as CAD/CAM-file (its extension being *.cad) 
+The operational functions in detail:
+
+ 
+
+
+2. Template-functions
+In the menu File/templates you get to a sub-menu where you can select the wanted function:
+
+
+2.1 Open templates
+Click on Open template to get the picture above. The content of the folder "Templates" is presented, click on the wanted template to load it.
+The folder proposed can be set in the menu Parameters/Files/Select folder... and can be changed there, if wanted.
+
+As a start,the folder contains some templates; you can see some of them in the following examples:
+
+
+Example 1: Template "Milling file" with pre-set zeropoint, workpiece-changing position and filename...
+
+
+Example 2: Detail of the file "Drawing frame"...
+
+You can draw into the template, and edit the drawing (delete, shift...)without changing the template elements, which are locked.
+
+ 
+
+
+2.2 Save as template
+You can save each file as template by clicking at the menu File/Templates/Save as template.
+For saving, the folder Templates is proposed, the files gets automatically the extension *.cdt . The folder can be changed in the menu Parameters/Files/Select folder.... 
+
+ 
+
+
+2.3 Edit template
+The template can be modified, completed or reduced. Click at the menu File/Templates/Edit template, the protection of the drawing elements is cancelled.
+
+The file can be edited like any CAD/CAM-file - and it can be saved afterwards, either....
+
+... as a normal CAD/CAM-file 
+... or again as a template, see 2.2.
+
+\chapter{The Menu}
+
+The menu bar
+
+This is the menu bar. For more information, click a keyword further down in the table of contents.
+
+\section{View}
+
+Menu view
+Revised: December 2004
+
+Here are elements available to modify the way of representing a drawing.
+
+
+
+Colour
+Layer 1 to 8 are displayed in 8 different colours (except for red and black). This way each user is able to make up his own "range of colours". The colour switches automatically when you change the layer by the icon "LAYER" or by the short keys SHIFT+F... 
+The colour of the current layer is shown for information. 
+The colour settings for the table is of importance if the contents of the picture is to be copied via <Ctrl> +<C> into a DTP-program.
+
+Drawing area
+You can choose the size of your drawing area. The possible size is selected by mouse click and registered in the program by clicking on "save". 
+The default value is DIN A4. 
+Coordinates display
+The coordinates are displayed in cartesian and polar, in absolute as well as relative values. An additional setting window appears. Here you are able to hide display information to simplify and reduce the size of the window.
+The settings made here can be saved under Save configuration in the Menu File.
+
+Helplines
+After clicking this menu dotted construction helplines are inserted in red. 
+For example additional polygons for curve constructions or textframes for inscriptions. 
+
+\section{File}
+
+Menu file
+Revised: October 2004
+
+Each programming activity with nccad starts by selecting the file to be processed. 
+Either you make a new file, or use an existing one. The functions "SAVE" and "PRINT" are started here too. 
+The proper exit out of nccad is also done in this menu. 
+
+
+Generally, you have to decide whether to program the CNC-machine in the CNC-way or by the CAD/CAM method. 
+
+
+
+Please mind the following :
+
+CAD/CAM New drawing
+The way from the drawing to the finished workpiece starts here. 
+In case another file is already in work you are asked if you want to save it . Then the screen is cleared and the drawing area is displayed, representing the Y-table. Simultaneously, the memory for the drawing pieces is cleared. Choose the functions for drawing in the icon bar. 
+CAD/CAM New special drawing
+Here you find the special CAD-functions. A sub-menu appears from which you can choose. 
+Turning
+If you own the turning equipment, these software functions become accessible. 
+You can find more information in our Helptopics. 
+Model building 
+Particularly for model builders who want to construct rib-shaped bodies (like plane wings or boat bodies) 
+Its operation is explained in the help topics 3D/Model building. 
+CAD/CAM - Open drawing
+You want to load an existing drawing. In case another file is already in work you are asked if you want to save it. The screen is cleared and a window is opened which allows you to choose between the CAD-files in the announced directory. 
+CNC - New program
+Start a new NC-program.In case another file is already in work you are asked if you want to save it. The screen is cleared and you see an empty edit window. Simultaneously, the memory for the NC-sentences is deleted. 
+CNC - Open program
+Via the explorer window a KOSY CNC-file with the extension *.KNC is chosen and loaded. The text editor is opened.
+In case another file is already in work, you are asked if you want to save it. The screen is cleared and a window with the available CNC-programs is opened. Select a file. 
+Import file
+Here you find the special load functions. A sub-menu appears from which you can choose. 
+DXF-file
+If drawings are made in other CAD programs and saved as DXF-files, they can 
+be loaded here, and they have to be given their technology data in nccad. 
+Imported drawings are captured form layer 0 to 32000, layer 0 is moved on to layer 1 and layers bigger than 9 appear in layers 1 to 9. Colors are only checked with points. Drawings which are too large are automatically reduced to table size in whole number scale. With very small drawings the program asks if the scale shall be adjusted to table size or not. The graphic simulation and the CNC machining is however done in its original size, if you have not changed the scale in <Parameter>. See alo under Import/Export 2D 
+HPGL-file
+Some CAD-programs use plotterfiles (HPGL-files). If the CNC-machine has to replace the plotter, this import possibility is an advantage. 
+The technology data of nccad offer the possibility for contour correction and of milling in more than one steps. See also under Import/Export 2D 
+
+Surface-file
+If you have scanned a plastic body and saved the scanning (*.txt), you can load it via this function. A plastic zone appears on the screen. 
+STL-file
+If 3D-bodies are drawn in another CAD program and saved as STL-file (*.stl), they can be imported here. More information in our help topics under CAD 3D/STL. 
+Picture-file
+Here you can import picture-files in the formats BMP, GIF and JPG. You will find more information under Basics CAD/Graphics...... 
+Last file(s)
+You get a list of the last files you worked on. 
+Save file
+Your work is saved in the announced directory. If your project is not yet given a name (the top of the menu bar shows "NoName" as file name) you are first asked to enter the date and name of the worker, then you can enter a file name. 
+Save file as 
+A window is opened to enter the date and name of the worker, then to enter a file name. So you are able to save existing files under a new name if they were modified, for example. The file is saved under the new name in the announced directory. But you are able to change the directory in the window, too. 
+Export file(s)
+Here you find special functions of saving. A sub-menu appears from which you can choose. 
+Model-building (3D -> 2D)
+If you have made several rib-shaped profiles in "CAD Special - 3D" they are now projected on a surface by this export and can then be further processed as 2D-file (e.g. give them technology and mill them).
+HPGL-file
+The drawing is saved as a plot-file (* .PLT). 
+You use this file to print it out with a plotter or you import it to a DTP-program. 
+If you make drawings for HPGL-export, don't use true-type-characters (inscription, engraving-texts), they are not displayed. 
+KOSY list
+When a drawing is ready and completed with technology data, you normally start machining or graphic simulation via <Machine> or >Simulation>. In each case the postprocessor is activated generating a controlling list for the CNC-machine. This list can be saved separately. It has the same name as the drawing-file but gets the file-extension .CNC. 
+
+Set page 
+Here you make settings how the pages are to be printed. The window is easy to be understood and explains itself. You will find more information under Basics of operation/Printing... 
+Print
+The current file is printed. 
+You find the printer settings in <Set page> (see above). 
+Configuration
+You will find more information in detail under Basics of operation/Configuration... 
+Templates
+You will find more information in detail under Basics of operation/Templates
+
+
+nccad7end
+The menu function "nccad exit" is the best way to close nccad.
+
+
+
+\section{Help}
+
+Menu help
+Revised: December 2004
+
+Here you find information about our Help topics concerning the different system components and their operation as well as information about the present version.
+
+
+
+
+Help Topics...
+You get an overview on the helptopics and a so-called searchtree to choose your subject under the condition that the MS-Internet browser (since version 4) is installed on your PC.
+In the printed part of our manual you get information on installation and handling of this help system.
+In addition to that: 
+Search
+You can look for search words by entering the term you are looking for. A list of topics appears where this term is applied. The topics can be chosen and clicked at. Another possibility is to look in the index register.
+
+Print
+You can print all chapters of the help topics. A colour printer is useful. More information under Operation/Printing...
+
+File Information
+Here you are informed on size and type of the file, important for service. 
+Version
+You are asked for your version in service cases. 
+Hotline
+Before calling the hotline you should read these lines to spare costs and misunderstandings. 
+Licence
+You may be asked for your licence in service cases. 
+
+
+\section{Machine}
+
+Menu machine
+Revised:December 2004
+
+
+
+Since version 7 we differenciate between different types of machines. You have to activate the CNC-Lathe in the Menu Parameters/Machine/KOSY first to be able to select it here.
+
+Please mind the following:
+
+CNC-Machine
+The manual operation window appears ("manual operation"). Out of security reasons this window is exclusive on the screen, i.e. you can quit this window only by the button "CNC-machine end".
+The manual operation controls the following functions: 
+- Machine-control by hand 
+- Basic settings of the machine 
+- Input of NC direct commands
+- Administration of the zeropoints 
+- Display of the mode of the machine 
+- Display of the positions 
+
+For more information press the function key [F1] while the "manual operation" window is opened or open Basics of operation/Manual operation resp. Lathe Basics/first steps
+
+
+Drilling machine
+The CNC machine can be used as "intelligent drilling machine" when you connect a joystick to the game port. 
+
+\section{Parameter}
+
+Menu Parameters
+Revised: October 2006
+
+Here you have elements concerning the basic settings of your system components.
+
+
+
+1. The different functions of the menus
+There are different sub-menus for different groups. Please mind the following:
+
+Machine 
+The way of machining and the typical data of the CNC-machine connected with the PC are set here.
+
+Parameter...
+This function allows to set all system parameters, e.g. the PC-port, where the CNC-Machine is connected to. The speed factors are set here, too, and other functions...
+Since nccad7.5 we have the possibility to hand over the parameters-file together with the installation and to have this file updated later by your supplier (load). When OEM-customers control a very specific machine, a parameters-file must be given.
+In each case, the very complex and sometimes complicated parameter settings are to be entered by specialists only !!! 
+Check parameters
+Here you can see which parameters are set. 
+Load parameters
+A parameter-file is updated, e.g. by an update of your supplier 
+Edit parameters
+Here you get a warning first: Modifications can be dangerous......
+You can change all settings. 
+Extras... 
+Workpiece Copies:The machining is repeated on the workpiece surface as often as possible (copied).
+An example: number of copies X=2, Y=1 and shift X = 5, Y = 10. This means: Including the original, the machining is done 3-times in X-direction and 2-times in Y-direction, in total number 16 times on the whole surface. 
+The shift must be at least as big as the maximal way of machining in the relating axis. 
+Counter: If you want to engrave signs with consecutive numbers for example, use this function. The start-number tells the first number to engrave, each following engraving adds the step width.
+The relating texts and text-formats are given as engraving-text, for example: 
+CNC-machine number: * / 000.00 / * 
+More details under Special applications/Engraving/...subsequent numbers.
+
+Options: The test mode enables you to do a step by step machining. It can be used with the graphic simulation as well as with the working of the CNC-machine. 
+To activate/deactivate, click the field "Testmode". 
+The control of the single step functions is done via the functionkeys or the buttons. 
+Automatic Home-run: If this field is activated, the machine zero point is approached automatically when the machine is started. So you get an exact zero position of the workpiece. 
+Specification: This window is used with customer specific sytems only.
+Here you can choose the existing and connected system components.They have an influence on the machining-data. 
+Type of the CNC-machine... There is a default setting out of the present delivery program. 
+Factor... ..it depends on the strength and the stability of the CNC-machine and is declared by the manufacturer. When in doubt, edit a value lower 1. 
+Spindle... ..the machining unit has limits for its rpm. Its values are to be entered or already default.
+
+Simulation 
+Workpiece-Zeropoint... 
+Detail... 
+Speed
+Since nccad6 the speed of the simulation can be adapted to the clock frequency of the PC, so that, for instance, a true-time simulation is approached. Please try different settings.
+Since nccad7 there is a differenciation between the speed setting for Standard Simulations and OpenGL-Simulations. 
+
+CAD 
+PCB
+The size of PADs and the width of the circuits are assigned here to the layers 2 to 8.
+There are default values given which can be edited individually. See also under Special applications/PCB..
+
+Documentation
+To set and save default values. The height of the fonts (in pixel or mm) include ascenders and descenders. 
+CAM 
+Milling Scale
+The milling scale shows the relation between "size of the drawing and size of machining". With the setting 2:1 it is possible, for example, to mill a drawing in half the size of the drawing. Normally the default scale is 1:1. 
+If the scale is other than 1:1, measurements and ruler are given in natural values, the display of the coordinates in the status bar, however, shows the drawing units. Via ZOOM Scale the drawing can be adapted to the milling scale. 
+Technology
+The default values for the technology-window can be set here.
+E.g. always activate a relay for the machining unit (BAE) and set a value for the feed.
+
+Tools
+Is of importance 
+if an automatic tool changer is activated with Turning or Milling, 
+if you work with a correction memory when Turning or Milling, 
+if OpenGL-Simulation is used with Turning and Milling. 
+For more information see below
+
+Files 
+Choose folders...
+You set the folders for .... 
+- drawing files
+- NC-Program-files
+- KOSY-lists
+- DXF-files
+- tools
+- symbols 
+As soon as you call up the functions <File> <Load> or <Save>, the folders you have set here are used.
+ 
+
+Import/Export
+Here the change metre/inch is done.
+In "Export" additional saving of the KOSY-list can be activated. It is then saved together with the drawing files. It is available immediately after opening so you need not spend time in transmitting it before machining (as long as no modifications have been made).
+ 
+
+2. Tools and their Parameters
+They are worth to be paid special attention:
+
+
+2.1 Call up the Tool management and general remarks
+
+For Computer Assisted Manufacturing (CAM) you need different tools. They have to be given to the Software-System in some way and their data have to be managed. This is done in the menu Parameter/CAM under 3 different tool keywords:
+
+2.1.1 The tool memory for machining
+In the tool memory, the correction values are saved which are needed for the shift of the workpiece zeropoint (WZP) in case of a tool-change. It is therefore called Tool-Correction memory and is of importance for the actual machining only.
+
+The Workpiece-Zeropoint has to be shifted after the tool-change, if the tool has other dimensions, i.e. if it hits the workpiece at another spot (e.g. it looks more out of the clamps, the turning tool has a side shift in its holder, etc.). 
+
+The Shift of the WZP can be automated, when...
+
+.... the Tool-Correction memory is activated. Menu Parameters/Machine/KOSY/Options. 
+.... the tools have been measured and the correction values have been entered into the table of the tool memory. This table is useful with CNC-milling machines and it is particularly important and critical for tools for the CNC-Lathe. 
+.... the new tool is entered after manual tool change (in manual control press the keys <Ctrl>+<n>, n = number of tool) or 
+... the automatic tool changer is used with CNC-milling machines equipped with a tool changer or with CNC-Lathes with tool-changer. 
+For a better overview, please pay attention that the Numbers of the tools in the tool-correction memory and the numbers of the tools in the tool-magazine are meant for the same tools. At present there is no automatic accordance.
+
+
+
+2.1.2 The description of the tool 
+This window allows to enter the geometry of the tool to be given to the Software. It explains itself.
+These geometry data are neede for the OpenGL-Simulation and after nccad -development also for contour correction.
+
+Please note the difference between tools for milling and turning (index-tab on the left).
+
+For everyday use it is helpful to give the tools meaningful names, which tell the essential data and its application, e.g.: ShankMill3_2mm (Cylindric mill, 3mm shank, 2mm diameter). The name of the tool and the file name can be largely identical, as long as no symbol is used which is forbidden with file names. Little trick: Mark the name and copy it into the clipboard by <Ctrl>+<C>, you can then insert it by <Ctrl>+<V> into the explorer-window under the file name. 
+
+The Geometry of a tool is saved in a separate subdirectory Tools . See also chapter 2.2.
+
+
+2.1.3 Tool-magazines
+They are helpful for editing a tool set of the most frequently used tools. It helps to avoid permanent looking for tool files.
+
+You can make a tool magazine respectively modify it, by.....
+
+selecting one of the indextabs (milling or turning), 
+marking the number of the tool in the table, 
+choosing 'load tool', to select one of the existing tool files,
+or 'delete tool', to take a tool out of the magazine, 
+choosing 'Save magazine', to save the table on the hard disk.
+At present there is only one magazine for milling and one for turning, saved under the file name Default.MGZ . 
+The magazine helps you to find the tools quickly and - in case of a manual or automatic tool change- to assign the number of the tool to the tool data and the tool geometry. At present, this is true for simulation only, later it will also be possible for machining.
+
+For a better overview, please pay attention that the Numbers of the tools in the tool-correction memory and the numbers of the tools in the tool-magazine are meant for the same tools. At present there is no automatic accordance.
+
+2.2 Tool files
+They are saved in a separate sub-directory:
+
+C (hard disk) 
+Kosy7 (Home directory) 
+Tools (Tool-subdirectory) 
+Milling (milling) 
+*.TOL (tool files, geometry-data)
+Default.MGZ (default-magazine) 
+Turning (turning) 
+*.TOL (tool files, geometry-data)
+Default.MGZ (default-magazine) 
+ 
+
+Together with the installation of the software nccad you will get some extra files. For milling you get the tool-files for the KOSY basic equipment and a relating magazine-file Default.MGZ, which can be modified by you. For milling you get typical examples, too. 
+
+
+\section{Simulation}
+
+Menu simulation
+Revised: August 2002
+
+The machining is shown graphically in different projections.
+At the same time, the state of the relays is displayed.
+In the menu Parameter/Simulation the different settings can be made.
+
+
+Choose one of the presentations, and a controlling program is generated, containing the run and controlling the simulation.
+
+
+
+Table
+The entire X-Y-Z movements are represented as it was set in the menu Parameter/Machine/KOSY under...formats. If the moves set there are smaller than needed for the simulation you get the error message "Unvalid movement..."
+You get an overview of how the working piece is machined, but you can't recognize details.
+
+Zoom automatic
+The display size of the drawing detail is chosen automatically in order to give a good view of the details.
+
+Zoom detail
+The detail shown in the simulation is to be marked by a frame (2 corner points) via the ICON View/Choose detail. 
+During the simulation not all of the machining is visible, but the machining of the detail is shown in bigger size.
+
+Table and 3D-view
+After the 3-table projection has run as under "table", you can see a 3D-presentation which can be rotated, shifted, enlargened and examined.
+Single-step: As soon as the machining has been simulated once, you have the complete controlling program in the cache memory of your PC at your disposal.You can repeat the simulation in different ways in the 3D-window to watch closely. Under "Display" in this 3D-window you can also hide a part of the presentation and choose a single-step presentation. (Switch forward/backward by the keys + and -). 
+Table and NC-output
+After the 3-table projection has run as under "table", the controlling program can be saved as CNC-program and be used again. As a rule, the CNC-code is adapted to KOSY, an adaption to other CNC-machines is possible on request. See also CNC-export.
+This simulation run does not depend on the simulation speed. 
+Open GL...
+This way of simulation is possible for milling actions and turning actions. It is explained in detail in the relating chapters:
+Milling simulation with Open GL or Turning simulation with Open GL.
+
+For this sort of simulation you need a fast PC with very good graphic equipment!! 
+
+
+\chapter{The Icons}
+
+The icons in the icon menu
+Revised: August 2002
+
+In the pictures below you see the ICON menu differently opened. 
+After clicking at CAD/CAM.. (..New drawing or ...Open drawing) the Icon menu appears at the left border of the drawing area.
+
+
+The icons are sorted into groups. When you click at a group-name, the relating icons become accessible. Clicking a second time closes the group again. So the icon bar becomes more clear and structured.
+
+When you move the mouse cursor to an icon and wait for an instant, you can see the tooltip explaining the meaning of it. By pressing the function key <F1>, you 'll get to the relating helppage. 
+
+If you want to get more detailed information about the icons, click at one of the headwords in the help-searchtree or in the index register.
+
+
+The icon bar after starting.
+
+
+Example for a tooltip.
+
+
+
+ 
+The upper part of the icon bar with its opened groups.
+ 
+The middle part of the icon bar with its opened groups.
+ 
+The lower part of the icon bar with its opened groups..
+ 
+\section{Edit}
+\section{CAD -- 3D}
+\section{CAD -- Special}
+\section{CAD -- Standard}
+\section{CAM -- Standard}
+\section{View}
+\section{Documentation}
+\section{Settings}
+\section{Information}
+\section{Symbols}
+\section{Convert}
+
+\part{Basics CAD}
+
+CAD Basics
+
+Picture: A construction example
+
+Open the branch and select your topic! 
+
+
+\part{CNC-milling machine KOSY3}
+
+CNC - Milling machines with 3 axles
+
+Picture: Linear profile of the milling machine
+
+Open the branch and select your topic! 
+
+\part{CNC-Driliing machines}
+
+CNC-Drilling machine
+ 
+Picture: A CNC-machine with joystick
+
+Open the branch and select your topic! 
+
+\part{CNC -- Lathe}
+
+CNC-Lathe
+
+\fig{pic/cnclathe/01.png}{Picture: Desktop-Buttons for the different types}
+
+nccad is very versatile; you can programme and operate different types of machines.
+Normally, you get the relating start buttons on your screen after installing the programme. After double-clicking a button, nccad is being started with the necessary range of function.
+
+You have decided on the CNC-lathe so the button on the downright is the right one.
+
+For further help, open the branch and select the topic! 
+
+\part{Dispensing systems}
+
+Dispensing systems
+
+ 
+Picture: Example for a dispensing system
+
+Open the branch and select your topic! 
+
+\part{Automation systems}
+
+Automating Systems
+
+Picture: An example for automating: dip varnishing
+
+Open the branch and select your topic! 
+
+\part{KOSY Control units}
+
+KOSY Controls
+ 
+Picture: KOSY Control 4.7 in standard version
+
+Open the branch and select your topic! 
+
+\part{Special functions/programmes}
+
+Help programmes
+
+
+Pictures: Fonts designed by the help programme zse
+
+Open the branch and select your topic! 
+
+
+\part{Import/Export}
+
+Import/Export
+ 
+Picture: File import in nccad
+
+Open the branch and select your topic! 
+
+\part{Options and their operation}
+
+This is a generic term
+
+
+
+Please continue searching between the indented entries. 
+
+\part{How to handle the system}
+
+This is a generic term
+
+
+
+Please continue searching between the indented entries. 
+
+\part{Appendix}
+
+This is a generic term
+
+
+
+Please continue searching between the indented entries. 
+
+\end{document}
