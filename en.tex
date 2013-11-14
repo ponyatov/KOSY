@@ -2,6 +2,8 @@
 \usepackage[a4paper,left=20mm,right=10mm,top=10mm,bottom=10mm]{geometry}
 
 \usepackage{graphicx}
+% \usepackage{xcolor}
+\newcommand{\textcolor}[2]{\textit{$<$#1$>$}\textbf{#2}\textit{$<$/#1$>$}}
 
 \newcommand{\nccad}{\textbf{NCCAD}}
 
@@ -1067,92 +1069,136 @@ The investment is worth its money, but, as always, you should think first before
 
 The KOSY-control consists of the following elements:
 
-Software nccad 
-Control electronics 
-Teachware in the form of helppages 
+\begin{itemize}
+\item Software \nccad 
+\item Control electronics 
+\item Teachware in the form of helppages
+\end{itemize}
+ 
 When you want to use the CNC-lathe you need the following parameters and features:
 
-2.1 The Software nccad7 for CNC-lathes
-CAD/CAM with direct CNC-control (DNC) for the Coordinate-System KOSY and for foreign machines
-The data are valid for the new Version 7,  date of January 2004.
-Features in yellow colour will be achieved in the course of autumn/winter 2004/2005.
-New Functions of the Version 6/7 with regard to Version 5/6 are marked by + and in colour.
+\subsection{2.1 The Software nccad7 for CNC-lathes}
 
-General remarks 
+\textbf{CAD/CAM with direct CNC-control (DNC) for the Coordinate-System KOSY and
+for foreign machines}\\
+The data are valid for the new \textbf{Version 7},  date of \textbf{January
+2004}.\\
+Features in \textcolor{yellow}{yellow colour} will be achieved in the course of
+autumn/winter 2004/2005.\\
+\textcolor{red}{New Functions} of the Version 6/7 with regard to Version 5/6 are
+marked by \textcolor{red}{+} and \textcolor{red}{in colour}.\\
 
-Extensive program for computer assisted drawing (CAD), as well as for programmed machining with CNC-machines (CAM) and for direct machine control (DNC). 
-Delivered as multiple-licence on CD, it can be installed as often as needed in your company, institute, school, etc. 
-Suitable for Win98/2000/NT/XP. 
-Suitable for the installation in networks; pay attention to our tips in the Internet. 
-Program needs approx. 60 MB on the harddisk. 
-Symbol-libraries included in the delivery. 
-+ about 10 example files, examples for beginners of turning. 
-Manual (chapter 0, 11) for installation and putting into operation in the CD-box 
-System support also via Hotline and Internet 
-System-requirements 
+\subsubsection{General remarks} 
 
-As control computer directly at the machine, min.: PC 586 (Pentium1)/min. 133 MHz, min. 16MB RAM, Win98/2000/NT4, CD-drive, graphic resolution min. 800x600, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed. An old computer can be used here. 
-At your constructing- and programming place, min.: PC Pentium2/min. 600 MHz, min. 64MB RAM, Win98/2000/NT/XP, CD-drive, graphic resolution min. 1024x768, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed.
-+ OpenGL with graphic chip set Gforce4 
-Operation/Handling 
+\begin{itemize}
+\item Extensive program for computer assisted drawing (CAD), as well as for
+programmed machining with CNC-machines (CAM) and for direct machine control (DNC).
+\item Delivered as \underline{multiple-licence on CD}, it can be installed as
+often as needed in your company, institute, school, etc.
+\item Suitable for Win98/2000/NT/\textcolor{red}{XP}. 
+\item Suitable for the installation in networks; pay attention to our tips in
+the Internet.
+\item Program needs approx. 60 MB on the harddisk. 
+\item Symbol-libraries included in the delivery. 
+\item \textcolor{red}{+ about 10 example files, examples for beginners of
+turning}.
+\item Manual (chapter 0, 11) for installation and putting into operation in the
+CD-box 
+\item System support also via Hotline and Internet
+\end{itemize} 
 
-Modern Windows-user surface with ToolTip-Texts. 
-Aktivate the lathe through the menu ("Parameters" and "Machine") 
-+ Icon-bar divided into groups, the groups may be opened/closed . 
-+ Possibility to make your own Icon-bar to be saved. 
-+ Possibility to reduce the range of functions- and operations e.g. for manufacturing personnel or in education. 
-Extremely extended HTML-Helpsystem with searchtree and full text search + Index register, 
-with INTERNET-updating + direct access via F1-key. 
-CNC-Teil (Functions with special impact for turning)
+\subsubsection{System-requirements} 
 
-Machine control together with the KOSY- control electronics
-- through microcontroller independent from computer speed
-+ use of Spooler for workpiece machining without interruptions
-- automatic HOME- positioning (end switches)
-- go to CHANGE WORKPIECE -POSITION by pressing button
-- hand-control of all axes in 5 different speeds
-- display of X-Y-Z-position with a resolution of 1/100mm
-- linear interpolation in 3 axes (linear movement in space),
-- circular interpolation alternatively in 2 of 3 axes (circular movement X/Y- or X/Z or Y/Z-level)
-- enter direct orders with repeat function
-- direct enter in relative- or absolute mode
-- single-step-working
-- interruption/continuing of working (f.e.after breaking a tool)
-- workpiece copies in X-and Y-direction
-- memory for 20 diff. workpiece zero-points
-- direct start of CNC-Programs when booting the PC
-- texts for digital inputs freely editable
-- testfunction for digital inputs
-- support of automatic tool change
-- measuring functions for turning tools
-- free parameters of machine data for any mechanics
-+ remote monitoring of the machining state via network (TCP/IP). Instructions on demand ! 
-Scanning
-- taking in of the X-Y-Table position as CNC-command (TeachIN)
-- take in the table position as coordinate pair in CAD 
-- scanning the height for general measurement science, the series of measurements is written as a evaluable file 
-CNC-Programmiung
--Code sentences after DIN/ISO 66025
--approx. 30 different NC-commands
--support of relays and digital inputs
--support of analogue inputs/outputs
--support of an 3rd axis (Option) 
--syntax-check
--teach-in-mode with automatic command generating (including relay)
--import of NC-files as connection to 3D-SW- and postprocessors (external CAD/CAM)
--graphic simulation of NC-programs 
-Text-Editor
--text extent to approx. 500.000 lines, 80 signs/line
--full-screen editing with horizontal and vertical scroll
--line- and column display, help-function
--block-operations: delete, shift, copy
--file-functions: print, save, save as, load)
--ASCII-import (NC-program was made in another text editor) 
- 
+\begin{itemize}
+\item \underline{As control computer} directly at the machine, min.: PC 586
+(Pentium1)/min.
+133 MHz, min. 16MB RAM, Win98/2000/NT4, CD-drive, graphic resolution min. 800x600, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed. An old computer can be used here.
+\item \underline{At your constructing- and programming place, min.}: PC
+Pentium2/min.
+600 MHz, min. 64MB RAM, Win98/2000/NT/XP, CD-drive, graphic resolution min. 1024x768, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed.
+\\ \textcolor{red}{+ OpenGL with graphic chip set Gforce4}
+\end{itemize} 
 
-Special turning funtions 
+\subsubsection{Operation/Handling} 
 
-Make operation easier
+\begin{itemize}
+\item Modern Windows-user surface with ToolTip-Texts. 
+\item Aktivate the lathe through the menu ("Parameters" and "Machine") 
+\item \textcolor{red}{+ Icon-bar divided into groups, the groups may be
+opened/closed .}
+\item \textcolor{red}{+ Possibility to make your own Icon-bar to be saved. }
+\item \textcolor{red}{+ Possibility to reduce the range of functions- and
+operations e.g. for manufacturing personnel or in education.}
+\item \textcolor{red}{Extremely extended} HTML-Helpsystem with searchtree and
+full text search \textcolor{red}{+ Index register}, with INTERNET-updating
+\textcolor{red}{+ direct access via F1-key.}
+\end{itemize}
+
+\subsubsection{CNC-Teil (Functions with special impact for turning)}
+
+\begin{itemize}
+\item Machine control together with the KOSY- control electronics
+\begin{itemize}
+\item through microcontroller independent from computer speed
+\item \textcolor{red}{use of Spooler for workpiece machining without
+interruptions}
+\item automatic HOME- positioning (end switches)
+\item go to CHANGE WORKPIECE -POSITION by pressing button
+\item hand-control of all axes in 5 different speeds
+\item display of X-Y-Z-position with a resolution of 1/100mm
+\item linear interpolation in 3 axes (linear movement in space),
+\item circular interpolation alternatively in 2 of 3 axes (circular movement
+X/Y- or X/Z or Y/Z-level) - enter direct orders with repeat function
+\item direct enter in relative- or absolute mode
+\item single-step-working
+\item interruption/continuing of working (f.e.after breaking a tool)
+\item workpiece copies in X-and Y-direction
+\item memory for 20 diff. workpiece zero-points
+\item direct start of CNC-Programs when booting the PC
+\item texts for digital inputs freely editable
+\item testfunction for digital inputs
+\item \textcolor{red}{support of automatic tool change}
+\item \textcolor{red}{measuring functions for turning tools}
+\item free parameters of machine data for any mechanics
+\item \textcolor{red}{+ remote monitoring of the machining state via network
+(TCP/IP).
+Instructions on demand !}
+\end{itemize}
+\item Scanning
+\begin{itemize}
+\item taking in of the X-Y-Table position as CNC-command (TeachIN)
+\item \textcolor{yellow}{take in the table position as coordinate pair in CAD}
+\item scanning the height for general measurement science, the series of
+measurements is written as a evaluable file
+\end{itemize} 
+\item CNC-Programmiung
+\begin{itemize}
+\item Code sentences after DIN/ISO 66025 
+\item approx. 30 different NC-commands
+\item support of relays and digital inputs
+\item support of analogue inputs/outputs
+\item support of an 3rd axis (Option) 
+\item syntax-check
+\item teach-in-mode with automatic command generating (including relay)
+\item import of NC-files as connection to 3D-SW- and postprocessors (external
+CAD/CAM) 
+\item graphic simulation of NC-programs 
+\end{itemize} 
+\item Text-Editor
+\begin{itemize}
+\item text extent to approx. 500.000 lines, 80 signs/line
+\item full-screen editing with horizontal and vertical scroll
+\item line- and column display, help-function
+\item block-operations: delete, shift, copy
+\item file-functions: print, save, save as, load)
+\item ASCII-import (NC-program was made in another text editor) 
+\end{itemize} 
+\end{itemize} 
+
+\subsubsection{Special turning funtions} 
+
+\begin{itemize}
+\item \textbf{Make operation easier}\\
 - Manual user surface for conventional turning (manual command by mouse and keyboard)
 - Tool administration with correction memory (X,Z-Position, + geometry), manual shift through keyboard (Tn)
 + Editing of tool geometry (tool description)
@@ -1160,9 +1206,9 @@ Make operation easier
 - Machine related tool change point
 - Machine related workpiece-changing position
 - Stop function for clamping in 
-Special turning cycles and turning functions (in CAD/CAM and CNC )
-- Length - thread cutting (external, internal, left, right, norm-thread, inch-thread, individual linear thread)
-- Plane-thread cutting (Spirals)
+\item \textbf{Special turning cycles and turning functions} (in CAD/CAM and CNC)\\
+ - Length - thread cutting (external, internal, left, right, norm-thread,
+inch-thread, individual linear thread) - Plane-thread cutting (Spirals)
 - Cone- thread cutting (clamp thread)
 - More lead thread cutting
 - Thread repairing (insertion in existing threads)
@@ -1175,12 +1221,14 @@ Special turning cycles and turning functions (in CAD/CAM and CNC )
 - Cone turning
 - Radius function (saves special tools and polishing)
 - account for the reverse play (as far as possible, not with contour turning, high precision turning) 
-Helps
+\item \textbf{Helps}\\
 - Simulation of turning in CAD/CAM + and CNC 
 + OpenGL-simulation with viewing of tool geometry
 + OpenGL-Simulation of drilling and interior turning 
 - Workshop programming without CNC-knowledge 
-CAD-part (only drawing functions with general use for turning) 
+\end{itemize}
+
+\subsubsection{CAD-part (only drawing functions with general use for turning)} 
 
 Draw
 - Drawing turning machining in different layers and levels (auxiliary turning axes)
