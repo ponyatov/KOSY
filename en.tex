@@ -938,6 +938,344 @@ You have decided on the CNC-lathe so the button on the downright is the right on
 
 For further help, open the branch and select the topic! 
 
+\chapter{Data and Facts}
+
+The"Intelligent Lathe"
+ 
+Data and Facts
+
+Date: 24 November 2003
+
+Revised: 21 October 2004 
+
+With the KOSY-control and a highly developed version 7 of nccad , the good old lathe 
+becomes a very comfortable CNC-Lathe. Let's give you some main information.
+
+\section{1. General remarks about lathes}
+
+The big range of products makes it difficult to choose and invites to make unsuitable comparisons. 
+It is necessary to be an expert in order to be able to give reliable judgements on this sort of machines. 
+We want to explain you some basic principles.
+
+\subsection{1.1 Main features and types}
+
+The parameters for tip width, tip height and spindle boring have an impact on which worpkieces 
+can be machined, whereas the \textbf{following parameters} have also an
+\textbf{influence on the quality of the machining}:
+
+\begin{itemize}
+\item Driving power 
+\item Motor spindle rpm 
+\item Accuracy of truth 
+\item Accuracy of the feed spindles 
+\item Guides and bearings
+\end{itemize} 
+
+Normally we distinguish between the following \textbf{types of lathes}:
+
+\begin{itemize}
+\item \textbf{Conventional lathes}\\
+Movements are made manually by a hand crank or automatically by a mecanical feed drive. 
+\item \textbf{CNC-Lathes}\\
+Movements and machining are electronically controlled and are prommable through a software. 
+\item \textbf{Upgraded conventional lathes}\\
+They are extended by an electronic control including a programming/operating software thus becoming a CNC-machine.
+Without information and advice, your \textbf{expectations may be disappointed.
+You cannot always reach the level of an Original CNC Lathe}.
+\end{itemize}
+
+\textbf{Special components are crucial} for different applications, 
+\textbf{the most important being}:
+\begin{itemize}
+\item thread cutting 
+\item right-hand/left-hand rotation 
+\item speed control 
+\item possibility for extension (3rd axis, tool-change, cooling system, etc.)
+\end{itemize} 
+
+\subsection{1.2 Problems when conventional lathes are upgraded to become
+CNC-lathes}
+
+Often, conventional machines are not constructed for upgrading, therefore:
+ 
+\begin{itemize}
+
+\item \textbf{there are missing suitable space for the drives}\\
+e.g. the motors block the way, the connection to the feed spindles is incomplete (type of coupling).
+
+\item \textbf{there are missing helpful construction details}\\
+e.g. the turning tool is not placed behind, but in front of the spindle axis. The cuttings are 
+difficult to remove in automatic operation and/or covers are inadequate.
+
+\item \textbf{there are missing well-suited feed spindles}\\
+Rolled ball screws are a rule in CNC-machines, building them in later is often impossible or the 
+chosen spindles are not sufficient (too weak, too big linearity tolerance, wrong bearings, etc.). 
+It is best to have them build in by the manufacturer. Conventional lathes have,
+as a rule, \textbf{trapezoidal screws with a reverse play}. They are \textbf{not
+suitable for CNC-lathes}. In our KOSY-control the reverse play is taken into
+account where technically and physically useful.
+\begin{itemize}
+  \item \textbf{the software can calculate and take into account the reverse
+  play only with some applications as}:
+  \begin{itemize}
+\item thread cutting 
+\item plane milling 
+\item chipping 
+\item cutting 
+\end{itemize}
+\item \textbf{the following applications are not possible with reverse play}, or
+only with considerable faults:
+\begin{itemize}
+\item contour turning\\
+the floating of the supports always leads to mistakes when changing direction, their degree depends 
+on the machining conditions (chipping pressure, tool geometry, feed, depth per step, etc.), the leads 
+and the measures of the supports. A control without integrated measure system can by no means compensate it. 
+\item high precision turning
+\end{itemize}
+\end{itemize} 
+
+\item \textbf{there are missing important equipment and control elements}\\
+
+The upgrading to a CNC-lathe intends to improve reproducibility and time expenditure and, above all, 
+to \textbf{automate the turning procedure}, so that the user has no longer to
+keep staying with the machine.
+\textbf{For a complete automatic working} the following elements are
+\textbf{absolutely necessary}:
+
+\begin{itemize}
+\item Process-synchronous control of the turning spindle (ON/OFF and turning
+direction) 
+\item Speed control of the turning spindle (via control tension 0...10V) 
+\item Automatic tool changer\\
+No other type of CNC-machines must change the tools as often as CNC-lathes. 
+\item Encoder for thread cutting\\
+It must be directly connected to the turning spindle (transmission 1:1) and is necessary for 
+synchronization of speed and feed. 
+\item An integrated controllable cooling system
+\end{itemize}
+
+\item \textbf{there are missing consequent new strategies of the users}\\
+The hand cranks stay at the machine, for example, although they are completely unnecessary. This may 
+lead to mistakes and makes it more difficult to get used to "think in programming level".
+
+\end{itemize}
+ 
+In spite of all these critical words, the increase of performance and comfort shall not be forgotten. 
+The investment is worth its money, but, as always, you should think first before acting. This chapter 
+
+\section{2. Special parameters and functions of CNC-lathes with KOSY-control}
+
+The KOSY-control consists of the following elements:
+
+Software nccad 
+Control electronics 
+Teachware in the form of helppages 
+When you want to use the CNC-lathe you need the following parameters and features:
+
+2.1 The Software nccad7 for CNC-lathes
+CAD/CAM with direct CNC-control (DNC) for the Coordinate-System KOSY and for foreign machines
+The data are valid for the new Version 7,  date of January 2004.
+Features in yellow colour will be achieved in the course of autumn/winter 2004/2005.
+New Functions of the Version 6/7 with regard to Version 5/6 are marked by + and in colour.
+
+General remarks 
+
+Extensive program for computer assisted drawing (CAD), as well as for programmed machining with CNC-machines (CAM) and for direct machine control (DNC). 
+Delivered as multiple-licence on CD, it can be installed as often as needed in your company, institute, school, etc. 
+Suitable for Win98/2000/NT/XP. 
+Suitable for the installation in networks; pay attention to our tips in the Internet. 
+Program needs approx. 60 MB on the harddisk. 
+Symbol-libraries included in the delivery. 
++ about 10 example files, examples for beginners of turning. 
+Manual (chapter 0, 11) for installation and putting into operation in the CD-box 
+System support also via Hotline and Internet 
+System-requirements 
+
+As control computer directly at the machine, min.: PC 586 (Pentium1)/min. 133 MHz, min. 16MB RAM, Win98/2000/NT4, CD-drive, graphic resolution min. 800x600, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed. An old computer can be used here. 
+At your constructing- and programming place, min.: PC Pentium2/min. 600 MHz, min. 64MB RAM, Win98/2000/NT/XP, CD-drive, graphic resolution min. 1024x768, 60 MB free on HD, MS Internet-Explorer V4.02 (or later) must be installed.
++ OpenGL with graphic chip set Gforce4 
+Operation/Handling 
+
+Modern Windows-user surface with ToolTip-Texts. 
+Aktivate the lathe through the menu ("Parameters" and "Machine") 
++ Icon-bar divided into groups, the groups may be opened/closed . 
++ Possibility to make your own Icon-bar to be saved. 
++ Possibility to reduce the range of functions- and operations e.g. for manufacturing personnel or in education. 
+Extremely extended HTML-Helpsystem with searchtree and full text search + Index register, 
+with INTERNET-updating + direct access via F1-key. 
+CNC-Teil (Functions with special impact for turning)
+
+Machine control together with the KOSY- control electronics
+- through microcontroller independent from computer speed
++ use of Spooler for workpiece machining without interruptions
+- automatic HOME- positioning (end switches)
+- go to CHANGE WORKPIECE -POSITION by pressing button
+- hand-control of all axes in 5 different speeds
+- display of X-Y-Z-position with a resolution of 1/100mm
+- linear interpolation in 3 axes (linear movement in space),
+- circular interpolation alternatively in 2 of 3 axes (circular movement X/Y- or X/Z or Y/Z-level)
+- enter direct orders with repeat function
+- direct enter in relative- or absolute mode
+- single-step-working
+- interruption/continuing of working (f.e.after breaking a tool)
+- workpiece copies in X-and Y-direction
+- memory for 20 diff. workpiece zero-points
+- direct start of CNC-Programs when booting the PC
+- texts for digital inputs freely editable
+- testfunction for digital inputs
+- support of automatic tool change
+- measuring functions for turning tools
+- free parameters of machine data for any mechanics
++ remote monitoring of the machining state via network (TCP/IP). Instructions on demand ! 
+Scanning
+- taking in of the X-Y-Table position as CNC-command (TeachIN)
+- take in the table position as coordinate pair in CAD 
+- scanning the height for general measurement science, the series of measurements is written as a evaluable file 
+CNC-Programmiung
+-Code sentences after DIN/ISO 66025
+-approx. 30 different NC-commands
+-support of relays and digital inputs
+-support of analogue inputs/outputs
+-support of an 3rd axis (Option) 
+-syntax-check
+-teach-in-mode with automatic command generating (including relay)
+-import of NC-files as connection to 3D-SW- and postprocessors (external CAD/CAM)
+-graphic simulation of NC-programs 
+Text-Editor
+-text extent to approx. 500.000 lines, 80 signs/line
+-full-screen editing with horizontal and vertical scroll
+-line- and column display, help-function
+-block-operations: delete, shift, copy
+-file-functions: print, save, save as, load)
+-ASCII-import (NC-program was made in another text editor) 
+ 
+
+Special turning funtions 
+
+Make operation easier
+- Manual user surface for conventional turning (manual command by mouse and keyboard)
+- Tool administration with correction memory (X,Z-Position, + geometry), manual shift through keyboard (Tn)
++ Editing of tool geometry (tool description)
++ Editing tool sets in magazines of frequently used tools
+- Machine related tool change point
+- Machine related workpiece-changing position
+- Stop function for clamping in 
+Special turning cycles and turning functions (in CAD/CAM and CNC )
+- Length - thread cutting (external, internal, left, right, norm-thread, inch-thread, individual linear thread)
+- Plane-thread cutting (Spirals)
+- Cone- thread cutting (clamp thread)
+- More lead thread cutting
+- Thread repairing (insertion in existing threads)
+- Chipping cycles (longside, plane, inside, outside, from or from right)
+- Boring cycles for centric borings (with/without chip-break or de-chipping)
+- Boring threadswith compensation chuck
+- Cutting cycles (left, right, outside, with/without edge chanmfer)
+- Sting cycles (symmetrical/asymmetrical, outside, inside, with/without edge chamfer) 
+- Blade radius-correction (account for tool geometry)
+- Cone turning
+- Radius function (saves special tools and polishing)
+- account for the reverse play (as far as possible, not with contour turning, high precision turning) 
+Helps
+- Simulation of turning in CAD/CAM + and CNC 
++ OpenGL-simulation with viewing of tool geometry
++ OpenGL-Simulation of drilling and interior turning 
+- Workshop programming without CNC-knowledge 
+CAD-part (only drawing functions with general use for turning) 
+
+Draw
+- Drawing turning machining in different layers and levels (auxiliary turning axes)
+-Input of polar coordinates or cartesian coordinates absolute and relative, 
++ calculating input (4 basic calculations with parentheses).
++drawing by CNC-Machine (the X-Y-position of the machine is taken in the drawing area by pressing a button). 
+Drawing elements
+- Reference point,  line,  line with indication of angles, polygon, arch, ellipse,
+- curve (approximation, interpolation, math.formula, free hand), 
+- workpiece-zeropoint, 
+- chamfering and rounding, selective chamfering and rounding
++ cutting, stinging, threads
++ drilling 
+View
+- Presentation on table (DIN A4), detail (also with sectional view)
+- moving the detail (also while drawing and with positioning window)
+- new presentation
++ Scrolling detail with scroll-bar or cursor keys, centering by mouse and Enter-key 
+Edit
+- Delete (window, separate, last, last part of polygons or curves)
+- shift (separate, window), copy (separate, window)
+- mirror hor./vert (with/without copy, also text)
+- change features, trim
+- Undo (1 step)
+- shift construction-point
+- contour correction
+- follow contour (autom. trimming and closing)
+- thin out contours
+- dissolve/dismantle contours into lines or polygons
++ Split up and drop a perpendicular with lines. 
++ Scale drawing elements and groups. 
+Symbols
+- Save, load, shift, copy, dissolve, scale (autom. scale)
+- libraries for electrics, electronics, pneumatics, mechanics, architecture, logos and accessories
++ ICONs as drawing elements for making teachware. 
+Elements for documentation
+- Dimensions (horizontal, vertical, angles, radius, sloping), 
++ editable, font height to be set.
+- Inscriptions with text editor. 
++ drawing elements for set documentation texts: Date, file name, worker. 
+Information-elements
++ Measuring distances
++ Information about chosen drawing elements with calculated data (area, circumference, number, etc.). 
+Layers
+Drawing in max. 10 layers (8 freely eligible) ,automatic color switching, button "display all or hide" 
++ layer protection (no editing/changing of the drawing possible) 
+Parameters/settings
+-Ruler, catch, grid, line diameter, line type, colour assignation
+- scale (screen-nature)
+- drawing-area, Y -table size
+- help lines
+- default technology. 
+File-operations
+Load, save, save as. 
+Print/Plot
+According to Windows installation, printing of help pages via Internet-Browser.
+True to scale printing with half-automatic scale calculation and scaling.
++ Print with set paper format DIN A4.
++ Print with freely eligible scale factor.
+Plot via HPGL-files. 
+Import
+DXF-Import (DXF = exchange format for 2D-drawings) + improved and extended. 
+HPGL-Import (Plotter-files). 
+Export
+- Port to DTP via HPGL-files.
+- Export of control-list (attach the KOSY-list to CAD-files). 
+- CNC-Program for KOSY-control, for other CNC-lathes (Option)
++ Save the drawing as Bitmap (BMP) in cache memory by pressing the keys Ctrl+C. 
+2.2 Special elements of KOSY-control electronics for CNC-lathes
+The electronis, derivated from our universal KOSY-control, contains the following elements, specifically for lathes:
+
+Stepping motor-Interface 
+
+Endsteps
+- For 2-phase-stepping motors up to 4 A phase current, normal equipment for 2 stepping motors
+- optionally you can use foreign endsteps (Signal output for frequency, direction and current reduction at standstill)
+- Third endstep e.g. for tool-changing system possible (optional) 
+Box
+- Microcontroller, Interface and power supply in a closed box
+- Plug connections for stepping motors, step by step transmitter (optional), PC and control functions 
+Control elements 
+
+Relay-outputs
+- 1 output for turning spindle (ON/OFF) 
+- 4 more relays (switching contact), switch performance 24V/1A optional
+-- (e.g. for truning direction, the control electronics of the turning spindle must be suitable for remote control) 
+Digital inputs (optional)
+- 5 Optocoupler-inputs, 24V, for compulsory sequence control 
+Tension output (optional)
+- 1....24V (1...10V) to control the number of revs of the turning spindle 
+step be step transmitter-input
+- Plug connection and connection to microcontroller 
+ 
+
+
 \part{Dispensing systems}
 
 Dispensing systems
