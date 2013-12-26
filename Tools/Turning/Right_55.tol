@@ -1,0 +1,15 @@
+[Tool]
+Name=правый B7 <55
+AngleL1=117.5
+AngleL2=62.5
+AngleR2=62.5
+AngleR1=117.5
+LengthL1=7
+LengthL2=7
+LengthR2=7
+LengthR1=7
+Orientation=35
+FreeAngle=0
+CutAngle=0
+Height=2
+Drill=0
