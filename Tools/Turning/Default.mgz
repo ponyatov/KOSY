@@ -3,7 +3,7 @@ ToolType=Turning
 [ToolNumber]
 1=\Turning\Right_55.tol
 2=
-3=
+3=\Turning\cutter_1m6.tol
 4=
 5=
 6=
