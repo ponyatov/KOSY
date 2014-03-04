@@ -1,0 +1,14 @@
+[Tool]
+Name=Abstechen 2,9mm
+AngleL1=90
+AngleL2=0
+AngleR2=0
+AngleR1=90
+LengthL1=5
+LengthL2=1.45
+LengthR2=1.45
+LengthR1=5
+Orientation=0
+FreeAngle=0
+CutAngle=0
+Height=2

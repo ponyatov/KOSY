@@ -1,0 +1,14 @@
+[Tool]
+Name=LängsAbspanen 1
+AngleL1=0
+AngleL2=90
+AngleR2=20
+AngleR1=90
+LengthL1=0
+LengthL2=3
+LengthR2=3
+LengthR1=3
+Orientation=10
+FreeAngle=0
+CutAngle=0
+Height=2

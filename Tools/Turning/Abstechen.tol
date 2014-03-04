@@ -1,0 +1,14 @@
+[Tool]
+Name=Abstechen
+AngleL1=90
+AngleL2=1
+AngleR2=1
+AngleR1=90
+LengthL1=10
+LengthL2=5
+LengthR2=5
+LengthR1=10
+Orientation=0
+FreeAngle=0
+CutAngle=0
+Height=5

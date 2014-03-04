@@ -1,0 +1,12 @@
+[Tool]
+Name=Gravierstichel 60°
+Diameter=3
+TipDiameter=.2
+InnerDiameter=0
+ShankDiameter=3
+Angle=60
+Length=40
+GripLength=13.5
+BevelLength=1.5
+FreeLength=10
+CuttingLength=10

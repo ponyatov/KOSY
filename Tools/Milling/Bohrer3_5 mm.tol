@@ -1,0 +1,12 @@
+[Tool]
+Name=Bohrer3_5 mm
+Diameter=5
+TipDiameter=5
+InnerDiameter=0
+ShankDiameter=3
+Angle=0
+Length=40
+GripLength=8
+BevelLength=1.5
+FreeLength=10
+CuttingLength=10

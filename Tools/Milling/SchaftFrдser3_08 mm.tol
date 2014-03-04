@@ -1,0 +1,12 @@
+[Tool]
+Name=SchaftFräser3_08 mm
+Diameter=.8
+TipDiameter=.8
+InnerDiameter=0
+ShankDiameter=3
+Angle=0
+Length=40
+GripLength=8
+BevelLength=1.5
+FreeLength=10
+CuttingLength=10

@@ -1,0 +1,14 @@
+[Tool]
+Name=Text1
+AngleL1=117.5
+AngleL2=62.5
+AngleR2=62.5
+AngleR1=117.5
+LengthL1=11.6
+LengthL2=11.6
+LengthR2=11.6
+LengthR1=5
+Orientation=45
+FreeAngle=0
+CutAngle=0
+Height=3.97
