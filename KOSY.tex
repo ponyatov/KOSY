@@ -1,0 +1,372 @@
+\input{header}
+
+\title{Стойка ЧПУ KOSY и NCCAD7}
+\author{перевод Dmitry Ponyatov <dponyatov@gmail.com>}
+
+\begin{document}
+
+\maketitle
+
+\RU{Кривой перевод оригинальной документации из поставки учебного комплекта станков
+WABECO~--- файлы \file{nccad7.chm} и \file{ZSE3Help.chm} с немецкого.
+Комплектность поставки документации от ecoinvent хромает, могли бы хотя бы
+английский вариант положить как опцию.}
+
+\tableofcontents
+
+\DE{Hilfethemen für nccad7 - 18. 02. 2005}
+\RU{Справка для nccad7 - 18 02, 2005}
+\DE{Überarbeitet: August 2002}
+\RU{Редакция: Август 2002}
+
+\TRpart{NCCAD7}{NCCAD7}
+
+\TRchapter{Suchen von Worten}{Поиск по словам}
+
+\bigskip 
+
+\DE{Angenommen Sie möchten eine nähere Erklärung zum Begriff "Nullpunkt".}
+\RU{Вероятно Вы хотели бы более точное определение термина
+"нулевая точка".}
+\DE{Innerhalb aller Hilfethemen kommt dieser Begriff auf mehreren Seiten vor.}
+\RU{Кажется что этот термин используется на каждой странице этого
+документа.}
+\DE{Um diese Seiten - und die zugehörigen Textstellen zu finden gibt es die
+Funktion "Suchen".}
+\RU{Чтобы найти такие страницы и соответствующие места в тексте,
+существует функция ``Поиск''}
+\DE{Sie gehen folgendermaßen vor:}
+\RU{Он используется следующим образом:}
+\begin{enumerate}
+  \item Öffnen Sie die Karteikarte \textbf{Suchen} durch Klick auf den Reiter
+  "Suchen".
+  \item Geben Sie im \textbf{Feld Suchbegriff} das Suchwort komplett ein. 
+\begin{enumerate}
+  \item Achten Sie auf Rechtschreibung. 
+  \item Die Klein/Großschreibung wird in der Suchfunktion nicht beachtet, z.B.
+  \item kann eingegeben werden "nullpunkt" oder "Nullpunkt".
+  \item Schon einmal eingegebene Suchworte sind über das PullDown-Menü wieder
+  aufrufbar (Pfeil nach unten).
+  \item In den Suchbegriff können logische Verknüpfungen eingebaut werden, die
+Sie über den Button "Pfeil nach rechts" neben dem Eingabefeld erreichen.
+\end{enumerate}
+  \item Klicken Sie auf "Themen auflisten". Eine Liste mit den Seiten, in denen
+das Suchwort mindestens einmal vorkommt, erscheint.
+  \item Wählen Sie durch Doppelklick eine dieser Seiten aus. In der
+dargestellten Seite werden die gefundenen Textstellen markiert. Durch Scrollen können
+ Sie die Textstellen auffinden. (Siehe Bild, unterer Teil).
+\end{enumerate}
+
+\bigskip
+
+Das folgende Bild gibt einen Überblick über die verschiedenen Phasen des Suchens:
+
+\includegraphics{pic/Suche1.png}
+
+\TRchapter{Das Indexregister}{Индексный регистр}
+
+\DE{Falls Sie mehr Informationen über einen bestimmten Themenbereich oder über
+eine bestimmte Anwendung haben möchten, finden Sie im Indexregister alle
+erdenklichen Stichworte.}
+\RU{Если бы Вы хотели иметь большую информацию об определенной теме или
+применении, вы можете найти в разделе ``Индекс'' возможные ключевые слова.}
+\DE{Diese Stichworte sind nach Themenbereichen
+gegliedert.}
+\RU{Ключевые слова разделены на тематические области.}
+
+\bigskip
+
+\textbf{Bedienung des Indexregisters}
+
+\bigskip
+
+Geben Sie den Begriff in das Feld "Zu suchendes Schlüsselwort"\ ein. 
+Nach jedem
+eingegebenen Buchstaben werden Sie im Indexfenster weitergeleitet:
+
+\includegraphics{pic/Suche2.png}
+
+Wenn Sie den richtigen Begriff gefunden haben klicken Sie ihn doppelt an. Im rechten Fenster 
+erscheint die Hilfsseite, die das Thema erläutert.
+
+\includegraphics{pic/Suche3.png}
+
+\TRchapter{Grundlagen der Bedienung}{Основные принципы работы}
+	\TRsection{Kurzanleitung}{Краткое руководство}
+	\TRsection{Bedienprinzip}{Принцип действия}
+	\TRsection{Drucken}{Печать}
+	\TRsection{Konfiguration von nccad7}{Конфигурирование nccad7}
+	\TRsection{Vorlagen}{Шаблоны}
+	\TRsection{Das Menü}{Меню}
+		\TRsubsection{Ansicht}{Вид}
+		\TRsubsection{Datei}{Файл}
+		\TRsubsection{Hilfe}{Помощь}
+		\TRsubsection{Maschine}{Станок}
+		\TRsubsection{Parameter}{Параметры}
+		\TRsubsection{Simulation}{Симуляция}
+		
+	\TRsection{Die Icons}{Иконки}
+		\TRsubsection{Bearbeitung}{Обработка}
+			\TRsubsubsection{Drehen}{Стрелять}
+			\TRsubsubsection{Eigenschaften ändern}{Изменение свойств}
+			\TRsubsubsection{Konstruktionspunkt verschieben}{Перемещение узлов}
+			\TRsubsubsection{Kopieren}{Копировать}
+			\TRsubsubsection{Korrektur Texte}{Исправление текста}
+			\TRsubsubsection{Kreisförmig anordnen}{Круговое выравнивание}
+			\TRsubsubsection{Löschen}{Удалить}
+			\TRsubsubsection{Löschen Letztes}{Удалить последнюю}
+			\TRsubsubsection{Rückgängig Letztes}{Отменить последнее}
+			\TRsubsubsection{Skalieren}{Масштабирование}
+			\TRsubsubsection{Spiegeln horizontal}{Отразить горизонтально}
+			\TRsubsubsection{Spiegeln horizontal mit Kopie}{Отразить горизонтально с
+			копией}
+			\TRsubsubsection{Spiegeln vertikal}{Зеркалить вертикально}
+			\TRsubsubsection{Spiegeln vertikal mit Kopie}{Зеркалить вертикально с копией}
+			\TRsubsubsection{Verschieben}{Сдвинуть}
+			\TRsubsubsection{Zoom Maßstab}{Зум}
+			
+		\TRsubsection{CAD - 3D}{}
+			\TRsubsubsection{Ansicht dreidimensional}{Трехмерное изображение}
+			\TRsubsubsection{Plastische Zone Kreis}{Пластичная зона Круг}
+			\TRsubsubsection{Plastische Zone Rechteck}{Пластичная зона Прямоугольник}
+			\TRsubsubsection{Plastische Zone in STL wandeln}{Пластичная зона Прямоугольник}
+			\TRsubsubsection{Schnitt bearbeiten}{Править секцию}
+			\TRsubsubsection{Schnitt neu}{Новая секция}
+			
+		\TRsubsection{CAD - Besonderes}{CAD - Фичи}
+			\TRsubsubsection{Ellipse}{Эллипс}
+			\TRsubsubsection{Freihand}{От руки}
+			\TRsubsubsection{Kurve Approximation}{Аппроксимация кривых}
+			\TRsubsubsection{Kurve Interpolation}{Интерполяция кривых}
+			\TRsubsubsection{Mathematische Funktion}{Математические функции}
+			\TRsubsubsection{Outline - Generierung}{Outline - генерация}
+			\TRsubsubsection{Pad/Bahn - Generierung}{Pad/Bahn - генерация}
+			\TRsubsubsection{Schraffieren}{Колодец}
+			\TRsubsubsection{Tangente}{Касание}
+			\TRsubsubsection{Tangente außen}{Внешнее касание}
+			\TRsubsubsection{Tangente innen}{Внутреннее касание}
+			\TRsubsubsection{Zahnrad außenverzahnt}{Внешнее зубчатое колесо}
+			\TRsubsubsection{Zahnrad innenverzahnt}{Внутреннее зубчатое колесо}
+			\TRsubsubsection{Zahnstange}{Зубчатая рейка}
+			
+		\TRsubsection{CAD - Standard}{CAD - Стандартный}
+			\TRsubsubsection{Bogen}{Дуга}
+			\TRsubsubsection{Gerade}{Прямая}
+			\TRsubsubsection{Gravurtext MAX/einzeilig}{Гравировка MAX/однострочная}
+			\TRsubsubsection{Gravurtext MAX/mehrzeilig}{Гравировка MAX/многострочная}
+			\TRsubsubsection{Gravurtext TrueType}{Гравировка TrueType}
+			\TRsubsubsection{Kreis}{Круг}
+			\TRsubsubsection{Langloch}{Паз}
+			\TRsubsubsection{Polygon}{Многоугольник}
+			\TRsubsubsection{Polygon-Generierung}{Полигон генерация}
+			\TRsubsubsection{Punkt}{Точка}
+			\TRsubsubsection{Rechteck}{Прямоугольник}
+			
+ 		\TRsubsection{CAM - Standard}{CAM - Стандарт}
+ 			\TRsubsubsection{Ausspannposition}{Позиция зажима}
+ 			\TRsubsubsection{Bahnkorrektur}{Коррекция трассы}
+ 			\TRsubsubsection{Insel auflösen}{Растворение острова}
+ 			\TRsubsubsection{Insel zuweisen}{Назначить Остров}
+ 			\TRsubsubsection{Kontur auflösen}{Растворить контур}
+ 			\TRsubsubsection{Kontur generieren}{Создание контура}
+ 			\TRsubsubsection{Leitkontur}{Ограничивающий контур}
+ 			\TRsubsubsection{Tasche fräsen}{Фрезерование кармана}
+ 			\TRsubsubsection{Technologie}{Технология}
+ 			\TRsubsubsection{Werkstück - Befestigung}{Заготовка - фиксация}
+ 			\TRsubsubsection{Werkstück - Nullpunkt}{Заготовка - Нулевая точка}
+ 			
+ 		\TRsubsection{Darstellung}{Представление}
+			\TRsubsubsection{Ansicht Letzte}{Последний вид}
+			\TRsubsubsection{Ausschnitt verschieben}{Переместить раздел}
+			\TRsubsubsection{Ausschnitt wählen}{Выбрать раздел}
+			\TRsubsubsection{Neu darstellen}{Новый вид}
+			\TRsubsubsection{Tischdarstellung}{Изображение стола}
+			
+		\TRsubsection{Dokumentation}{Документация}
+			\TRsubsubsection{Bemaßung horizontal}{Горизонтальный размер}
+			\TRsubsubsection{Bemaßung Radius}{Радиусный размер}
+			\TRsubsubsection{Bemaßung schräg}{Косой размер}
+			\TRsubsubsection{Bemaßung vertikal}{Вертикальный размер}
+			\TRsubsubsection{Bemaßung Winkel}{Угловой размер}
+			\TRsubsubsection{Beschriftung TrueType}{Надпись TrueType}
+			\TRsubsubsection{Beschriftung MAX/einzeilig}{Надпись MAX/однострочный}
+			\TRsubsubsection{Beschriftung MAX/mehrzeilig}{Надпись MAX/многострочный}
+			\TRsubsubsection{Bearbeiter}{Редактор}
+			\TRsubsubsection{Bearbeiter letzte Änderung}{Редактор последнего изменения}
+			\TRsubsubsection{Dateiname}{Имя файла}
+			\TRsubsubsection{Datum letzte Änderung}{Дата последнего изменения}
+			\TRsubsubsection{Datum aktuell}{Текущая дата}
+			\TRsubsubsection{Datum Ausdruck}{Дата выражение}
+			\TRsubsubsection{Datum erstellt}{Дата создания}
+		\TRsubsection{Einstellungen}{Настройки}
+			\TRsubsubsection{Bezugspunkt}{Контрольная точка}
+			\TRsubsubsection{Fang}{Привязка}
+ 			\TRsubsubsection{Layer (Zeichnungslage)}{Слой (рисунок расположения)}
+			\TRsubsubsection{Lineal}{Линейка}
+			\TRsubsubsection{Linien}{Вектор}
+			\TRsubsubsection{Raster}{Растр}
+			
+		\TRsubsection{Information}{Информация}
+			\TRsubsubsection{Messen}{Измерение} 
+			\TRsubsubsection{Zeichnungsteil-Informationen}{Рисование часть информации} 
+			
+ 		\TRsubsection{Symbole}{Символы}
+			\TRsubsubsection{Symbol auflösen}{Разрешенные символы}
+			\TRsubsubsection{Symbol laden}{Загрузка символа}
+			\TRsubsubsection{Symbol speichern}{Сохранение символа}
+			
+ 		\TRsubsection{Umwandlung}{Преобразование}		
+ 			\TRsubsubsection{Trimmen}{Обрезка} 
+			\TRsubsubsection{Verlängern}{Удлинение}
+			\TRsubsubsection{Trimmen-Verlängern}{Обрезка-Удлинение}
+			\TRsubsubsection{Trimmen 2 Teile}{Обрезка 2 детали}
+			\TRsubsubsection{Verlängern 2 Teile}{Удлинение 2 детали}
+			\TRsubsubsection{Auftrennen}{Разделение}
+			\TRsubsubsection{Autom. Trimmen-Verl. (Kontur verfolgen)}{Автоматическая
+			обрезка-удлинение (verfolgen трека)}
+			\TRsubsubsection{Verdünnen}{Разбавление}
+			\TRsubsubsection{Polygon-Generierung}{Полигон генерация}
+			\TRsubsubsection{Konvertieren in Gerade}{Преобразовать в отрезки}
+			\TRsubsubsection{Konvertieren in Polygon}{Преобразовать в многоугольник}
+			\TRsubsubsection{Runden}{Скругление}
+			\TRsubsubsection{Runden selektiv}{Селективное скругление}
+			\TRsubsubsection{Fasen}{Фаска}
+			\TRsubsubsection{Fasen selektiv}{Селективная фаска}
+
+\input{GrundlagenCAD}
+
+% 
+% \TRchapter{CNC-Fräsmaschinen}{Фрезерные станки с ЧПУ}
+% 	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+% работе}
+%  	\TRsection{Handsteuerung}{Ручное управление}
+% 	\TRsection{CNC-Fräsen}{ЧПУ Фрезеровка}
+% 	\TRsection{Teach In - Programmierung}{Teach In - Программирование}
+% 	\TRsection{Simulation mit OpenGL}{Моделирование в OpenGL}
+% 	\TRsection{Werkzeug-Korrektur}{Коррекция инструмента}
+% 	\TRsection{CAD/CAM-Fräsen}{CAD / CAM фрезерные}
+% 		\TRsubsection{Einführungsbeispiel, Prinzip}{Введение, принцип}
+% 		\TRsubsection{Technologie-Angaben}{Информационные технологии}
+% 	\TRsection{3D-Fräsen}{3D фрезеровка}
+% 		\TRsubsection{Körper aus Rippen und Spanten}{Körper aus Rippen und Spanten}
+% 		\TRsubsection{Plastische Zonen}{Пластические зоны}
+% 		\TRsubsection{Randzonen}{Краевые зоны}
+% 		\TRsubsection{STL Grundlagen}{STL основы}
+% 		\TRsubsection{STL Ebenenbearbeitung}{STL Редактирование слоев}
+% 		\TRsubsection{STL 4-Achs-Bearbeitung}{STL 4-осевая обработка}
+% 	\TRsection{Bearbeitungseinheiten}{Блоки обработки}
+% 		\TRsubsection{Universal (Metabo)}{Universal (Metabo)}
+% 		\TRsubsection{Schnellfrequenz}{Высокая частота}
+% 		\TRsubsection{Drehstrom}{Фаза}
+% 	\TRsection{Arbeitshinweise}{Рабочие инструкции}
+% 		\TRsubsection{WNP verschieben}{Переместить WNP}
+% 		\TRsubsection{Maschine aufrüsten}{Обновление машины}
+% 	\TRsection{Hilfsmittel}{СПИД}
+% 		\TRsubsection{Pratze, Treppenbock}{Прижим, лестничный блок}
+% 		\TRsubsection{Anschlagwinkel}{Параллельки}
+% 	\TRsection{Spezialanwendungen}{Специальные применения}
+% 		\TRsubsection{Mit Sonderwerkzeugen}{Использование специальных инструментов}
+% 			\TRsubsubsection{Gewindefräser ZBGF}{Gewindefräser ZBGF}
+% 		\TRsubsection{Gravuren}{Гравировка}
+% 			\TRsubsubsection{MAX-Schriften}{MAX-шрифты}
+% 			\TRsubsubsection{TrueType-Schriften}{TrueType шрифты}
+% 			\TRsubsubsection{Fortlaufende Zahlen}{Нумерация}
+% 			\TRsubsubsection{am Bogen}{на носу}
+% 		\TRsubsection{Leiterplatten}{Печатная плата}
+% 			\TRsubsubsection{Mit nccad entwerfen und fräsen}{сверление и фрезеровка с
+% 			nccad}
+% 			\TRsubsubsection{Von Layout-Programmen bearbeiten}{Импорт из программы
+% 			разводки}
+% 			\TRsubsubsection{Von Layout-Programmen bohren}{Сверление из программы
+% 			разводки}
+% 		\TRsubsection{Zahnräder}{Шестеренки}
+% 			\TRsubsubsection{Grundlagen}{Основы}
+% 			\TRsubsubsection{Bearbeiten}{Изготовление}
+% 			\TRsubsubsection{Praxis}{Практика}
+% 		\TRsubsection{Schneiden}{Резка}
+% 			\TRsubsubsection{Schleppmesser}{Поворотный нож}
+% 
+% \TRchapter{CNC-Bohrmaschinen}{Расточной станок с ЧПУ}
+% 	\TRsection{Bediengrundlagen}{Основная операция}
+% 
+% \TRchapter{CNC-Drehmaschinen}{Токарный станок с ЧПУ}
+% 	\TRsection{Daten und Fakten}{Цифры и факты}
+% 	\TRsection{Inbetriebnahme, Erste Schritte}{Ввод в эксплуатацию, Приступая к
+% 	работе}
+% 	\TRsection{CNC-Drehen}{ЧПУ точение}
+% 	\TRsection{Simulation mit OpenGL}{Симуляция в OpenGL}
+% 	\TRsection{Werkzeugverwaltung}{Управление инструментами}
+% 	\TRsection{Testhilfen}{Средства тестирования}
+% 	\TRsection{CAD/CAM-Drehen}{Токарный CAD/CAM}
+% 		\TRsubsection{Prinzip}{Принцип}
+% 		\TRsubsection{Mehrfachzyklen}{Несколько циклов}
+% 	\TRsection{Spezialanwendungen}{Специальные применения}
+% 		\TRsubsection{Gewinde-Drehen}{Нарезание резьбы}
+% 		\TRsubsection{CNC-Zyklen}{CNC-Zyklen}
+% 
+% \TRchapter{Dosier-Systeme}{Системы дозирования}
+% 	\TRsection{Grundlagen}{Основы}
+% 	\TRsection{Schubdosierung}{Повысить дозу}
+% 
+% \TRchapter{Automatisierungs-Systeme}{Системы автоматизации}
+% 	\TRsection{Grundlagen}{Основы}
+% 	\TRsection{Schaltfunktionen während Bewegung}{Функции переключения во время
+% 	тренировки}
+% 
+% \TRchapter{KOSY-Steuerungen}{Стойка KOSY}
+% 	\TRsection{Standard-Ausführung}{Стандартная версия}
+% 	\TRsection{Wabeco-Ausführung}{Wabeco версия}
+% 
+% \TRchapter{Spezial-Funktionen/Programme}{Спецфункции/программы}
+% 	\TRsection{Hilfsprogramme}{Программа помощи}
+% 		\TRsubsection{Zeichensatz-Editor}{Редактор шрифтов}
+% 
+% \TRchapter{Import/Export}{Импорт / экспорт}
+% 	\TRsection{CNC-Programmexport}{Экспорт Программы ЧПУ}
+% 	\TRsection{Postprozessoranpassung}{Постпроцессор}
+% 	\TRsection{Schnittstellen}{Интерфейсы}
+% 	\TRsection{2D-Import}{Импорт 2D}
+% 		\TRsubsection{DXF}{DXF}
+% 		\TRsubsection{HPGL}{HPGL}
+% 		\TRsubsection{Nachbearbeitung}{Пост}
+% 		\TRsubsection{Scannen und Vektorisieren}{Сканирование и векторизация}
+% 	\TRsection{3D-Import}{Импорт 3D}
+% 		\TRsubsection{STL}{STL}
+% 	\TRsection{3D-Export}{3D экспорт}
+% 		\TRsubsection{STL}{STL}
+% 
+% \TRchapter{Optionen und deren Bedienung}{Функции и их использование}
+% 	\TRsection{Abtasten}{Отбор проб}
+% 	\TRsection{Drehen}{Drehen}
+% 	\TRsection{KOSY Wagen}{Корзина KOSY}
+% 	\TRsection{Mindermengendosierung}{Микродозирование}
+% 	\TRsection{Schubdosierung}{Повысить дозу}
+% 	\TRsection{Spooler}{Диспетчер очереди}
+% 	\TRsection{Tiefenregelung}{Контроль глубины}
+% 	\TRsection{Werkzeuglängenmessung}{Измерение длины инструмента}
+% 	\TRsection{Werkzeugwechsel}{Смена инструмента}
+% 
+% \TRchapter{Umgang mit dem System}{Работа с системой}
+% 	\TRsection{Service und Wartung}{Сервисное и техническое обслуживание}
+% 		\TRsubsection{Fehlerliste}{Список ошибок}
+% 		\TRsubsection{Hotline}{Горячая линия}
+% 		\TRsubsection{Massiv-Körper reparieren}{Крупногабаритный ремонт}
+% 	\TRsection{Transport}{Транспортировка}
+% 		\TRsubsection{Massive Maschinen}{Массивные машины}
+% 		\TRsubsection{Paketversand}{Комплектность поставки}
+% 
+% \chapter{Anhang}{Приложение}
+% 	\section{Liesmich/Installation}{Readme / установка}
+% 	\section{Anschlussbelegung}{Проводка}
+% 	\section{CAM-Technologien}{CAM технологии}
+% 	\section{Dreh-Zyklen}{Вращение циклов}
+% 	\section{NC-Befehle}{NC команды}
+% 	\section{NC-Kurzbefehlsliste}{NC список быстрого доступа}
+% 	\section{Netzwerk-Installation}{Сетевая установка}
+% 	\section{Tastenbelegung (HotKeys)}{Горячие клавиши}
+% 
+
+
+\part{ZSE3}
+
+\end{document}

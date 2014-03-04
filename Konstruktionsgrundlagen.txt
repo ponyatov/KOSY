@@ -1,0 +1,175 @@
+
+\DE{CAD-Konstruktionsgrundlagen}
+\RU{CAD Основы конструирования}
+
+ 
+2. Der CAD-Bildschirm
+Sobald Sie im Menu Datei/CAD/CAM - Neue Zeichnung gewahlt haben, konnen Sie im Zeichenfeld konstruieren. Im Bild oben wird Ihnen die Bedeutung der einzelnen Bereiche des CAD-Bildschirms erklдrt. Links neben dem Zeichenfeld ist das ICON-Menu. In ihm kцnnen die wichtigsten Funktionen direkt gewдhlt werden. 
+
+2.1 Bereiche der ICON-Hauptleiste
+Das ICON-Menu teilt sich von oben nach unten in verschiedene Gruppen bzw. Bereiche auf:
+
+Der Technologie-Bereich, der den Zugang zu den CAM- (Bearbeitungs-) Funktionen erцffnet. 
+Der Einstell- und Darstellungsbereich fьr die die Auswahl der Layer, Linien usw. - und fur die Behandlung des Zeichnungs-Ausschnittes. 
+Der Korrekturbereich zum Bearbeiten (editieren) von Zeichnungsteilen. 
+Der 2D-Bereich fьr die Konstruktion von Zeichnungsteilen in der X-Y-Ebene. 
+Der 3D-Bereich fьr die Konstruktion von "Plastischen Zonen". 
+Der Dokumentations- und Informationsbereich 
+Bewegen Sie zum Kennenlernen der Funktionen die Maus vom Zeichenfeld zum ICON-Menu und dort zu einem beliebigen ICON (beispielsweise zu Gerade im 2D-Bereich), warten Sie einen Augenblick. Es erscheint ein Erklarungsfeld (ToolTip) mit der Bedeutung dieses ICONs.
+
+
+2.2 Die Status-Zeile (ganz unten im Bild)
+Sie hat eine besondere Aufgabe:
+Dort "sagt" Ihnen nccad, welche Bedienschritte erwartet werden (z.B.: Startpunkt einer Geraden wдhlen). 
+Alle zu konstruierenden Zeichnungsteile basieren auf mathematischer Grundlage, d.h. es mussen Koordinatenpunkte angegeben werden, mit deren Hilfe die geometrischen Figuren berechnet - und dargestellt werden konnen. Zunachst ist kein Zeichnungsteil vorgeschlagen, wahlen Sie z.B in der ICON-Gruppe CAD Standard das ICON GERADE. Sie benotigt zwei Punkte (Startpunkt und Endpunkt), die durch 2 Mausklicks (kurzes Drucken der linken Maustaste) an 2 verschiedenen Stellen des Zeichenfeldes mit dem Fadenkreuz positioniert werden. Grundsatzlich wird in der Statuszeile angezeigt, welcher Konstruktionspunkt momentan eingegeben werden muЯ.
+
+[Zurьck]
+
+ 
+
+ 
+
+ 
+3. CAD-Funktionswahl
+Bewegen Sie die Maus vom Zeichenfeld zum ICON-Menu und dort zu einem beliebigen ICON (beispielsweise zu Besonderes), warten Sie einen Augenblick. Es erscheint ein Erklarungsfeld mit der Bedeutung dieses ICONs. Wenn Sie jetzt die Funktionstaste [F1] drucken, erscheint ein Fenster mit Bedienhinweisen zu dieser Funktion.
+Nach einem Klick (linke Maustaste) auf ein ICON ist die zugehorige Funktion ausgewahlt. Beachten Sie danach unbedingt die Statuszeile! Dort "sagt" Ihnen nccad, welche Bedienschritte erwartet werden (z.B.: Startpunkt einer Geraden wдhlen).
+
+[Zurьck]
+
+ 
+
+ 
+
+ 
+
+
+4. Koordinaten beim Konstruieren
+Normalerweise geben Sie eine Position auf der Zeichenflache durch Anfahren mit dem Fadenkreuz und drucken auf die linke Maustaste an (Klicken). Die momentane Position des Fadenkreuzes wird im Feld fur die Koordinatenanzeige dargestellt.
+
+4.1 Mцglichkeiten der Koordinaten-Angabe
+Es gibt 4 Moglichkeiten, Koordinaten (Konstruktionspunkte) anzugeben:
+
+Kartesisch absolut (KA), mit der Anzeige X-Wert,Y-Wert.  Bezugspunkt ist der absolute 0-Pkt  (linke untere Ecke). 
+Kartesisch relativ (KR), mit der Anzeige X-Wert,Y-Wert. Bezugspunkt ist der zuvor angegebene Konstruktionspunkt.  
+Polar absolut (PA), mit der Anzeige Winkel,Lange. Bezugspunkt ist der absolute 0-Pkt  (linke untere Ecke).  
+Polar relativ (PR), mit der Anzeige Winkel,Lange. Bezugspunkt ist der zuvor angegebene Konstruktionspunkt.  
+4.2 Konstruktionsbeispiel (Bild oben)
+Hier wird eine Gerade konstruiert, deren Anfangspunkt absolut bei X=60 und Y=20 liegt (zдhlen Sie dazu die Rasterpunkte in X- und Y-Richtung). Die momentane Position des Fadenkreuzes ist also durch folgende 4 Aussagen beschreibbar:
+
+Die Entfernung vom absoluten 0-Punkt kartesisch ist  X=70, Y=30. 
+Polar absolut bedeutet dies, daЯ die momentane Position des Fadenkreuzes eine Strecke mit einer Winkellage von 23.20grad und einer Lдnge von 76.16mm vom absoluten 0-Punkt entfernt ist. 
+Die relative Entfernung vom zuvor eingegebenen Startpunkt der Geraden ist kartesisch X=10, Y=10. 
+Polar relativ bedeutet dies, daЯ die momentane Position des Fadenkreuzes eine Strecke mit einer Winkellage von 45grad und einer Lдnge von 14.14mm vom zuvor eingegebenen Startpunkt der Geraden entfernt ist. 
+4.3 Moglichkeiten der Koordinaten-Eingabe
+Es gibt 3 Moglichkeiten:
+
+4.3.1 Mit der Maus
+Sobals Sie die linke Maustaste Drucken, wird die momentane Position des Fadenkreuzes als Koordinate ubernommen. Beachten Sie dabei den Fang und seine Einstellmoglichkeiten.
+
+4.3.2 Mit der Tastatur
+Drucken Sie wiederholt die Taste [K], gelangen Sie in eines der Felder fur kartesische Koordinaten. Drucken Sie wiederholt die Taste [P], gelangen Sie in eines der Felder fur polare Koordinaten. Sie kцnnen auch den Mauszeiger in eines der Felder der Koordinatenanzeige positionieren und klicken.
+Innerhalb des gewдhlten Feldes konnen die Koordinatenwerte, wie in Windows ublich, uberschrieben- oder editiert werden. 
+Die Eingabe der kartesischen Koordinaten kann mit der Auflцsung von 1/100mm erfolgen, wobei als Dezimaltrenner der Punkt verwendet wird und die Trennung zwischen X-Wert und Y-Wert durch des Komma festgelegt ist.
+Die Eingabe der polaren Koordinaten kann mit der Auflцsung von 1/100mm bzw. 1/100grad erfolgen, wobei auch als Dezimaltrenner der Punkt verwendet wird und die Trennung zwischen Winkel und Lдnge durch des Komma festgelegt ist.
+
+
+4.3.2.1 Rechnende Eingabe
+Sie konnen an Stelle der Koordinaten auch eine Rechnung stellen. An Stelle von 20.5,15 konnen Sie beispielsweise 2*10.25,5*3 eingeben. Dies funktioniert mit den 4 Grundrechenarten (+,-,*,/) sowie mit Klammern, z.B. 7*(55.3+27.98),88.9/3.
+
+4.3.3 Mit der CNC-Maschine
+Haben Sie eine Zeichenfunktion gewahlt, wird die Eingabe eines Koordinatenpaares fur X und Y verlangt. Sobald Sie zusatzlich im Menu Maschine/CNC-Maschine die Handsteuerung starten, kann die momentane X-Y-Position durch Drucken der Taste <Einfg> in das Zeichenfeld ubertragen werden. Naheres finden Sie unter TeachIn-Programmierung.
+
+[Zurьck]
+
+ 
+
+
+
+5. Ausschnitte und Darstellungsformen
+Einige Bedienschritte ermцglichen die unterschiedliche Darstellung von Ausschnitten. Im Bild ist der entsprechende Bereich der ICON-Hauptleiste markiert. Wenn Sie mit dem Mauszeiger die 6 ICONS anfahren und einen kurzen Moment warten, wird deren Bedeutung erklдrt.
+
+5.1 Unmittelbare Verдnderung der Darstellung
+
+Zum VergroЯern (Zoomen) bewegen Sie die das Fadenkreuz in das Zentrum des gewunschten Ausschnittes und drucken [Strg]+[Rechte Maustaste]. 
+Zum Verkleinern drucken Sie [Umsch.]+[Rechte Maustaste]. 
+Zum Verschieben des Ausschnittes gibt es mehrere Moglichkeiten 
+Bewegen Sie die Scrollbalken unterhalb - oder rechts von der Zeichenflache. 
+Benutzen Sie das Icon AUSSCHNITT VERSCHIEBEN in der Gruppe Darstellung. 
+Verwenden Sie die Cursor-Tasten (Links/Rechts, Vor/Zuruck, Bild Auf/Ab). 
+5.2  ICONS fьr die Wahl der Darstellungsformen
+
+Einen Ausschnitt wдhlen Sie fьr die vergrцЯerte Darstellung, indem Sie das entsprechende ICON anklicken und mit Hilfe des Fadenkreuzes einen Rahmen um den gewьnschten Ausschnitt aufziehen (2 Eckpunkte eines Rechteckes diagonal zueinander anklicken). 
+In die Gesamtansicht kommen Sie wieder zurьck, indem Sie das ICON Tischdarstellung anklicken. 
+Die Darstellungsformen Letzte Ansicht  und Ausschnitt verschieben sollten Sie einfach einmal ausprobieren. 
+Neu darstellen ist immer dann anzuwenden, wenn wдhrend der Konstruktionsarbeit Zeichnungsteile verloren gegangen sind oder in den falschen Farben dargestellt werden u.A.m. 
+Die Einstellungen fьr Lineal, Raster, Fang werden in einem separaten Fenster vorgenommen (siehe Bild oben), sobald Sie das entsprechende ICON anklicken. Eine Besonderheit in nccad ist die automatische Umschaltung von Fang und Raster, wenn Sie zwischen Tisch- und Ausschnittdarstellung wechseln. Deshalb werden zwei verschiedene Werte angegeben. 
+5.3 Fang im Raster
+Fang bedeutet "Einrasten" des Fadenkreuzes. Er kann ein/ausgeschaltet werden durch Klicken auf das ICON Fang/Raster/Lineal in der ICON-Gruppe "Einstellungen" und dann durch Klicken auf das Feld Fang/eingeschaltet oder durch Drьcken der Taste [F2] oder uber das PopUp-Menu, das beim Drucken der rechten Maustaste erscheint.
+
+
+5.4 Scrollen im Fenster
+Wenn das Fenster, in dem Sie eine Zeichnung anfertigen oder bearbeiten nicht alle Zeichnungsteile darstellt, mussen Sie scrollen um an die richtige Position im Bild zu gelangen. 
+Am unteren und rechten Bildrand befinden sich zwei Scroll-Leisten. In dieser Leiste ist wiederum ein Schieber, der anzeigt, wo sich der Bildausschnitt auf der Seite befindet. Durch klicken auf die Pfeile an den Enden der Leiste wird der Bildschirmausschnitt nach oben und nach unten, bzw. nach links und nach rechts verschoben.
+
+Auch die Cursor-Tasten konnen zum Scrollen benutzt werden.
+
+Um das Bild in der Fadenkreuz-Position zu zentrieren, benutzen Sie die Return(Eingabe)-Taste oder das PopUp-Menu, das beim Drucken der rechten Maustaste erscheint.
+
+[Zurьck]
+
+ 
+
+ 
+
+
+6. Besondere Konstruktionshilfen
+Beim Konstruieren sind einige Hilfen sinnvoll und erforderlich. Damit sie schnell und bequem bedient werden kцnnen sind sie durch Tasten oder Tastenkombinationen belegt:
+
+6.1 Maus fixieren (Orthogonales Zeichnen)
+Damit vor einem Klick die Maus nicht "verwackelt" kann sie fixiert (festgehalten) werden. Dazu drьcken Sie im Moment des Mausklicks zusatzlich folgende Tasten: 
+[Umsch.] zum Fixieren senkrecht 
+[Strg]  zum Fixieren waagrecht 
+[Strg]+[Umsch.] zum Fixieren waag- u. senkrecht
+
+6.2 Fang von Konstruktionspunkten mit dem Suchfenster
+Zum Einrasten des Fadenkreuzes auf einen existierenden Konstruktionspunkt bildet nccad im Kreuzungspunkt des Fadenkreuzes ein Suchfenster (siehe Bild oben). 
+Das Suchfenster erscheint automatisch, nachdem Sie Funktionen, wie Lцschen, Verschieben, Kopieren u.Д. gewдhlt haben. Bewegen Sie dieses Suchfenster in die Nдhe eines Konstruktionspunktes und warten Sie einen Moment. Das Suchfenster rastet ein und in der Statuszeile wird gemeldet zu welchem Zeichnungsteil dieser Konstruktionspunkt gehцrt. In der Koordinatenanzeige wird seine Position exakt angegeben.
+
+
+
+Der Konstruktionsfang ist eine Besonderheit:
+Er muЯ gezielt aktiviert werden, wenn beim Konstruieren Punkte auЯerhalb von Raster- und Fangpositionen liegen. Es gibt 3 Moglichkeiten:
+
+Durch Klicken auf das ICON Fang/Raster/Lineal in der ICON-Gruppe "Einstellungen" und dann durch Klicken auf das Feld Konstruktionsfang/eingeschaltet. 
+Durch Drьcken der Tastenkombination [Strg]+[F9]. Dieselbe Tatigkeit ist zum Ausschalten des Konstruktionsfamgs erforderlich. 
+Durch Doppelklick auf das ICON am rechten Rand der Statuszeile (siehe Bild oben). Dieselbe Tatigkeit ist zum Ausschalten des Konstruktionsfangs erforderlich. 
+6.3 Fang von deckungsgleichen Konstruktionspunkten
+Nachdem Sie Funktionen, wie Lцschen, Verschieben, Kopieren u.Д. gewдhlt haben, erscheint automatisch das Suchfenster. Bewegen Sie dieses Suchfenster in die Nдhe eines Konstruktionspunktes und warten Sie einen Moment. Das Suchfenster rastet ein und in der Statuszeile wird gemeldet zu welchem Zeichnungsteil dieser Konstruktionspunkt gehцrt. Es ist mцglich, daЯ an einem Konstruktionspunkt mehrere verschiedene Zeichnungsteile "hдngen". Mit der [Leertaste] ist ein Weiterschalten zum nachsten Zeichnungsteil mцglich.
+
+6.4 Gruppenbildung
+Nachdem Sie Funktionen, wie Lцschen, Verschieben, Kopieren u.Д. gewдhlt haben, erscheint automatisch das Suchfenster. Klicken Sie mit dem Suchfenster an einer freien Stelle, ziehen ein Rechteck auf (diagonal bewegen) und klicken erneut, dann werden alle innerhalb des Rechtecks befindlichen Teile markiert. Sie konnen gemeinsam behandelt (z.B. geloscht, verschoben .... ) werden.
+
+6.5 Tastaturbelegung
+Die meisten Bedienungen kцnnen nur mit der Tastatur gemacht werden, um schnell zu einem Ergebnis zu kommen und um von der staubempfindlichen Maus unabhдngig zu sein. Im Anhang finden Sie diese "HOT-Keyґs"
+
+[Zurьck]
+
+ 
+
+ 
+
+
+ 
+7. Layer (Zeichnungslagen)
+Eine Zeichnung kann in nccad aus bis zu 10 ubereinander liegenden Blattern - Layer oder Lagen genannt- bestehen. Fur die Zusammenarbeit mit der CNC-Maschine sind dazu einige Festlegungen erforderlich, die die Voraussetzung fur ein einwandfreies Bearbeiten von Zeichnung und Werkstuck schaffen:
+
+7.1 Layer fьr Zeichnungs- und Frдsteile
+Im Layer1 werden die ersten Zeichnungsteile gezeichnet, die gezeichneten geometrischen Figuren geben die Bearbeitungswege (in der X-Y- Ebene) vor. Dem Layer1 wird standardmassig die Farbe Hellgrun zugeordnet, eine Дnderung der Farbzuordnung kann im Menь Ansicht/Farbe vorgenommen werden.
+Sollte Layer 1 fur die Zeichnungsteile nicht ausreichen, kann Layer 2 bis 8 - und damit automatisch eine andere Farbe auЯer Rot und Schwarz verwendet werden.
+
+7.2 Besondere Layer: 9 fьr Dokumentation, 10 fьr Technologie
+Der Layer9 d.h. die Farbe Schwarz wird automatisch aufgerufen, wenn die Funktionen "Beschriftung" oder "BemaЯung" angewahlt wurden. Zum Layer9 (schwarz) kann frei gewechselt werden, um beliebige Zeichnungsteile z.B. Hilfslinien zu erstellen. 
+Der Layer10 d.h. die Farbe Rot wird automatisch aufgerufen, wenn die Funktionen "Zuordnungslinie", "Ausspannposition" oder "Werkstuckbefestigung" angewahlt wurden.
+
+[Zurьck]
+
