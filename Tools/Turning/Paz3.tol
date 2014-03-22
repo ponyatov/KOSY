@@ -1,0 +1,15 @@
+[Tool]
+Name=Paz3
+AngleL1=90
+AngleL2=0
+AngleR2=0
+AngleR1=90
+LengthL1=10
+LengthL2=.01
+LengthR2=3
+LengthR1=10
+Orientation=0
+FreeAngle=10
+CutAngle=10
+Height=10
+Drill=0
